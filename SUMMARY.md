@@ -6,6 +6,7 @@
 
 * [React Redux](programming/untitled.md)
 * [RTMP + flv.js \(Livestreaming app\)](programming/rtmp-+-flv.js-livestreaming-app.md)
+* [EmberJS](programming/emberjs.md)
 
 ## Books
 

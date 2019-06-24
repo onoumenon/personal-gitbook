@@ -12,6 +12,8 @@ Ember is a front-end framework that follows Ruby on Rails' Convention over Confi
 
 ###  
 
+![](../.gitbook/assets/image%20%281%29.png)
+
 ### QuickStart
 
 ```text
@@ -186,17 +188,73 @@ var context = {
 
 Anything that is valid Handlebars syntax is valid Ember syntax.
 
-###  
+
+
+### Handlebar Helpers
+
+Handle helpers allow our users to quickly see if a property is "Standalone" or part of a "Community".
+
+```text
+ember g helper rental-property-type
+```
+
+ This creates 2 files \(a JavaScript file and a test file\):
+
+```text
+installing helper
+  create app/helpers/rental-property-type.js
+installing helper-test
+  create tests/integration/helpers/rental-property-type-test.js
+```
+
+Now in the rental-listing component file:
+
+```text
+<span>Type:</span> {{rental-property-type this.rental.category}} - {{this.rental.category}}
+```
+
+### 
 
 ### Models
 
+There should only be a single source of truth for the data.
+
 Represents persistent state, saved to web server or local \(local storage\).
 
-###  
+ To generate:
+
+```text
+ember g model rental
+```
+
+It generates a model file and a test file.
+
+To initiate a model object: 
+
+```text
+import DS from 'ember-data';
+
+export default DS.Model.extend({
++  title: DS.attr(),
++  owner: DS.attr(),
++  city: DS.attr(),
++  category: DS.attr(),
++  image: DS.attr(),
++  bedrooms: DS.attr(),
++  description: DS.attr()
+});
+```
+
+### 
 
 ### Components and Hooks
 
 Similar to React's concept of Components and Hooks.
+
+A component consists of two parts:
+
+* A template that defines how it will look \(`app/templates/components/rental-listing.hbs`\)
+* A JavaScript source file \(`app/components/rental-listing.js`\) that defines how it will behave.
 
 [Docs for Hooks](https://guides.emberjs.com/release/components/the-component-lifecycle/)
 
@@ -228,7 +286,58 @@ import {
 } from '@ember/test-helpers';
 ```
 
-### 
+### Integration Test
+
+For components:
+
+```text
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, click } from '@ember/test-helpers';
+import hbs from 'htmlbars-inline-precompile';
+import EmberObject from '@ember/object';
+
+
+module('Integration | Component | rental listing', function (hooks) {
+  setupRenderingTest(hooks);
+
+  hooks.beforeEach(function () {
+    this.rental = EmberObject.create({
+      image: 'fake.png',
+      title: 'test-title',
+      owner: 'test-owner',
+      type: 'test-type',
+      city: 'test-city',
+      bedrooms: 3
+    });
+  });
+
+  test('should display rental details', async function(assert) {
+    await render(hbs`<RentalListing @rental={{this.rental}} />`);
+    assert.equal(this.element.querySelector('.listing h3').textContent.trim(), 'test-title', 'Title: test-title');
+    assert.equal(this.element.querySelector('.listing .owner').textContent.trim(), 'Owner: test-owner', 'Owner: test-owner');
+  });
+
+  test('should toggle wide class on click', async function(assert) {
+    await render(hbs`<RentalListing @rental={{this.rental}} />`);
+    assert.notOk(this.element.querySelector('.image.wide'), 'initially rendered small');
+    await click('.image');
+    assert.ok(this.element.querySelector('.image.wide'), 'rendered wide after click');
+    await click('.image');
+    assert.notOk(this.element.querySelector('.image.wide'), 'rendered small after second click');
+  });
+});
+```
+
+For handlebar helper:
+
+```text
+test("it renders correctly for a Community rental", async function(assert) { 
+    this.set("inputValue", "Apartment");
+    await render(hbs`{{rental-property-typ inputValue}}`);
+    assert.equal(this.element.textContent.trim(), "Community");
+});
+```
 
 ### AddOns
 
@@ -249,4 +358,35 @@ Installation:
 Adapter determines how data is persisted to a backend data store. Things such as the backend host, URL format and headers used to talk to a REST API can all be configured in an adapter.
 
 `ember generate adapter application`
+
+### 
+
+### Input Helpers
+
+[docs here](https://guides.emberjs.com/release/templates/input-helpers/)
+
+```text
+<label for="facebook">Facebook</label>
+{{input id="facebook" value="http://www.facebook.com"}}
+```
+
+More complex version:
+
+```text
+{{input
+  value=this.value
+  key-up=(action "handleFilterEntry")
+  class="light"
+  placeholder="Filter By City"
+}}
+{{yield this.results}}
+```
+
+
+
+### Services
+
+[docs here](https://guides.emberjs.com/release/tutorial/service/)
+
+
 

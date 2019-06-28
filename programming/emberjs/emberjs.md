@@ -1,8 +1,20 @@
-# EmberJS
+# EmberJS QuickStart
 
 Ember is a front-end framework that follows Ruby on Rails' Convention over Configuration guiding principle.
 
- 
+### Core Concepts
+
+Routes - URLs on client is handled by router.js, renders templates + models
+
+Templates - organizes the HTML \(handlebar templates\)
+
+Models - the data layer
+
+Components - logic for UI behaviour 
+
+Hooks - component lifecycle hooks and route hooks
+
+
 
 ![Source: Jackie Luo&apos;s Talk &quot;From React to Ember&quot;](https://stuffihavelearnthome.files.wordpress.com/2019/06/ember-vs-react.png)
 
@@ -12,7 +24,9 @@ Ember is a front-end framework that follows Ruby on Rails' Convention over Confi
 
 ###  
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/image%20%281%29.png)
+
+### 
 
 ### QuickStart
 
@@ -29,10 +43,14 @@ cd [directory-name]
 ember serve
 ```
 
+### 
+
+### Routes
+
 To generate a route:
 
 ```text
-ember g route [route-name]
+ember g route [dir/route-name]
 ```
 
 Creates
@@ -42,11 +60,60 @@ Creates
 * an entry in the router \(app/router.js\)
 * a unit test for the route
 
+### 
+
+### Components and Hooks
+
+Similar to React's concept of Components and Hooks.
+
+A component consists of two parts:
+
+* A template that defines how it will look \(`app/templates/components/rental-listing.hbs`\)
+* A JavaScript source file \(`app/components/rental-listing.js`\) that defines how it will behave.
+
+[Docs for Hooks](https://guides.emberjs.com/release/components/the-component-lifecycle/)
+
+note: didRender \(is called during both render and re-render\)
+
 ```text
-ember g component [component-name]
+ember g component [dir/component-name]
 ```
 
-Help
+### 
+
+### Models
+
+There should only be a single source of truth for the data.
+
+Represents persistent state, saved to web server or local \(local storage\).
+
+ To generate:
+
+```text
+ember g model [model-name]
+```
+
+It generates a model file and a test file.
+
+To initiate a model object: 
+
+```text
+import DS from 'ember-data';
+
+export default DS.Model.extend({
++  title: DS.attr(),
++  owner: DS.attr(),
++  city: DS.attr(),
++  category: DS.attr(),
++  image: DS.attr(),
++  bedrooms: DS.attr(),
++  description: DS.attr()
+});
+```
+
+### 
+
+### Help
 
 _`ember help generate`_ to get a list of other 'generate' commands
 
@@ -58,7 +125,7 @@ In Ember, the browser URL is mapped to a route, which then rendered a template, 
 
 ### VSC extensions
 
-Besides my usual, I also installed these extensions for productivity:
+Besides my usual, you can also installed these extensions for productivity:
 
 * handlebar-formatter
 * Ember.js
@@ -212,53 +279,6 @@ Now in the rental-listing component file:
 ```text
 <span>Type:</span> {{rental-property-type this.rental.category}} - {{this.rental.category}}
 ```
-
-### 
-
-### Models
-
-There should only be a single source of truth for the data.
-
-Represents persistent state, saved to web server or local \(local storage\).
-
- To generate:
-
-```text
-ember g model rental
-```
-
-It generates a model file and a test file.
-
-To initiate a model object: 
-
-```text
-import DS from 'ember-data';
-
-export default DS.Model.extend({
-+  title: DS.attr(),
-+  owner: DS.attr(),
-+  city: DS.attr(),
-+  category: DS.attr(),
-+  image: DS.attr(),
-+  bedrooms: DS.attr(),
-+  description: DS.attr()
-});
-```
-
-### 
-
-### Components and Hooks
-
-Similar to React's concept of Components and Hooks.
-
-A component consists of two parts:
-
-* A template that defines how it will look \(`app/templates/components/rental-listing.hbs`\)
-* A JavaScript source file \(`app/components/rental-listing.js`\) that defines how it will behave.
-
-[Docs for Hooks](https://guides.emberjs.com/release/components/the-component-lifecycle/)
-
-note: didRender \(is called during both render and re-render\)
 
 ###  
 

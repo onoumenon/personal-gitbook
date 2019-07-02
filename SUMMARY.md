@@ -29,4 +29,5 @@
 * [How to choose a career](life/untitled.md)
 * [How to Learn](life/how-to-learn.md)
 * [Fitness](life/fitness.md)
+* [Women in Tech](life/women-in-tech.md)
 

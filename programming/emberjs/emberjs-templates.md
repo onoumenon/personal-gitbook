@@ -539,7 +539,9 @@ The [`{{input}}`](https://www.emberjs.com/api/ember/release/classes/Ember.Templa
 
 #### Creating your own helpers
 
+{% hint style="warning" %}
 \(Note: Recommended to make helpers stateless, with no side effects, etc.\)
+{% endhint %}
 
 {% code-tabs %}
 {% code-tabs-item title="Example Currency Formatter" %}
@@ -636,7 +638,11 @@ export default Helper.extend({
 });
 ```
 
-#### Unescape html \(VULNERABLE TO XSS ATTACKS\)
+#### Unescape html 
+
+{% hint style="danger" %}
+#### This can make the element VULNERABLE to XSS attacks!
+{% endhint %}
 
 By default, ember escapes HTML.
 

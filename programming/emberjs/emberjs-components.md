@@ -1,6 +1,8 @@
 # EmberJS Components
 
+{% hint style="warning" %}
 Components must have at least one dash in their name \(to prevent clashes with HTML element names\).
+{% endhint %}
 
 ```text
 ember generate component my-component-name
@@ -21,7 +23,7 @@ Two parts: component.js \(logic\) and component.hbs \(view\)
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Usage:
+#### Usage:
 
 {% code-tabs %}
 {% code-tabs-item title="app/templates/index.hbs" %}

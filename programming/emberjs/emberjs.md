@@ -1,18 +1,26 @@
 # EmberJS QuickStart
 
-Ember is a front-end framework that follows Ruby on Rails' Convention over Configuration guiding principle.
+## Intro
+
+Ember is a front-end framework that follows Ruby on Rails' _Convention over Configuration_ guiding principle. The advantage is that you will usually end up using best practices if you follow those conventions, and waste less time thinking about configuration. 
+
+The emberCLI is a useful tool for meta-programming and fast prototyping, as it can generate files using blueprints. For instance, generating a component in the CLI includes the test file with accompanying starter tests, a component and a template file.
+
+It was one of the big 3 back in 2012, but has been replaced by the new kids on the block. 
+
+
 
 ### Core Concepts
 
-Routes - URLs on client is handled by router.js, renders templates + models
+**Routes** - URLs on client is handled by router.js, renders templates + models
 
-Templates - organizes the HTML \(handlebar templates\)
+**Templates** - organizes the HTML \(handlebar templates\)
 
-Models - the data layer
+**Models** - the data layer
 
-Components - logic for UI behaviour 
+**Components** - logic for UI behaviour 
 
-Hooks - component lifecycle hooks and route hooks
+**Hooks** - component lifecycle hooks and route hooks
 
 
 
@@ -50,7 +58,7 @@ ember serve
 To generate a route:
 
 ```text
-ember g route [dir/route-name]
+ember g route [route-name]
 ```
 
 Creates

@@ -5,7 +5,9 @@
 ## Programming
 
 * [Resources](programming/resources.md)
-* [React Redux](programming/untitled.md)
+* [React](programming/react/README.md)
+  * [React Intro](programming/react/untitled.md)
+  * [React Redux](programming/react/untitled-1.md)
 * [RTMP + flv.js \(Livestreaming app\)](programming/rtmp.md)
 * [EmberJS](programming/emberjs/README.md)
   * [EmberJS QuickStart](programming/emberjs/emberjs.md)
@@ -14,6 +16,7 @@
   * [EmberJS Routes](programming/emberjs/emberjs-routing.md)
   * [EmberJS Components](programming/emberjs/emberjs-components.md)
 * [Tips](programming/tips/README.md)
+  * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
 
 ## Books
@@ -24,4 +27,6 @@
 ## Life
 
 * [How to choose a career](life/untitled.md)
+* [How to Learn](life/how-to-learn.md)
+* [Fitness](life/fitness.md)
 

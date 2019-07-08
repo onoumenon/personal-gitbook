@@ -1,22 +1,28 @@
 # Women in Tech
 
+#### Women in Tech
+
+Coding used to be pioneered by women, but there's been a shift in demographics. Planet Money has a good episode on [when \(and why\) women stopped coding](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding). 
+
+
+
 #### Imposter Syndrome
 
-There's no evidence of women being predisposed to be worse at STEM, based on [25 years of research](https://www.vox.com/2017/8/11/16127992/google-engineer-memo-research-science-women-biology-tech-james-damore). And yet we still have stuff like the [Google memo](https://gizmodo.com/exclusive-heres-the-full-10-page-anti-diversity-screed-1797564320) that perpetuate this stereotype. I find the biggest challenge to learning or getting into an industry is overcoming internalized bias. 
+There's no evidence of women being predisposed to be worse at STEM, based on [25 years of research](https://www.vox.com/2017/8/11/16127992/google-engineer-memo-research-science-women-biology-tech-james-damore). And yet, it's not too long since the [Google memo](https://gizmodo.com/exclusive-heres-the-full-10-page-anti-diversity-screed-1797564320) that continues to perpetuate this stereotype. I find the biggest challenge to learning or getting into an industry is overcoming internalized bias. 
 
-I'm still new as a developer, so it's also challenging to differentiate the lack of confidence based on being a newbie versus my own bias.
+If you are a junior developer, it's also challenging to differentiate your lack of confidence that is based on being a newbie versus internal bias.
 
-I am fortunate to have devs around me who are fair but supportive, who I can turn to when I need a honest critique. Meetup groups and online groups are a great way to find dev friends. 
+Find women who are further along in their careers and ask them for advice. Meetup groups and online groups are a great way to find developer friends. 
 
-It's also nice to have peers/ colleagues to exchange notes on your developer journey, as those notes serve as a barometer to measure your progress by.
+It's also great to have peers/ colleagues to exchange notes on your developer journey, as those notes serve as a barometer to measure your progress by.
 
 #### 
 
 #### Fake it till you make it
 
-'Fake it till you make it' has negative connotations in the age of Anna Sorokin and Frank Abagnale. But I personally subscribe to the ['acting as if'](https://www.psychologytoday.com/us/blog/what-mentally-strong-people-dont-do/201606/when-fake-it-till-you-make-it-and-when-you-shouldnt) part of it, where you push yourself out of your comfort zone to better yourself.
+'Fake it till you make it' has negative connotations in the age of Anna Sorokin and Frank Abagnale. But used colloquially in positive psychology, it refers to ['acting as if'](https://www.psychologytoday.com/us/blog/what-mentally-strong-people-dont-do/201606/when-fake-it-till-you-make-it-and-when-you-shouldnt), where you push yourself out of your comfort zone and act as your better self. 
 
-That sometimes means failure. But failure is a good teacher, if you can recover and learn from it.
+That may mean you will encounter failure. So as an aside, you should have a healthy relationship to failures . The upside is that if you challenge yourself to bigger tasks with small risks of failures \(deliberate practice\), over time you will build more confidence in what you can be capable of.
 
 
 

@@ -32,4 +32,5 @@
 * [How to Learn](life/how-to-learn.md)
 * [Fitness](life/fitness.md)
 * [Women in Tech](life/women-in-tech.md)
+* [Getting my first dev job](life/getting-my-first-dev-job.md)
 

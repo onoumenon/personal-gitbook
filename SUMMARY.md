@@ -18,6 +18,8 @@
 * [Tips](programming/tips/README.md)
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
+* [Productivity](programming/productivity/README.md)
+  * [Vim](programming/productivity/vim.md)
 
 ## Books
 

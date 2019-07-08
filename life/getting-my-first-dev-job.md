@@ -74,10 +74,7 @@ Other motivating factors:
 ###  What helped?
 
 [Learning how to learn by Barbara Oakley](https://www.coursera.org/learn/learning-how-to-learn)  
-
-
-[EdX's CS50 Course by Harvard](https://www.edx.org/course/cs50s-introduction-to-computer-science)
-
+[EdX's CS50 Course by Harvard](https://www.edx.org/course/cs50s-introduction-to-computer-science)  
 [Web Developer Roadmap](https://github.com/P1xt/p1xt-guides)
 
 
@@ -100,4 +97,18 @@ How to learn effectively:
 * Don't be afraid to fail. It's just code. But it's best to have people to give you feedback so you don't repeat mistakes.
 * Learn in public. It makes you accountable for your learning journey and mistakes.
 * Learn GIT and how to use the command line sooner. Try to code or learn something every day. But remember to have time off. \(Saturday is a break day for me.\)
+
+### 
+
+### Job Search Tips
+
+\(Some of them I didn't apply to my own search, but wish I had.\)
+
+* Proof-read your resume, and make sure to optimize it.
+* Space out sending your resumes/ emails, so you don't get a bunch of coding assignments at one go.
+* Networking helps. Go to MeetUps, meet more people and tell people you are looking for a job. You can get an introduction that way.
+* Do daily coding katas and whiteboard them. Watch how others do their interviews \(YouTube has quite a few\).
+* Learn your algorithms and data structures. Try to apply that knowledge to your katas.
+* It's better to negotiate for a higher amount because the worst that can happen is usually a counter-offer.
+* Consider a job search as an [optimal stopping problem](https://en.wikipedia.org/wiki/Secretary_problem) if you have trouble deciding.
 

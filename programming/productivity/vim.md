@@ -18,19 +18,17 @@ You can also install extensions that provide emulate vim functionalities in the 
 
 [Vim cheatsheet](https://vim.rtorr.com/)
 
-
-
 ## Basic vim commands:
 
 `:help [keyword]`
 
-`:e [file]` opens a file
+`:e [file]` open a file
 
-`:w` \(write\) saves the current file
+`:w` \(write\) save the current file
 
-`:w [filename]` saves as filename
+`:w [filename]` save as filename
 
-`:wq` saves and quit
+`:wq` save and quit
 
 `:q!` quit without saving
 
@@ -80,19 +78,19 @@ You can also install extensions that provide emulate vim functionalities in the 
 
 `p` paste
 
-`yy` copies a line
+`yy` copy a line
 
-`y$`  copies from where your cursor is to the end of a line
+`y$`  copy from where your cursor is to the end of a line
 
-`dd` deletes a line of text
+`dd` delete a line of text
 
-`D` deletes from where your cursor is to the end of a line
+`D` delete from where your cursor is to the end of a line
 
-`x` deletes a single character
+`x` delete a single character
 
 `u` undo, `r` redo
 
-`.` repeats last action
+`.` repeat last action
 
 ## Searching:
 
@@ -102,9 +100,9 @@ You can also install extensions that provide emulate vim functionalities in the 
 
 `N` previous
 
-`:%s/[pattern]/[replacement]/g` - This replaces all occurrences of a pattern without confirming each one
+`:%s/[pattern]/[replacement]/g` - replace all occurrences of a pattern without confirmation
 
-`:%s/[pattern]/[replacement]/gc` - Replaces all occurrences of a pattern and confirms each one
+`:%s/[pattern]/[replacement]/gc` - replace all occurrences of a pattern and confirms each one
 
 ## Navigating files:
 
@@ -112,11 +110,11 @@ You can also install extensions that provide emulate vim functionalities in the 
 
 `:bd` close a buffer
 
-`:sp [filename]` opens new file and splits screen horizontally
+`:sp [filename]` open new file and splits screen horizontally
 
-`:vsp [filename]` opens new file and splits screen vertically
+`:vsp [filename]` open new file and splits screen vertically
 
-`:ls` lists all open buffers
+`:ls` list all open buffers
 
 `Ctrl+ws` split windows horizontally
 
@@ -136,7 +134,11 @@ You can also install extensions that provide emulate vim functionalities in the 
 
 ## Tab pages:
 
+`:tabedit [file]` open a new tab to edit file
 
+`gt` move to next tab, `gT` move to previous tab
+
+`#gt` go to specific tab, e.g. `2gt` goes to the second tab
 
 
 

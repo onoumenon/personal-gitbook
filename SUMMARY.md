@@ -19,6 +19,9 @@
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
 * [Productivity](programming/productivity/README.md)
+  * [Chrome](programming/productivity/chrome.md)
+  * [Mac](programming/productivity/mac.md)
+  * [VSCode](programming/productivity/vscode.md)
   * [Vim](programming/productivity/vim.md)
 
 ## Books

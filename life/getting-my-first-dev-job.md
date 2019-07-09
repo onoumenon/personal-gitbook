@@ -14,8 +14,8 @@ I'll be sharing my own developer journey at a CodingGirls sharing session held a
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">Sept 18 to Mar 19</td>
-      <td style="text-align:left">Mar 19 - May 19</td>
+      <td style="text-align:left">Sept 18 to Feb 19</td>
+      <td style="text-align:left">Feb 19 - May 19</td>
       <td style="text-align:left">May 19 to June 19</td>
     </tr>
     <tr>

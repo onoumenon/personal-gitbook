@@ -16,6 +16,7 @@
   * [EmberJS Templates](programming/emberjs/emberjs-templates.md)
   * [EmberJS Routes](programming/emberjs/emberjs-routing.md)
   * [EmberJS Components](programming/emberjs/emberjs-components.md)
+* [GIT](programming/git.md)
 * [Tips](programming/tips/README.md)
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)

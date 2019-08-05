@@ -14,7 +14,7 @@ To safely revert unwanted changes \(after push\), which creates a new commit
 
 `git revert <SHA>`
 
-[resource](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
+[resource](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/) for the above commands
 
 ### Cherry Pick
 
@@ -38,5 +38,13 @@ You can combine the two above to make small changes to specific feature-related 
 
 `git branch -f master HEAD~3`
 
+### Git Tag \(a 'label' describing a commit\)
 
+`git tag <name> <SHA>`
+
+### Git describe
+
+`git describe [ref]` 
+
+[resource](https://learngitbranching.js.org/) for the above commands
 

@@ -25,6 +25,8 @@
   * [Mac](programming/productivity/mac.md)
   * [VSCode](programming/productivity/vscode.md)
   * [Vim](programming/productivity/vim.md)
+* [HTML & CSS](programming/html-and-css/README.md)
+  * [CSS resources](programming/html-and-css/css-resources.md)
 
 ## Books
 

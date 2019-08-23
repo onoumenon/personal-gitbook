@@ -27,6 +27,8 @@
   * [Vim](programming/productivity/vim.md)
 * [HTML & CSS](programming/html-and-css/README.md)
   * [CSS resources](programming/html-and-css/css-resources.md)
+* [Coding Challenges/ Tutorials](programming/coding-challenges-tutorials/README.md)
+  * [Hackerrank 10 days of Statistics](programming/coding-challenges-tutorials/hackerrank-10-days-of-statistics.md)
 
 ## Books
 

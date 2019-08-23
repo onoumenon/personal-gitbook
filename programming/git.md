@@ -46,5 +46,13 @@ You can combine the two above to make small changes to specific feature-related 
 
 `git describe [ref]` 
 
-[resource](https://learngitbranching.js.org/) for the above commands
+[resource](https://learngitbranching.js.org/) for the above commands  
+  
+
+
+## SourceTree
+
+To git rebase interactively, right click on a commit in the timeline, and choose 'Rebase children of &lt;SHA&gt; interactively...'.  
+  
+You can drag and drag to reorder, delete or squash commits within the popup modal. If the commits have been pushed, you will need to force push. \(Make sure that if you do so, it is in a remote branch that others will not be affected by.\)
 

@@ -14,7 +14,7 @@ If you are a beginner, be sure to ramp the intensity up slowly.
 
 ## Diet
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 Apart from eating healthier portions as above, here are other guidelines:
 

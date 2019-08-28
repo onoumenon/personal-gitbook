@@ -42,8 +42,12 @@ And the Standard Deviation is just the square root of Variance, so:
 |  | = | **147** \(to the nearest mm\) |
 
 {% hint style="info" %}
-Why square? [https://www.mathsisfun.com/data/standard-deviation.html\#WhySquare](https://www.mathsisfun.com/data/standard-deviation.html#WhySquare)
+Why square? 
+
+[https://www.mathsisfun.com/data/standard-deviation.html\#WhySquare](https://www.mathsisfun.com/data/standard-deviation.html#WhySquare)
 {% endhint %}
+
+
 
 ## Day 2
 
@@ -51,34 +55,100 @@ Why square? [https://www.mathsisfun.com/data/standard-deviation.html\#WhySquare]
 
 Probability of an event happening = _Number of ways it can happen /_ Total number of outcomes
 
-Resource: [https://www.mathsisfun.com/data/probability-events-conditional.html](https://www.mathsisfun.com/data/probability-events-conditional.html)
+{% embed url="https://www.mathsisfun.com/data/probability-events-conditional.html" %}
 
 ### Permutations
 
-![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%286%29.png)
+![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%2812%29.png)
 
-![Permutations with repetition](../../.gitbook/assets/image%20%2811%29.png)
+![Permutations with repetition](../../.gitbook/assets/image%20%2818%29.png)
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
 ### Combinations
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2817%29.png)
+
+## Day 3
+
+### [Conditional Probability](https://en.wikipedia.org/wiki/Conditional_probability)
+
+This is defined as the probability of an event occurring, assuming that one or more other events have already occurred.
+
+Resource: [https://www.mathsisfun.com/data/probability-events-conditional.html](https://www.mathsisfun.com/data/probability-events-conditional.html)
+
+Probability of **event A and event B** equals the probability of **event A** times the probability of **event B given event A:**
+
+![](../../.gitbook/assets/image%20%2819%29.png)
+
+The probability of **event B given event A** equals the probability of **event A and event B** divided by the probability of **event A:**
+
+![](../../.gitbook/assets/image%20%2815%29.png)
+
+### Bayes Theorem
+
+{% embed url="https://www.mathsisfun.com/data/bayes-theorem.html" %}
 
 ## Day 4
 
 ### Binomial Distribution
 
-Formula: n! / \(k!\(n-k\)!\)
-
-Resource: [https://www.mathsisfun.com/data/binomial-distribution.html](https://www.mathsisfun.com/data/binomial-distribution.html)
+Formula: n! / \(k!\(n-k\)!
 
 Assumption: the chances of success or failure are **equally likely**.
 
 ![The binomial distribution follows a pascal&apos;s triangle pattern ](../../.gitbook/assets/image.png)
 
+### Geometric Distribution
+
+Geometric probability distribution” basically means the multiplication of probabilitie
+
+{% embed url="https://magoosh.com/statistics/understanding-geometric-probability-distribution/" %}
+
+![](../../.gitbook/assets/image%20%287%29.png)
+
+#### Cumulative geometric probability distribution
+
+![](../../.gitbook/assets/image%20%281%29.png)
+
+{% embed url="https://magoosh.com/statistics/what-is-the-geometric-distribution-formula/" %}
+
+Formula: p \* \(\(1-p\) \*\* k-1\)
+
+## Day 5
+
+### Poisson Distribution
+
+{% embed url="https://brilliant.org/wiki/poisson-distribution/" %}
+
+The **Poisson distribution** is the [discrete probability distribution](https://brilliant.org/wiki/discrete-random-variables-definition/) of the number of events occurring in a given time period, given the average number of times the event occurs over that time period.
+
+**Conditions for Poisson Distribution:**
+
+* An event can occur any number of times during a time period.
+* Events occur independently.
+* The rate of occurrence is constant.
+* The probability of an event occurring is proportional to the length of the time period.
+
+{% embed url="https://towardsdatascience.com/the-poisson-distribution-and-poisson-process-explained-4e2cb17d459" %}
 
 
-  
 
+![](../../.gitbook/assets/image%20%288%29.png)
+
+![](../../.gitbook/assets/image%20%283%29.png)
+
+### Waiting Time
+
+Using Poisson process to figure out how long we have to wait until the next event \(this is sometimes called the interarrival time\):
+
+![Probability of waiting more than a certain time](../../.gitbook/assets/image%20%285%29.png)
+
+![Probability of waiting less than or equal to a certain time](../../.gitbook/assets/image%20%286%29.png)
+
+{% embed url="https://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/" %}
+
+{% hint style="info" %}
+Note to self: Still not too sure how to derive Poisson Distribution's formula
+{% endhint %}
 

@@ -32,7 +32,7 @@ It was one of the big 3 back in 2012, but has been replaced by the new kids on t
 
 ###  
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image%20%284%29.png)
 
 ### 
 

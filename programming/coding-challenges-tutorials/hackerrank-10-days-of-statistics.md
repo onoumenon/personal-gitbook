@@ -152,3 +152,13 @@ Using Poisson process to figure out how long we have to wait until the next even
 Note to self: Still not too sure how to derive Poisson Distribution's formula
 {% endhint %}
 
+## Day 6
+
+### Central Limit Theorem 
+
+CLT is a statistical theory that states that given a sufficiently large sample size from a population with a finite level of variance, the mean of all samples from the same population will be about equal to the mean of the population.
+
+All the samples will follow an approximate [normal distribution](https://www.investopedia.com/terms/n/normaldistribution.asp) pattern, with all variances being about equal to the [variance](https://www.investopedia.com/terms/v/variance.asp) of the population divided by each sample's size.
+
+
+

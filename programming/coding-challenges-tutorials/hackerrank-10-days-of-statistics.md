@@ -59,15 +59,15 @@ Probability of an event happening = _Number of ways it can happen /_ Total numbe
 
 ### Permutations
 
-![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%2812%29.png)
+![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%2813%29.png)
 
-![Permutations with repetition](../../.gitbook/assets/image%20%2818%29.png)
+![Permutations with repetition](../../.gitbook/assets/image%20%2819%29.png)
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 ### Combinations
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2818%29.png)
 
 ## Day 3
 
@@ -79,11 +79,11 @@ Resource: [https://www.mathsisfun.com/data/probability-events-conditional.html](
 
 Probability of **event A and event B** equals the probability of **event A** times the probability of **event B given event A:**
 
-![](../../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2820%29.png)
 
 The probability of **event B given event A** equals the probability of **event A and event B** divided by the probability of **event A:**
 
-![](../../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 ### Bayes Theorem
 
@@ -105,7 +105,7 @@ Geometric probability distribution” basically means the multiplication of prob
 
 {% embed url="https://magoosh.com/statistics/understanding-geometric-probability-distribution/" %}
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 #### Cumulative geometric probability distribution
 
@@ -134,17 +134,17 @@ The **Poisson distribution** is the [discrete probability distribution](https://
 
 
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%284%29.png)
 
 ### Waiting Time
 
 Using Poisson process to figure out how long we have to wait until the next event \(this is sometimes called the interarrival time\):
 
-![Probability of waiting more than a certain time](../../.gitbook/assets/image%20%285%29.png)
+![Probability of waiting more than a certain time](../../.gitbook/assets/image%20%286%29.png)
 
-![Probability of waiting less than or equal to a certain time](../../.gitbook/assets/image%20%286%29.png)
+![Probability of waiting less than or equal to a certain time](../../.gitbook/assets/image%20%287%29.png)
 
 {% embed url="https://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/" %}
 
@@ -159,6 +159,37 @@ Note to self: Still not too sure how to derive Poisson Distribution's formula
 CLT is a statistical theory that states that given a sufficiently large sample size from a population with a finite level of variance, the mean of all samples from the same population will be about equal to the mean of the population.
 
 All the samples will follow an approximate [normal distribution](https://www.investopedia.com/terms/n/normaldistribution.asp) pattern, with all variances being about equal to the [variance](https://www.investopedia.com/terms/v/variance.asp) of the population divided by each sample's size.
+
+## Day 7
+
+### Covariance
+
+“Covariance” indicates the direction of the linear relationship between variables. “Correlation” on the other hand measures both the strength and direction of the linear relationship between two variables.
+
+{% embed url="https://towardsdatascience.com/let-us-understand-the-correlation-matrix-and-covariance-matrix-d42e6b643c22" %}
+
+Covariance =&gt; Correlation: divide the covariance values by the standard deviation, it essentially scales the value down to a limited range of **-1 to +1,** ie:
+
+![](../../.gitbook/assets/image%20%283%29.png)
+
+
+
+* **ρ\(X,Y\)** – the correlation between the variables X and Y
+* **Cov\(X,Y\)** – the covariance between the variables X and Y
+* **σX** – the standard deviation of the X-variable
+* **σY** – the standard deviation of the Y-variable
+
+![Formula to find covariance of x,y](../../.gitbook/assets/image%20%2821%29.png)
+
+* **Xi** – the values of the X-variable
+* **Yj** – the values of the Y-variable
+* **X̄** – the mean \(average\) of the X-variable
+* **Ȳ** – the mean \(average\) of the Y-variable
+* **n** – the number of the data points
+
+{% embed url="https://corporatefinanceinstitute.com/resources/knowledge/finance/covariance/" %}
+
+{% embed url="https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php" %}
 
 
 

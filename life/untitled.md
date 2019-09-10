@@ -18,7 +18,7 @@ description: Or how I came to become a programmer.
 
 The Japanese concept '[Ikigai](https://medium.com/thrive-global/ikigai-the-japanese-secret-to-a-long-and-happy-life-might-just-help-you-live-a-more-fulfilling-9871d01992b7)' refers to "a reason for being."
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 The modern conception of 'ikigai', as the diagram above shows, is a distillation of the concept. I personally find it too moderate. The assumption that you should find a middle ground disregards individual differences in priorities and opportunities. 
 

@@ -10,6 +10,7 @@
   * [React Intro](programming/react/untitled.md)
   * [React Redux](programming/react/untitled-1.md)
 * [RTMP + flv.js \(Livestreaming app\)](programming/rtmp.md)
+* [EDM templates](programming/edm-templates.md)
 * [EmberJS](programming/emberjs/README.md)
   * [EmberJS QuickStart](programming/emberjs/emberjs.md)
   * [EmberJS Objects](programming/emberjs/emberjs-objects.md)

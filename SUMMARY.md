@@ -4,7 +4,9 @@
 
 ## Programming
 
-* [JavaScript](programming/javascript.md)
+* [JavaScript](programming/javascript/README.md)
+  * [Resources](programming/javascript/resources.md)
+  * [Closures](programming/javascript/closures.md)
 * [Resources](programming/resources.md)
 * [Public key infrastructure](programming/public-key-infrastructure.md)
 * [React](programming/react/README.md)

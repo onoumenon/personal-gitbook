@@ -13,8 +13,7 @@ Don't add css links in hbs files. Style rules should go in the `app/styles` dire
 
 A template only has access to data in its context.
 
-{% code-tabs %}
-{% code-tabs-item title="app/components/my-component.js" %}
+{% code title="app/components/my-component.js" %}
 ```text
 import Component from '@ember/component';
 
@@ -24,16 +23,13 @@ export default Component.extend({
   favoriteFramework: 'Ember'
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="app/templates/application.hbs" %}
+{% code title="app/templates/application.hbs" %}
 ```text
 Hello, <strong>{{this.firstName}} {{this.lastName}}</strong>!
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Template
 
@@ -83,13 +79,11 @@ the block shows up when the page is rendered -->
 
 Lastly, it's important to know that arguments can be passed from one Component to another through 
 
-{% code-tabs %}
-{% code-tabs-item title="templates:app/templates/components/some-other-component.hbs" %}
+{% code title="templates:app/templates/components/some-other-component.hbs" %}
 ```text
 <MyComponent @favoriteFramework={{this.favoriteFramework}} />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
@@ -99,8 +93,7 @@ Takes in two types of arguments, `positional` \(an array of the positional value
 
 Ember gives you the ability to [write your own helpers](https://guides.emberjs.com/release/templates/writing-helpers/), and comes with some [helpers built-in](https://guides.emberjs.com/release/templates/built-in-helpers).
 
-{% code-tabs %}
-{% code-tabs-item title="app/helpers/sum.js" %}
+{% code title="app/helpers/sum.js" %}
 ```text
 import { helper as buildHelper } from '@ember/component/helper';
 
@@ -110,18 +103,15 @@ export function sum(params) {
 
 export const helper = buildHelper(sum);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
-{% code-tabs %}
-{% code-tabs-item title="app/templates/application.hbs" %}
+{% code title="app/templates/application.hbs" %}
 ```text
 <p>Total: {{sum 1 2}}</p>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Helpers can be nested. Parenthesis used because curly braces cannot be nested.
 
@@ -260,8 +250,7 @@ export default Component.extend({
 
 Include this:
 
-{% code-tabs %}
-{% code-tabs-item title="app/components/link-to/component.js" %}
+{% code title="app/components/link-to/component.js" %}
 ```text
 import LinkComponent from '@ember/routing/link-component';
 
@@ -269,8 +258,7 @@ export default LinkComponent.extend({
   attributeBindings: ['data-toggle', 'lang']
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 So that this includes the data attr and lang:
 
@@ -282,8 +270,7 @@ So that this includes the data attr and lang:
 
 #### link-to
 
-{% code-tabs %}
-{% code-tabs-item title="app/router.js" %}
+{% code title="app/router.js" %}
 ```text
 Router.map(function() {
   this.route('photos', function(){
@@ -291,11 +278,9 @@ Router.map(function() {
   });
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="app/templates/photos.hbs" %}
+{% code title="app/templates/photos.hbs" %}
 ```text
 <ul>
   {{#each this.photos as |photo|}}
@@ -303,8 +288,7 @@ Router.map(function() {
   {{/each}}
 </ul>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
@@ -319,8 +303,7 @@ When the rendered link matches the current route, and the same object instance i
 
 #### Example for Multiple Segments <a id="toc_example-for-multiple-segments"></a>
 
-{% code-tabs %}
-{% code-tabs-item title="app/router.js" %}
+{% code title="app/router.js" %}
 ```text
 Router.map(function() {
   this.route('photos', function(){
@@ -331,11 +314,9 @@ Router.map(function() {
   });
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="app/templates/photo/index.hbs" %}
+{% code title="app/templates/photo/index.hbs" %}
 ```text
 <div class="photo">
   {{this.body}}
@@ -343,8 +324,7 @@ Router.map(function() {
 
 <p>{{#link-to "photos.photo.comment" this.primaryComment}}Main Comment{{/link-to}}</p>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 If you specify only one model, it will represent the innermost dynamic segment `:comment_id`. The `:photo_id` segment will use the current photo.  
 
@@ -386,21 +366,18 @@ and a link in {{link-to "Inline Form" "index"}}.
 
 ### Actions
 
-{% code-tabs %}
-{% code-tabs-item title="app/templates/components/single-post.hbs" %}
+{% code title="app/templates/components/single-post.hbs" %}
 ```text
 <h3><button {{action "toggleBody"}}>{{this.title}}</button></h3>
 {{#if this.isShowingBody}}
   <p>{{this.body}}</p>
 {{/if}}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
-{% code-tabs %}
-{% code-tabs-item title="app/components/single-post.js" %}
+{% code title="app/components/single-post.js" %}
 ```text
 import Component from '@ember/component';
 
@@ -412,8 +389,7 @@ export default Component.extend({
   }
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Action Params
 
@@ -543,13 +519,11 @@ The [`{{input}}`](https://www.emberjs.com/api/ember/release/classes/Ember.Templa
 \(Note: Recommended to make helpers stateless, with no side effects, etc.\)
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="Example Currency Formatter" %}
+{% code title="Example Currency Formatter" %}
 ```text
 Your total is {{format-currency this.model.totalDue}}.
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 To generate a helper:
 
@@ -557,8 +531,7 @@ To generate a helper:
 ember generate helper format-currency
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="app/helpers/format-currency.js" %}
+{% code title="app/helpers/format-currency.js" %}
 ```text
 import { helper } from '@ember/component/helper';
 
@@ -573,8 +546,7 @@ export function formatCurrency([value, ...rest]) {
 
 export default helper(formatCurrency);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 To pass in multiple arguments:
 

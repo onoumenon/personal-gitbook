@@ -10,8 +10,7 @@ ember generate component my-component-name
 
 Two parts: component.js \(logic\) and component.hbs \(view\)
 
-{% code-tabs %}
-{% code-tabs-item title="app/templates/components/blog-post.hbs" %}
+{% code title="app/templates/components/blog-post.hbs" %}
 ```text
 <article class="blog-post">
   <h1>{{this.title}}</h1>
@@ -20,13 +19,11 @@ Two parts: component.js \(logic\) and component.hbs \(view\)
   <p>Edit title: {{input id="title" type="text" value=this.title}}</p>
 </article>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Usage:
 
-{% code-tabs %}
-{% code-tabs-item title="app/templates/index.hbs" %}
+{% code title="app/templates/index.hbs" %}
 ```text
 {{#each model as |post|}}
   {{#blog-post title=post.title}}
@@ -34,8 +31,7 @@ Two parts: component.js \(logic\) and component.hbs \(view\)
   {{/blog-post}}
 {{/each}}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Defining a Component Subclass <a id="toc_defining-a-component-subclass"></a>
 

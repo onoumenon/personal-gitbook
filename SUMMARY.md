@@ -5,6 +5,7 @@
 ## Programming
 
 * [JavaScript](programming/javascript/README.md)
+  * [Async/ defer](programming/javascript/async-defer.md)
   * [Resources](programming/javascript/resources.md)
   * [Closures](programming/javascript/closures.md)
 * [Resources](programming/resources.md)

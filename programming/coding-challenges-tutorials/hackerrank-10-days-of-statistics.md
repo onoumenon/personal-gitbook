@@ -59,15 +59,15 @@ Probability of an event happening = _Number of ways it can happen /_ Total numbe
 
 ### Permutations
 
-![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%2818%29.png)
+![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%2819%29.png)
 
-![Permutations with repetition](../../.gitbook/assets/image%20%2824%29.png)
+![Permutations with repetition](../../.gitbook/assets/image%20%2825%29.png)
 
-![](../../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2820%29.png)
 
 ### Combinations
 
-![](../../.gitbook/assets/image%20%2823%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 ## Day 3
 
@@ -79,11 +79,11 @@ Resource: [https://www.mathsisfun.com/data/probability-events-conditional.html](
 
 Probability of **event A and event B** equals the probability of **event A** times the probability of **event B given event A:**
 
-![](../../.gitbook/assets/image%20%2825%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
 The probability of **event B given event A** equals the probability of **event A and event B** divided by the probability of **event A:**
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 ### Bayes Theorem
 
@@ -105,7 +105,7 @@ Geometric probability distribution” basically means the multiplication of prob
 
 {% embed url="https://magoosh.com/statistics/understanding-geometric-probability-distribution/" %}
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 #### Cumulative geometric probability distribution
 
@@ -134,17 +134,17 @@ The **Poisson distribution** is the [discrete probability distribution](https://
 
 
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 ### Waiting Time
 
 Using Poisson process to figure out how long we have to wait until the next event \(this is sometimes called the interarrival time\):
 
-![Probability of waiting more than a certain time](../../.gitbook/assets/image%20%289%29.png)
+![Probability of waiting more than a certain time](../../.gitbook/assets/image%20%2810%29.png)
 
-![Probability of waiting less than or equal to a certain time](../../.gitbook/assets/image%20%2811%29.png)
+![Probability of waiting less than or equal to a certain time](../../.gitbook/assets/image%20%2812%29.png)
 
 {% embed url="https://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/" %}
 
@@ -170,7 +170,7 @@ All the samples will follow an approximate [normal distribution](https://www.inv
 
 Covariance =&gt; Correlation: divide the covariance values by the standard deviation, it essentially scales the value down to a limited range of **-1 to +1,** ie:
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%284%29.png)
 
 
 
@@ -179,7 +179,7 @@ Covariance =&gt; Correlation: divide the covariance values by the standard devia
 * **σX** – the standard deviation of the X-variable
 * **σY** – the standard deviation of the Y-variable
 
-![Formula to find covariance of x,y](../../.gitbook/assets/image%20%2826%29.png)
+![Formula to find covariance of x,y](../../.gitbook/assets/image%20%2827%29.png)
 
 * **Xi** – the values of the X-variable
 * **Yj** – the values of the Y-variable
@@ -201,7 +201,7 @@ Assumptions: You need two variables that are either ordinal, interval or ratio \
 
 Spearman's correlation determines the strength and direction of the **monotonic relationship** between your two variables rather than the strength and direction of the linear relationship between your two variables \(ie: for Pearson's correlation\).
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%287%29.png)
 
 You will need to rank the data \(or use [SPSS Statistics](https://statistics.laerd.com/spss-tutorials/ranking-data-in-spss-statistics.php)\) if it hasn't been ranked yet. 
 
@@ -211,11 +211,11 @@ For a tie in ranking \(eg: 61 for English\), the tie will share an averaged rank
 
 #### Formula for no-tied ranks
 
-![where di = difference in paired ranks and n = number of cases.](../../.gitbook/assets/image%20%288%29.png)
+![where di = difference in paired ranks and n = number of cases.](../../.gitbook/assets/image%20%289%29.png)
 
 #### Formula for tied ranks
 
-![where i = paired score](../../.gitbook/assets/image%20%2812%29.png)
+![where i = paired score](../../.gitbook/assets/image%20%2813%29.png)
 
 Example for no-tied ranks:
 
@@ -223,11 +223,11 @@ Example for no-tied ranks:
 
 Then calculate the following:
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2811%29.png)
 
 And then substitute into the formula:
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 
 0.67 = strong positive relationship between the ranks individuals obtained in the maths and English exam.
 

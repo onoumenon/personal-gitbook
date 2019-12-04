@@ -4,15 +4,17 @@
 
 ## Programming
 
+* [Resources](programming/resources.md)
 * [JavaScript](programming/javascript/README.md)
-  * [Async/ defer](programming/javascript/async-defer.md)
   * [Resources](programming/javascript/resources.md)
   * [Closures](programming/javascript/closures.md)
-* [Resources](programming/resources.md)
 * [Public key infrastructure](programming/public-key-infrastructure.md)
 * [React](programming/react/README.md)
   * [React Intro](programming/react/untitled.md)
   * [React Redux](programming/react/untitled-1.md)
+* [Web Optimization](programming/web-optimization/README.md)
+  * [Javascript](programming/web-optimization/async-defer.md)
+* [Babel & webpack](programming/babel-and-webpack.md)
 * [RTMP + flv.js \(Livestreaming app\)](programming/rtmp.md)
 * [EDM templates](programming/edm-templates.md)
 * [EmberJS](programming/emberjs/README.md)

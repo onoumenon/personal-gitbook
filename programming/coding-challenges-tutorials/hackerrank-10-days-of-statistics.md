@@ -59,15 +59,15 @@ Probability of an event happening = _Number of ways it can happen /_ Total numbe
 
 ### Permutations
 
-![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%2819%29.png)
+![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%2820%29.png)
 
-![Permutations with repetition](../../.gitbook/assets/image%20%2825%29.png)
+![Permutations with repetition](../../.gitbook/assets/image%20%2827%29.png)
 
-![](../../.gitbook/assets/image%20%2820%29.png)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
 ### Combinations
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
 ## Day 3
 
@@ -79,11 +79,11 @@ Resource: [https://www.mathsisfun.com/data/probability-events-conditional.html](
 
 Probability of **event A and event B** equals the probability of **event A** times the probability of **event B given event A:**
 
-![](../../.gitbook/assets/image%20%2826%29.png)
+![](../../.gitbook/assets/image%20%2828%29.png)
 
 The probability of **event B given event A** equals the probability of **event A and event B** divided by the probability of **event A:**
 
-![](../../.gitbook/assets/image%20%2822%29.png)
+![](../../.gitbook/assets/image%20%2823%29.png)
 
 ### Bayes Theorem
 
@@ -105,7 +105,7 @@ Geometric probability distribution” basically means the multiplication of prob
 
 {% embed url="https://magoosh.com/statistics/understanding-geometric-probability-distribution/" %}
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 #### Cumulative geometric probability distribution
 
@@ -134,7 +134,7 @@ The **Poisson distribution** is the [discrete probability distribution](https://
 
 
 
-![](../../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 ![](../../.gitbook/assets/image%20%285%29.png)
 
@@ -144,7 +144,7 @@ Using Poisson process to figure out how long we have to wait until the next even
 
 ![Probability of waiting more than a certain time](../../.gitbook/assets/image%20%2810%29.png)
 
-![Probability of waiting less than or equal to a certain time](../../.gitbook/assets/image%20%2812%29.png)
+![Probability of waiting less than or equal to a certain time](../../.gitbook/assets/image%20%2813%29.png)
 
 {% embed url="https://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/" %}
 
@@ -179,7 +179,7 @@ Covariance =&gt; Correlation: divide the covariance values by the standard devia
 * **σX** – the standard deviation of the X-variable
 * **σY** – the standard deviation of the Y-variable
 
-![Formula to find covariance of x,y](../../.gitbook/assets/image%20%2827%29.png)
+![Formula to find covariance of x,y](../../.gitbook/assets/image%20%2829%29.png)
 
 * **Xi** – the values of the X-variable
 * **Yj** – the values of the Y-variable
@@ -215,7 +215,7 @@ For a tie in ranking \(eg: 61 for English\), the tie will share an averaged rank
 
 #### Formula for tied ranks
 
-![where i = paired score](../../.gitbook/assets/image%20%2813%29.png)
+![where i = paired score](../../.gitbook/assets/image%20%2814%29.png)
 
 Example for no-tied ranks:
 
@@ -223,7 +223,7 @@ Example for no-tied ranks:
 
 Then calculate the following:
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
 And then substitute into the formula:
 

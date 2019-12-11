@@ -18,17 +18,5 @@ It's also great to have peers/ colleagues to exchange notes on your developer jo
 
 #### 
 
-#### Fake it till you make it
-
-'Fake it till you make it' has negative connotations in the age of Anna Sorokin and Frank Abagnale. But used colloquially in positive psychology, it refers to ['acting as if'](https://www.psychologytoday.com/us/blog/what-mentally-strong-people-dont-do/201606/when-fake-it-till-you-make-it-and-when-you-shouldnt), where you push yourself out of your comfort zone and act as your better self. 
-
-That may mean you will encounter failure. So as an aside, you should have a healthy relationship to failures . The upside is that if you challenge yourself to bigger tasks with small risks of failures \(deliberate practice\), over time you will build more confidence in what you can be capable of.
-
-
-
-#### Harassment
-
-Most people are nice. But encountering bullshit \(including but not limited to: sexism or harassment\) is inevitable. In an ideal scenario, you make your stand, and the situation is remedied. But the real world is complex, and it's doubly difficult if you are in the minority. I found [This American Life's episode](https://www.thisamericanlife.org/647/ladonna) of a how a security guard handled sexism interesting. \([Transcript](https://www.thisamericanlife.org/647/transcript) here\) 
-
-In the story, she went hard against the system. She won some battles, and lost some. What I got out of it though, is that YMMV. While it's important to advocate for yourself \(and others\), you may have to pick your battles. It's also important to be empathetic and recognize that different women have varying responses. 
+#### 
 

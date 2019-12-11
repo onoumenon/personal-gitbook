@@ -8,7 +8,6 @@
 * [JavaScript](programming/javascript/README.md)
   * [Resources](programming/javascript/resources.md)
   * [Closures](programming/javascript/closures.md)
-* [Front End Design Thinking](programming/front-end-design-thinking.md)
 * [Public key infrastructure](programming/public-key-infrastructure.md)
 * [React](programming/react/README.md)
   * [React Intro](programming/react/untitled.md)
@@ -51,4 +50,8 @@
 * [Fitness](life/fitness.md)
 * [Women in Tech](life/women-in-tech.md)
 * [Getting my first dev job](life/getting-my-first-dev-job.md)
+
+## Slides
+
+* [Front End Design Thinking](slides/front-end-design-thinking.md)
 

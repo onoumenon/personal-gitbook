@@ -54,4 +54,5 @@
 ## Slides
 
 * [Front End Design Thinking](slides/front-end-design-thinking.md)
+* [Dev Journey \(CodingGirls\)](slides/dev-journey-codinggirls.md)
 

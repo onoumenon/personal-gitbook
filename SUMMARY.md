@@ -8,6 +8,7 @@
 * [JavaScript](programming/javascript/README.md)
   * [Resources](programming/javascript/resources.md)
   * [Closures](programming/javascript/closures.md)
+* [Front End Design Thinking](programming/front-end-design-thinking.md)
 * [Public key infrastructure](programming/public-key-infrastructure.md)
 * [React](programming/react/README.md)
   * [React Intro](programming/react/untitled.md)

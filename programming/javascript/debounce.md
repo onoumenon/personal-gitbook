@@ -49,7 +49,7 @@ When the button is click, the function `debounce` is called.
 
 1. Start with 0 timeout
 2. If the debounced function is called again \(when button is clicked\), reset the timer again to the specified delay \(3 seconds\)
-3. When the timeout expires, the function provided \(alert\) is applied to `this` which is the `window`.
+3. When the timeout expires, the function provided \(alert\) is applied to `this` which is the global object `window`. \(Check [this](this.md) out\)
 
 
 

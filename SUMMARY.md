@@ -21,6 +21,7 @@
 * [Resources](programming/resources.md)
 * [JavaScript/ General](programming/javascript/README.md)
   * [Resources](programming/javascript/resources.md)
+  * [This](programming/javascript/this.md)
   * [Closures](programming/javascript/closures.md)
   * [Memoize](programming/javascript/memoize.md)
   * [Debounce](programming/javascript/debounce.md)

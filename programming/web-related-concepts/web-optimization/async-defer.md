@@ -4,7 +4,7 @@
 
 More information can be found in the website above.
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../../.gitbook/assets/image%20%2811%29.png)
 
 The first optimisation is to reduce network transmission time:
 
@@ -19,7 +19,7 @@ The first optimisation is to reduce network transmission time:
   * Service Worker caching can make your app network resilient and give you eager access to features like [V8’s code cache](https://v8project.blogspot.com/2015/07/code-caching.html).
   * Use long-term caching to avoid having to re-fetch resources that haven't changed. If using Webpack, see [filename hashing](https://webpack.js.org/guides/caching/).
 
-![Scripts take longer to parse and execute](../../.gitbook/assets/image%20%2825%29.png)
+![Scripts take longer to parse and execute](../../../.gitbook/assets/image%20%2825%29.png)
 
 {% hint style="info" %}
 For deferring hubspot forms, a target div is needed so form will be rendered in it on load 
@@ -29,5 +29,5 @@ For deferring hubspot forms, a target div is needed so form will be rendered in 
 
 
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../../.gitbook/assets/image%20%283%29.png)
 

@@ -4,6 +4,8 @@
 
 ## Programming
 
+* [Fundamentals](programming/fundamentals/README.md)
+  * [Introduction](programming/fundamentals/introduction.md)
 * [Front End](programming/front-end/README.md)
   * [EmberJS](programming/front-end/emberjs/README.md)
     * [EmberJS QuickStart](programming/front-end/emberjs/emberjs.md)

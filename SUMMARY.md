@@ -28,6 +28,7 @@
   * [Memoize](programming/javascript/memoize.md)
   * [Debounce](programming/javascript/debounce.md)
 * [Web-related concepts](programming/web-related-concepts/README.md)
+  * [Responsiveness](programming/web-related-concepts/responsiveness.md)
   * [Web Optimization](programming/web-related-concepts/web-optimization/README.md)
     * [Javascript](programming/web-related-concepts/web-optimization/async-defer.md)
   * [Public key infrastructure](programming/web-related-concepts/public-key-infrastructure.md)

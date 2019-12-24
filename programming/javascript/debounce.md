@@ -51,5 +51,7 @@ When the button is click, the function `debounce` is called.
 2. If the debounced function is called again \(when button is clicked\), reset the timer again to the specified delay \(3 seconds\)
 3. When the timeout expires, the function provided \(alert\) is applied to `this` which is the global object `window`. \(Check [this](this.md) out\)
 
+{% embed url="https://stackoverflow.com/questions/25991367/difference-between-throttling-and-debouncing-a-function" %}
+
 
 

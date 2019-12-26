@@ -33,18 +33,26 @@ CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgndGVzdDMnKTwvc2NyaXB0Pg"
 
 ## Preventation
 
-#### Have a whitelist model for input:
+#### Have a whitelist mental model:
 
-Only allow untrusted input in limited places & you **MUST** use the escape syntax for the part of the HTML document you're putting untrusted data into.
+Only allow untrusted input in limited places & you should ****use the escape syntax for the part of the HTML document you're putting untrusted data into.
 
-Use **tested** html sanitizers like [sanitize-html](https://www.npmjs.com/package/sanitize-html). \(See also: [input vs output sanitization](https://security.stackexchange.com/questions/95325/input-sanitization-vs-output-sanitization)/ encoding\)
+#### Filter input, escape output:
 
-For javascript scripts, the only safe place to put untrusted data is inside a quoted "data value".
+If doing the above, use **tested** libraries and conventions like filter input, escape output. \(See also: [input vs output sanitization](https://security.stackexchange.com/questions/95325/input-sanitization-vs-output-sanitization)\). 
 
-**Use appropriate response headers.** To prevent XSS in HTTP responses that aren't intended to contain any HTML or JavaScript, you can use the Content-Type and X-Content-Type-Options headers to ensure that browsers interpret the responses in the way you intend.
+{% hint style="info" %}
+Sanitization is a misleading term. It evokes having a blacklist of dangerous tags to be removed, but can also mean other methods. Read [this](https://kevinsmith.io/sanitize-your-inputs).
+{% endhint %}
+
+> Escape user-supplied data as late as possible. This ensures that nothing is erroneously assumed to have already been escaped, allowing it to slip through the cracks, _and_ that the appropriate escape method is performed for the given context. For a web application serving up a web page, this would probably be in the HTML template itself since the context is obvious by that point.
+
+{% embed url="http://shiflett.org/blog/2005/filter-input-escape-output" %}
+
+
 
 {% hint style="warning" %}
-There are JS functions that should never take in untrusted input even if escaped, such as [window.setInterval](https://nemethgergely.com/building-secure-javascript-applications/), setTimeout, etc.
+For javascript scripts, the only safe place to put untrusted data is inside a quoted "data value". But there are JS functions that should never take in untrusted input even if escaped, such as [window.setInterval](https://nemethgergely.com/building-secure-javascript-applications/), setTimeout, etc.
 
 Same for some css contexts: 
 
@@ -54,6 +62,14 @@ Same for some css contexts:
 { text-size: "expression(alert('XSS'))"; }   // only in IE
 ```
 {% endhint %}
+
+
+
+**Use appropriate response headers:** 
+
+To prevent XSS in HTTP responses that aren't intended to contain any HTML or JavaScript, you can use the Content-Type and X-Content-Type-Options headers to ensure that browsers interpret the responses in the way you intend.
+
+
 
 {% embed url="https://portswigger.net/web-security/cross-site-scripting" %}
 

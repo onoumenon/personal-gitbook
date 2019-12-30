@@ -38,6 +38,7 @@
   * [OWASP Top 10 \(2017\)](programming/security/untitled.md)
   * [XSS](programming/security/xss.md)
 * [MISC](programming/tips/README.md)
+  * [Error handling](programming/tips/error-handling.md)
   * [Babel & webpack](programming/tips/babel-and-webpack.md)
   * [RTMP + flv.js \(Livestreaming app\)](programming/tips/rtmp.md)
   * [Productivity](programming/tips/productivity/README.md)

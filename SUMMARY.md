@@ -54,6 +54,8 @@
 
 ## Books/ Courses <a id="books"></a>
 
+* [SICP](books/sicp/README.md)
+  * [1. Building Abstractions with Procedures](books/sicp/1.-building-abstractions-with-procedures.md)
 * [Code Complete](books/code-complete.md)
 * [Cracking the Coding Interview](books/cracking-the-coding-interview.md)
 * [Better Web Type](books/better-web-type.md)

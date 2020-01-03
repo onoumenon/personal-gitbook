@@ -52,8 +52,10 @@
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
 
-## Books/ Courses <a id="books"></a>
+## Books/ Courses/ Etc <a id="books"></a>
 
+* [Programming Words](books/programming-words/README.md)
+  * [Referential Transparency](books/programming-words/referential-transparency.md)
 * [SICP](books/sicp/README.md)
   * [1. Building Abstractions with Procedures](books/sicp/1.-building-abstractions-with-procedures.md)
 * [Code Complete](books/code-complete.md)

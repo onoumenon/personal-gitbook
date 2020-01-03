@@ -76,3 +76,7 @@
 * [Front End Design Thinking](slides/front-end-design-thinking.md)
 * [Dev Journey \(CodingGirls\)](slides/dev-journey-codinggirls.md)
 
+## Articles
+
+* [Programming: Universal Design Pattern](articles/programming-universal-design-pattern.md)
+

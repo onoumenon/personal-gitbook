@@ -52,6 +52,10 @@
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
 
+## Articles
+
+* [Programming: Universal Design Pattern](articles/programming-universal-design-pattern.md)
+
 ## Books/ Courses/ Etc <a id="books"></a>
 
 * [Programming Words](books/programming-words/README.md)
@@ -75,8 +79,4 @@
 
 * [Front End Design Thinking](slides/front-end-design-thinking.md)
 * [Dev Journey \(CodingGirls\)](slides/dev-journey-codinggirls.md)
-
-## Articles
-
-* [Programming: Universal Design Pattern](articles/programming-universal-design-pattern.md)
 

@@ -14,6 +14,7 @@
     * [EmberJS Routes](programming/front-end/emberjs/emberjs-routing.md)
     * [EmberJS Components](programming/front-end/emberjs/emberjs-components.md)
   * [HTML & CSS](programming/front-end/html-and-css/README.md)
+    * [Media Queries](programming/front-end/html-and-css/media-queries.md)
     * [CSS resources](programming/front-end/html-and-css/css-resources.md)
   * [Browser Support](programming/front-end/browser-support.md)
   * [EDM templates](programming/front-end/edm-templates.md)

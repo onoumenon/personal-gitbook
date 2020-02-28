@@ -20,6 +20,7 @@
   * [EDM templates](programming/front-end/edm-templates.md)
   * [React](programming/front-end/react/README.md)
     * [React Intro](programming/front-end/react/untitled.md)
+    * [React concepts](programming/front-end/react/react-concepts.md)
     * [React Redux](programming/front-end/react/untitled-1.md)
 * [Resources](programming/resources.md)
 * [JavaScript](programming/javascript/README.md)

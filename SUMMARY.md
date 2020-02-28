@@ -71,6 +71,8 @@
 
 ## Life
 
+* [Trading](life/trading/README.md)
+  * [Read charts](life/trading/read-charts.md)
 * [Tech-related](life/tech-related/README.md)
   * [Getting my first dev job](life/tech-related/getting-my-first-dev-job.md)
   * [Women in Tech](life/tech-related/women-in-tech.md)

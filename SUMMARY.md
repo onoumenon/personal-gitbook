@@ -72,6 +72,7 @@
 ## Life
 
 * [Trading](life/trading/README.md)
+  * [The economic machine](life/trading/the-economic-machine.md)
   * [Read charts](life/trading/read-charts.md)
 * [Tech-related](life/tech-related/README.md)
   * [Getting my first dev job](life/tech-related/getting-my-first-dev-job.md)

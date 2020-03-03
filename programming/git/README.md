@@ -56,3 +56,11 @@ To git rebase interactively, right click on a commit in the timeline, and choose
   
 You can drag and drag to reorder, delete or squash commits within the popup modal. If the commits have been pushed, you will need to force push. \(Make sure that if you do so, it is in a remote branch that others will not be affected by.\)
 
+References:
+
+* [git - How to change the starting point of a branch? - Stack Overflow](https://stackoverflow.com/questions/38427050/how-to-change-the-starting-point-of-a-branch)
+* [Workflows for long-running feature branches · GitHub](https://gist.github.com/canton7/1570681) 
+* [Should you rebase or merge to update feature branches in git? – Tim Abell – UK Software Developer](https://timwise.co.uk/2019/10/14/merge-vs-rebase/)
+
+
+

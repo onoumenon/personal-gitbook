@@ -6,6 +6,7 @@
 
 * [Fundamentals](programming/fundamentals/README.md)
   * [Introduction](programming/fundamentals/introduction.md)
+* [Ruby](programming/ruby.md)
 * [Back End](programming/back-end/README.md)
   * [Ruby on Rails](programming/back-end/ruby-on-rails.md)
 * [Front End](programming/front-end/README.md)

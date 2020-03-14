@@ -358,5 +358,132 @@ class Human
     
     # Basic initializer
     def initialize(name, age = 0)
+        # Assign the arg to the 'name' instance variable for the instance
+        @name = name
+        @age = age
+    end
+    
+    # Basic setter method
+    def name=(name)
+        @name = name
+    end
+    
+    # Basic getter method
+    def name
+        @name
+    end
+    
+    # The above functionality can be encapsulated using the attr_accessor method as follows:
+    attr_accessor :name
+    
+    # Getter/ setter methods can also be created individually like this:
+    attr_reader :name
+    attr_writer :name
+    
+    # A class method uses self to distinguish from instance methods.
+    # It can only be called on the class, not an instance.
+    def self.say(msg)
+        puts msg
+    end
+    
+    def species
+        @@species
+    end
+end
+
+jim = Human.new('Jim Halpert')
+dwight = Human.new('Dwight K. Schrute')
+
+# You can call the methods of the generated object.
+jim.species #=> 'H. sapiens'
+jim.name #=> 'Jim Halpert'
+jim.name = 'Jim Halpert II' #=> 'Jim Halpert II'
+jim.name #=> 'Jim Halpert II'
+dwight.species #=> 'H. sapiens'
+dwight.name #=> 'Dwight K. Schrute'
+
+# Calling of a class method
+Human.say('Hi') #=> 'Hi'
+
+# Variable's scopes are defined by the way we name them.
+# Variables that start with $ have global scope.
+$var = "I'm a global var"
+defined? $var #=> global-variable
+
+# Variables that start with @@ have class scope.
+@@var = "I'm a class var"
+defined? @@var #=> class variable
+
+# Variables that start with @ have instance scope
+@var = "I'm an instance var"
+defined? @var #=> instance-variable
+
+# Variables that start with a capital letter are constants.
+Var = "I'm a constant"
+defined? Var #=> constant
+
+# Class is also an object in ruby. So a class can have instance variables.
+# A class variable is shared among the class and all of its descendants.
+
+# Base class
+class Human
+    @@foo = 0
+    
+    def self.foo
+        @@foo
+    end
+    
+    def self.foo=(value)
+        @@foo = value
+    end
+end
+
+# Derived class
+class Worker < Human
+end
+
+Human.foo #=> 0
+Worker.foo #=> 0
+
+Human.foo = 2
+Worker.foo #=> 2
+
+# A class instance variable is not shared by the class's descendants.
+class Human
+    @bar = 0
+    
+    def self.bar
+        @bar
+    end
+    
+    def self.bar=(value)
+        @bar = value
+    end
+end
+
+class Doctor < Human
+end
+
+Human.bar #=> 0
+Doctor.bar #=> nil
+
+module ModuleExample
+    def foo
+        'foo'
+    end
+end
+
+# Including modules binds their methods to the class instances.
+# Extending modules binds their methods to the class iteself.
+class Person
+    include ModuleExample
+end
+
+class Book
+    extend ModuleExample
+end
+
+Person.foo #=> NoMethodError: 
+
 ```
 

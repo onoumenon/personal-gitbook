@@ -9,6 +9,7 @@
 * [Ruby](programming/ruby/README.md)
   * [Intro](programming/ruby/intro.md)
   * [Ruby Date and Time](programming/ruby/ruby-date-and-time.md)
+  * [Ruby Koans](programming/ruby/ruby-koans.md)
 * [Back End](programming/back-end/README.md)
   * [Ruby on Rails](programming/back-end/ruby-on-rails.md)
 * [Front End](programming/front-end/README.md)

@@ -46,6 +46,7 @@
 * [Security](programming/security/README.md)
   * [OWASP Top 10 \(2017\)](programming/security/untitled.md)
   * [XSS](programming/security/xss.md)
+  * [Content Security Policies](programming/security/content-security-policies.md)
 * [MISC](programming/tips/README.md)
   * [Optimistic UI](programming/tips/optimistic-ui.md)
   * [Error handling](programming/tips/error-handling.md)

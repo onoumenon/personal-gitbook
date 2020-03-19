@@ -9,8 +9,8 @@ CSP provides a standard method for website owners to declare approved origins of
 ## TL;DR
 
 * Use whitelists to tell the client what's allowed and what isn't.
-* Learn what directives are available.
-* Learn the keywords they take.
+* Learn what directives are available. \('default-src', 'script-src', etc\)
+* Learn the keywords they take. \('none', self, etc\)
 * Inline code and `eval()` are considered harmful.
 * Report policy violations to your server before enforcing them.
 
@@ -93,4 +93,26 @@ Eval converts  inert text into executable JavaScript and executing it on their b
 Rewrite any `setTimeout` or `setInterval` calls you're currently making with inline functions rather than strings. For example:
 
 However, a better choice would be a templating language that offers precompilation \([Handlebars does](http://handlebarsjs.com/precompilation.html), for instance\). Precompiling your templates can make the user experience even faster than the fastest runtime implementation, and it's safer too.
+
+## Reporting
+
+You can instruct the browser to `POST` JSON-formatted violation reports to a location specified in a `report-uri` directive.
+
+```text
+Content-Security-Policy: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;
+```
+
+Sample report:
+
+```text
+{
+  "csp-report": {
+    "document-uri": "http://example.org/page.html",
+    "referrer": "http://evil.example.com/",
+    "blocked-uri": "http://evil.example.com/evil.js",
+    "violated-directive": "script-src 'self' https://apis.google.com",
+    "original-policy": "script-src 'self' https://apis.google.com; report-uri http://example.org/my_amazing_csp_report_parser"
+  }
+}
+```
 

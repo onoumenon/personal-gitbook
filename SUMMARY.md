@@ -26,6 +26,7 @@
   * [Browser Support](programming/front-end/browser-support.md)
   * [EDM templates](programming/front-end/edm-templates.md)
   * [React](programming/front-end/react/README.md)
+    * [Error logging](programming/front-end/react/error-logging.md)
     * [React Intro](programming/front-end/react/untitled.md)
     * [React concepts](programming/front-end/react/react-concepts.md)
     * [React Redux](programming/front-end/react/untitled-1.md)

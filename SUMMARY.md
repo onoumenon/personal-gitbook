@@ -53,6 +53,7 @@
   * [Optimistic UI](programming/tips/optimistic-ui.md)
   * [Error handling](programming/tips/error-handling.md)
   * [Babel & webpack](programming/tips/babel-and-webpack.md)
+  * [Sourcemap](programming/tips/sourcemap.md)
   * [RTMP + flv.js \(Livestreaming app\)](programming/tips/rtmp.md)
   * [Productivity](programming/tips/productivity/README.md)
     * [Chrome](programming/tips/productivity/chrome.md)

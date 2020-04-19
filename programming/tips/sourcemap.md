@@ -6,5 +6,9 @@ TLDR: used to debug errors by mapping minified code to your pretty code. Require
 
 {% embed url="https://www.bugsnag.com/blog/source-maps" %}
 
+Ember \(as well as React, etc\) has a flag to enable sourcemap:
+
+{% embed url="https://cli.emberjs.com/release/advanced-use/asset-compilation/" %}
+
 
 

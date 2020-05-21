@@ -37,6 +37,7 @@
   * [Closures](programming/javascript/closures.md)
   * [Memoize](programming/javascript/memoize.md)
   * [Debounce](programming/javascript/debounce.md)
+  * [Other JS Concepts](programming/javascript/other-js-concepts.md)
 * [Web-related concepts](programming/web-related-concepts/README.md)
   * [Responsiveness](programming/web-related-concepts/responsiveness.md)
   * [Web Optimization](programming/web-related-concepts/web-optimization/README.md)

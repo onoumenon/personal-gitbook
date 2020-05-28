@@ -61,7 +61,7 @@ function heapSort(input) {
         heapify(input, i);
     }
 
-    // get largest value and place it at the last position iteratively
+    // get largest value and place it at the last position of the heap, then reduce heap size iteratively
     for (let i = arrLength - 1; i > 0; i--) {
         [input[0], input[i]] = [input[i], input[0]]
         arrLength--;

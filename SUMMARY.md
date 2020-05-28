@@ -6,6 +6,8 @@
 
 * [Fundamentals](programming/fundamentals/README.md)
   * [Introduction](programming/fundamentals/introduction.md)
+  * [Data Structures and Algos](programming/fundamentals/data-structures-and-algos/README.md)
+    * [Heap Sort](programming/fundamentals/data-structures-and-algos/heap-sort.md)
 * [Ruby](programming/ruby/README.md)
   * [Intro](programming/ruby/intro.md)
   * [Ruby Date and Time](programming/ruby/ruby-date-and-time.md)

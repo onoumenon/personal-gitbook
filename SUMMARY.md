@@ -10,6 +10,7 @@
 * [CS Fundamentals](programming/fundamentals/README.md)
   * [Maths for CS](programming/fundamentals/maths-for-cs/README.md)
     * [1.1 - 1.2 Intro, Proofs](programming/fundamentals/maths-for-cs/1.1-intro-to-maths-for-cs.md)
+    * [1.3 Well Ordering Principle](programming/fundamentals/maths-for-cs/1.3-well-ordering-principle.md)
   * [Data Structures and Algos](programming/fundamentals/data-structures-and-algos/README.md)
     * [Heap Sort](programming/fundamentals/data-structures-and-algos/heap-sort.md)
     * [Quick Sort](programming/fundamentals/data-structures-and-algos/quick-sort.md)

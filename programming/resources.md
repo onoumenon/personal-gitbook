@@ -4,7 +4,7 @@ description: >-
   resources I would want to check out.
 ---
 
-# Resources
+# Resources for Beginners
 
 ## Web Development Starter Kit \(2019\)
 
@@ -60,4 +60,10 @@ Refer to [Quora's answers ](https://www.quora.com/What-are-the-best-books-on-alg
 {% hint style="info" %}
 For more recommendations, this [article](https://simpleprogrammer.com/best-programming-books-2019/) is great as a starting point.
 {% endhint %}
+
+The bootcamp I graduated from also has a good guide available here:
+
+{% embed url="https://guides.jumpstart.sh/\#/" %}
+
+
 

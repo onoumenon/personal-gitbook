@@ -4,8 +4,10 @@
 
 ## Programming
 
+* [Resources for Beginners](programming/resources.md)
 * [Fundamentals](programming/fundamentals/README.md)
-  * [Introduction](programming/fundamentals/introduction.md)
+  * [Introduction](programming/fundamentals/introduction/README.md)
+    * [CS50](programming/fundamentals/introduction/cs50.md)
   * [Maths for CS](programming/fundamentals/maths-for-cs/README.md)
     * [1.1 Intro to Maths for CS](programming/fundamentals/maths-for-cs/1.1-intro-to-maths-for-cs.md)
   * [Data Structures and Algos](programming/fundamentals/data-structures-and-algos/README.md)
@@ -56,7 +58,6 @@
   * [OWASP Top 10 \(2017\)](programming/security/untitled.md)
   * [XSS](programming/security/xss.md)
   * [Content Security Policies](programming/security/content-security-policies.md)
-* [Resources](programming/resources.md)
 * [MISC](programming/tips/README.md)
   * [Optimistic UI](programming/tips/optimistic-ui.md)
   * [Error handling](programming/tips/error-handling.md)

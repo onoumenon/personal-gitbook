@@ -6,7 +6,8 @@
 
 * [Fundamentals](programming/fundamentals/README.md)
   * [Introduction](programming/fundamentals/introduction.md)
-  * [Maths for CS](programming/fundamentals/maths-for-cs.md)
+  * [Maths for CS](programming/fundamentals/maths-for-cs/README.md)
+    * [1.1 Intro to Maths for CS](programming/fundamentals/maths-for-cs/1.1-intro-to-maths-for-cs.md)
   * [Data Structures and Algos](programming/fundamentals/data-structures-and-algos/README.md)
     * [Heap Sort](programming/fundamentals/data-structures-and-algos/heap-sort.md)
     * [Quick Sort](programming/fundamentals/data-structures-and-algos/quick-sort.md)

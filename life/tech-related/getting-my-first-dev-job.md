@@ -44,7 +44,9 @@ I'll be sharing my own developer journey at a CodingGirls sharing session held a
       </td>
     </tr>
   </tbody>
-</table>### Background
+</table>
+
+### Background
 
 About 7 months ago, I was still working as an artist/ art director. I had some HTML/ CSS background and was learning JavaScript for a few months by then after work. But I had never completed any serious projects besides some static websites.
 

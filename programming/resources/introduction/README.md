@@ -2,7 +2,7 @@
 description: Documentation for style consistency + tools used
 ---
 
-# Introduction
+# Preparation/ Setup
 
 ## Flowchart
 
@@ -22,7 +22,7 @@ IDE I'm using: VSCode \(as I'm on Windows, and it's free\)
 
 Refer to [GIT](../../git/)
 
-I'm using: GIT + SourceTree
+**I'm using: GIT + SourceTree**
 
 ## Casing standards
 
@@ -46,7 +46,70 @@ These rules are decided on by the industry \(those who are using the programming
 Different programming languages may have different casing standards. Refer to: [https://www.chaseadams.io/posts/most-common-programming-case-types/\#go-conventions](https://www.chaseadams.io/posts/most-common-programming-case-types/#go-conventions)
 {% endhint %}
 
-## ESLint/ Prettier
+## Machine Set-Up \(for Web Dev\)
+
+On Windows: 
+
+* Git for windows [https://gitforwindows.org/](https://gitforwindows.org/)
+* Chocolatey \(Package manager\) [https://chocolatey.org/install](https://chocolatey.org/install)
+* npm \(via `choco install`\)
+* node.js \(via `choco install`\)
+
+On Mac:
+
+* get homebrew \(package manager\):
+
+  ```text
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
+
+ Brew install the following:
+
+* `nvm`
+* `git`
+* `npm`
+* `node`
+
+Additional for both OS: \(node version manager\)
+
+```text
+npm install --global n
+```
+
+## Extensions
+
+VSCode:
+
+* [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) 
+* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) 
+* [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+* [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+* [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+* [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+* [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
+* Quokka
+* Git File History
+
+Browser:
+
+* [Octotree](https://www.octotree.io/)
+* React Dev Tool
+
+## Bikeshedding 
+
+![Source: Dilbert](../../../.gitbook/assets/image%20%2835%29.png)
+
+{% embed url="https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a" %}
+
+### TLDR: Just download this config and get it over with
+
+{% embed url="https://github.com/paulolramos/eslint-prettier-airbnb-react" %}
+
+{% hint style="info" %}
+The above config can be a tad noisy, so you can tweak it to your preferences and save the config files.
+{% endhint %}
+
+
 
 
 

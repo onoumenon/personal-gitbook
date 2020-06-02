@@ -4,10 +4,10 @@
 
 ## Programming
 
-* [Resources for Beginners](programming/resources.md)
+* [Resources for Beginners](programming/resources/README.md)
+  * [Preparation/ Setup](programming/resources/introduction/README.md)
+    * [CS50](programming/resources/introduction/cs50.md)
 * [Fundamentals](programming/fundamentals/README.md)
-  * [Introduction](programming/fundamentals/introduction/README.md)
-    * [CS50](programming/fundamentals/introduction/cs50.md)
   * [Maths for CS](programming/fundamentals/maths-for-cs/README.md)
     * [1.1 Intro to Maths for CS](programming/fundamentals/maths-for-cs/1.1-intro-to-maths-for-cs.md)
   * [Data Structures and Algos](programming/fundamentals/data-structures-and-algos/README.md)

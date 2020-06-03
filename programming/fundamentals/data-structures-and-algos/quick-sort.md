@@ -11,11 +11,11 @@ Quick sort is a fast sorting algorithm that uses divide-and-conquer, but has a s
 **Run time**  
 In average to best case, if pivot is a 'middle' value: n \* Log\(n\)
 
-![](../../../.gitbook/assets/image%20%2844%29.png)
+![](../../../.gitbook/assets/image%20%2845%29.png)
 
 In worst case: O\(n \*\* 2\)
 
-![](../../../.gitbook/assets/image%20%2864%29.png)
+![](../../../.gitbook/assets/image%20%2870%29.png)
 
 ### Steps:
 

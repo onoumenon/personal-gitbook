@@ -76,8 +76,6 @@
     * [Mac](programming/tips/productivity/mac.md)
     * [VSCode](programming/tips/productivity/vscode.md)
     * [Vim](programming/tips/productivity/vim.md)
-  * [Coding Challenges/ Tutorials](programming/tips/coding-challenges-tutorials/README.md)
-    * [Hackerrank 10 days of Statistics](programming/tips/coding-challenges-tutorials/hackerrank-10-days-of-statistics.md)
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
 
@@ -87,12 +85,15 @@
 
 ## Books/ Courses/ Etc <a id="books"></a>
 
+* [Coding Challenges/ Tutorials](books/coding-challenges-tutorials/README.md)
+  * [Hackerrank 10 days of Statistics](books/coding-challenges-tutorials/hackerrank-10-days-of-statistics.md)
 * [Programming Words](books/programming-words/README.md)
   * [Referential Transparency](books/programming-words/referential-transparency.md)
 * [SICP](books/sicp/README.md)
   * [1. Building Abstractions with Procedures](books/sicp/1.-building-abstractions-with-procedures.md)
 * [Code Complete](books/code-complete.md)
-* [Cracking the Coding Interview](books/cracking-the-coding-interview.md)
+* [Cracking the Coding Interview](books/cracking-the-coding-interview/README.md)
+  * [Solutions](books/cracking-the-coding-interview/solutions.md)
 * [Better Web Type](books/better-web-type.md)
 
 ## Life

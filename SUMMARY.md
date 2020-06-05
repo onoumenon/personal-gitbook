@@ -15,6 +15,7 @@
     * [1.5 Predicate Logic](programming/fundamentals/maths-for-cs/predicate-logic.md)
     * [1.6 Sets](programming/fundamentals/maths-for-cs/1.6-sets.md)
     * [1.7 Relations](programming/fundamentals/maths-for-cs/1.7-relations.md)
+    * [1.8 Induction](programming/fundamentals/maths-for-cs/1.8-induction.md)
   * [MIT Intro to Algorithms](programming/fundamentals/mit-intro-to-algorithms.md)
   * [Data Structures and Algos](programming/fundamentals/data-structures-and-algos/README.md)
     * [Heap Sort](programming/fundamentals/data-structures-and-algos/heap-sort.md)

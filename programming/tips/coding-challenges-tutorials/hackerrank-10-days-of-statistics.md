@@ -22,6 +22,8 @@ Scale: Number of significant digits to the right of a decimal point. \(eg: 0.12 
 
 ### Standard Deviation
 
+{% embed url="https://www.youtube.com/watch?v=qqOyy\_NjflU" %}
+
 To calculate the Variance, take each difference, square it, and then average the result:
 
 | **Variance** |  |  |

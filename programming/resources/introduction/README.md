@@ -97,7 +97,7 @@ Browser:
 
 ## Bikeshedding 
 
-![Source: Dilbert](../../../.gitbook/assets/image%20%2839%29.png)
+![Source: Dilbert](../../../.gitbook/assets/image%20%2843%29.png)
 
 {% embed url="https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a" %}
 

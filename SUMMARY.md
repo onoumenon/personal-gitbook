@@ -4,7 +4,8 @@
 
 ## Programming
 
-* [Resources for Beginners](programming/resources/README.md)
+* [Resources](programming/resources/README.md)
+  * [Articles](programming/resources/articles.md)
   * [Preparation/ Setup](programming/resources/introduction/README.md)
     * [CS50](programming/resources/introduction/cs50.md)
 * [CS Fundamentals](programming/fundamentals/README.md)

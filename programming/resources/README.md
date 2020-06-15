@@ -4,7 +4,7 @@ description: >-
   resources I would want to check out.
 ---
 
-# Resources for Beginners
+# Resources
 
 ## Web Development Starter Kit \(2019\)
 

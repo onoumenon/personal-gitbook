@@ -69,6 +69,7 @@
 * [Deployment](programming/deployment/README.md)
   * [Heroku Deployment](programming/deployment/heroku-deployment.md)
 * [MISC](programming/tips/README.md)
+  * [Interview Prep](programming/tips/interview-prep.md)
   * [Optimistic UI](programming/tips/optimistic-ui.md)
   * [Error handling](programming/tips/error-handling.md)
   * [Babel & webpack](programming/tips/babel-and-webpack.md)

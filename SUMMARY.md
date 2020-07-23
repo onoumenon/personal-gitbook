@@ -99,6 +99,7 @@
 * [Cracking the Coding Interview](books/cracking-the-coding-interview/README.md)
   * [Solutions](books/cracking-the-coding-interview/solutions.md)
 * [Better Web Type](books/better-web-type.md)
+* [Functional Programming](books/functional-programming.md)
 
 ## Life
 

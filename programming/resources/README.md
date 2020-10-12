@@ -22,7 +22,7 @@ Pick either. Free Code Camp offers more, and has a bigger community. If you alre
 
 For basic JavaScript knowledge, skim read MDN's documentation and [Eloquent JavaScript](https://eloquentjavascript.net/). Don't worry if you don't understand anything on first read.
 
-[App Academy](https://open.appacademy.io/) or [Odin Project](https://www.theodinproject.com/courses?ref=homenav) to learn full stack development. App Academy has videos and I would recommend them over Odin Project. Ruby on Rails may be less popular nowadays but is still pretty big, so you can replace that with NodeJS if you prefer \(depending on the jobs available in your country\). 
+[FullStackOpen](https://fullstackopen.com/en/) or [App Academy](https://open.appacademy.io/) or [Odin Project](https://www.theodinproject.com/courses?ref=homenav) to learn full stack development. App Academy has videos and I would recommend them over Odin Project. Ruby on Rails may be less popular nowadays but is still pretty big, so you can replace that with NodeJS if you prefer \(depending on the jobs available in your country\). 
 
 Pick a specialization based on interest \(refer to [P1xt's guide](https://github.com/P1xt/p1xt-guides/) for resources\).
 

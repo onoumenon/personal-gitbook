@@ -1,6 +1,10 @@
+---
+description: To be merged with Programming section once completed
+---
+
 # SJ Stack Studies
 
-* [ ] **Get reacquainted with React + new hooks**
+* [x] **Get reacquainted with React + new hooks**
 
 Estimated hours: 3 hrs \* 5 days \(15 hrs\)
 

@@ -1,8 +1,4 @@
-# React Native
-
-Components: [https://reactnative.dev/docs/components-and-apis](https://reactnative.dev/docs/components-and-apis)
-
-
+# React Hooks
 
 {% hint style="info" %}
 With React Hooks, you should use functional components since they can support changing of states. Note: Hooks **don't work inside classes.**
@@ -158,7 +154,53 @@ function FriendStatus(props) {
 
 **When exactly does React clean up an effect?** React performs the cleanup when the component unmounts. However, as we learned earlier, effects run for every render and not just once. This is why React _also_ cleans up effects from the previous render before running the effects next time. We’ll discuss [why this helps avoid bugs](https://reactjs.org/docs/hooks-effect.html#explanation-why-effects-run-on-each-update) and [how to opt out of this behavior in case it creates performance issues](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) later below.
 
+You can declare useEffect multiple times.
+
+**Hooks let us split the code based on what it is doing** rather than a lifecycle method name. React will apply _every_ effect used by the component, in the order they were specified.
+
+### Issue with previous class component lifecycle hooks method
+
+**But what happens if the `friend` prop changes** while the component is on the screen? Our component would continue displaying the online status of a different friend. This is a bug. We would also cause a memory leak or crash when unmounting since the unsubscribe call would use the wrong friend ID. Forgetting to handle `componentDidUpdate` properly is a common source of bugs in React applications.
+
+There is no special code for handling updates because `useEffect` handles them _by default_. It cleans up the previous effects before applying the next effects. To illustrate this, here is a sequence of subscribe and unsubscribe calls that this component could produce over time:
+
+```text
+// Mount with { friend: { id: 100 } } props
+ChatAPI.subscribeToFriendStatus(100, handleStatusChange);     // Run first effect
+
+// Update with { friend: { id: 200 } } props
+ChatAPI.unsubscribeFromFriendStatus(100, handleStatusChange); // Clean up previous effect
+ChatAPI.subscribeToFriendStatus(200, handleStatusChange);     // Run next effect
+
+// Update with { friend: { id: 300 } } props
+ChatAPI.unsubscribeFromFriendStatus(200, handleStatusChange); // Clean up previous effect
+ChatAPI.subscribeToFriendStatus(300, handleStatusChange);     // Run next effect
+
+// Unmount
+ChatAPI.unsubscribeFromFriendStatus(300, handleStatusChange); // Clean up last effect
+```
+
+### Skip update
+
+You can tell React to _skip_ applying an effect if certain values haven’t changed between re-renders. To do so, pass an array as an optional second argument to `useEffect`:
+
+```text
+useEffect(() => {
+  document.title = `You clicked ${count} times`;
+}, [count]); // Only re-run the effect if count changes
+```
+
+
+
+> If you use this optimization, make sure the array includes **all values from the component scope \(such as props and state\) that change over time and that are used by the effect**. Otherwise, your code will reference stale values from previous renders. Learn more about [how to deal with functions](https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies) and [what to do when the array changes too often](https://reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often).
 >
+> If you want to run an effect and clean it up only once \(on mount and unmount\), you can pass an empty array \(`[]`\) as a second argument. This tells React that your effect doesn’t depend on _any_ values from props or state, so it never needs to re-run. This isn’t handled as a special case — it follows directly from how the dependencies array always works.
+>
+> If you pass an empty array \(`[]`\), the props and state inside the effect will always have their initial values. While passing `[]` as the second argument is closer to the familiar `componentDidMount` and `componentWillUnmount` mental model, there are usually [better](https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies) [solutions](https://reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often) to avoid re-running effects too often. Also, don’t forget that React defers running `useEffect` until after the browser has painted, so doing extra work is less of a problem.
+>
+> We recommend using the [`exhaustive-deps`](https://github.com/facebook/react/issues/14920) rule as part of our [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
+
+###  <a id="next-steps"></a>
 
 ## Custom Hooks
 

@@ -62,5 +62,7 @@ References:
 * [Workflows for long-running feature branches · GitHub](https://gist.github.com/canton7/1570681) 
 * [Should you rebase or merge to update feature branches in git? – Tim Abell – UK Software Developer](https://timwise.co.uk/2019/10/14/merge-vs-rebase/)
 
+{% embed url="https://www.christianengvall.se/undo-pushed-merge-git/" %}
+
 
 

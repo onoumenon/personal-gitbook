@@ -11,8 +11,41 @@ With React Hooks, you should use functional components since they can support ch
 
 {% embed url="https://reactjs.org/docs/hooks-rules.html" %}
 
-* Only call hooks at the top level. Don't call them inside loops, conditions, or nested functions
-* Only call hooks from React function components. Don't call from regular JS functions.
+* **Only call hooks at the top level. Don't call them inside loops, conditions, or nested functions**
+* **Only call hooks from React function components/ custom hooks. Don't call from regular JS functions.**
+
+\*\*\*\*
+
+```text
+ // 🔴 We're breaking the first rule by using a Hook in a condition
+  if (name !== '') {
+    useEffect(function persistForm() {
+      localStorage.setItem('formData', name);
+    });
+  }
+```
+
+The `name !== ''` condition is `true` on the first render, so we run this Hook. However, on the next render the user might clear the form, making the condition `false`. Now that we skip this Hook during rendering, the order of the Hook calls becomes different:
+
+```text
+useState('Mary')           // 1. Read the name state variable (argument is ignored)
+// useEffect(persistForm)  // 🔴 This Hook was skipped!
+useState('Poppins')        // 🔴 2 (but was 3). Fail to read the surname state variable
+useEffect(updateTitle)     // 🔴 3 (but was 4). Fail to replace the effect
+```
+
+**Instead, put the condition inside the function of useEffect**
+
+```text
+  useEffect(function persistForm() {
+    // 👍 We're not breaking the first rule anymore
+    if (name !== '') {
+      localStorage.setItem('formData', name);
+    }
+  });
+```
+
+
 
 {% embed url="https://www.npmjs.com/package/eslint-plugin-react-hooks" %}
 
@@ -228,5 +261,7 @@ function useFriendStatus(friendID) {  const [isOnline, setIsOnline] = useState(n
 
 If a function’s name starts with ”`use`” and it calls other Hooks, we say it is a custom Hook. The `useSomething` naming convention is how our linter plugin is able to find bugs in the code using Hooks.
 
+**A custom Hook is a JavaScript function whose name starts with ”`use`” and that may call other Hooks.**
 
+\*\*\*\*
 

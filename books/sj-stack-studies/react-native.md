@@ -263,5 +263,135 @@ If a function’s name starts with ”`use`” and it calls other Hooks, we say 
 
 **A custom Hook is a JavaScript function whose name starts with ”`use`” and that may call other Hooks.**
 
-\*\*\*\*
+```text
+import { useState, useEffect } from 'react';
+
+function useFriendStatus(friendID) {  
+  const [isOnline, setIsOnline] = useState(null);
+
+  useEffect(() => {
+    function handleStatusChange(status) {
+      setIsOnline(status.isOnline);
+    }
+
+    ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
+    return () => {
+      ChatAPI.unsubscribeFromFriendStatus(friendID, handleStatusChange);
+    };
+  });
+
+  return isOnline;
+}
+```
+
+## Hooks API
+
+{% embed url="https://reactjs.org/docs/hooks-reference.html" %}
+
+### useState
+
+**Functional updates**
+
+If the new state is computed using the previous state, you can pass a function to `setState`. The function will receive the previous value, and return an updated value. Here’s an example of a counter component that uses both forms of `setState`:
+
+```text
+function Counter({initialCount}) {
+  const [count, setCount] = useState(initialCount);
+  return (
+    <>
+      Count: {count}
+      <button onClick={() => setCount(initialCount)}>Reset</button>
+      <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+    </>
+  );
+}
+```
+
+If your update function returns the exact same value as the current state, the subsequent rerender will be skipped completely.
+
+**Lazy initial state**
+
+The `initialState` argument is the state used during the initial render. In subsequent renders, it is disregarded. If the initial state is the result of an expensive computation, you may provide a function instead, which will be executed only on the initial render:
+
+```text
+const [state, setState] = useState(() => {
+  const initialState = someExpensiveComputation(props);
+  return initialState;
+```
+
+### useEffect
+
+**Cleaning up an effect**
+
+Often, effects create resources that need to be cleaned up before the component leaves the screen, such as a subscription or timer ID. To do this, the function passed to `useEffect` may return a clean-up function. For example, to create a subscription:
+
+```text
+useEffect(() => {
+  const subscription = props.source.subscribe();
+  return () => {
+    // Clean up the subscription
+    subscription.unsubscribe();
+  };
+});
+```
+
+**Timing of effects**
+
+Unlike `componentDidMount` and `componentDidUpdate`, the function passed to `useEffect` fires **after** layout and paint, during a deferred event.  For effects that are dependant on timing, use [`useLayoutEffect`](https://reactjs.org/docs/hooks-reference.html#uselayouteffect). It has the same signature as `useEffect`, and only differs in when it is fired.
+
+**Conditionally firing an effect**
+
+To conditionally fire an effect, pass a second argument to `useEffect` that is the array of values that the effect depends on:
+
+```text
+useEffect(
+  () => {
+    const subscription = props.source.subscribe();
+    return () => {
+      subscription.unsubscribe();
+    };
+  },
+  [props.source],
+);
+```
+
+You can pass an empty array if you want the effect to fire only once.
+
+### useContext
+
+```text
+const themes = {
+  light: {
+    foreground: "#000000",
+    background: "#eeeeee"
+  },
+  dark: {
+    foreground: "#ffffff",
+    background: "#222222"
+  }
+};
+
+const ThemeContext = React.createContext(themes.light);
+
+function App() {
+  return (
+    <ThemeContext.Provider value={themes.dark}>
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+function Toolbar(props) {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+function ThemedButton() {
+  const theme = useContext(ThemeContext);  return (    <button style={{ background: theme.background, color: theme.foreground }}>      I am styled by theme context!    </button>  );
+}
+```
 

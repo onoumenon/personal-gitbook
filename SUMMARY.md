@@ -97,6 +97,7 @@
   * [Advanced React](books/sj-stack-studies/advanced-react/README.md)
     * [Accessibility](books/sj-stack-studies/advanced-react/accessibility.md)
     * [Context](books/sj-stack-studies/advanced-react/context.md)
+    * [Error Boundaries](books/sj-stack-studies/advanced-react/error-boundaries.md)
 * [Coding Challenges/ Tutorials](books/coding-challenges-tutorials/README.md)
   * [Hackerrank 10 days of Statistics](books/coding-challenges-tutorials/hackerrank-10-days-of-statistics.md)
 * [Programming Words](books/programming-words/README.md)

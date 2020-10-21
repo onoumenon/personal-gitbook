@@ -96,6 +96,7 @@
   * [React Hooks](books/sj-stack-studies/react-native.md)
   * [Advanced React](books/sj-stack-studies/advanced-react/README.md)
     * [Accessibility](books/sj-stack-studies/advanced-react/accessibility.md)
+    * [Context](books/sj-stack-studies/advanced-react/context.md)
 * [Coding Challenges/ Tutorials](books/coding-challenges-tutorials/README.md)
   * [Hackerrank 10 days of Statistics](books/coding-challenges-tutorials/hackerrank-10-days-of-statistics.md)
 * [Programming Words](books/programming-words/README.md)

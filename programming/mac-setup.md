@@ -87,9 +87,15 @@ Extensions used
 
 ## Setting up React Native environment
 
+{% hint style="info" %}
+Check the [docs](https://reactnative.dev/docs/0.61/getting-started) for complete instructions
+{% endhint %}
+
 Download Xcode
 
 `brew install watchman`
+
+`brew install yarn`
 
 
 

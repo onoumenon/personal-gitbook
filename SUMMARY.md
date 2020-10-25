@@ -4,6 +4,7 @@
 
 ## Programming
 
+* [Mac Setup](programming/mac-setup.md)
 * [Resources](programming/resources/README.md)
   * [Articles](programming/resources/articles.md)
   * [Preparation/ Setup](programming/resources/introduction/README.md)

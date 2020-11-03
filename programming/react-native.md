@@ -4,5 +4,7 @@
 
   
 Bitrise takes too long to build for React Native new version because of Flipper  
-- Check if bitrise workflow can remove that pod install if FLipper is not used or remove that dependency 
+Solution:
+
+* [https://www.gitmemory.com/issue/react-native-community/discussions-and-proposals/226/673302568](https://www.gitmemory.com/issue/react-native-community/discussions-and-proposals/226/673302568)
 

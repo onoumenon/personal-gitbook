@@ -20,6 +20,10 @@
 
 7\) **When you find you need to refactor working code, refactor and re-test prior to writing new code.**  This technique ensures your refactoring is correct prior to adding new functionality and applies to creating new methods, introducing inheritance, everything.  I equate this principle to the practice of running all tests in a solution after getting the latest code from the repository and prior to writing anything new.  I don't want to spend time debugging my newly written code under the false assumption that the system wasn't already broken.
 
+{% embed url="https://kentcdodds.com/blog/common-mistakes-with-react-testing-library" %}
+
+
+
 ## Testing Recipes
 
 ### Setup/ teardown
@@ -48,6 +52,8 @@ You may use a different pattern, but keep in mind that we want to execute the cl
 **INFO if using react testing library**
 
 Please note that this is done automatically if the testing framework you're using supports the `afterEach` global \(like mocha, Jest, and Jasmine\). If not, you will need to do manual cleanups after each test.
+
+In react testing library, methods such as`render` and `fireEvent` are already wrapped in `act`
 {% endhint %}
 
 ### Data Fetching
@@ -142,4 +148,81 @@ Different DOM events and their properties are described in [MDN](https://develop
 ### Timers
 
 Your code might use timer-based functions like `setTimeout` to schedule more work in the future. In this example, a multiple choice panel waits for a selection and advances, timing out if a selection isn’t made in 5 seconds:
+
+```text
+// card.test.js
+
+import React from "react";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
+
+import Card from "./card";
+jest.useFakeTimers();
+
+let container = null;
+beforeEach(() => {
+  // setup a DOM element as a render target
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  // cleanup on exiting
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
+
+it("should select null after timing out", () => {
+  const onSelect = jest.fn();
+  act(() => {
+    render(<Card onSelect={onSelect} />, container);
+  });
+
+  // move ahead in time by 100ms  act(() => {
+    jest.advanceTimersByTime(100);
+  });
+  expect(onSelect).not.toHaveBeenCalled();
+
+  // and then move ahead by 5 seconds  act(() => {
+    jest.advanceTimersByTime(5000);
+  });
+  expect(onSelect).toHaveBeenCalledWith(null);
+});
+
+it("should cleanup on being removed", () => {
+  const onSelect = jest.fn();
+  act(() => {
+    render(<Card onSelect={onSelect} />, container);
+  });
+  act(() => {
+    jest.advanceTimersByTime(100);
+  });
+  expect(onSelect).not.toHaveBeenCalled();
+
+  // unmount the app
+  act(() => {
+    render(null, container);
+  });
+  act(() => {
+    jest.advanceTimersByTime(5000);
+  });
+  expect(onSelect).not.toHaveBeenCalled();
+});
+
+it("should accept selections", () => {
+  const onSelect = jest.fn();
+  act(() => {
+    render(<Card onSelect={onSelect} />, container);
+  });
+
+  act(() => {
+    container
+      .querySelector("[data-testid='2']")
+      .dispatchEvent(new MouseEvent("click", { bubbles: true }));
+  });
+
+  expect(onSelect).toHaveBeenCalledWith(2);
+});
+```
 

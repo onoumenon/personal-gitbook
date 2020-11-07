@@ -10,7 +10,7 @@ Other things I like: good food, science fiction, and cats.
 
 ## Disclaimer
 
-This braindump is for private usage only, and is not being indexed by search engines. 
+This braindump is for private usage only, and is not being indexed by search engines. Limited materials may be reproduced here under fair use.
 
 ## Other Braindumps
 

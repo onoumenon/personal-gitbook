@@ -8,11 +8,9 @@ Hi, I'm Hui Tian, a mid-career switcher \(from artist to web developer\). I like
 
 Other things I like: good food, science fiction, and cats.
 
-I also have a public [Trello board](https://trello.com/b/Mm5vnVEh/personal-to-do) that lists my personal to-dos.
+## Disclaimer
 
-## Contributing
-
-If anything is erroneous, feel free to submit a PR.
+This braindump is for private usage only.
 
 ## Other Braindumps
 

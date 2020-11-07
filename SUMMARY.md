@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-## Programming
+## Programming Core <a id="programming"></a>
 
 * [Mac Setup](programming/mac-setup.md)
 * [Resources](programming/resources/README.md)
@@ -63,11 +63,14 @@
   * [Public key infrastructure](programming/web-related-concepts/public-key-infrastructure.md)
 * [React Native](programming/react-native-1/README.md)
   * [React Native Issues](programming/react-native-1/react-native.md)
+  * [React Native Intro](programming/react-native-1/react-native-1.md)
+  * [Testing](programming/react-native-1/testing.md)
   * [React Navigation](programming/react-native-1/react-navigation.md)
 * [React](programming/react/README.md)
   * [Error logging](programming/react/error-logging.md)
   * [React Intro](programming/react/untitled.md)
   * [React concepts](programming/react/react-concepts.md)
+  * [Testing](programming/react/testing.md)
   * [React Redux](programming/react/untitled-1.md)
 * [Security](programming/security/README.md)
   * [OWASP Top 10 \(2017\)](programming/security/untitled.md)
@@ -90,8 +93,9 @@
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
 
-## Articles
+## Articles/ Websites <a id="articles"></a>
 
+* [Wiki of People, Projects and Patterns in Software Dev](articles/wiki-of-people-projects-and-patterns-in-software-dev.md)
 * [Programming: Universal Design Pattern](articles/programming-universal-design-pattern.md)
 * [Data Structures &gt; Code](articles/data-structures-greater-than-code.md)
 * [UI guidelines](articles/ui-guidelines.md)
@@ -99,7 +103,6 @@
 ## Books/ Courses/ Etc <a id="books"></a>
 
 * [SJ Stack Studies](books/sj-stack-studies/README.md)
-  * [React Native](books/sj-stack-studies/react-native-1.md)
   * [React Big Picture](books/sj-stack-studies/react-big-picture.md)
   * [React Hooks](books/sj-stack-studies/react-native.md)
   * [Advanced React](books/sj-stack-studies/advanced-react/README.md)
@@ -131,7 +134,7 @@
 * [Fitness](life/fitness/README.md)
   * [Beginner Strength Routine](life/fitness/beginner-strength-routine.md)
 
-## Slides
+## Slides for Presentations <a id="slides"></a>
 
 * [Front End Design Thinking](slides/front-end-design-thinking.md)
 * [Dev Journey \(CodingGirls\)](slides/dev-journey-codinggirls.md)

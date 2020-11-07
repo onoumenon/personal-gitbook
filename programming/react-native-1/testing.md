@@ -105,3 +105,24 @@ E2E tests give you the highest possible confidence that part of your app is work
 
  [Detox](https://github.com/wix/detox/) is a popular framework because it’s tailored for React Native apps. Another popular library in the space of iOS and Android apps is [Appium](http://appium.io/).
 
+## React Native Testing Library
+
+{% embed url="https://github.com/vanGalilea/react-native-testing" %}
+
+{% embed url="https://blog.usejournal.com/where-and-how-to-start-testing-your-react-native-app-%EF%B8%8F-and-how-to-keep-on-testin-ec3464fb9b41" %}
+
+
+
+**Prioritizing test subjects**- where to start? start with the most important modules, screens, utils and the core logics of your app. This probably means your state management part of the app or any other place where your fetching data or making external calls. From there move to hooks, screens and any other piece of core util.
+
+**Real life examples**- I’ve devoted a whole [repo](https://github.com/vanGalilea/react-native-testing) to this, the repo has a solid structure of test [configuration](https://github.com/vanGalilea/react-native-testing/blob/master/jest.config.js) and [setup](https://github.com/vanGalilea/react-native-testing/blob/master/jest.setup.js) that will help you along the way. The examples cover:
+
+* [Clicking buttons and asserting onPress’ outcome](https://github.com/vanGalilea/react-native-testing/blob/master/__tests__/Counter-test.tsx).
+* [Filling a simple login form and asserting successful submission](https://github.com/vanGalilea/react-native-testing/blob/master/__tests__/LoginSubmission-test.tsx).
+* [Custom hook testing \(number of alternatives\)](https://github.com/vanGalilea/react-native-testing/blob/master/__tests__/CounterUsesCustomHook-test.tsx).
+* [Mocking fetch calls](https://github.com/vanGalilea/react-native-testing/blob/7d13c63ffcb5de3df02c8b42d2e2aaf76421953e/__tests__/LoginSubmission-test.tsx#L36).
+* [Mocking navigation through screens](https://github.com/vanGalilea/react-native-testing/blob/7d13c63ffcb5de3df02c8b42d2e2aaf76421953e/__tests__/LoginSubmission-test.tsx#L13)\([react navigation v5](https://reactnavigation.org/)\).
+* [E2E feel due to real navigation throughout screens](https://github.com/vanGalilea/react-native-testing/blob/master/__tests__/Home-test.tsx).
+* [Handling and mocking providers](https://github.com/vanGalilea/react-native-testing/blob/master/src/test/test-utils.tsx).
+* [Mocking external lib.’s components](https://github.com/vanGalilea/react-native-testing/blob/master/__tests__/Video-test.tsx)
+

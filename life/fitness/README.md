@@ -1,16 +1,30 @@
 # Fitness
 
-## Exercise
+## Cardio \(HIIT\)
 
 > Adults should do at least 150 minutes to 300 minutes a week of moderate-intensity, or 75 minutes to 150 minutes a week of vigorous-intensity aerobic physical activity, or an equivalent combination of moderate- and vigorous-intensity aerobic activity. They should also do muscle-strengthening activities on 2 or more days a week.
 >
 > Source: [American Physical Activity Guideline](https://jamanetwork.com/journals/jama/article-abstract/2712935)
 
-High Intensity Interval Training \(HIIT\) is a time efficient way to exercise, according to [many](https://www.vox.com/science-and-health/2019/1/10/18148463/high-intensity-interval-training-hiit-orangetheory) [research](https://www.sciencefocus.com/the-human-body/hiit-is-changing-the-way-we-workout-heres-the-science-why-it-works).
+I'm a sucker for efficiency so that I can laze around surfing reddit for cat videos. High Intensity Interval Training \(HIIT\) is a time-efficient way to exercise, according to [many](https://www.vox.com/science-and-health/2019/1/10/18148463/high-intensity-interval-training-hiit-orangetheory) [research](https://www.sciencefocus.com/the-human-body/hiit-is-changing-the-way-we-workout-heres-the-science-why-it-works).
 
 A common lab routine is the 4x4 routine: which can be found [here](https://www.ntnu.edu/cerg/advice).
 
+{% hint style="info" %}
 If you are a beginner, be sure to ramp the intensity up slowly.
+
+HIIT is pretty darn exhausting so once/ twice a week is my max.
+{% endhint %}
+
+### Youtube recommendations
+
+{% embed url="https://www.youtube.com/watch?v=N3e8UXMdqOM&ab\_channel=FitnessBlender" %}
+
+{% embed url="https://www.youtube.com/watch?v=1skBf6h2ksI&ab\_channel=PamelaReif" %}
+
+{% embed url="https://www.youtube.com/watch?v=Mvo2snJGhtM&ab\_channel=NatachaOc%C3%A9ane" %}
+
+
 
 ## Diet
 
@@ -24,9 +38,15 @@ Apart from eating healthier portions as above, here are other guidelines:
 
 Source: [Harvard's School of Public Health](https://www.hsph.harvard.edu/nutritionsource/healthy-weight/best-diet-quality-counts/)
 
-
+{% hint style="info" %}
+**TLDR** eat more vegs, drink more water, consume less processed food/drinks \(esp sugary stuff\). 
+{% endhint %}
 
 ## Brain Fitness
+
+{% hint style="info" %}
+**TLDR** Healthy body, healthy mind, duh. Caffeine and omega-3 if you want to hyperoptimize.  Socializing and managing stress is also important.
+{% endhint %}
 
 From [Scientific American \(review of a book\)](https://blogs.scientificamerican.com/beautiful-minds/review-of-the-sharpbrains-guide-to-brain-fitness/)
 

@@ -48,6 +48,10 @@ Different programming languages may have different casing standards. Refer to: [
 
 ## Machine Set-Up \(for Web Dev\)
 
+{% hint style="info" %}
+2020 Update: I've given in to getting a macbook since set up is smoother on macs. Check [Mac Setup](../../mac-setup.md) for the new setup
+{% endhint %}
+
 On Windows: 
 
 * Git for windows [https://gitforwindows.org/](https://gitforwindows.org/)

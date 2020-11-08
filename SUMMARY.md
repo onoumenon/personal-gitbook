@@ -140,3 +140,7 @@
 * [Front End Design Thinking](slides/front-end-design-thinking.md)
 * [Dev Journey \(CodingGirls\)](slides/dev-journey-codinggirls.md)
 
+## Interesting Stuff
+
+* [Generative / AI Art](interesting-stuff/generative-ai-art.md)
+

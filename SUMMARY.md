@@ -64,6 +64,7 @@
 * [React Native](programming/react-native-1/README.md)
   * [React Native Issues](programming/react-native-1/react-native.md)
   * [React Native Intro](programming/react-native-1/react-native-1.md)
+  * [Libraries](programming/react-native-1/libraries.md)
   * [Testing](programming/react-native-1/testing.md)
   * [React Navigation](programming/react-native-1/react-navigation.md)
 * [React](programming/react/README.md)

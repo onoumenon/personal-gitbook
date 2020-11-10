@@ -22,6 +22,7 @@
   * [Data Structures and Algos](programming/fundamentals/data-structures-and-algos/README.md)
     * [Heap Sort](programming/fundamentals/data-structures-and-algos/heap-sort.md)
     * [Quick Sort](programming/fundamentals/data-structures-and-algos/quick-sort.md)
+* [Useful Formatters/ Utils](programming/useful-formatters-utils.md)
 * [GIT](programming/git/README.md)
   * [Sourcetree](programming/git/sourcetree.md)
   * [Resources](programming/git/resources.md)

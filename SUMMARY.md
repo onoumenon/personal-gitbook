@@ -68,6 +68,7 @@
   * [Libraries](programming/react-native-1/libraries.md)
   * [Testing](programming/react-native-1/testing.md)
   * [React Navigation](programming/react-native-1/react-navigation.md)
+  * [React Native Splash Screen](programming/react-native-1/react-native-splash-screen.md)
 * [React](programming/react/README.md)
   * [Error logging](programming/react/error-logging.md)
   * [React Intro](programming/react/untitled.md)

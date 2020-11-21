@@ -43,6 +43,7 @@
     * [EmberJS Components](programming/front-end/emberjs/emberjs-components.md)
   * [HTML & CSS](programming/front-end/html-and-css/README.md)
     * [Media Queries](programming/front-end/html-and-css/media-queries.md)
+    * [Learn by playing](programming/front-end/html-and-css/learn-by-playing.md)
     * [CSS resources](programming/front-end/html-and-css/css-resources.md)
     * [Weird bugs](programming/front-end/html-and-css/weird-bugs.md)
   * [Browser Support](programming/front-end/browser-support.md)

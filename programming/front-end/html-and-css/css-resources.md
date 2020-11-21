@@ -1,6 +1,12 @@
 # CSS resources
 
-[https://htmlcheatsheet.com/css/](https://htmlcheatsheet.com/css/)  
+{% embed url="https://htmlcheatsheet.com/css/" %}
+
+{% embed url="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" %}
+
+
+
+  
   
 `*` _all elements_  
 `div` _all div tags_  

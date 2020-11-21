@@ -12,6 +12,10 @@ I like learning new things, but the mind is [forgetful](https://www.iflscience.c
 
 Other things I like: good food, bubble tea, science fiction and anime.
 
+## How to Use
+
+Predominantly, this is used to log/ store what I've learned for Programming. You can follow my journey by going through Programming Core linearly, or use the search function. 
+
 ## Disclaimer
 
 This braindump is for private usage only, and is not being indexed by search engines. Limited materials may be reproduced here under fair use. Let me know if you see any information that's outdated/ wrong.

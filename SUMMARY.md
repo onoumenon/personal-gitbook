@@ -4,11 +4,13 @@
 
 ## Programming Core <a id="programming"></a>
 
-* [Mac Setup](programming/mac-setup.md)
-* [Resources](programming/resources/README.md)
-  * [Articles](programming/resources/articles.md)
-  * [Preparation/ Setup](programming/resources/introduction/README.md)
-    * [CS50](programming/resources/introduction/cs50.md)
+* [Start Here](programming/start-here/README.md)
+  * [Useful Links](programming/start-here/articles.md)
+  * [Preparation/ Setup](programming/start-here/introduction/README.md)
+    * [Mac Setup](programming/start-here/introduction/mac-setup.md)
+* [GIT](programming/git/README.md)
+  * [Sourcetree](programming/git/sourcetree.md)
+  * [Resources](programming/git/resources.md)
 * [CS Fundamentals](programming/fundamentals/README.md)
   * [Maths for CS](programming/fundamentals/maths-for-cs/README.md)
     * [1.1 - 1.2 Intro, Proofs](programming/fundamentals/maths-for-cs/1.1-intro-to-maths-for-cs.md)
@@ -23,9 +25,6 @@
     * [Heap Sort](programming/fundamentals/data-structures-and-algos/heap-sort.md)
     * [Quick Sort](programming/fundamentals/data-structures-and-algos/quick-sort.md)
 * [Useful Formatters/ Utils](programming/useful-formatters-utils.md)
-* [GIT](programming/git/README.md)
-  * [Sourcetree](programming/git/sourcetree.md)
-  * [Resources](programming/git/resources.md)
 * [JavaScript](programming/javascript/README.md)
   * [Resources](programming/javascript/resources.md)
   * [Event loop](programming/javascript/event-loop.md)

@@ -14,6 +14,18 @@ This means you’ll be productive and it is easier to collaborate.
 
 **Don’t Repeat Yourself**
 
-Rails takes advantage of Ruby’s metaprogramming features to not just reuse code but eliminate code where possible. With a knowledge of Rails conventions, it’s possible to create entire simple web applications with only a few lines of code.  
+Rails takes advantage of Ruby’s metaprogramming features to not just reuse code but eliminate code where possible. With a knowledge of Rails conventions, it’s possible to create entire simple web applications with only a few lines of code.
+
+
+
+## Resources
+
+{% embed url="https://gorails.com/series" %}
+
+{% embed url="https://www.learnenough.com/ruby-on-rails-6th-edition" %}
+
+
+
+  
 
 

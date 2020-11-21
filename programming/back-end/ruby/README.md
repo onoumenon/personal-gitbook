@@ -1,5 +1,9 @@
 # Ruby
 
+{% embed url="https://www.learnenough.com/ruby-tutorial/hello\_world" %}
+
+
+
 {% embed url="https://learnxinyminutes.com/docs/ruby/" %}
 
 ```text

@@ -1,6 +1,8 @@
 # EDM templates
 
-
+{% hint style="info" %}
+This is copied from the documentation I wrote before leaving my first job, where I was responsible for EDM templates. EDM templates are rendered in Mail clients and css/ html support lags behind browsers, so this neccessitated a different workflow. Eg: testing is done in Litmus, which generates snapshots from different clients.
+{% endhint %}
 
 #### Context
 

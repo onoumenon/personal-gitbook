@@ -33,5 +33,5 @@ Two parts: component.js \(logic\) and component.hbs \(view\)
 ```
 {% endcode %}
 
-### Defining a Component Subclass <a id="toc_defining-a-component-subclass"></a>
+###  <a id="toc_defining-a-component-subclass"></a>
 

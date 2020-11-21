@@ -34,7 +34,7 @@
   * [Memoize](programming/javascript/memoize.md)
   * [Debounce](programming/javascript/debounce.md)
   * [Other JS Concepts](programming/javascript/other-js-concepts.md)
-* [Front End](programming/front-end/README.md)
+* [General Front End](programming/front-end/README.md)
   * [EmberJS](programming/front-end/emberjs/README.md)
     * [EmberJS QuickStart](programming/front-end/emberjs/emberjs.md)
     * [EmberJS Objects](programming/front-end/emberjs/emberjs-objects.md)

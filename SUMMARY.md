@@ -84,6 +84,7 @@
 * [Deployment](programming/deployment/README.md)
   * [Heroku Deployment](programming/deployment/heroku-deployment.md)
 * [MISC](programming/tips/README.md)
+  * [Utils library \(JS\)](programming/tips/utils-library-js.md)
   * [Interview Prep](programming/tips/interview-prep.md)
   * [Optimistic UI](programming/tips/optimistic-ui.md)
   * [Error handling](programming/tips/error-handling.md)

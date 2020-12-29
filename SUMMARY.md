@@ -65,6 +65,7 @@
     * [Javascript](programming/web-related-concepts/web-optimization/async-defer.md)
   * [Public key infrastructure](programming/web-related-concepts/public-key-infrastructure.md)
 * [React Native](programming/react-native-1/README.md)
+  * [New Architecture](programming/react-native-1/new-architecture.md)
   * [React Native Issues](programming/react-native-1/react-native.md)
   * [React Native Intro](programming/react-native-1/react-native-1.md)
   * [Libraries](programming/react-native-1/libraries.md)

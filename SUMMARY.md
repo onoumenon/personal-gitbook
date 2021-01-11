@@ -53,6 +53,7 @@
     * [Ruby Date and Time](programming/back-end/ruby/ruby-date-and-time.md)
     * [Ruby Koans](programming/back-end/ruby/ruby-koans.md)
   * [Ruby on Rails](programming/back-end/ruby-on-rails/README.md)
+    * [Set up](programming/back-end/ruby-on-rails/set-up.md)
     * [Intro](programming/back-end/ruby-on-rails/intro.md)
 * [Development for Apple](programming/development-for-apple/README.md)
   * [Code signing](programming/development-for-apple/apple-developers.md)

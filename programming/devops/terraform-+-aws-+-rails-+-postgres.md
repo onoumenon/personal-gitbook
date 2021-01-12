@@ -41,6 +41,8 @@ docker run -d --name {web} \
   {proj_name}
 ```
 
+`-p 3000:3000` is the command which mirrors port 3000 in the container in your current environment.
+
 ### Manually send the docker image to ECR
 
 ```bash
@@ -499,6 +501,20 @@ terraform {
   }
 }
 ```
+
+### Additional concerns
+
+* Database and rails server should be in separate EC2 \(so it doesn't go down together, and you can have multiple servers getting from one DB\).
+* They should not communicate with public IP. You can set in the security groups, a policy that the incoming connection should be of a certain security id.
+
+### Additional Info
+
+Instead of using Elastic IP to deal with the cloudflare IP issue, you can also use Application Load Balancer with a Target Group of one or more EC2 instances to manage it, as the Load Balancer has its own IP address. You can additionally add autoscaling to it, with rules such as "memory utilization &gt; 60%, add one more instance".
+
+Horizontal scaling is better than vertical scaling, as
+
+* it's cheaper \(pay for more only if you need more\)
+* multiple instances means less chance of everything going down
 
 
 

@@ -33,12 +33,12 @@ docker run -d --restart unless-stopped --name {database_name} \
 docker run -d --name {web} \
   --network {name} \
   -p 3000:3000 \
-  --env FITME_DATABASE_USERNAME={user} \
-  --env FITME_DATABASE_PASSWORD={password} \
+  --env DATABASE_USERNAME={user} \
+  --env DATABASE_PASSWORD={password} \
   --env DB_HOST={database_name} \
   --env RAILS_MASTER_KEY={master_key} \
   --cap-drop ALL \
-  fitme
+  {proj_name}
 ```
 
 ### Manually send the docker image to ECR
@@ -161,21 +161,21 @@ echo "Login ECR"
 aws ecr get-login-password --region ap-southeast-1 \
   | docker login --username AWS --password-stdin ${ecr_stdin}
 
-docker network create --attachable fitme-default
+docker network create --attachable {proj_name}
 
 docker run -d --name web \
-  --network fitme-default \
+  --network {proj_name} \
   -p 3000:3000 \
-  --env FITME_DATABASE_USERNAME=${postgres_user} \
-  --env FITME_DATABASE_PASSWORD=${postgres_password} \
+  --env {proj_name}_DATABASE_USERNAME=${postgres_user} \
+  --env {proj_name}_DATABASE_PASSWORD=${postgres_password} \
   --env DB_HOST=${db_host} \
   --env VIRTUAL_HOST=${domain} \
   --env RAILS_MASTER_KEY=${rails_master_key} \
   --cap-drop ALL \
-  ${ecr_stdin}/fitme-rails-api:latest
+  ${ecr_stdin}/{proj_name}:latest
 
 docker run -d --restart unless-stopped --name nginx-proxy \
-  --network fitme-default \
+  --network {proj_name} \
   -p 80:80 \
   -p 443:443 \
   --env VIRTUAL_PORT=3000 \
@@ -194,7 +194,7 @@ Nginx makes sure users don't hit :3000 directly, for security.
 
 ```text
 docker run -d --restart unless-stopped --name nginx-proxy \
-  --network fitme-default \
+  --network {proj_name} \
   -p 80:80 \
   -p 443:443 \
   --env VIRTUAL_PORT=3000 \
@@ -205,7 +205,7 @@ docker run -d --restart unless-stopped --name nginx-proxy \
 Make sure that you support incoming http \(port 80\)/ https \(port 443\) connection in the EC2's security group via terraforming.
 
 {% hint style="warning" %}
-Do not edit an EC2 created by terraform directly, and instead provision one using terraform
+Do not edit an EC2 created by terraform directly, and instead provision one using terraform. The state should also be saved remotely and not changed as much as possible.
 {% endhint %}
 
 It looks something like this \(ingress\):
@@ -214,7 +214,7 @@ It looks something like this \(ingress\):
 ```text
 ...
 resource "aws_security_group" "allow_http" {
-  name        = "http_fitme_production"
+  name        = "http_{proj_name}_production"
   description = "Allow HTTP(s) inbound traffic"
 
   ingress {
@@ -314,11 +314,11 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "fitme-api-tf-state"
+    bucket = "{proj_name}-api-tf-state"
     key    = "production/database/terraform.tfstate"
     region = "ap-southeast-1"
 
-    dynamodb_table = "fitme-api-tf-running-locks"
+    dynamodb_table = "{proj_name}-api-tf-running-locks"
     encrypt        = true
   }
 }
@@ -326,14 +326,14 @@ terraform {
 data "terraform_remote_state" "web" {
   backend = "s3"
   config = {
-    bucket = "fitme-api-tf-state"
+    bucket = "{proj_name}-api-tf-state"
     key    = "production/web/terraform.tfstate"
     region = "ap-southeast-1"
   }
 }
 
 resource "aws_security_group" "allow_db" {
-  name        = "fitme_web_db_connection"
+  name        = "{proj_name}_web_db_connection"
   description = "Allow 5432 access from the web"
 
   ingress {
@@ -352,7 +352,7 @@ resource "aws_security_group" "allow_db" {
   }
 
   tags = {
-    Name        = "Fitme Rails API DB"
+    Name        = "{proj_name} Rails API DB"
     Deployer    = "sj_deployer"
     Environment = "production"
   }
@@ -364,7 +364,7 @@ resource "aws_db_instance" "rds" {
   engine                  = "postgres"
   engine_version          = "12.2"
   instance_class          = "db.t2.micro"
-  identifier              = "fitme-production"
+  identifier              = "{proj_name}-production"
   backup_retention_period = 7
   name                    = var.POSTGRES_DB
   username                = var.POSTGRES_USER
@@ -382,11 +382,11 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "fitme-api-tf-state"
+    bucket = "{proj_name}-api-tf-state"
     key    = "production/web/terraform.tfstate"
     region = "ap-southeast-1"
 
-    dynamodb_table = "fitme-api-tf-running-locks"
+    dynamodb_table = "{proj_name}-api-tf-running-locks"
     encrypt        = true
   }
 }
@@ -394,14 +394,14 @@ terraform {
 data "terraform_remote_state" "database" {
   backend = "s3"
   config = {
-    bucket = "fitme-api-tf-state"
+    bucket = "{proj_name}-api-tf-state"
     key    = "production/database/terraform.tfstate"
     region = "ap-southeast-1"
   }
 }
 
 resource "aws_security_group" "allow_http" {
-  name        = "http_fitme_production"
+  name        = "http_{proj_name}_production"
   description = "Allow HTTP(s) inbound traffic"
 
   ingress {
@@ -465,7 +465,7 @@ resource "aws_instance" "server" {
   })
 
   tags = {
-    Name        = "fitme-rails-api-production"
+    Name        = "{proj_name}-rails-api-production"
     Deployer    = "sj_deployer"
     Environment = "production"
   }
@@ -473,11 +473,32 @@ resource "aws_instance" "server" {
 ```
 {% endcode %}
 
-### Elastic IP so don't have to update cloudflare
+### use Elastic IP so don't have to update cloudflare's subdomain's EC2 IP
 
 ```text
 resource "aws_eip" "web_instance" {
   instance = aws_instance.server.id
 }
 ```
+
+Check elastic ip on aws console.
+
+### Upload the terraform state to S3
+
+This is so that team members in the same dev team can also share the state, and state is not saved locally. \(You can delete the local state files.\)
+
+```text
+terraform {
+  backend "s3" {
+    bucket = "{proj_name}-tf-state"
+    key    = "production/web/terraform.tfstate"
+    region = "ap-southeast-1"
+
+    dynamodb_table = "{proj_name}-tf-running-locks"
+    encrypt        = true
+  }
+}
+```
+
+
 

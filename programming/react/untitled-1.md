@@ -6,6 +6,12 @@ Redux is a [state management tool](https://blog.logrocket.com/why-use-redux-reas
 
 Redux solves that by having the state stored in a single location, and passing each component exactly what they need.
 
+
+
+{% embed url="https://css-tricks.com/understanding-how-reducers-are-used-in-redux/\#:~:text=A%20reducer%20is%20a%20function,receives%20to%20determine%20this%20change.&text=Redux%20relies%20heavily%20on%20reducer,to%20execute%20the%20next%20state." %}
+
+
+
 ### Redux vs React Context
 
 Under the hood, since 2015, Redux is using the old React Context's Provider API. Instead of using it to propagate state, Redux, Apollo, and React-Router use it to provide observables \(objects with functions that subscribe to changes\).

@@ -1,5 +1,11 @@
 # Useful Links
 
+## Codepath
+
+[https://books.codepath.org/student-handbook/](https://books.codepath.org/student-handbook/)
+
+
+
 ## Articles
 
 {% embed url="https://javarevisited.blogspot.com/2014/05/10-articles-every-programmer-must-read.html\#axzz6ePcPBodn" %}

@@ -92,3 +92,29 @@ Then put it in your layout:
 <% end %>
 ```
 
+
+
+### Alert vs Notice
+
+As far as I understand it doesn’t really matter if you use `alert` or `notice`.
+
+Use the one that feels more natural for your situation.
+
+I like to think about `alert` as an error message & a `notice` as a confirmation message.
+
+Separating them helps you style them differently.
+
+**For example**:
+
+You can show alerts in red & notices in green.
+
+It’s also possible to create your own flash types by using the `add_flash_types` controller method.
+
+**Like this**:
+
+```text
+class ApplicationController
+ add_flash_types :info, :error, :warning
+end
+```
+

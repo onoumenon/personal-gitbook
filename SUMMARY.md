@@ -56,6 +56,7 @@
     * [Set up](programming/back-end/ruby-on-rails/set-up.md)
     * [Intro](programming/back-end/ruby-on-rails/intro.md)
     * [MVC](programming/back-end/ruby-on-rails/mvc.md)
+    * [Views/ templates](programming/back-end/ruby-on-rails/views-templates.md)
 * [Development for Apple](programming/development-for-apple/README.md)
   * [Code signing](programming/development-for-apple/apple-developers.md)
 * [Testing](programming/testing/README.md)

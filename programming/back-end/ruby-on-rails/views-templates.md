@@ -1,4 +1,4 @@
-# Views/ templates
+# Views
 
 {% embed url="https://guides.rubyonrails.org/layouts\_and\_rendering.html" %}
 
@@ -62,5 +62,33 @@ Displays "About" as text, `about_path` is from `rails route` prefix
 
 {% embed url="https://www.rubyguides.com/2019/11/rails-flash-messages/" %}
 
+In controller:
 
+```text
+...
+flash[:alert] = "User not found."
+...
+```
+
+You can use this code inside your controller actions, like `index`, `create`, `new`, etc.
+
+**Another way is this**:
+
+```text
+...
+redirect_to :books_path, notice: "Book not found"
+...
+```
+
+This allows you to redirect & create a flash message in one step.
+
+Then put it in your layout:
+
+```text
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+```
 

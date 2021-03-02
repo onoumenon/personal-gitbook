@@ -61,6 +61,7 @@
     * [Models](programming/back-end/ruby-on-rails/models.md)
     * [Enable s3](programming/back-end/ruby-on-rails/untitled.md)
     * [Enable pagination](programming/back-end/ruby-on-rails/enable-pagination.md)
+    * [ActiveSupport Concern, rspec, etc](programming/back-end/ruby-on-rails/activesupport-concern-rspec-etc.md)
 * [Development for Apple](programming/development-for-apple/README.md)
   * [Code signing](programming/development-for-apple/apple-developers.md)
 * [Testing](programming/testing/README.md)

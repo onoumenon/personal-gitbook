@@ -119,6 +119,7 @@
 * [Programming: Universal Design Pattern](articles/programming-universal-design-pattern.md)
 * [Data Structures &gt; Code](articles/data-structures-greater-than-code.md)
 * [UI guidelines](articles/ui-guidelines.md)
+* [Scalability](articles/scalability.md)
 
 ## Books/ Courses/ Etc <a id="books"></a>
 

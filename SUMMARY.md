@@ -47,6 +47,7 @@
     * [Weird bugs](programming/front-end/html-and-css/weird-bugs.md)
   * [Browser Support](programming/front-end/browser-support.md)
   * [EDM templates](programming/front-end/edm-templates.md)
+  * [Multi-select \(shift-click\)](programming/front-end/multi-select-shift-click.md)
 * [Back End](programming/back-end/README.md)
   * [Ruby](programming/back-end/ruby/README.md)
     * [Intro](programming/back-end/ruby/intro.md)

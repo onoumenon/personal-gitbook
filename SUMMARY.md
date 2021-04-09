@@ -65,6 +65,7 @@
     * [ActiveSupport Concern, rspec, openURI](programming/back-end/ruby-on-rails/activesupport-concern-rspec-etc.md)
     * [Active Jobs & Sidekiq](programming/back-end/ruby-on-rails/active-jobs-and-sidekiq.md)
     * [State machines](programming/back-end/ruby-on-rails/state-machines.md)
+    * [Code 'health'](programming/back-end/ruby-on-rails/code-health.md)
 * [Development for Apple](programming/development-for-apple/README.md)
   * [Code signing](programming/development-for-apple/apple-developers.md)
 * [Testing](programming/testing/README.md)

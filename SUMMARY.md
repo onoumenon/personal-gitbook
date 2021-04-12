@@ -101,6 +101,8 @@
   * [Heroku Deployment](programming/deployment/heroku-deployment.md)
 * [DevOps](programming/devops/README.md)
   * [Terraform + AWS + Rails + Postgres](programming/devops/terraform-+-aws-+-rails-+-postgres.md)
+* [Elixir](programming/elixir/README.md)
+  * [Intro & setup](programming/elixir/intro-and-setup.md)
 * [MISC](programming/tips/README.md)
   * [Utils library \(JS\)](programming/tips/utils-library-js.md)
   * [Interview Prep](programming/tips/interview-prep.md)

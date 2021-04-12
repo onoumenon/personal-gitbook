@@ -6,7 +6,7 @@
 
 {% embed url="https://mortoray.com/2013/11/27/the-string-type-is-broken/" %}
 
-## **TLDR**
+## **String TLDR**
 
 * double quote strings are utf-8 binary \(preferred\)
 * single quote strings are a list of chars
@@ -31,6 +31,40 @@ to_string('hello')to_string('hello')
 ```
 
 {% embed url="https://medium.com/@junwan01/elixir-strings-in-single-quote-vs-double-quote-c0a61d3e5acd" %}
+
+## Associative datatypes TLDR:
+
+Keyword lists are used in Elixir mainly for passing optional values. If you need to store many items or guarantee one-key associates with at maximum one-value, you should use maps instead.
+
+```text
+iex> list == [a: 1, b: 2]
+iex> new_list = [a: 0] ++ list
+[a: 0, a: 1, b: 2]
+iex> new_list[:a]
+0
+```
+
+Keyword lists are important because they have three special characteristics:
+
+* Keys must be atoms.
+* Keys are ordered, as specified by the developer.
+* Keys can be given more than once.
+
+Maps:
+
+* Maps allow any value as a key.
+* Maps’ keys do not follow any ordering.
+
+```text
+iex> map = %{:a => 1, 2 => :b}
+%{2 => :b, :a => 1}
+iex> map[:a]
+1
+iex> map[2]
+:b
+iex> map[:c]
+nil
+```
 
 ## Single quote
 
@@ -222,6 +256,101 @@ iex> "he" ++ "llo"
     :erlang.++("he", "llo")
 iex> "he" <> "llo"
 "hello"
+```
+
+### Keyword lists <a id="keyword-lists"></a>
+
+In many functional programming languages, it is common to use a list of 2-item tuples as the representation of a key-value data structure. In Elixir, when we have a list of tuples and the first item of the tuple \(i.e. the key\) is an atom, we call it a keyword list:
+
+```text
+iex> list = [{:a, 1}, {:b, 2}]
+[a: 1, b: 2]
+iex> list == [a: 1, b: 2]
+true
+```
+
+As you can see above, Elixir supports a special syntax for defining such lists: `[key: value]`. Underneath it maps to the same list of tuples as above. Since keyword lists are lists, we can use all operations available to lists. For example, we can use `++` to add new values to a keyword list:  
+
+
+```text
+iex> list ++ [c: 3]
+[a: 1, b: 2, c: 3]
+iex> [a: 0] ++ list
+[a: 0, a: 1, b: 2]
+```
+
+Note that values added to the front are the ones fetched on lookup:
+
+```text
+iex> new_list = [a: 0] ++ list
+[a: 0, a: 1, b: 2]
+iex> new_list[:a]
+0
+```
+
+
+
+For example, [the Ecto library](https://github.com/elixir-lang/ecto) makes use of these features to provide an elegant DSL for writing database queries:
+
+```text
+query =
+  from w in Weather,
+    where: w.prcp > 0,
+    where: w.temp < 20,
+    select: w
+```
+
+
+
+These characteristics are what prompted keyword lists to be the default mechanism for passing options to functions in Elixir. In chapter 5, when we discussed the `if/2` macro, we mentioned that the following syntax is supported:
+
+```text
+iex> if false, do: :this, else: :that
+:that
+```
+
+The `do:` and `else:` pairs form a keyword list! In fact, the call above is equivalent to:
+
+```text
+iex> if(false, [do: :this, else: :that])
+:that
+```
+
+keyword lists are used in Elixir mainly for passing optional values. If you need to store many items or guarantee one-key associates with at maximum one-value, you should use maps instead.
+
+### Maps <a id="maps"></a>
+
+Whenever you need a key-value store, maps are the “go to” data structure in Elixir. A map is created using the `%{}` syntax:
+
+```text
+iex> map = %{:a => 1, 2 => :b}
+%{2 => :b, :a => 1}
+iex> map[:a]
+1
+iex> map[2]
+:b
+iex> map[:c]
+nil
+```
+
+Compared to keyword lists, we can already see two differences:
+
+* Maps allow any value as a key.
+* Maps’ keys do not follow any ordering.
+
+In contrast to keyword lists, maps are very useful with pattern matching. When a map is used in a pattern, it will always match on a subset of the given value:
+
+When a map is used in a pattern, it will always match on a subset of the given value:
+
+```text
+iex> %{} = %{:a => 1, 2 => :b}
+%{2 => :b, :a => 1}
+iex> %{:a => a} = %{:a => 1, 2 => :b}
+%{2 => :b, :a => 1}
+iex> a
+1
+iex> %{:c => c} = %{:a => 1, 2 => :b}
+** (MatchError) no match of right hand side value: %{2 => :b, :a => 1}
 ```
 
 

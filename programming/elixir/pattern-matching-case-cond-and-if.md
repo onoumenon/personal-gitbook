@@ -1,5 +1,29 @@
 # Pattern matching, case, cond, and if
 
+## TLDR:
+
+`=` is match operator \(compare + assignment\)
+
+```text
+iex> {:ok, result} = {:ok, 13}
+{:ok, 13}
+iex> result
+13
+```
+
+`^` is pin operator \(compare but no assignment\)
+
+```text
+iex> x = 1
+1
+iex> ^x = 2
+** (MatchError) no match of right hand side value: 2
+```
+
+`_` if you don't need assignment of those values
+
+`case` pattern matching preferred unless you require more complex conditions `cond`
+
 ## Pattern matching
 
 `=` operator in Elixir is actually a match operator and how to use it to pattern match inside data structures. Finally, we will learn about the pin operator `^` used to access previously bound values.

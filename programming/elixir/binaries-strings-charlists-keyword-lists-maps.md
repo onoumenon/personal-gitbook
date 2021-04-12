@@ -6,6 +6,10 @@
 
 {% embed url="https://mortoray.com/2013/11/27/the-string-type-is-broken/" %}
 
+{% embed url="https://dashbit.co/blog/writing-assertive-code-with-elixir" %}
+
+
+
 ## **String TLDR**
 
 * double quote strings are utf-8 binary \(preferred\)
@@ -72,6 +76,18 @@ iex> a
 1
 iex> %{:c => c} = %{:a => 1, 2 => :b}
 ** (MatchError) no match of right hand side value: %{2 => :b, :a => 1}
+```
+
+If all keys are atoms: 
+
+```text
+iex> map = %{a: 1, b: 2}
+%{a: 1, b: 2}
+
+iex> map.a
+1
+iex> map.c
+** (KeyError) key :c not found in: %{2 => :b, :a => 1}
 ```
 
 ## Single quote
@@ -386,4 +402,86 @@ iex> Map.put(%{:a => 1, 2 => :b}, :c, 3)
 iex> Map.to_list(%{:a => 1, 2 => :b})
 [{2, :b}, {:a, 1}]
 ```
+
+Updating a map's key value
+
+```text
+iex> map = %{:a => 1, 2 => :b}
+%{2 => :b, :a => 1}
+
+iex> %{map | 2 => "two"}
+%{2 => "two", :a => 1}
+iex> %{map | :c => 3}
+** (KeyError) key :c not found in: %{2 => :b, :a => 1}
+```
+
+
+
+When all the keys in a map are atoms, you can use the keyword syntax for convenience:
+
+```text
+iex> map = %{a: 1, b: 2}
+%{a: 1, b: 2}
+```
+
+
+
+Another interesting property of maps is that they provide their own syntax for accessing atom keys:
+
+```text
+iex> map = %{:a => 1, 2 => :b}
+%{2 => :b, :a => 1}
+
+iex> map.a
+1
+iex> map.c
+** (KeyError) key :c not found in: %{2 => :b, :a => 1}
+```
+
+### Nested data structures <a id="nested-data-structures"></a>
+
+Often we will have maps inside maps, or even keywords lists inside maps, and so forth. Elixir provides conveniences for manipulating nested data structures via the `put_in/2`, `update_in/2` and other macros giving the same conveniences you would find in imperative languages while keeping the immutable properties of the language.
+
+Imagine you have the following structure:
+
+```text
+iex> users = [
+  john: %{name: "John", age: 27, languages: ["Erlang", "Ruby", "Elixir"]},
+  mary: %{name: "Mary", age: 29, languages: ["Elixir", "F#", "Clojure"]}
+]
+[
+  john: %{age: 27, languages: ["Erlang", "Ruby", "Elixir"], name: "John"},
+  mary: %{age: 29, languages: ["Elixir", "F#", "Clojure"], name: "Mary"}
+]
+```
+
+We have a keyword list of users where each value is a map containing the name, age and a list of programming languages each user likes. If we wanted to access the age for john, we could write:
+
+```text
+iex> users[:john].age
+27
+```
+
+It happens we can also use this same syntax for updating the value:
+
+```text
+iex> users = put_in users[:john].age, 31
+[
+  john: %{age: 31, languages: ["Erlang", "Ruby", "Elixir"], name: "John"},
+  mary: %{age: 29, languages: ["Elixir", "F#", "Clojure"], name: "Mary"}
+]
+```
+
+The `update_in/2` macro is similar but allows us to pass a function that controls how the value changes. For example, let’s remove “Clojure” from Mary’s list of languages:
+
+```text
+iex> users = update_in users[:mary].languages, fn languages -> List.delete(languages, "Clojure") end
+[
+  john: %{age: 31, languages: ["Erlang", "Ruby", "Elixir"], name: "John"},
+  mary: %{age: 29, languages: ["Elixir", "F#"], name: "Mary"}
+]
+```
+
+There is more to learn about `put_in/2` and `update_in/2`, including the `get_and_update_in/2` that allows us to extract a value and update the data structure at once. There are also `put_in/3`, `update_in/3` and `get_and_update_in/3` which allow dynamic access into the data structure. [Check their respective documentation in the `Kernel` module for more information](https://hexdocs.pm/elixir/Kernel.html).  
+
 

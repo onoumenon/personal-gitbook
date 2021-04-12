@@ -1,5 +1,35 @@
 # Basic types, basic operators
 
+## TLDR:
+
+{% hint style="info" %}
+`and` `or` `not` if boolean is expected \(stricter\)
+
+`&&` `||` `!` otherwise
+
+use " " for utf binary string and ' ' for char list
+
+mathematical operators are similar except % returns float
+
+use div\(\) or rem\(\) instead if you need the integer results
+
+dot notation to call anonymous fn:
+
+```text
+add = fn a, b -> a + b end
+add.(1, 2)
+```
+
+different data types can be sorted:
+
+```text
+1 < :atom
+true
+```
+
+`++ (concat)` and `-- (subtract) to manipulate lists`
+{% endhint %}
+
 ```text
 iex> 1          # integer
 iex> 0x1F       # integer

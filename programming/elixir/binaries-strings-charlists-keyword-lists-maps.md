@@ -64,6 +64,14 @@ iex> map[2]
 :b
 iex> map[:c]
 nil
+iex> %{} = %{:a => 1, 2 => :b}
+%{2 => :b, :a => 1}
+iex> %{:a => a} = %{:a => 1, 2 => :b}
+%{2 => :b, :a => 1}
+iex> a
+1
+iex> %{:c => c} = %{:a => 1, 2 => :b}
+** (MatchError) no match of right hand side value: %{2 => :b, :a => 1}
 ```
 
 ## Single quote
@@ -342,6 +350,8 @@ In contrast to keyword lists, maps are very useful with pattern matching. When a
 
 When a map is used in a pattern, it will always match on a subset of the given value:
 
+\(ie: merge\)
+
 ```text
 iex> %{} = %{:a => 1, 2 => :b}
 %{2 => :b, :a => 1}
@@ -353,5 +363,27 @@ iex> %{:c => c} = %{:a => 1, 2 => :b}
 ** (MatchError) no match of right hand side value: %{2 => :b, :a => 1}
 ```
 
+Variables can be used when accessing, matching and adding map keys:
 
+```text
+iex> n = 1
+1
+iex> map = %{n => :one}
+%{1 => :one}
+iex> map[n]
+:one
+iex> %{^n => :one} = %{1 => :one, 2 => :two, 3 => :three}
+%{1 => :one, 2 => :two, 3 => :three}
+```
+
+[The `Map` module](https://hexdocs.pm/elixir/Map.html) provides a very similar API to the `Keyword` module with convenience functions to manipulate maps:
+
+```text
+iex> Map.get(%{:a => 1, 2 => :b}, :a)
+1
+iex> Map.put(%{:a => 1, 2 => :b}, :c, 3)
+%{2 => :b, :a => 1, :c => 3}
+iex> Map.to_list(%{:a => 1, 2 => :b})
+[{2, :b}, {:a, 1}]
+```
 

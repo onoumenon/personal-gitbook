@@ -12,6 +12,25 @@ nil is default value if no default is specified, and implicit `nil` values must 
 
 `@enforce_keys` to enforce keys
 
+
+
+Protocols are a mechanism to achieve polymorphism in Elixir when you want behavior to vary depending on the data type. 
+
+```text
+defprotocol Utility do
+  @spec type(t) :: String.t()
+  def type(value)
+end
+
+defimpl Utility, for: BitString do
+  def type(_value), do: "string"
+end
+
+defimpl Utility, for: Integer do
+  def type(_value), do: "integer"
+end
+```
+
 ### Defining structs <a id="defining-structs"></a>
 
 To define a struct, the `defstruct` construct is used:

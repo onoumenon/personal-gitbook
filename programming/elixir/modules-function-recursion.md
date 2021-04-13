@@ -8,7 +8,7 @@ normal vs private functions: `def` and `defp`
 
 trailing `?` for boolean returns
 
-
+recursion can be done with a guard for the 'escape' condition and a recursive call, but use you can use enum for most applications
 
 ## _Functions_
 

@@ -1,4 +1,4 @@
-# Enumerables, streams, processes
+# Enumerables, streams
 
 ## TLDR:
 

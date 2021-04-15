@@ -115,7 +115,7 @@
   * [Comprehensions](programming/elixir/comprehensions.md)
   * [Sigils](programming/elixir/sigils.md)
   * [try catch rescue](programming/elixir/try-catch-rescue.md)
-  * [debugging](programming/elixir/debugging.md)
+  * [typespecs, behaviours, debugging](programming/elixir/debugging.md)
   * [erlang libraries, what next](programming/elixir/erlang-libraries-what-next.md)
 * [MISC](programming/tips/README.md)
   * [Utils library \(JS\)](programming/tips/utils-library-js.md)

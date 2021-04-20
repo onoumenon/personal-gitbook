@@ -118,6 +118,7 @@
   * [typespecs, behaviours, debugging](programming/elixir/debugging.md)
   * [erlang libraries, what next](programming/elixir/erlang-libraries-what-next.md)
   * [Mix, Agent](programming/elixir/mix-agent.md)
+  * [GenServer](programming/elixir/genserver.md)
 * [Phoenix](programming/phoenix.md)
 * [MISC](programming/tips/README.md)
   * [Utils library \(JS\)](programming/tips/utils-library-js.md)

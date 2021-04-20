@@ -137,5 +137,74 @@ iex> Agent.get(agent, fn content -> content end)
 iex>
 ```
 
-As you can see, we can modify the agent state in any way we want. Therefore, we most likely don’t want to access the Agent API throughout many different places in our code. Instead, we want to encapsulate all Agent-related functionality in a single module, which we will call `KV.Bucket`
+we can modify the agent state in any way we want. Therefore, we most likely don’t want to access the Agent API throughout many different places in our code. Instead, we want to encapsulate all Agent-related functionality in a single module, which we will call `KV.Bucket`
+
+```text
+defmodule KV.BucketTest do
+  use ExUnit.Case, async: true
+
+  test "stores values by key" do
+    {:ok, bucket} = KV.Bucket.start_link([])
+    assert KV.Bucket.get(bucket, "milk") == nil
+
+    KV.Bucket.put(bucket, "milk", 3)
+    assert KV.Bucket.get(bucket, "milk") == 3
+  end
+end
+```
+
+`:async` must _only_ be set if the test case does not rely on or change any global values. For example, if the test requires writing to the filesystem or access a database, keep it synchronous \(omit the `:async` option\) to avoid race conditions between tests.
+
+{% code title="lib/kv/bucket.ex" %}
+```text
+defmodule KV.Bucket do
+  use Agent
+
+  @doc """
+  Starts a new bucket.
+  """
+  def start_link(_opts) do
+    Agent.start_link(fn -> %{} end)
+  end
+
+  @doc """
+  Gets a value from the `bucket` by `key`.
+  """
+  def get(bucket, key) do
+    Agent.get(bucket, &Map.get(&1, key))
+  end
+
+  @doc """
+  Puts the `value` for the given `key` in the `bucket`.
+  """
+  def put(bucket, key, value) do
+    Agent.update(bucket, &Map.put(&1, key, value))
+  end
+end
+```
+{% endcode %}
+
+We are keeping a map inside the agent to store our keys and values. Getting and putting values on the map is done with the Agent API and the capture operator `&`, introduced in [the Getting Started guide](https://elixir-lang.org/getting-started/modules-and-functions.html#function-capturing). The agent passes its state to the anonymous function via the `&1` argument when `Agent.get/2` and `Agent.update/2` are called.
+
+
+
+### Test setup with ExUnit callbacks <a id="test-setup-with-exunit-callbacks"></a>
+
+```text
+defmodule KV.BucketTest do
+  use ExUnit.Case, async: true
+
+  setup do
+    {:ok, bucket} = KV.Bucket.start_link([])
+    %{bucket: bucket}
+  end
+
+  test "stores values by key", %{bucket: bucket} do
+    assert KV.Bucket.get(bucket, "milk") == nil
+
+    KV.Bucket.put(bucket, "milk", 3)
+    assert KV.Bucket.get(bucket, "milk") == 3
+  end
+end
+```
 

@@ -117,6 +117,7 @@
   * [try catch rescue](programming/elixir/try-catch-rescue.md)
   * [typespecs, behaviours, debugging](programming/elixir/debugging.md)
   * [erlang libraries, what next](programming/elixir/erlang-libraries-what-next.md)
+  * [Mix, Agent](programming/elixir/mix-agent.md)
 * [Phoenix](programming/phoenix.md)
 * [MISC](programming/tips/README.md)
   * [Utils library \(JS\)](programming/tips/utils-library-js.md)

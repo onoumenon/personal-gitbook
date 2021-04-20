@@ -14,5 +14,11 @@ On Mac, homebrew doesn't set up the default db username as 'postgres', but the s
 
 `assets` - front-end assets
 
+`config` - project configuration
 
+`deps` - a directory with all of our Mix dependencies. 
+
+`lib` - a directory that holds your application source code
+
+`test` - a directory with all of our application tests. It often mirrors the same structure found in `lib`
 

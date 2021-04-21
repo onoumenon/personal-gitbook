@@ -135,6 +135,7 @@
     * [Vim](programming/tips/productivity/vim.md)
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
+  * [Headless CMS](programming/tips/headless-cms.md)
 
 ## Articles/ Websites <a id="articles"></a>
 

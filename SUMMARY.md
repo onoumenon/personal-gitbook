@@ -122,6 +122,7 @@
   * [misc](programming/elixir/misc.md)
   * [Sage \(Saga Pattern\)](programming/elixir/sage-saga-pattern.md)
 * [Phoenix](programming/phoenix.md)
+* [AWS \(Architect path\)](programming/aws-architect-path.md)
 * [MISC](programming/tips/README.md)
   * [Utils library \(JS\)](programming/tips/utils-library-js.md)
   * [Interview Prep](programming/tips/interview-prep.md)

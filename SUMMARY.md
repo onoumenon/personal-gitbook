@@ -125,6 +125,7 @@
 * [Phoenix](programming/phoenix.md)
 * [Django](programming/django.md)
 * [AWS \(Architect path\)](programming/aws-architect-path.md)
+* [Docker](programming/docker.md)
 * [MISC](programming/tips/README.md)
   * [Utils library \(JS\)](programming/tips/utils-library-js.md)
   * [Interview Prep](programming/tips/interview-prep.md)

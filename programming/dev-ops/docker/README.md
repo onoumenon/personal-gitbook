@@ -1,5 +1,9 @@
 # Docker
 
+{% embed url="https://github.com/wsargent/docker-cheat-sheet" %}
+
+The below two guides are very good intro-level guide to the high level concepts:
+
 {% embed url="https://vsupalov.com/6-docker-basics/" %}
 
 

@@ -132,6 +132,7 @@
   * [Github Best Practices](programming/code-security/github-best-practices.md)
   * [What to do if you've pushed secrets to github](programming/code-security/what-to-do-if-youve-pushed-secrets-to-github.md)
 * [Security](programming/security/README.md)
+  * [OWASP guide](programming/security/owasp-guide.md)
   * [OWASP Top 10 \(2017\)](programming/security/untitled.md)
   * [XSS](programming/security/xss.md)
   * [Content Security Policies](programming/security/content-security-policies.md)

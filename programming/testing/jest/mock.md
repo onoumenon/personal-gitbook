@@ -6,5 +6,7 @@
 
 {% embed url="https://www.leighhalliday.com/mock-fetch-jest" %}
 
+{% embed url="https://kentcdodds.com/blog/stop-mocking-fetch" %}
+
 
 

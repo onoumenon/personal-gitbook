@@ -1,10 +1,10 @@
 # Useful Formatters/ Utils
 
-momentJS \(for time\)
+[momentJS](https://momentjs.com/) \(for time\)
 
-dayJS \(for time, lighter weight\)
+[dayJS](https://day.js.org/) \(for time, lighter weight\)
 
-numeralJS \(for numbers\)
+[numeralJS](http://numeraljs.com/) \(for numbers\)
 
-pluralize \(for pluralizing\)
+[pluralize](https://www.npmjs.com/package/pluralize) \(for pluralizing\)
 

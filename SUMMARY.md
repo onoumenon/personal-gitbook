@@ -151,6 +151,7 @@
   * [SECURITY, DEPLOYMENT & OPERATIONS](programming/aws-architect-path/security-deployment-and-operations.md)
   * [NOSQL Databases & DynamoDB](programming/aws-architect-path/nosql-databases-and-dynamodb.md)
 * [Docker](programming/docker/README.md)
+  * [Docker and semver](programming/docker/docker-and-semver.md)
   * [Docker commands](programming/docker/docker-commands.md)
 * [Open source](programming/open-source/README.md)
   * [Code quality](programming/open-source/code-quality.md)

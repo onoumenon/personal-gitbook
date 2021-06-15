@@ -1,5 +1,7 @@
 # Other resources
 
+{% embed url="https://kentcdodds.com/blog/don-t-solve-problems-eliminate-them" %}
+
 {% embed url="https://github.com/binhnguyennus/awesome-scalability" %}
 
 {% embed url="https://github.com/kuchin/awesome-cto" %}

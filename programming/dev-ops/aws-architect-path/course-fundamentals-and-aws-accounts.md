@@ -49,7 +49,7 @@ Under account settings, near the bottom of the page, activate IAM access to bill
 
 **Role: Used by aws services or for external access to your account \(uncertain number of things that needs access, eg: can be given to ec2 instances\)**
 
-![](../../.gitbook/assets/screenshot-2021-06-12-at-3.04.54-pm.png)
+![](../../../.gitbook/assets/screenshot-2021-06-12-at-3.04.54-pm.png)
 
 * An IAM user has 1 username and 1 password \(password is optional for CLI IAM user\)
 * An IAM can have two access keys
@@ -66,7 +66,7 @@ Access secret will only be shown once
 
 {% embed url="https://aws.amazon.com/cli/" %}
 
-![](../../.gitbook/assets/screenshot-2021-06-12-at-4.12.07-pm.png)
+![](../../../.gitbook/assets/screenshot-2021-06-12-at-4.12.07-pm.png)
 
 Instructions to configure profile \(iamadmin-general is a name you can specify\), and list s3 buckets
 

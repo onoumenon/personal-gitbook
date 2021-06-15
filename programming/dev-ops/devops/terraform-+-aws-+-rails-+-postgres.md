@@ -264,7 +264,7 @@ We don't care about outbound connections, so egress protocol is -1 \(all protoco
 
 This should be saved to the same folder as the other tf files.
 
-![](../../.gitbook/assets/screenshot-2021-01-12-at-5.29.14-pm.png)
+![](../../../.gitbook/assets/screenshot-2021-01-12-at-5.29.14-pm.png)
 
 The file structure should look like the above. Terraform will read all the tf files and run it as one huge file. main.tf is conventionally the main config, outputs.tf is the script to generate outputs \(eg: aws ip address\), variables for the script variables, with secrets in .env using TF VAR name method
 

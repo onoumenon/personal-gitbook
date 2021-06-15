@@ -21,7 +21,7 @@ Regions are the area where AWS physical servers are located. \(Eg: ap-southeast-
   
 Each region has multiple availability zones, each with its own independent power, cooling, physical security, etc
 
-![](../../.gitbook/assets/screenshot-2021-04-30-at-1.14.10-pm%20%281%29.png)
+![](../../../.gitbook/assets/screenshot-2021-04-30-at-1.14.10-pm%20%281%29.png)
 
  Names \(ap-southeast-2a\) are randomly generated so users don't keep sticking to one availability zone. 
 
@@ -41,7 +41,7 @@ Root user -&gt; can create users with roles
 
 Users can be in groups.
 
-![](../../.gitbook/assets/screenshot-2021-04-30-at-1.30.51-pm.png)
+![](../../../.gitbook/assets/screenshot-2021-04-30-at-1.30.51-pm.png)
 
 Example JSON policy
 

@@ -7,19 +7,19 @@
 ### Finish a feature
 
 * If your feature relies on another repo's \(common library\) release, merge that first \(see below for release\)
-* Change package.json’s for common library ver  
+* Change package.json’s for common library ver if any
 * Yarn install
 * Make a commit \(msg: ‘use common-lib v1.0.0’\)
 * Finish feature to merge to dev
 
 ### Start a Release \(1 or more\):
 
-\(to merge sk-web feature after finishing feature &gt; dev\)
+\(to merge feature after finishing feature &gt; dev\)
 
-* start new release \(msg: v2.3.18 if prev is v2.3.17\)
+* start new release \(msg: v2.3.18 if prev is v2.3.17 for patch, see [semantic versioning](../semver.md)\)
 * change package.json
 * if common library's version is changed, change it in package.json as well
-* \(don't change yarn or npm files, just yarn install\)
+* \(don't change yarn or npm files directly\)
 * commit the changes \(msg: Release v2.3.18\)
 * Finish release
 * push to dev + master \(with tags\)
@@ -35,21 +35,21 @@
 * finish hotfix
 * push to dev + master \(with tags\)
 
-### Manual Deployment
+### ~~Manual Deployment~~
 
-on common-library, pull latest from master and dev
+~~on common-library, pull latest from master and dev~~
 
-* make sure it's the correct version of common library
-* point to master branches \(on both repos\)
-* ember deploy staging —activate
+* ~~make sure it's the correct version of common library~~
+* ~~point to master branches \(on both repos\)~~
+* ~~deploy staging —activate~~
 
 {% hint style="warning" %}
-The next step is important, as it's the last checkpoint before deployment.
+~~The next step is important, as it's the last checkpoint before deployment.~~
 {% endhint %}
 
-* check staging site \(and verify is all commits look correct\)
-* ember deploy production —activate
-* check production \(and verify that nothing is broken\)
+* ~~check staging site \(and verify is all commits look correct\)~~
+* ~~deploy production —activate~~
+* ~~check production \(and verify that nothing is broken\)~~
 
 
 

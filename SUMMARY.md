@@ -14,6 +14,7 @@
   * [Resources](programming/git/resources.md)
   * [Signed commits](programming/git/signed-commits.md)
   * [Git Flow](programming/git/git-flow.md)
+  * [Git alias](programming/git/git-alias.md)
 * [CS Fundamentals](programming/fundamentals/README.md)
   * [Maths for CS](programming/fundamentals/maths-for-cs/README.md)
     * [1.1 - 1.2 Intro, Proofs](programming/fundamentals/maths-for-cs/1.1-intro-to-maths-for-cs.md)

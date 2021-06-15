@@ -129,6 +129,7 @@
     * [SECURITY, DEPLOYMENT & OPERATIONS](programming/dev-ops/aws-architect-path/security-deployment-and-operations.md)
     * [NOSQL Databases & DynamoDB](programming/dev-ops/aws-architect-path/nosql-databases-and-dynamodb.md)
 * [Code security](programming/code-security/README.md)
+  * [Github Best Practices](programming/code-security/github-best-practices.md)
   * [What to do if you've pushed secrets to github](programming/code-security/what-to-do-if-youve-pushed-secrets-to-github.md)
 * [Security](programming/security/README.md)
   * [OWASP Top 10 \(2017\)](programming/security/untitled.md)

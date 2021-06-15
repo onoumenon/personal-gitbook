@@ -8,6 +8,7 @@
   * [Useful Links](programming/start-here/articles.md)
   * [Preparation/ Setup](programming/start-here/introduction/README.md)
     * [Mac Setup](programming/start-here/introduction/mac-setup.md)
+* [semver](programming/semver.md)
 * [GIT](programming/git/README.md)
   * [Sourcetree](programming/git/sourcetree.md)
   * [Resources](programming/git/resources.md)

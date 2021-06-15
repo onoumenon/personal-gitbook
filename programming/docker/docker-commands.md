@@ -6,8 +6,6 @@
 
 `docker build -t {tagname}:latest . -f ../docker/Dockerfile`
 
-\`\`
-
 {% embed url="https://dockerlabs.collabnix.com/docker/cheatsheet/" %}
 
 

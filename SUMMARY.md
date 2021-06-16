@@ -163,6 +163,7 @@
 * [Open source](programming/open-source/README.md)
   * [Code quality](programming/open-source/code-quality.md)
 * [CodeClimate](programming/codeclimate.md)
+* [postgres](programming/postgres.md)
 * [MISC](programming/tips/README.md)
   * [Utils library \(JS\)](programming/tips/utils-library-js.md)
   * [Interview Prep](programming/tips/interview-prep.md)

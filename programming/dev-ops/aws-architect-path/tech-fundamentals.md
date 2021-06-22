@@ -71,5 +71,53 @@ CSMA/CD: [https://en.wikipedia.org/wiki/Carrier-sense\_multiple\_access\_with\_c
 
 ![](../../../.gitbook/assets/screenshot-2021-06-21-at-9.59.29-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-9.33.17-pm.png)
+
+133 is 10000101 in binary: you can use the binary table to easily convert.
+
+### Layer 3 - Network
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-9.40.33-pm.png)
+
+AKA inter-networking -&gt; internet, uses IP Protocol
+
+In layer 2, information is encapsulated in frames, on layer 3, it's encapsulated in packets.
+
+ IP packets contains certain fields:
+
+* Source IP Address
+* Destination IP Address
+* Protocol \(TCP, ICMP, UDP\)
+* Data
+* Time to live \(maximum hops\)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-9.47.54-pm.png)
+
+### IP address
+
+eg: 133.33.3.7 -&gt; human readable ip address, dotted decimal notation
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-9.50.16-pm.png)
+
+Each part is an 8bit binary \(octet\), which adds up to 32 bits \(4 bytes\), or 4 \* 8bits \(Octets\)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-9.52.25-pm.png)
+
+IP addresses should be unique.
+
+### Subnet Mask
+
+allows host to check if ip address is local or remote, whether it needs to use gateway or not
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.17.20-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.18.09-pm.png)
+
+### Route tables
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.20.12-pm.png)
+
+Route table prefers more specific to least specific, so it can hop by hop get to the destination
+
 
 

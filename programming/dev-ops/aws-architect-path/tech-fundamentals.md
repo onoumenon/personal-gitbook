@@ -119,5 +119,27 @@ allows host to check if ip address is local or remote, whether it needs to use g
 
 Route table prefers more specific to least specific, so it can hop by hop get to the destination
 
+### Address Resolution Protocol
+
+When subnet mask is used to determine that a destination ip address is local, it will use ARP to send data.
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.26.31-pm.png)
+
+ 1. On layer 3, instructions to send data from 1 IP to another IP is received
+
+2. Uses subnet mask to check if address is local
+
+3. It's local, so it uses layer 2 ARP. ARP discovers which MAC = destination IP
+
+4. Layer 2 broadcasts to check destination IP
+
+5. Receives a response from a corresponding address
+
+6. Layer 2 encapsulates data in frame to transmit on layer 1
+
+7. L1 hands over data in frame to L2
+
+8. L2 strips frame and passes payload to L3, which passes it to game
+
 
 

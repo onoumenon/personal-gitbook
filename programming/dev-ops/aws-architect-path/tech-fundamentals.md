@@ -143,3 +143,50 @@ When subnet mask is used to determine that a destination ip address is local, it
 
 
 
+Note: Router has MAC address, and routes packages \(doesn't drop if it is not destination like a computer\)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.37.38-pm.png)
+
+#### Attributes
+
+* IP Addresses \(IPv4, IPv6\)
+* ARP - find the MAC address, for this IP
+* Route - where to foward packet
+* Route Tables - multiple routes
+* Router - moves packets from source to destination
+* Device &lt;=&gt; device communication over internet
+* No method for channels of communications \(src IP &lt;=&gt; dest IP only, cannot have different apps communicating at the same time\)
+* Can be delivered out of order
+
+### Layer 4 - Transport \(and maybe layer 5\)
+
+As layers are conceptual, some distinctions are blurry.
+
+This layer solves limitation of L3 where packets are out of order cos of different routes, or missing packets. L3 doesn't distinguish between apps/ channels.
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.44.41-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.46.07-pm.png)
+
+IP packet wraps/ encapsulates TCP segments:
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.49.40-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.52.45-pm.png)
+
+How it relates to AWS is that you need to set a range of tcp ports for ephemeral ports, and add firewall rules.
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-10.55.40-pm.png)
+
+Then only does connection establish, and client can send data. It's to synchronise what sequence numbers the other 'party' will be using.
+
+Stateless firewall: two rules, outbound and inbound
+
+Network ACL \(aws\), it's basically this
+
+Stateful firewall: \(maybe layer 5\) only cares about outbound, inbound is implicit
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.01.15-pm.png)
+
+
+

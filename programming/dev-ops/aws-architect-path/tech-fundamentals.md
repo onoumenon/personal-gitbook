@@ -190,3 +190,47 @@ Stateful firewall: \(maybe layer 5\) only cares about outbound, inbound is impli
 
 
 
+IPv4 is required to be unique, but was/is encountering shortage, so NAT was created \(only for IPv4\) \(IPv6 solves it by making more addresses avail\)
+
+PAT \(likely used in your home router network\)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.04.07-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.08.43-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.10.29-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.13.38-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.14.56-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.17.06-pm.png)
+
+#### Private addresses
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.18.40-pm.png)
+
+Aim to allocate non-overlapping addresses for private use
+
+IPv6 has a LOT more addresses
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.19.48-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.24.02-pm.png)
+
+starts at midway point, entire internet is a /0 network, 0.0.0.0 matches entire network
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.28.22-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.29.47-pm.png)
+
+
+
+
+
+
+
+
+
+
+

@@ -222,13 +222,27 @@ starts at midway point, entire internet is a /0 network, 0.0.0.0 matches entire 
 
 ![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.28.22-pm.png)
 
+
+
+### DDOS
+
 ![](../../../.gitbook/assets/screenshot-2021-06-22-at-11.29.47-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-06-23-at-9.44.38-am.png)
 
+Attacker exploits the fact that requests are cheaper than responses. It's like throwing hand grenades.
 
+![](../../../.gitbook/assets/screenshot-2021-06-23-at-9.46.03-am.png)
 
+Attacker exploits 3-way handshake protocol means server is waiting for response \(the 2nd handshake\), but never gets any since SYNs are spoofed.
 
+![](../../../.gitbook/assets/screenshot-2021-06-23-at-9.50.27-am.png)
 
+Attacker exploits protocol where a response is significantly larger than the request, ie: spoofed dns requests.
+
+{% embed url="https://www.varonis.com/blog/dns-cache-poisoning/" %}
+
+{% embed url="https://www.computerworld.com/article/2516831/china-s-great-firewall-spreads-overseas.html" %}
 
 
 

@@ -38,5 +38,5 @@ resilient across availability zones
 
 ![Default VPC](../../../.gitbook/assets/screenshot-2021-06-24-at-11.27.25-pm.png)
 
-
+You'll probably need custom VPC
 

@@ -18,5 +18,9 @@ Rubber teats are not air-tight
 
 {% embed url="https://www.perfumersworld.com/unit-2.php" %}
 
+{% embed url="http://www.leffingwell.com/olfaction.htm" %}
+
+{% embed url="https://artandolfaction.com/" %}
+
 
 

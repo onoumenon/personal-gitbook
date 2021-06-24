@@ -244,7 +244,9 @@ Attacker exploits protocol where a response is significantly larger than the req
 
 {% embed url="https://www.computerworld.com/article/2516831/china-s-great-firewall-spreads-overseas.html" %}
 
-Tricky part is block
+### SSL & TLS \(related to that lock on the website\)
 
+![](../../../.gitbook/assets/screenshot-2021-06-24-at-10.49.38-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-06-24-at-10.53.54-pm.png)
 

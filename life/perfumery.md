@@ -36,9 +36,10 @@ Beginner ingredients:
 * [x]  Galaxolide
 * [x]  Hedione
 
-• Musks: 
+• Musks, Linalool: 
 
 * [x] Exaltolide
+* [x] Ethyl Linalool
 
 • Woods:
 
@@ -56,7 +57,6 @@ Beginner ingredients:
 * [x] Iris/violet/orris \(alpha isomethyl ionone, ~~ionone alpha or Methyl Ionone Gamma~~\)
 * [x] Lavender EO 
 * [x] Orange Blossom \(pre-made neroli accord\)
-* [x] Ethyl Linalool
 
 • Citruses 
 
@@ -76,6 +76,7 @@ Beginner ingredients:
 * [x] Dairy accord
 * [x] Green tea
 * [ ] Coffee
+* [ ] Cocoa
 * [x] Tonka Bean \(absolute or pre made accord\)
 
 • Spicy 
@@ -85,7 +86,7 @@ Beginner ingredients:
 * [x] Cinnamon \(Cinnamic Aldehyde\) 
 * [ ] Pink pepper EO 
 * [x] Frankincense EO \(also called Olibanum\) 
-* [ ] Tobacco Absolute \(5%\)
+* [ ] Tobacco Absolute \(5%\)/ accord
 
 • Ambery 
 

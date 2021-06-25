@@ -40,3 +40,23 @@ resilient across availability zones
 
 You'll probably need custom VPC
 
+
+
+### EC2 - Elastic Cloud
+
+VPC network means EC2 is AZ resilient
+
+![](../../../.gitbook/assets/screenshot-2021-06-25-at-10.24.32-pm.png)
+
+Terminate = delete \(irreversible\)
+
+storage is still used when instance is stopped
+
+![](../../../.gitbook/assets/screenshot-2021-06-25-at-10.31.44-pm.png)
+
+3389 port  remote desktop protocol - windows
+
+22 port for ssh protocol - mac/ linux
+
+
+

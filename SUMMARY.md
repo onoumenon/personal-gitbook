@@ -183,6 +183,7 @@
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
   * [Headless CMS](programming/tips/headless-cms.md)
+  * [misc](programming/tips/misc.md)
 
 ## Articles/ Websites <a id="articles"></a>
 

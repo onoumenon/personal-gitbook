@@ -15,5 +15,6 @@ Notes:
 Rake task
 
 * In rails app using gem, use railtie
-* in gem, import rake task file
+* in gem, import rake task file \(`import "./lib/tasks/{name}.rake"`\) used in `Rakefile`
+*  create the rake file, call the services you need
 

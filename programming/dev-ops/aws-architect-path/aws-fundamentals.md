@@ -58,5 +58,20 @@ storage is still used when instance is stopped
 
 22 port for ssh protocol - mac/ linux
 
+### EC2 Practical
+
+* Go to EC2
+* Create keypair -&gt; use pem if ssh/ linux -&gt; save private part of key
+* Launch instance \(eg for type: linux, Amazon linux 2 AMI, x86, t2micro \(free\)
+* configure instance -&gt; default
+* add storage \(device id, root vol\) ...
+* security group \(1 security group can be many-to-many mapping\), set source to my IP \(or limit it somehow\)
+* review and launch -&gt; launch
+* select a key pair \(public key on instance\)
+* state = pending, then ready
+* click on instance -&gt; connect to instance, copy the `ssh ....` command
+* move to folder w pem, might need to run chmod command
+* run ssh
+
 
 

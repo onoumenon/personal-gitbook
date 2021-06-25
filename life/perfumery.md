@@ -22,5 +22,106 @@ Rubber teats are not air-tight
 
 {% embed url="https://artandolfaction.com/" %}
 
+Beginner ingredients:
 
+{% embed url="https://www.youtube.com/watch?v=jP3Z3WGAijA" %}
+
+
+
+• Perfumers alcohol \(200 proof - SDA 40-B Ethanol\)
+
+• The "Must haves": 
+
+* [x] Iso E super
+* [x]  Galaxolide
+* [x]  Hedione
+
+• Musks: 
+
+* [x] Exaltolide
+
+• Woods:
+
+* [x] Cedarwood EO
+* [x] Agarwood \(oud\) - Black Agar accord
+* [x] Sandalwood \(Sandalore/Sandela\) 
+* [ ] Pine
+* [ ] Juniper Berry EO
+* [x] Patchouli Light EO \(Clearwood\)
+
+• Florals:
+
+* [x] Rose otto accord
+* [ ] Jasmine \(Jasmatone\)
+* [x] Iris/violet/orris \(alpha isomethyl ionone, ~~ionone alpha or Methyl Ionone Gamma~~\)
+* [x] Lavender EO 
+* [x] Orange Blossom \(pre-made neroli accord\)
+* [x] Ethyl Linalool
+
+• Citruses 
+
+* [x] Bergamot EO
+* [x]  Orange \(Sweet\) 
+* [ ] EO Grapefruit \(Pink\) EO
+
+• Fruits 
+
+* [ ] Nectarine/peach \(Nectaryl\) 
+* [x] Delta Decalactone \(creamy coconut\)
+* [x] Apple \(Fructone and/or ~~Manzanate~~\)
+* [ ] Pineapple \(pre-made accord\)
+
+• Gourmand
+
+* [x] Dairy accord
+* [x] Green tea
+* [ ] Coffee
+* [x] Tonka Bean \(absolute or pre made accord\)
+
+• Spicy 
+
+* [x] Cardamom EO 
+* [x] AllSpice \(replace w spice accord\)
+* [x] Cinnamon \(Cinnamic Aldehyde\) 
+* [ ] Pink pepper EO 
+* [x] Frankincense EO \(also called Olibanum\) 
+* [ ] Tobacco Absolute \(5%\)
+
+• Ambery 
+
+* [x] Cetalox or Ambroxan 
+* [x] Amber \(pre-made accord\)
+
+• Aldehydes
+
+* [x]  C12 MNA \(warm ambery\) 
+* [x] C12 Lauric \(soapy fresh\) 
+* [x] C10 Decanal \(orange peel\) 
+* [x] C16 Strawberry
+
+• Ozonic 
+
+* [x]  Calone \(replaced w ozone\)
+* [x] Floral ozone
+
+• Mossy/Earthy/Animalic
+
+* [x] Oakmoss 
+* [x] Leather \(Suederal\)
+
+• Sweet 
+
+* [x] Ethyl Maltol
+* [x] Ethyl Vanillin 
+
+• Green
+
+* [ ] Violet leaf \(green leaf accord, Stemone\)
+* [x]   Hexenol-3-Cis \(fresh grass\)
+
+• Balsamic
+
+* [x] Benzoin Ollifac 63 \(replaced w accord\)
+
+ 
 

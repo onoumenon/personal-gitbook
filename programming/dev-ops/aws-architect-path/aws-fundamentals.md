@@ -73,5 +73,25 @@ storage is still used when instance is stopped
 * move to folder w pem, might need to run chmod command
 * run ssh
 
+### S3
+
+Default storage service
+
+![](../../../.gitbook/assets/screenshot-2021-06-25-at-11.27.12-pm.png)
+
+Objects are like files
+
+bucket are created by default in a region
+
+![](../../../.gitbook/assets/screenshot-2021-06-25-at-11.28.44-pm.png)
+
+folders are referred to as prefixes, because /old/koala.jpg is positioned in old folder
+
+![](../../../.gitbook/assets/screenshot-2021-06-25-at-11.29.57-pm.png)
+
+has no file-based system, it's flat
+
+![](../../../.gitbook/assets/screenshot-2021-06-25-at-11.31.16-pm.png)
+
 
 

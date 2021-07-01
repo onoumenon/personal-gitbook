@@ -171,3 +171,11 @@ Finally - we will create an **OrganizationAccountAccessRole** in the production 
 
 WARNING : If you get an error "You have exceeded the allowed number of AWS Accounts" then you can go here [https://console.aws.amazon.com/servicequotas/home?region=us-east-1\#!/services/organizations/quotas/L-29A0C5DF](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/organizations/quotas/L-29A0C5DF) and request a quote increase for the number of member accounts in an ORG
 
+Need to add role if adding existing account, eg, add general account to role
+
+switch role
+
+provide the account from, to acct to switch role to \(prod acct\), display name \(eg:prod\)
+
+### 
+

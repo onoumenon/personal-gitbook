@@ -177,5 +177,21 @@ switch role
 
 provide the account from, to acct to switch role to \(prod acct\), display name \(eg:prod\)
 
-### 
+### Service control policy
+
+json doc, attached to org / ou / member
+
+![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.50.18-pm.png)
+
+management acct cannot be restricted using service control policy.
+
+don't use management acct to do normal tasks
+
+![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.52.07-pm.png)
+
+limit but can't grant
+
+same flow = deny &gt; allow &gt; deny
+
+
 

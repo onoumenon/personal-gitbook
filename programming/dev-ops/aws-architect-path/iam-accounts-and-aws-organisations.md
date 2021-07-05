@@ -209,6 +209,10 @@ select PROD from role history
 
 aws organization -&gt; policies -&gt; service control policy -&gt; enable service control policy -&gt; default is full access -&gt; add explicit deny by create -&gt; detach other policies and attach the recently created scp
 
+### Cloudwatch logs
+
+![](../../../.gitbook/assets/screenshot-2021-07-05-at-10.40.07-pm.png)
+
 
 
 

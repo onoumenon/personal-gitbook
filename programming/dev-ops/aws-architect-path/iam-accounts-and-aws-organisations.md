@@ -255,3 +255,19 @@ can configure organization trail
 
 within 15mins
 
+### Demo
+
+CloudTrail Pricing : [https://aws.amazon.com/cloudtrail/pricing/](https://aws.amazon.com/cloudtrail/pricing/)
+
+CloudWatch Logs Pricing : [https://aws.amazon.com/cloudwatch/pricing/](https://aws.amazon.com/cloudwatch/pricing/)
+
+cloudtrail \(free\) - 90 days, 1 trail per region, management events but no data events
+
+Cloud trail -&gt; Trails -&gt; trail name, all regions for all accounts in org, use/ create s3 bucket to store logs -&gt; log file encryption -&gt; cloudwatch logs enabled -&gt; choose things to log \(management, data, insight\) -&gt; read and write enabled
+
+open json log file for cloudtrail
+
+Event history enabled by default
+
+
+

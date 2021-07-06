@@ -213,9 +213,45 @@ aws organization -&gt; policies -&gt; service control policy -&gt; enable servic
 
 ![](../../../.gitbook/assets/screenshot-2021-07-05-at-10.40.07-pm.png)
 
+regional service
 
+logging sources injects data to log events
 
+log events are stored in log stream
 
+log group stores config settings, metric filter, metric triggers alarm
 
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-8.19.37-pm.png)
 
+### Cloudtrail
+
+CloudTrail Is a product which logs API calls and account events.
+
+It's very often used to diagnose security or performance issues, or to provide quality account level traceability.
+
+It is enabled by default in AWS accounts and logs free information with a 90 day retention.
+
+It can be configured to store data indefinitely in S3 or CloudWatch Logs.
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-8.21.49-pm.png)
+
+only management event is logged by default
+
+configure cloudtrail for one region or all regions
+
+services will log to the region they're in.
+
+you can also enable data events to be logged
+
+you can store logs to s3
+
+you can store in cloudwatch logs \(more powerful\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-8.25.56-pm.png)
+
+can configure organization trail
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-8.27.23-pm.png)
+
+within 15mins
 

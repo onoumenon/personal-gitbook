@@ -80,5 +80,76 @@ cheap
 
 ![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.17.04-pm.png)
 
+### Object versioning
+
+default is disabled, but once enabled, can't be disabled, only suspended
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.26.56-pm.png)
+
+versioning allocates id, operations that modify objects generates new ver
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.28.33-pm.png)
+
+if you delete an obj, you create a delete marker
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.29.03-pm.png)
+
+You can delete a specific version
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.30.07-pm.png)
+
+### MFA delete
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.30.44-pm.png)
+
+### You can overwrite files by names without versioning
+
+### Demo
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14305172" %}
+
+* set up s3 bucket
+* enable versioning
+* replace a file with the same name with another file
+* looks like it's overwritten, but you can toggle `list versions`
+* delete objects adds delete markers to them
+* to undelete object, delete the delete marker
+* to permanently delete object at version, delete the version
+* you can suspend, but it only stops new ver from being saved
+
+### s3 optimization
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.36.48-pm.png)
+
+This lesson reviews how S3 Uploads \(PutObject\) works
+
+Single PUT Upload \(not recommended if &gt;100mb\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.38.43-pm.png)
+
+Multipart Upload
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.40.02-pm.png)
+
+Finishing up by reviewing how S3 Transfer Acceleration works and how it could benefit Animals4life remote workers when uploading large data sets.
+
+no control over internet paths
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.41.28-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.41.57-pm.png)
+
+S3 Transfer Acceleration is off by default
+
+{% hint style="info" %}
+Bucket names cannot contain periods, need to be DNS compatible 
+{% endhint %}
+
+remote worker connects to -&gt; edge location uses-&gt; aws global network to link to -&gt;s3 bucket
+
+![](../../../.gitbook/assets/screenshot-2021-07-06-at-10.45.24-pm.png)
+
+the further the bucket is, the better the improvement
+
 
 

@@ -243,6 +243,48 @@ you need both key policy and iam policy
 
 you can be permissioned to only create key but not encrypt/decrypt
 
+### Demo
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14368224" %}
+
+* kms, customer managed key, kms
+* alias for key
+* key admin, this is the role that can create and delete key
+* key usage, role to decrypt and encrypt
+* review key policy
+* encypt w cmk
+
+Note : the commands required will be different based on using 1\) Windows 10, or 2\) macOS/Linux
+
+`# Shared  
+echo "find all the doggos, distract them with the yumz" > battleplans.txt` 
+
+`Windows Commands`   
+`aws kms encrypt --key-id alias/catrobot --plaintext fileb://battleplans.txt --output text --profile iamadmin-general --query CiphertextBlob > battleplans.base64   
+  
+certutil -decode battleplans.base64 not_battleplans.enc   
+  
+aws kms decrypt --ciphertext-blob fileb://not_battleplans.enc --output text --profile iamadmin-general --query Plaintext > decreyptedplans.base64   
+  
+certutil -decode decreyptedplans.base64 decryptedplans.txt #` 
+
+`Linux/macOS commands   
+aws kms encrypt \   
+ --key-id alias/catrobot \  
+ --plaintext fileb://battleplans.txt \  
+ --output text \  
+ --query CiphertextBlob \  
+ --profile iamadmin-general | base64 \  
+ --decode > not_battleplans.enc   
+  
+aws kms decrypt \  
+ --ciphertext-blob fileb://not_battleplans.enc \  
+ --output text \  
+ --profile iamadmin-general \  
+ --query Plaintext | base64 --decode > decryptedplans.txt`
+
+some services creates aws managed keys
+
 
 
 

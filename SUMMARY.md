@@ -227,7 +227,8 @@
   * [Women in Tech](life/tech-related/women-in-tech.md)
 * [How to choose a career](life/untitled.md)
 * [How to Learn](life/how-to-learn.md)
-* [Perfumery](life/perfumery.md)
+* [Perfumery](life/perfumery/README.md)
+  * [Starting Guide](life/perfumery/starting-guide.md)
 * [Fitness](life/fitness/README.md)
   * [Beginner Strength Routine](life/fitness/beginner-strength-routine.md)
 

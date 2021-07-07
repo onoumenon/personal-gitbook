@@ -151,5 +151,107 @@ remote worker connects to -&gt; edge location uses-&gt; aws global network to li
 
 the further the bucket is, the better the improvement
 
+### Demo
+
+* create bucket
+* select bucket &gt; transfer acceleration, get endpoint \(edge location\)
+* check speed with aws test
+
+AWS Accelerated Transfer Tool : [http://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html](http://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html)
+
+### Encryption
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.07.17-pm.png)
+
+Difference between encryption at rest, and encryption in transit.
+
+at rest: 'local', one entity
+
+in transit: encryption tunnel \(outsiders can't see\), multiple entities
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.08.59-pm.png)
+
+plaintext: unencrypted data, can be doc, image, or app
+
+algorithm: math/ code that takes secret and encrypts it with an algorithm
+
+key: cipher
+
+ciphertext: encrypted data
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.11.33-pm.png)
+
+Symmetric encryption
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.13.01-pm.png)
+
+symmetric encryption is not ideal for transit encyption, because you need a way to transfer the key
+
+assymetric: choose algo, both make pub and priv keys, priv key needs to be used to decrypt stuff encrypted w pub key. 
+
+upload pub key to be shared. the other party encrypt w pub key.
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.20.13-pm.png)
+
+cat only knows robot has received by 'ok'
+
+'ok' can be proven to be from robot with signing w priv key.
+
+use pub key to check if ok is signed w priv key
+
+### steganography
+
+hiding that you are hiding \(encrypting\) sth -- plausible deniability
+
+algo can't easily be detected unless you know the algo \(eg: image pixel changes\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.25.01-pm.png)
+
+### KMS \(key management service\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.26.42-pm.png)
+
+comply FIPS 140 level 2
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.28.05-pm.png)
+
+* create a key, customer master key
+* kms encrypts cmk
+* client makes a encrypt call \(using permission\)
+* client decrypts file \(using permission\)
+* cmk NEVER leaves kms
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.30.12-pm.png)
+
+dek is created w cmk, bypass 4kb limit, linked to a specific cmk
+
+kms does not store dek, it creates and then discards it
+
+it stores the encrypted key w data
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.33.13-pm.png)
+
+aws managed \(using kms\) - cmk rotation is mandatory
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.35.13-pm.png)
+
+key policy is on cmk
+
+![](../../../.gitbook/assets/screenshot-2021-07-07-at-10.36.18-pm.png)
+
+you need both key policy and iam policy
+
+you can be permissioned to only create key but not encrypt/decrypt
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -357,6 +357,8 @@ edit default encryption: on bucket
 
 ### S3 storage classes
 
+### Standard
+
 default : s3 standard, az resilient
 
 ![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.16.13-pm.png)
@@ -367,7 +369,7 @@ default : s3 standard, az resilient
 
 s3 standard: frequent access and non replaceable
 
-#### Standard-IA
+### Standard-IA
 
 cheaper than standard, storage cost
 
@@ -384,6 +386,68 @@ min capacity of object is 128kb \(not cost effective for small objects\)
 diff w standard IA is one AZ storage, durable cept AZ failure, data is non critical and replaceable, don't use if only one copy
 
 ![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.21.18-pm.png)
+
+### Glacial 
+
+1/5 of cost of standard
+
+very infrequent access, cold obj \(not immediate access\), when retrieved, it goes to IA temporarily
+
+first btye latency of minutes or hours
+
+archival data
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.23.31-pm.png)
+
+### Glacial deep archive
+
+cheapest, 'frozen' state, retrieval time is much longer
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.25.17-pm.png)
+
+### Intelligent tiering
+
+contains 4 different tiers
+
+auto migrating based on metrics
+
+same costs for storing + monitoring costs 
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.27.08-pm.png)
+
+long-lived data and changing/ unknown usage patterns
+
+## s3 lifecycle config
+
+transition objects between storage tiers by duration, 
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.29.04-pm.png)
+
+based on duration not on usage
+
+waterfall \(transition is one way\)
+
+restrictions:
+
+small objects can cost more \(min size\)
+
+min of 30 days before transition on standard
+
+cannot transition multiple times within 30 days in single rule
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.31.45-pm.png)
+
+management tab on bucket
+
+scope of rule \(bucket -all, or certain objs\)
+
+expire - prev ver to delete after days
+
+## s3 replication
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.35.41-pm.png)
+
+
 
 
 

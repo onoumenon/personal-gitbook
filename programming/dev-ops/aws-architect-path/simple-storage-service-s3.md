@@ -285,13 +285,47 @@ aws kms decrypt \
 
 some services creates aws managed keys
 
+### Object encryption
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-9.46.51-pm.png)
+
+Encryption at rest:
+
+client-side means it's uploaded encrypted
+
+server-side means user uploads in plain text but aws encrypts it 
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-9.49.24-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-9.50.27-pm.png)
+
+SSE-C: offload the encryption process to aws, you supply the key and plaintext
+
+aws discard keys after, good for heavy regulated applications, but you NEED TO MANAGE KEYS
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-9.52.23-pm.png)
+
+SSE-S3: aws manages encryption and keys, creates master key which is not visible. key for object encryoption is created and encrypted w master key. plaintext object key is discarded, and encrypted object key is stored w object.
+
+Default, but not suitable if you are heavily regulated, need control over keys or rotation or role separation \(eg diff sets of permission\) 
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-9.54.54-pm.png)
+
+you can manage the cons of SSE-S3 by using SSE KMS
+
+master key is a CMK stored in KMS , which you have control over
+
+you can put permissions on cmk, so s3 admin don't have decrypting access to s3 obj unless otherwise specified
 
 
 
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-9.58.08-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.01.55-pm.png)
 
+header set to enable encryption server side: x-amz-server-side-encryption, per object
 
-
+Bucket default encryption: default encryption used if encryption is set on object
 
 
 

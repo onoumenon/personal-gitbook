@@ -327,7 +327,7 @@ header set to enable encryption server side: x-amz-server-side-encryption, per o
 
 Bucket default encryption: default encryption used if encryption is set on object
 
-
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.05.03-pm.png)
 
 
 

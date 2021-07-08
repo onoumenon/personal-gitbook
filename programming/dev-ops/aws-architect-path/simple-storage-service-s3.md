@@ -325,9 +325,65 @@ you can put permissions on cmk, so s3 admin don't have decrypting access to s3 o
 
 header set to enable encryption server side: x-amz-server-side-encryption, per object
 
-Bucket default encryption: default encryption used if encryption is set on object
+Bucket default encryption: default encryption used unless otherwise specified
 
 ![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.05.03-pm.png)
+
+### Demo
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14391333" %}
+
+KMS, create cmk key, symmetric key, don't set key policy atm
+
+upload img, enable server side encyption, if kms, choose key
+
+open iam, open user, deny user kms:
+
+```text
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Deny",
+            "Action": "kms:*",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+edit default encryption: on bucket
+
+### S3 storage classes
+
+default : s3 standard, az resilient
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.16.13-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.16.31-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.17.19-pm.png)
+
+s3 standard: frequent access and non replaceable
+
+#### Standard-IA
+
+cheaper than standard, storage cost
+
+retrieval fee is expensive, for infrequently access
+
+min duration 30days billing
+
+min capacity of object is 128kb \(not cost effective for small objects\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.18.56-pm.png)
+
+### one zone-IA
+
+diff w standard IA is one AZ storage, durable cept AZ failure, data is non critical and replaceable, don't use if only one copy
+
+![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.21.18-pm.png)
 
 
 

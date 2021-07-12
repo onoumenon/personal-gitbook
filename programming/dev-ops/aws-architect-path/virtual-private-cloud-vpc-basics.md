@@ -73,6 +73,29 @@ how many AZs? default is usually 3 AZs, then add one spare, so start with at lea
 
 ![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.06.23-pm.png)
 
+## Custom vpc
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.07.33-pm.png)
+
+VPC Limits [https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.09.29-pm.png)
+
+dedicated = locked in, don't choose unless you know why
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.10.45-pm.png)
+
+ipv6 has no concept of private and public networks
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.12.56-pm.png)
+
+dns problems, check vpc dns settings
+
+### demo
+
+* go to vpc -&gt; create vpc \(vpc-1, 10.16.0.0/16, amazon provided, default tenancy\)
+* edit vpc-1, enable dns resolution, enable dns hostname
+
 
 
 

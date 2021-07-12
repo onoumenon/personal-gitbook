@@ -447,7 +447,46 @@ expire - prev ver to delete after days
 
 ![](../../../.gitbook/assets/screenshot-2021-07-08-at-10.35.41-pm.png)
 
+differs only in same or diff aws accounts
 
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-8.36.01-pm.png)
+
+{% hint style="info" %}
+same account: IAM role has access if configed
+
+diff account: require bucket policy for dest bucket to allow role
+{% endhint %}
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-8.37.03-pm.png)
+
+### Replication Options
+
+default is use source bucket storage class
+
+RTC for syncing
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-8.38.44-pm.png)
+
+{% hint style="info" %}
+cannot replicate if no versioning, and can only replicate versions from this point on \(not retrospective\)
+{% endhint %}
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-8.41.13-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-8.43.41-pm.png)
+
+### Demo
+
+In this \[DEMO\] We create 2 S3 buckets - one in N. Virginia, the other in N. California and configure Cross-Region Replication \(CRR\) between the two.
+
+* create two public buckets \(source, destinatiion\)
+* bucket &gt; management &gt; create replication rule -&gt; enable versioning
+* configure rule \(source, what objects, destination, iam role, encryption, storage class, etc\)
+* iam role: create new role unless one is previously created
+* by default, delete markers are not replciated
+* check both buckets after upload to source bucket
+
+## Presigned url
 
 
 

@@ -512,5 +512,21 @@ Demo: [https://learn.cantrill.io/courses/730712/lectures/14305207](https://learn
 
 presigned url that is not expired but if the identity can't access the object anymore, the presigned url will also not be able to.
 
+## s3 select and glacier select
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.24.21-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.25.26-pm.png)
+
+## event notifications
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.26.54-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.27.46-pm.png)
+
+## access logs
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.29.03-pm.png)
+
 
 

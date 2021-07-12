@@ -91,12 +91,30 @@ ipv6 has no concept of private and public networks
 
 dns problems, check vpc dns settings
 
-### demo
+### Demo
 
 * go to vpc -&gt; create vpc \(vpc-1, 10.16.0.0/16, amazon provided, default tenancy\)
 * edit vpc-1, enable dns resolution, enable dns hostname
 
 
+
+Add subnets \(blue = private\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.30.25-pm.png)
+
+1 subnet in 1 AZ
+
+1 AZ can have many subnets
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.31.58-pm.png)
+
+### reserved subnets
+
+unusable: network address \(first address\), vpc router, reserved \(dns\), reserved for future, last ip address \(broadcast\)
+
+keep in mind if you're creating subnets, esp smaller ones \(first 4: network 0, +1 to +3, and last address\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.34.47-pm.png)
 
 
 

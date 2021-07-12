@@ -488,5 +488,29 @@ In this \[DEMO\] We create 2 S3 buckets - one in N. Virginia, the other in N. Ca
 
 ## Presigned url
 
+Problem: without presigned url, you'll need to give aws identity/credentials to the unauthenticated user or make bucket/ object public, which are ALL not ideal
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.07.54-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.09.40-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.11.39-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-9.13.13-pm.png)
+
+{% hint style="info" %}
+Always use long term creds, ie: IAM user
+{% endhint %}
+
+Demo: [https://learn.cantrill.io/courses/730712/lectures/14305207](https://learn.cantrill.io/courses/730712/lectures/14305207)
+
+* cloudshell, creds are your aws account
+* `aws s3 ls`
+* `aws s3 presign {{URI}} --expires-in 180`
+*  copy presigned url
+* paste \(the url is accessible for 180 secs\)
+
+presigned url that is not expired but if the identity can't access the object anymore, the presigned url will also not be able to.
+
 
 

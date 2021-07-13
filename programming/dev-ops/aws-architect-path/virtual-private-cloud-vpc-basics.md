@@ -116,5 +116,14 @@ keep in mind if you're creating subnets, esp smaller ones \(first 4: network 0, 
 
 ![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.34.47-pm.png)
 
+DHCP options set can be created but not edited
 
+you can set auto assign ipv4/v6
+
+![](../../../.gitbook/assets/screenshot-2021-07-12-at-10.37.16-pm.png)
+
+* use Subnet Calculator : [https://www.site24x7.com/tools/ipv4-subnetcalculator.html](https://www.site24x7.com/tools/ipv4-subnetcalculator.html) to calculate subnets, /16
+* Subnets.txt [https://github.com/acantril/aws-sa-associate-saac02/blob/master/07-VPC-Basics/03\_vpc\_subnets/subnets.txt](https://github.com/acantril/aws-sa-associate-saac02/blob/master/07-VPC-Basics/03_vpc_subnets/subnets.txt)
+* vpc -&gt; choose vpc -&gt; create subnet
+* vpc id \(select vpc-1\)
 

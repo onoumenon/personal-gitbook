@@ -124,6 +124,17 @@ you can set auto assign ipv4/v6
 
 * use Subnet Calculator : [https://www.site24x7.com/tools/ipv4-subnetcalculator.html](https://www.site24x7.com/tools/ipv4-subnetcalculator.html) to calculate subnets, /16
 * Subnets.txt [https://github.com/acantril/aws-sa-associate-saac02/blob/master/07-VPC-Basics/03\_vpc\_subnets/subnets.txt](https://github.com/acantril/aws-sa-associate-saac02/blob/master/07-VPC-Basics/03_vpc_subnets/subnets.txt)
-* vpc -&gt; choose vpc -&gt; create subnet
+* vpc -&gt; choose vpc -&gt; create subnet for AZ A
 * vpc id \(select vpc-1\)
+* 1 of 1 subnet settings \(name: sn-reserved-A, CIDR range
+* add new subnet \(2 of 2\) ...
+* till subnet 4
+* repeat for AZ B, C
+* modify auto-assign ip settings, enable auto-assign ipv6
+
+
+
+
+
+
 

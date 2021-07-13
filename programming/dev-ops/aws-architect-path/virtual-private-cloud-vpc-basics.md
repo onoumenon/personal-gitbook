@@ -226,3 +226,51 @@ But.. SGs are not capable of explicitly blocking traffic - so often require assi
 
 ![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.23.22-pm.png)
 
+## NAT
+
+IGW uses NAT to map private ip to public ip
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.25.21-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.27.32-pm.png)
+
+route table routes to NAT
+
+NAT is only AZ resilient in the subnet it's in
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.31.09-pm.png)
+
+two charges: duration + data vol
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.33.33-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.32.53-pm.png)
+
+Disable Source/Destination checks if you want to use ec2 instance as Nat instance
+
+use NAT gateway over NAT instance
+
+unless you need cheaper or free
+
+no free tier for NAT gateway
+
+NAT gateway cannot do port fowarding or use as bastion server
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.37.15-pm.png)
+
+### Demo
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/27209177" %}
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.39.26-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.41.27-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.41.58-pm.png)
+
+### Demo to add nat gateways
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/27209178" %}
+
+
+

@@ -136,7 +136,35 @@ you can set auto assign ipv4/v6
 
 ## VPC Routing and Internet Gateway
 
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-9.29.57-pm.png)
 
+destination can be range or 1 ip
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-9.34.28-pm.png)
+
+IGW is region resilient by design
+
+main route table is set by default
+
+goes to most specific matches for destination first, local takes priority over non-local
+
+target: local \(same vpc\)/ aws gateway
+
+
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-9.36.05-pm.png)
+
+only covers AZ that VPC is using
+
+it's also used for 'public' services, like s3 \(to make private files avail\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-9.36.34-pm.png)
+
+associate rt to web subnet
+
+target is IGW
+
+private ip address is not used, it's mapped to public address in IGW record
 
 
 

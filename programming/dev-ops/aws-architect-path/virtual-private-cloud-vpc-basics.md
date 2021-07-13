@@ -166,5 +166,63 @@ target is IGW
 
 private ip address is not used, it's mapped to public address in IGW record
 
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-10.40.16-pm.png)
 
+### Demo
+
+* click on Vpc, attach IGW to vpc by create Internet Gateway and create attach
+* create route table with target as IGW \(eg: vpc-1-rt-web\)
+* associate web-a web-b and web-c subnets \(otherwise it's assoc w main route table\)
+* edit table, edit route, add 0.0.0.0/0, target igw, add ::/0, target igw
+* auto-assign IPV4 for web-a, web-b, web-c
+
+### Network Access Control List
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-10.56.01-pm.png)
+
+Inbound rule for inbound traffic
+
+Outbound rule for outbound traffic
+
+Processed in order of rule \# \(lowest first\)
+
+NACLs can explicitly ALLOW or DENY traffic to subnet
+
+all fields must match for rule to match \(first rule that matches applies\)
+
+default is implicit deny 
+
+all ip comm is initiation + response
+
+need to add outbound rule for ephemeral ports for response traffic
+
+if web subnet is communicating with app subnet, then app subnet needs a inbound rule, and web an outbound rule
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.14.39-pm.png)
+
+NACLs are only for subnet
+
+NACLs can explicity deny traffic to subnet
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.17.07-pm.png)
+
+## Security Group
+
+Security group are like NACLs but they are attached to resource not subnet
+
+But NACLs is stateless, but Security Group is stateful, so it only requires inbound/ outbound \(as response auto allow\)
+
+can ref instance instead of ip, source can be itself, hidden implicit deny
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.21.46-pm.png)
+
+Security Groups \(SGs\) are another security feature of AWS VPC ... only unlike NACLs they are attached to AWS resources, not VPC subnets.
+
+SGs offer a few advantages vs NACLs in that they can recognize AWS resources and filter based on them, they can reference other SGs and also themselves.
+
+But.. SGs are not capable of explicitly blocking traffic - so often require assistance from NACL
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.22.53-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-13-at-11.23.22-pm.png)
 

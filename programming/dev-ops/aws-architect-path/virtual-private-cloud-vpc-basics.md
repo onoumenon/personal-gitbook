@@ -134,6 +134,8 @@ you can set auto assign ipv4/v6
 
 
 
+## VPC Routing and Internet Gateway
+
 
 
 

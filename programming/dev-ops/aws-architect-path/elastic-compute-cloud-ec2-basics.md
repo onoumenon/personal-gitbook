@@ -113,3 +113,23 @@ Accelerated computing: P3, G4, \(graphics\) F1 \(finance\), Infl \(machine learn
 
 Storage Optimized: I3/I3en, D2, H1
 
+### Demo
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/30093143" %}
+
+* EC2, select EC2, security tab, inbound rules
+* 80 TCP 0.0.0.0/0 \(HTTP\)
+* 22 TCP 0.0.0.0/0 \(SSH\)
+* 22 TCP ::/0 \(SSH IPv4\)
+* SSH: right click instance and click connect, ssh, follow instructions
+* note you need to cmod \(to limit permission for key\)
+* EC2 instance connect: right click instance, connect, ec2 instance connect
+* you are using IAMuser permission for ec2 instance connect
+* if you limit ssh ip to your local ip, you won't be able to ec2 instance connect
+* you can limit it to include the range for aws services \(search for EC2 instance connect with your region\)
+* [https://ip-ranges.amazonaws.com/ip-ranges.json](https://ip-ranges.amazonaws.com/ip-ranges.json)
+
+## Storage Refresher
+
+
+

@@ -1,2 +1,115 @@
 # ELASTIC COMPUTE CLOUD \(EC2\) BASICS
 
+## Virtualization
+
+{% embed url="http://www.brendangregg.com/blog/2017-11-29/aws-ec2-virtualization-2017.html" %}
+
+process by which more than one os can be run
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.17.59-pm.png)
+
+Initially virtualization was not efficient
+
+#### Emulated virtualization
+
+has hypervisor, each app in their own virtual machine, os is emulated
+
+app still tries to write to cpu, but actually is translated by hypervisor 
+
+but is really slow \(binary translation\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.21.41-pm.png)
+
+#### Para-virtualization
+
+only works in subset of OS, OS that can be modified to make hypercalls directly to hypervisor
+
+slightly faster than emulated virtualization because hypervisor is aware of vms
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.23.18-pm.png)
+
+#### Hardware assisted virtualization
+
+CPU is aware of virtualization, hardware redirects to hypervisor
+
+but still limited by hardware
+
+ie: network card on vm is actually connecting back to physical network card
+
+disk io/ network io is still limited in speed
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.27.13-pm.png)
+
+#### SR\_IOV
+
+allows a network card to represent itself as multiple mini cards
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.28.39-pm.png)
+
+aws has nitro
+
+## EC2 architecture
+
+* vm: os + resource
+* shared host: shared by multiple customer
+* dedicated host: you pay for entire host
+* hosts = 1 AZ, not resilient across region
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.31.32-pm.png)
+
+each ec2 instance has instance store, storage, data network
+
+provisioned into subnet, elastic network interface is provisioned in the subnet which maps to the data network hardware in ec2
+
+can use EBS in the same AZ
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.35.20-pm.png)
+
+stopped and started, will relocated to another host
+
+EC2 and EBS cannot access across AZ
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.36.46-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-8.39.05-pm.png)
+
+## EC2 instance types
+
+[https://aws.amazon.com/ec2/instance-types/](https://aws.amazon.com/ec2/instance-types/)
+
+{% embed url="https://ec2instances.info/" %}
+
+compute instance type have more ratio for cpu than memory
+
+storage and data network bandwidth might be limiting factor
+
+amd cpu vs x64, etc
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-10.48.34-pm.png)
+
+Five main categories
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-10.49.46-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-10.50.22-pm.png)
+
+always give full instance type to avoid miscomm
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-10.53.15-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-10.54.36-pm.png)
+
+[https://aws.amazon.com/ec2/instance-types/](https://aws.amazon.com/ec2/instance-types/)
+
+[https://ec2instances.info/](https://ec2instances.info/)
+
+General: A1, M6g \(graviton, efficient\), T3, T3a \(burst, eg: email relay w low usage usually\), M5, M5a, M5n \(steady state, intel/ amd architecture\)
+
+Compute optimized: C5, C5n 
+
+Memory optimized: R5, R5a \(real time analytics, in memory ops\), X1, X1e \(lowest $ per GiB memory, large scale\), High memory, z1d \(directly attached NVMe\)
+
+Accelerated computing: P3, G4, \(graphics\) F1 \(finance\), Infl \(machine learning\)
+
+Storage Optimized: I3/I3en, D2, H1
+

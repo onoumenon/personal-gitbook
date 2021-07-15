@@ -161,5 +161,35 @@ the lowest performing factor is the limiting factor \(eg: latency\)
 
 ![](../../../.gitbook/assets/screenshot-2021-07-14-at-11.42.10-pm.png)
 
+## Elastic Block Store
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.31.41-pm.png)
+
+EBS is separate from EC2, has separate lifecycles
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.33.41-pm.png)
+
+## GP2 \(general usage, to be replaced w gp3\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.40.09-pm.png)
+
+IO credit allocation, 1 IO credit is 16kb, if no credit = no IO operations can be performed
+
+think of IO credit as mana, which refills
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.37.20-pm.png)
+
+vols larger than 1000gb don't use this mana system, and baseline is always achievable
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.39.34-pm.png)
+
+## GP3
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.41.06-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.42.44-pm.png)
+
+
+
 
 

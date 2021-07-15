@@ -237,6 +237,14 @@ faster than ebs
 
 ![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.07.33-pm.png)
 
+## Instance store vs ebs
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.09.34-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.11.32-pm.png)
+
+
+
 
 
 

@@ -131,5 +131,35 @@ Storage Optimized: I3/I3en, D2, H1
 
 ## Storage Refresher
 
+direct: fast, but can be lost
+
+network: resilient
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-11.36.29-pm.png)
+
+EBS is persistent
+
+Block storage no structure, mount, boot
+
+file storage has structure, mount
+
+object storage, flat
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-11.39.02-pm.png)
+
+high perf boot from: block
+
+read files: file storage
+
+cat pics app: obj storage
+
+IOPS: IO operations per second
+
+IO size: block size \(16k, 1 meg\)
+
+the lowest performing factor is the limiting factor \(eg: latency\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-14-at-11.42.10-pm.png)
+
 
 

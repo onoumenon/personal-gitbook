@@ -189,6 +189,62 @@ vols larger than 1000gb don't use this mana system, and baseline is always achie
 
 ![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.42.44-pm.png)
 
+## EBS Volume Types
+
+io1, io2 Provisioned IOPS SSD
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.55.38-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.56.27-pm.png)
+
+
+
+## HDD
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.58.23-pm.png)
+
+moving bits = slower
+
+IOPS in mb rather than gb
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-10.59.43-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.00.13-pm.png)
+
+## Instance Store Volumes
+
+An _instance store_ provides temporary block-level storage for your instance. This storage is located on disks that are physically attached to the host computer. Instance store is ideal for temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content, or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers.
+
+An instance store consists of one or more instance store volumes exposed as block devices. The size of an instance store as well as the number of devices available varies by instance type.
+
+The virtual devices for instance store volumes are `ephemeral[0-23]`. Instance types that support one instance store volume have `ephemeral0`. Instance types that support two instance store volumes have `ephemeral0` and `ephemeral1`, and so on.
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.01.38-pm.png)
+
+
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.02.49-pm.png)
+
+Any files stored in ephemeral storage will be lost when an instance migrates host.
+
+it migrates for many reasons, eg: stop and start instance
+
+ephemeral vol can also fail
+
+faster than ebs
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.06.21-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.07.33-pm.png)
+
+
+
+
+
+
+
+
+
 
 
 

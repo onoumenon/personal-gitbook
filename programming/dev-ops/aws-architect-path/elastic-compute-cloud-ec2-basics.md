@@ -243,6 +243,12 @@ faster than ebs
 
 ![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.11.32-pm.png)
 
+Remember the above
+
+## EBS Snapshots
+
+![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.14.19-pm.png)
+
 
 
 

@@ -249,6 +249,79 @@ Remember the above
 
 ![](../../../.gitbook/assets/screenshot-2021-07-15-at-11.14.19-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-07-17-at-6.13.35-pm.png)
+
+requested blocks from backup snapshots is fetched immediately from s3 but is slower than ebs unless FSR
+
+![](../../../.gitbook/assets/screenshot-2021-07-17-at-6.21.46-pm.png)
+
+gb per month, so 10gb for half month vs 5gb for full month costs the same
+
+only calc used data, so eg: volume is 10gb, but data takes up 1gb, then first snapshot is 1gb in size, and billed at 1gb, subsequent snapshots are billed by incremental change size
+
+![](../../../.gitbook/assets/screenshot-2021-07-17-at-6.28.17-pm.png)
+
+### Demo
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14576059" %}
+
+## EBS Encryption
+
+DEK - data encryption key
+
+![](../../../.gitbook/assets/screenshot-2021-07-17-at-6.48.41-pm.png)
+
+ec2 instance moves, host loses decrypted DEK
+
+![](../../../.gitbook/assets/screenshot-2021-07-17-at-6.51.09-pm.png)
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14576061" %}
+
+* add storage \(in ec2 instance config\), choose encryption
+* config security group
+
+## Network Interface, instance ips, dns
+
+ENI - elastic network interface
+
+ipv6 are by default public routable
+
+security groups are attached to interface
+
+need to edit NAT for source/ dest check
+
+![](../../../.gitbook/assets/screenshot-2021-07-18-at-12.24.09-am.png)
+
+primary private ip does not change
+
+resolvable only within vpc
+
+public ipv4 is dynamic \(restart doesn't change, stop and start does\)
+
+if you assign elastic ip, it removes public ipv4, toggling it off gets new ipv4
+
+![](../../../.gitbook/assets/screenshot-2021-07-18-at-12.28.06-am.png)
+
+mac address is viewed as static, but since ec2 is virtual, you can swap and change elastic network interfaces, so you can move the licensing as well
+
+multiple interfaces rather than separate ips, good for security groups as it's attached to interface
+
+config ec2 sometimes is the same as config interface
+
+![](../../../.gitbook/assets/screenshot-2021-07-18-at-12.32.35-am.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

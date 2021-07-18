@@ -310,16 +310,42 @@ config ec2 sometimes is the same as config interface
 
 ![](../../../.gitbook/assets/screenshot-2021-07-18-at-12.32.35-am.png)
 
+demo
 
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14598419" %}
 
+* ec2 instance connect, set dbname and password, etc
+* sudo systemctl enable httpd, mariadb \( to help restart services if down\)
+* sudo systemctl start httpd mariadb \(to start services\)
+* mysqladmin -u root password $DBROOTPASSWORD
+* download \(wget\) wordpress and extract \(tar\) and put it in correct folder
+* rm the download file
+* wp-config-sample.php -&gt; wp-config.php
+* sed to replace placeholder w actual values
+* chown apache:apache
+* etc
 
+[Lesson Commands](https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0006-aws-associate-ec2-wordpress-on-ec2/lesson_commands.txt)
 
+## AMI
 
+ami are regional, each region has own set of amis
 
+![](../../../.gitbook/assets/screenshot-2021-07-18-at-11.48.13-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-07-18-at-11.48.50-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-07-18-at-11.52.15-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-07-18-at-11.53.53-pm.png)
 
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14599922" %}
+
+* stop instance
+* right click and create image
+* creating ami will create snapshot of ebs
+* in AMI tab, an image will be created
+* 
 
 
 

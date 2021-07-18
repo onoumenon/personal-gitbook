@@ -345,7 +345,80 @@ ami are regional, each region has own set of amis
 * right click and create image
 * creating ami will create snapshot of ebs
 * in AMI tab, an image will be created
-* 
+
+## Instance pricing
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.35.16-am.png)
+
+On demand:
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.36.39-am.png)
+
+Spot pricing
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.39.31-am.png)
+
+Reserved:
+
+reserved has highest priority if AZ/ region has issues
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.42.58-am.png)
+
+you can use all 3 in combination
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.44.49-am.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.46.37-am.png)
+
+only new types of instances, you can create alert with action \(recover\)
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/29725578" %}
+
+### Termination protection
+
+* right click instance, change termination protection
+* enable 'disableApiTermination'
+* role separation
+* right click instance, instance settings, change shutdown behavior
+* stop/ terminate
+* most of the time it shd be stop
+
+## horizontal vertical scaling
+
+vertical scaling
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.55.27-am.png)
+
+ 
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.56.28-am.png)
+
+horizontal:
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.57.04-am.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.57.21-am.png)
+
+sessions are hosted somewhere else
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-3.59.38-am.png)
+
+## Instance metadata
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-4.02.53-am.png)
+
+`ifconfig` in ec2 connect \(no public ipv4 address is config at instance level, that's igw\)
+
+`curl http://168.254.269.254/latest/meta-data/public-ipv4` to get ipv4
+
+an easier way is to download metadata tool: `wget http://s3.amazonaws.com/ec2metadata/ec2-metadata`
+
+ 
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-4.10.30-am.png)
+
+
+
 
 
 

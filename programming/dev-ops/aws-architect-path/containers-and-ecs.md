@@ -73,5 +73,58 @@ service lets you determine how to scale task, load balance for tasks, replace fa
 
 ![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.04.13-pm.png)
 
+ECS is capable of running in EC2 mode or Fargate mode.
+
+EC2 mode deploys EC2 instances into your AWS account which can be used to deploy tasks and services.
+
+With EC2 mode you pay for the EC2 instances regardless of container usage
+
+Fargate mode uses shared AWS infrastructure, and ENI's which are injected into your VPC
+
+You pay only for container resources used while they are running.
+
+## ECS Cluster types
+
+ASG: auto scaling group
+
+EC2 mode: not serverless, handles no of instances deployed, you handle capacity, no of container hosts, great middle ground
+
+you pay for ec2 instances regardless of container usage
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.09.06-pm.png)
+
+fargate: no servers to manage, use fargate shared infra, injected into vpc, no need to care for capacity
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.11.26-pm.png)
+
+EC2: virtualization
+
+ECS in EC2 mode: containerized app 
+
+Fargate: less management overhead, burst cos charge for only what you use
+
+![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.14.29-pm.png)
+
+Demo: [https://learn.cantrill.io/courses/730712/lectures/14640459](https://learn.cantrill.io/courses/730712/lectures/14640459)
+
+* ECS
+* Clusters -&gt; create cluster -&gt; networking only fargate
+* create w/o create vpc
+* cos default alr has public ip address for all subnets
+* task definition - create fargate
+* task role: set task role
+* task memory and cpu
+* add container, can add multiple containers, choose image
+* since web server port 80, set port to 80, click create
+* click clusters, select cluster, click tasks tab
+*  run a new task
+* switch launch type fargate
+* select vpc to attach to \(default: 172...\)
+* select two subnets
+* attach security group, run task
+* copy public ip of cluster
+
+
+
 
 

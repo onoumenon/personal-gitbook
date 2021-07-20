@@ -163,6 +163,117 @@ You will also configure an instance role allowing the agent to store the above c
 
 [Lesson Commands](https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0013-aws-associate-ec2-cwagent/lesson_commands.txt)
 
+* go to EC2, select instance, ec2 instance connect to it
+* download the agent `wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm`
+*  install the agent: `sudo rpm -U ./amazon-cloudwatch-agent.rpm`
+* go back to IAM role, create role for EC2, attach CloudWatchAgentServerPolicy and AmazonSSMFullAccess
+* call role CloudWatchRole and create role
+* go back to EC2 instance, right click to modify IAM role, select CloudWatchRole from dropdown and save
+* connect to ec2 instance again
+* start to wizard for cloudwatch agent `sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard`
+* choose default for most except:
+*  default metrics config \(choose advanced\) so it captures additional os metrics
+* log file path: `/var/log/secure`
+* log group name: `/var/log/secure` \(prefer full path\)
+* log stream is named after instance generating the log
+* yes for additional log file
+* log file path \(for additional log files\): `/var/log/httpd/access_log`
+* log group name: `/var/log/httpd/access_log`
+* yes for additional log file
+* log file path \(for additional log files\): `/var/log/httpd/error_log`
+* log group name: `/var/log/httpd/error_log`
+*  no for additional log file
+* do you want to store the config in the SSM parameter store: yes
+* param name is `AmazonCloudWatch`-etc by default
+* default region is based on meta data \(parameter store is a regional service\)
+* finish config
+* if you go to param store, you will find cloudwatch config
+* you can use this type of architecture to deploy at scale \(since you can copy and paste the config\)
+* cloudwatch agent expects the directory collectd
+* create the directory `sudo mkdir -p /usr/share/collectd/`
+* create db file that agent expects `sudo touch /usr/share/collectd/types.db`
+* start the agent with config by:
+* `sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config m ec2 -c ssm:AmazonCloudWatch-linux -s`
+* the above command starts the agent, pull config from param store, start collecting logs, inject into cloudwatch
+* go back to cloudwatch, you should see the logs
+* go into /log/secure, you should be able to see ssh connection attempts
+* go to metrics &gt; cwagent &gt; image id, instanceid, instance type, name: you should see the diskio metrics
+* if you select imageid... cpu, you should see cpu usage logs
+
+## EC2 Placement Groups
+
+by default, aws will place ec2 instances within a region based on availability
+
+placement groups allows you to configure that.
+
+In this lesson we step through the architecture, benefits and limitations of the three placement groups available within AWS :
+
+* Cluster Placement Groups \(PERFORMANCE\)
+* Spread Placement Groups \(Resilience\)
+* Partition Placement Groups \(Topology Awareness\)
+
+{% embed url="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html" %}
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-1.53.53-pm.png)
+
+### Why cluster: highest level of performance
+
+best practice is launch at the same time. you might have capacity issue if you launch in batches, eg: you want to double your no of instances but aws only have limited capacity
+
+locked in AZ, same rack, sometimes same host, 10gbps single stream
+
+you need instances that has capacity for streaming 10gbps \(high throughput\)
+
+if hardware in that rack fails, everything fails \(DATA MUST NOT BE CRITICAL\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-1.57.40-pm.png)
+
+### Why spread placement: resilient
+
+they are placed in diff racks, in diff az, limit of 7 instances per az
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-1.58.44-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-1.59.36-pm.png)
+
+eg: mirrors of app, nodes for analytics cluster
+
+### Why Partition Placement: more than 7 instances in one AZ \(huge scale\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-2.03.52-pm.png)
+
+max 7 partitions per AZ, each partition has its own racks, no sharing between partition
+
+you can assign which partition or let aws decide
+
+good for topology aware systems
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-2.05.05-pm.png)
+
+
+
+* Cluster Placement Groups \(PERFORMANCE\)
+* Spread Placement Groups \(Resilience\)
+* Partition Placement Groups \(Topology Awareness\)
+
+{% embed url="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html" %}
+
+Demo: [https://learn.cantrill.io/courses/730712/lectures/14730107](https://learn.cantrill.io/courses/730712/lectures/14730107)
+
+* go to ec2 -&gt; placement groups -&gt; strategy: cluster \(name: performance\)
+* strategy: 'spread' for resilient
+* strategy: partition for parallel
+* create ec2 instance, in config, placement group: select placement group partition
+* target partion: you can let aws aut distribution, or select target partition
+
+## EC Dedicated Hosts
+
+
+
+
+
+
+
 
 
 

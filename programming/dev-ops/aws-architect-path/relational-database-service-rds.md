@@ -231,5 +231,57 @@ define('DB_HOST', 'REPLACEME_WITH_RDSINSTANCEENDPOINTADDRESS');
 
 * verify by stopping db ec2 instance
 
+## Multi AZ
+
+cannot access standby via CNAME normally
+
+little lag between sync, therefore syncronous replication
+
+is not fault-tolerant, there will be a short period of outage before CNAME is switched over to point to standby
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-10.32.53-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-10.34.15-pm.png)
+
+## RDS backups and restores
+
+RDS is capable of performing Manual Snapshots and Automatic backups
+
+Manual snapshots are performed manually and live past the termination of an RDS instance
+
+Automatic backups can be taken of an RDS instance with a 0 \(Disabled\) to 35 Day retention.
+
+Automatic backups also use S3 for storing transaction logs every 5 minutes - allowing for point in time recovery.
+
+Snapshots can be restored .. but create a new RDS instance.
+
+Recovery Time objective, recovery point objective
+
+rpo: max data loss
+
+rto: duration to restore
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-10.38.58-pm.png)
+
+rds backups \(if it's multi rds setup, the primary is never used for backups\)
+
+similar to ebs snapshots, first is full, then incremental
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-10.41.04-pm.png)
+
+manual snapshots are FOREVER, unless you delete them \(you determine the rpo, based on frequency of backup\)
+
+final snapshot is default if you choose to terminate the instance
+
+auto backups have transaction logs \(rpo is 5 mins\), retained for max 35 days \(0 means auto backup is disabled\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-10.44.40-pm.png)
+
+restore = new rds instance w new address \(you need to update app config\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-10.46.06-pm.png)
+
+## RDS Read-Replicas
+
 
 

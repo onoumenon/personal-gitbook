@@ -266,7 +266,31 @@ Demo: [https://learn.cantrill.io/courses/730712/lectures/14730107](https://learn
 * create ec2 instance, in config, placement group: select placement group partition
 * target partion: you can let aws aut distribution, or select target partition
 
-## EC Dedicated Hosts
+## EC Dedicated Hosts \(use if software licensing\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-2.11.54-pm.png)
+
+important: software license can utilize visibility of hardware
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-2.13.30-pm.png)
+
+you can't mix and match sizes
+
+unless you use nitro
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-2.14.04-pm.png)
+
+Dedicated hosts are EC2 Hosts which support a certain type of instance which are dedicated to your account.
+
+You can pay an on-demand or reserved price for the hosts and then you have no EC2 instance pricing to pay for instances running on these dedicated hosts.
+
+Generally dedicated hosts are used for applications which use physical core/socket licensing
+
+{% embed url="https://aws.amazon.com/ec2/dedicated-hosts/pricing/" %}
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-2.15.20-pm.png)
+
+Resource Access Manager \(between accounts\)
 
 
 

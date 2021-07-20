@@ -194,6 +194,42 @@ Lesson Time **~40 mins**
 * subnets: choose the ip ranges for db1a - 1c
 * create subnet group
 * create db -&gt; standard create -&gt; engine type: some are commercial, some are free, pick mysql community -&gt; template: free tier -&gt; pick version, some may have limitations, choose 5.7.31 -&gt; instance identifier \(a4lwordpress\) -&gt; cred settings: same as rds db -&gt; instance class \(limited to free tier\) -&gt; storage \(toggle off autoscaling for demo\) -&gt; vpc: vpc1, subnet group: a4lnsgroup, public access: no, security group: create new  name a4lvpc-rds-sg -&gt; password auth -&gt; initial db name \(need for migration\), enable backups -&gt; create db
-* 
+* RDS db instance has endpoint and port, with correct vpc and subnets, has security group
+* click on securtiy group, which only has inbound rule allowing your ip address
+* edit inbound rule, delete ip address, allow wordpress instance instead
+* go back to a4l rds db instance, connectivity and security tab
+* connect to a4l wordpress instance
+* backup ec2 db
+
+```text
+# Backup of Source Database
+mysqldump -h PRIVATEIPOFMARIADBINSTANCE -u a4lwordpress -p a4lwordpress > a4lwordpress.sql
+```
+
+* inject into rds instance \(endpoint name is the CNAME\)
+
+```text
+# Restore to Destination Database
+mysql -h CNAMEOFRDSINSTANCE -u a4lwordpress -p a4lwordpress < a4lwordpress.sql 
+```
+
+* change wp-config
+
+```text
+# Change WP Config
+cd /var/www/html
+sudo nano wp-config.php
+
+replace
+/** MySQL hostname */
+define('DB_HOST', 'PRIVATEIPOFMARIADBINSTANCE');
+
+with 
+/** MySQL hostname */
+define('DB_HOST', 'REPLACEME_WITH_RDSINSTANCEENDPOINTADDRESS'); 
+```
+
+* verify by stopping db ec2 instance
+
 
 

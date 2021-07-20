@@ -46,5 +46,130 @@ Redshift is a data warehouse product
 
 good for complex relationship/ social media
 
+## Acid vs BASE
+
+This lesson steps through the ACID and BASE Database transaction models and introduces the CAP Theorem
+
+[https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+
+[https://en.wikipedia.org/wiki/ACID\#Consistency](https://en.wikipedia.org/wiki/ACID#Consistency)
+
+[https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+
+{% embed url="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/transactions.html" %}
+
+CAP
+
+Consistency: every read will get most recent write or errors out
+
+Availability: will only receive non-error response, but not guaranteed to be most recent write
+
+Partition tolerant: multiple network partition, and system continues to operate despite having dropped messages or errors between nodes
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-8.33.02-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-8.33.18-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-8.35.16-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-8.37.07-pm.png)
+
+BASE refers to NoSQL, DynamoDB
+
+ACID refers to SQL, may refer to Dynamo DB Transactions
+
+## Databases on EC2
+
+usually not a good idea to run db on ec2, unless you know what you're doing
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-8.40.21-pm.png)
+
+splitting introduces dependency and cost
+
+Not really justified: need access of os of db, but there's not many reasons why you need that
+
+Not really justified: option tuning, but aws allows you to tune with other services
+
+Justified: db or db ver aws don't provide
+
+Justified: specific os/db combination
+
+Justified: aws architecture don't provide
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-8.43.54-pm.png)
+
+patching of db with app, need to do out of core usage hours
+
+backup/ DR management: many aws managed products have automation, why change the formula?
+
+single AZ, need ebs snapshots, put snapshots outside of AZ
+
+aws DB products are already good, better for replication, performance features, why diy?
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-8.49.06-pm.png)
+
+## Migrating Wordpress Monolith to dedicated EC2 DB
+
+In this demo lesson you will migrate the database for the monolithic animals4life Wordpress instance to a dedicated MariaDB platform running on EC2.
+
+The outcome of this lesson is to understand the process for performing a simple database migration manually...
+
+[1-Click Deployment](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0014-aws-associate-rds-dbonec2/A4L_WORDPRESS_ALLINONE_AND_EC2DB.yaml&stackName=MONOLITHTOEC2DB)
+
+[Lesson Commands](https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0014-aws-associate-rds-dbonec2/lesson_commands.txt)
+
+Deployment Time **~15 minutes**
+
+Demo Time **~15 minutes**
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-8.50.35-pm.png)
+
+* create stack
+* go to WP instance, go to IP, install WP, make a simple post
+* images are now stored in instance which later needs to be migrated out to its own file system
+* right click WP instance and EC2 instance connect
+* get the data on db `mysqldump -u root -p {dbname} > {dbname}.sql`
+* enter dbpassword
+* `ls -la`
+* `mysql -h {private ipv4 of db instance} -u {dbuser} -p {dbname} < a4lwordpress.sql`
+* the above command takes the db dump and injects it to the new db
+* enter dbpassword
+* configure WP to point to the new db server
+* `cd /var/www/html`
+* `sudo nano wp-config.php`
+* find `DB_HOST` and change from localhost to `{private ipv4 of db instance}`
+* `Ctrl-O to save, Ctrl-X to exit`
+* `sudo service mariadb stop` on original WP instance
+
+## RDS
+
+it's not DBaas and more DatabaseServer as a service, provides managed db instance
+
+don't need to handle hardware and engines yourself
+
+amazon aurora is so different that it should be a category on its own 
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-9.08.55-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-9.09.58-pm.png)
+
+Basic building block is a rds instance \(you can create more than one db instance linked to it\)
+
+client access using database CNAME 
+
+interfacing with db instance is similar to other types of ec2 instance
+
+db.m5: general, r5: memory, t3: burst, has variety of sizes
+
+can be multi az if you have multiple instances
+
+the simple setup in 1 az, storage is similar to ebs storage, ie: gp2 is default
+
+pricing similar to ebs as well, allocated gb/m, so 10gb per month is same as 20gb for half a month
+
+extra payment for io1 additional min iops
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-9.27.06-pm.png)
+
 
 

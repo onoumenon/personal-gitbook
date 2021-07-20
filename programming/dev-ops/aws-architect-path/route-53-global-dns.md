@@ -176,5 +176,19 @@ Private hosted zone
 * associate w instance vpc
 * after 5 mins, it should ping successfully
 
+## Multi Value Routing
 
+Multivalue answer routing lets you configure Amazon Route 53 to return multiple values, such as IP addresses for your web servers, in response to DNS queries. You can specify multiple values for almost any record, but multivalue answer routing also lets you check the health of each resource, so Route 53 returns only values for healthy resources.
+
+{% hint style="info" %}
+Function wise, it's like a mixture of simple and failover
+{% endhint %}
+
+each record is associated w an ip and health check
+
+failed record won't be returned
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-4.57.41-pm.png)
+
+## Weighted Routing
 

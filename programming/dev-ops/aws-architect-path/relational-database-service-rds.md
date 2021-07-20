@@ -171,5 +171,29 @@ extra payment for io1 additional min iops
 
 ![](../../../.gitbook/assets/screenshot-2021-07-20-at-9.27.06-pm.png)
 
+## Migrating MariaDB database into RDS
+
+In this \[DEMO\] Lesson you will create a MySQL RDS instance and migrate the Wordpress Database from the self-managed MariaDB server running on EC2 into this RDS instance.
+
+Due to the time required to work with RDS please ensure you have at least 1 hour to work through this demo.
+
+[1-Click Deployment](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0015-aws-associate-rds-migrating-to-rds/A4L_WORDPRESS_AND_EC2DB.yaml&stackName=MIGRATE2RDS)
+
+[Lesson Commands](https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0015-aws-associate-rds-migrating-to-rds/lesson_commands.txt)
+
+Deployment Time **~15 mins**
+
+Lesson Time **~40 mins**
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-9.38.47-pm.png)
+
+* create stack
+* go to ec2 -&gt; select wordpress instance public ipv4, set up, log in wordpress and creeate post
+* rds -&gt; subnet groups - create db subnet group, vpc 1, az: us-east-1a to 1c
+* go to vpc -&gt; subnets -&gt; check for ip range of db1a - 1c
+* subnets: choose the ip ranges for db1a - 1c
+* create subnet group
+* create db -&gt; standard create -&gt; engine type: some are commercial, some are free, pick mysql community -&gt; template: free tier -&gt; pick version, some may have limitations, choose 5.7.31 -&gt; instance identifier \(a4lwordpress\) -&gt; cred settings: same as rds db -&gt; instance class \(limited to free tier\) -&gt; storage \(toggle off autoscaling for demo\) -&gt; vpc: vpc1, subnet group: a4lnsgroup, public access: no, security group: create new  name a4lvpc-rds-sg -&gt; password auth -&gt; initial db name \(need for migration\), enable backups -&gt; create db
+* 
 
 

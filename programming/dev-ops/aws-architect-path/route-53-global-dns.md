@@ -226,7 +226,21 @@ maybe useful for news outlets?
 
 ## Interoperability
 
+when you register a domain with r53: accepts money, allocates ns, creates zone file, communicates w registry of TLD, sets ns records for domain to point to 4 ns
 
+Note that there are two roles for r53: registrar and domain hosting
 
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-5.59.24-pm.png)
 
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-6.01.14-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-6.02.39-pm.png)
+
+not common, cos registrar role for r53 is not anything special
+
+hosting only is more common
+
+ you can change the NS records after the fact via r53 if you host records via r53
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-6.04.15-pm.png)
 

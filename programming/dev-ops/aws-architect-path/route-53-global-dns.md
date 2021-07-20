@@ -91,7 +91,7 @@ type should be matched with target record
 
 ALIAS is a type by AWS, so you can only use it if you're using Route 53 otherwise, it's not sth understood as it's not in the DNS standards
 
-## Simple Routing \(no health check, one service\)
+## Simple Routing \(no health check, one record/ 1 service\)
 
 1 record per name
 
@@ -129,7 +129,7 @@ demo: [https://learn.cantrill.io/courses/730712/lectures/28015257](https://learn
 
 ![](../../../.gitbook/assets/screenshot-2021-07-20-at-4.32.55-pm.png)
 
-## Failover Routing
+## Failover Routing \(if unhealthy, use backup\)
 
 used so that you can display maintanence screen to users
 
@@ -176,7 +176,7 @@ Private hosted zone
 * associate w instance vpc
 * after 5 mins, it should ping successfully
 
-## Multi Value Routing
+## Multi Value Routing \(multi records, healthy returned\)
 
 Multivalue answer routing lets you configure Amazon Route 53 to return multiple values, such as IP addresses for your web servers, in response to DNS queries. You can specify multiple values for almost any record, but multivalue answer routing also lets you check the health of each resource, so Route 53 returns only values for healthy resources.
 
@@ -190,5 +190,41 @@ failed record won't be returned
 
 ![](../../../.gitbook/assets/screenshot-2021-07-20-at-4.57.41-pm.png)
 
-## Weighted Routing
+## Weighted Routing \(load balance or software ver test\)
+
+simple load balancing, beta test new software ver
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-5.00.29-pm.png)
+
+## Latency-based Routing \(performance\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-5.05.10-pm.png)
+
+supports 1 record with same name in each region
+
+aws knows user is in australia based on latency to region
+
+selects based on lowest estimated latency, so the apac record is selected and returned
+
+## Geolocation Routing \(relevancy\)
+
+uses IP check, doesn't return closest record, it returns relevant record \(ie: shoppee.sg vs shoppee.my\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-5.07.57-pm.png)
+
+if you're in australia, but no records exist, you won't get the next closest record by region, but the default \(as it tries to find record by state &gt; country &gt; continent &gt; default\)
+
+## Geoproximity Routing \(geographical distance with bias\)
+
+resources are tagged geolocation
+
+you can define a bias, so traffic can be routed towards the region with larger bias
+
+maybe useful for news outlets?
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-5.14.13-pm.png)
+
+
+
+
 

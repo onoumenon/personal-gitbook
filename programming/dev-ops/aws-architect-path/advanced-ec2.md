@@ -292,6 +292,24 @@ Generally dedicated hosts are used for applications which use physical core/sock
 
 Resource Access Manager \(between accounts\)
 
+## Enhanced Networking & EBS Optimized
+
+Enhanced networking is the AWS implementation of SR-IOV, a standard allowing a physical host network card to present many logical devices which can be directly utilized by instances.
+
+This means lower host CPU usage, better throughput, lower and consistent latency
+
+EBS optimisation on instances means dedicated bandwidth for storage networking - separate from data networking.
+
+{% embed url="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/enhanced-networking.html" %}
+
+instead of host dealing with instances which are virtualizations, enhanced networking has 'logical' cards for the physical network card, exclusive to instance, which handles networking w/o consuming massive cpu
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-2.22.13-pm.png)
+
+### EBS Optimization:
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-2.23.59-pm.png)
+
 
 
 

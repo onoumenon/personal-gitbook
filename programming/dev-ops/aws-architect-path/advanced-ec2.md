@@ -132,4 +132,38 @@ Demo: [https://learn.cantrill.io/courses/730712/lectures/14726913](https://learn
 * `aws ssm get-parameers-by=path --path /my-cat-app/`
 * to decrypt param, you need to have access to the kms used to encrypt it \(ie: use same acct\)
 * `aws ssm get-parameters-by-path --path /my-cat-app/ -- with-decryption`
-* 
+
+## System and Application Logging on EC2
+
+you may want to enable monitoring inside instance, like app and system logs, etc
+
+ cloudwatch cannot capture data inside an instance unless you use cloudwatch agent configured
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-1.02.16-pm.png)
+
+say you have a wordpress app instance, you need to install cloudwatch agent in it, have config so agent knows what to do. use iam role to let cloudwatch service to access ec2 instance.
+
+config needs to set up log group, log stream inside log group for each instance
+
+![](../../../.gitbook/assets/screenshot-2021-07-20-at-1.05.00-pm.png)
+
+you can store agent config in parameter store
+
+Demo: [https://learn.cantrill.io/courses/730712/lectures/14727081](https://learn.cantrill.io/courses/730712/lectures/14727081)
+
+In this \[DEMO\] lesson you will download and install the CloudWatch Agent and configure it to capture 3 log files from an EC2 instance
+
+* /var/log/secure
+* /var/log/httpd/access\_log
+* /var/log/httpd/error\_log
+
+You will also configure an instance role allowing the agent to store the above config into parameter store AND allow the agent to inject the logging and metric data into CW and CW Logs.
+
+[1-Click Deployment](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0013-aws-associate-ec2-cwagent/A4L_VPC_PUBLIC_Wordpress.yaml&stackName=CWAGENT)
+
+[Lesson Commands](https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0013-aws-associate-ec2-cwagent/lesson_commands.txt)
+
+
+
+
+

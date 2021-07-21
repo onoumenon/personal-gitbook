@@ -283,5 +283,48 @@ restore = new rds instance w new address \(you need to update app config\)
 
 ## RDS Read-Replicas
 
+can use replicas but readonly, not the same at standby.
+
+small lag as it's async replication
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-9.12.30-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-9.13.31-pm.png)
+
+RPO near 0, and low RTO due to read replica promoted quickly to read-write \(within mins\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-9.15.24-pm.png)
+
+### Demo
+
+In this \[DEMO\] lesson you will gain experience how how snapshots and restores can be used to recover from data corruption issues.
+
+[1-Click Deployment](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0016-aws-associate-rds-snapshot-and-multiaz/A4L_WORDPRESS_AND_RDS.yaml&stackName=RDSMULTIAZSNAP)
+
+Deploy Time **~ 15 mins**
+
+Demo Time **~90 mins**
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14923954" %}
+
+* create stack
+* install wordpress and create post for wordpress instance
+* rds, databases, select rds db instance-&gt; take snapshot
+* enable multi-az: select rds instance, click on modify, on availability & durability, choose create a standby instance, apply changes now or during maintanence window
+*  simulate a failure by selecting rds instance &gt; reboot &gt; reboot w failover
+* simulate a corruption by updating post title to 'Not the best cats'
+* select snapshot &gt; restore snapshot \(creates new instance\)
+* update app to use new db instance by instance connect to wordpress instance
+* `cd /var/www/html`
+* `sudo nano wp-config.php`
+* replace with new rds endpoint, and save file
+* you can also restore to point in time via auto snapshots \(rds instance &gt; restore to point in time\)
+
+## Security
+
+
+
+
+
 
 

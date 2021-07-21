@@ -322,6 +322,113 @@ Demo Time **~90 mins**
 
 ## Security
 
+Auth, authorization, encryption 
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.06.14-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.06.45-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.07.36-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.08.20-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.08.35-pm.png)
+
+## Aurora \(no need to choose storage options\)
+
+Aurora is a AWS designed database engine officially part of RDS
+
+Aurora implements a number of radical design changes which offer significant performance and feature improvements over other RDS database engines.
+
+This lesson steps through the changes introduced with the Aurora architecture.
+
+replicas are more powerful than read/ standby replicas, can read \(and write if multi master\)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.10.50-pm.png)
+
+read/write to cluster vol
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.11.38-pm.png)
+
+more resilient architecture. if disk fails, aurora repairs w data from other volumes
+
+up to 15 replicas
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.14.53-pm.png)
+
+reader endpoint will load balance for read operations
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.18.58-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.20.00-pm.png)
+
+In this \[DEMO\] lesson you will migrate an RDS Snapshot created earlier in the course into an Aurora Cluster and verify access by provisioning the Wordpress EC2 instance.
+
+The lesson also introduces the next architectural problem which the course will resolve ... local media storage.
+
+[https://aws.amazon.com/rds/aurora/pricing/](https://aws.amazon.com/rds/aurora/pricing/)
+
+[1-Click Deployment](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0017-aws-associate-rds-migrating-to-aurora/A4L_WORDPRESS_AND_AURORA.yaml&stackName=Aurora)
+
+Deploy Time **~30 mins**
+
+Demo Time **~ 30 mins**
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/14954140" %}
+
+* copy ARN of snapshot
+* create stack with database restore snapshot \(w arn\)
+* you can migrate snapshot into aurora cluster
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.28.07-pm.png)
+
+* take snapshot of writer aurora instance
+* missing images cos ec2 instance was taken down and new instance has no media
+
+
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.32.03-pm.png)
+
+## Aurora serverless
+
+DB as a service \(kinda\), no need to manage individual instances
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.36.50-pm.png)
+
+ACUs are allocated fro a pool
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.38.39-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.39.25-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.41.28-pm.png)
+
+{% embed url="https://learn.cantrill.io/courses/730712/lectures/29562431" %}
+
+In this \[DEMO\] lesson you will experience how to migrate an Aurora provisioned snapshot into an Aurora serverless cluster. In addition you will see how an aurora serverless cluster can scale down to 0 ACU and pause - meaning the cluster costs will be for storage only. You will experience how when incoming load reaches the serverless cluster it will unpause and allocate ACU to begin servicing requests.
+
+[1-Click Deployment](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0018-aws-associate-rds-migrating-to-aurora-serverless/A4L_WORDPRESS_AND_AURORASERVERLESS.yaml&stackName=AuroraServerless)
+
+* rds snapshot of aurora provisioned -&gt; copy name to creat stack w database
+* alternatively, you can restore an aurora snapshot w severless type, pause compute capacity
+* if you ping the app, it may timeout before cluster is up again
+
+## Aurora Global Database
+
+Aurora global databases are a feature of Aurora Provisioned clusters which allow data to be replicated globally providing significant RPO and RTO improvements for BC and DR planning. Additionally global databases can provide performance improvements for customers .. with data being located closer to them, in a read-only form.
+
+Replication occurs at the storage layer and is generally ~1second between all AWS regions.
+
+up to five regions
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.52.54-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.54.29-pm.png)
+
+## Aurora Multi Master
+
+
+
 
 
 

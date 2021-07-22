@@ -427,6 +427,22 @@ up to five regions
 
 ## Aurora Multi Master
 
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.56.06-pm.png)
+
+no load balancer endpoint, fault tolerant
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.57.33-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.58.32-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-10.58.54-pm.png)
+
+## Database migration service
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-11.00.54-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-21-at-11.02.12-pm.png)
+
 
 
 

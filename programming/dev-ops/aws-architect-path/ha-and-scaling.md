@@ -51,5 +51,41 @@ CLB can only use one SSL cert
 
 ![](../../../.gitbook/assets/screenshot-2021-07-23-at-10.37.25-pm.png)
 
+## Auto scaling group
 
+![](../../../.gitbook/assets/screenshot-2021-07-23-at-11.17.34-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-23-at-11.18.10-pm.png)
+
+attempt to keep no of instances in each az equal
+
+![](../../../.gitbook/assets/screenshot-2021-07-23-at-11.20.43-pm.png)
+
+cooling: scaling doesn't occur until certain time has passed from last one
+
+![](../../../.gitbook/assets/screenshot-2021-07-23-at-11.21.48-pm.png)
+
+self-healing: if min is set to 1, sick ec2 instance is terminated and new one is provisioned
+
+![](../../../.gitbook/assets/screenshot-2021-07-23-at-11.24.21-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-23-at-11.24.06-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-23-at-11.25.09-pm.png)
+
+## Demo
+
+![](../../../.gitbook/assets/screenshot-2021-07-23-at-11.26.13-pm.png)
+
+
+
+![](../../../.gitbook/assets/screenshot-2021-07-24-at-10.55.37-am.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-24-at-10.56.21-am%20%281%29.png)
+
+
+
+![](../../../.gitbook/assets/screenshot-2021-07-24-at-10.57.22-am.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-24-at-10.57.02-am%20%282%29.png)
 

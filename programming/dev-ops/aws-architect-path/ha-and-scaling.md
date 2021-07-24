@@ -94,5 +94,13 @@ self-healing: if min is set to 1, sick ec2 instance is terminated and new one is
 
 ## Network load balancer
 
+high performance but no understanding of http/s
 
+![](../../../.gitbook/assets/screenshot-2021-07-24-at-1.49.22-pm.png)
+
+## SSL offload & session stickiness
+
+![](../../../.gitbook/assets/screenshot-2021-07-24-at-2.05.25-pm.png)
+
+![](../../../.gitbook/assets/screenshot-2021-07-24-at-2.06.45-pm.png)
 

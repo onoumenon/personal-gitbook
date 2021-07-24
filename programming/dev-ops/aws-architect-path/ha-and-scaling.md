@@ -89,3 +89,5 @@ self-healing: if min is set to 1, sick ec2 instance is terminated and new one is
 
 ![](../../../.gitbook/assets/screenshot-2021-07-24-at-10.57.02-am%20%282%29.png)
 
+
+

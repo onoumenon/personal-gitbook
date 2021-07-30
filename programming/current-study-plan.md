@@ -1,7 +1,9 @@
 # Current Study Plan
 
-*  Understand how a whole web app works.
-* TypeScript.
+* AWS pass SA Associate by mid Aug
+* Terraform - pass end Sept
+*  Understand how a whole web app works. \(check out basics\)
+* TypeScript. 
 * Next.js.
 * React Native.
 * styled-components.

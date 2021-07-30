@@ -4,6 +4,7 @@
 
 ## Programming Core <a id="programming"></a>
 
+* [Current Study Plan](programming/current-study-plan.md)
 * [Start Here](programming/start-here/README.md)
   * [Useful Links](programming/start-here/articles.md)
   * [Preparation/ Setup](programming/start-here/introduction/README.md)

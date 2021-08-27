@@ -104,6 +104,7 @@
   * [React Redux](programming/react/untitled-1.md)
   * [Typescript](programming/react/typescript.md)
 * [Dev ops](programming/dev-ops/README.md)
+  * [Simple Wordpress with AWS Lightsail](programming/dev-ops/simple-wordpress-with-aws-lightsail.md)
   * [Webpacker](programming/dev-ops/webpacker/README.md)
     * [Alternatives](programming/dev-ops/webpacker/alternatives.md)
   * [CircleCI](programming/dev-ops/circleci.md)

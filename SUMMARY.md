@@ -54,6 +54,7 @@
   * [Browser Support](programming/front-end/browser-support.md)
   * [EDM templates](programming/front-end/edm-templates.md)
   * [Multi-select \(shift-click\)](programming/front-end/multi-select-shift-click.md)
+* [FE animation](programming/fe-animation.md)
 * [Ruby/ ROR](programming/back-end/README.md)
   * [Make ruby gem](programming/back-end/make-ruby-gem.md)
   * [Ruby](programming/back-end/ruby/README.md)

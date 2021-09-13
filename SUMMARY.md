@@ -168,6 +168,7 @@
   * [Sage \(Saga Pattern\)](programming/elixir/sage-saga-pattern.md)
 * [Phoenix](programming/phoenix.md)
 * [Django](programming/django/README.md)
+  * [Deployment](programming/django/deployment.md)
   * [Untitled](programming/django/untitled.md)
 * [Open source](programming/open-source/README.md)
   * [Code quality](programming/open-source/code-quality.md)

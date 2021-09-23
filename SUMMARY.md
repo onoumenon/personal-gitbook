@@ -10,6 +10,7 @@
   * [Preparation/ Setup](programming/start-here/introduction/README.md)
     * [Mac Setup](programming/start-here/introduction/mac-setup.md)
 * [Semantic versioning](programming/semver.md)
+* [REST](programming/rest.md)
 * [GIT](programming/git/README.md)
   * [Sourcetree](programming/git/sourcetree.md)
   * [Resources](programming/git/resources.md)

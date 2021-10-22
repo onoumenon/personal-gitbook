@@ -6,5 +6,3 @@ Rubocop
 
 {% embed url="https://rubocop.org/" %}
 
-
-

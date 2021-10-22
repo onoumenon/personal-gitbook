@@ -2,52 +2,52 @@
 
 ### IAM Policies
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.36.48-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.36.48 PM.png>)
 
-If there's overlap, it's like a venn diagram with priorities \(ordered\):
+If there's overlap, it's like a venn diagram with priorities (ordered):
 
 * explicit DENY
 * Explicit ALLOW
-* implicit DENY \(by default\)
+* implicit DENY (by default)
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.40.46-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.40.46 PM.png>)
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.41.17-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.41.17 PM.png>)
 
 You may have multiple IAM policies
 
-Inline \(most specific, only used in exceptions\)
+Inline (most specific, only used in exceptions)
 
-Managed Policy \(normal default ACL, reusable, low management overhead\)
+Managed Policy (normal default ACL, reusable, low management overhead)
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.43.10-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.43.10 PM.png>)
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.44.20-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.44.20 PM.png>)
 
 can be any named thing that needs long-lived access
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.45.29-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.45.29 PM.png>)
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.46.56-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.46.56 PM.png>)
 
-arn:aws:s3:::catgifs -&gt; Bucket
+arn:aws:s3:::catgifs -> Bucket
 
-arn:aws:s3:::catgifs/\* -&gt; Objects in the bucket
+arn:aws:s3:::catgifs/\* -> Objects in the bucket
 
 You may need permission for both
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.50.18-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.50.18 PM.png>)
 
 ### Demo
 
 * cloudformation
-* create stack -&gt; upload template -&gt; enter stack name, parameters, acknowledge
+* create stack -> upload template -> enter stack name, parameters, acknowledge
 * note: parameter may have restrictions, which may conflict w other restrictions
 * physical id is auto generated and unique
 * log in as iam user
 * for inline policy, find user, add inline policy
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-10.53.20-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 10.53.20 PM.png>)
 
 ### IAM Groups
 
@@ -55,15 +55,15 @@ You may need permission for both
 
 
 
-![](../../../.gitbook/assets/screenshot-2021-06-28-at-11.02.33-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-06-28 at 11.02.33 PM.png>)
 
 ### Demo for groups
 
 [https://learn.cantrill.io/courses/730712/lectures/14275294](https://learn.cantrill.io/courses/730712/lectures/14275294)
 
-[1-Click Deployment](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0023-aws-associate-iam-groups/groupsdemoinfrastructure.yaml&stackName=IAMGROUPS)
+[1-Click Deployment](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0023-aws-associate-iam-groups/groupsdemoinfrastructure.yaml\&stackName=IAMGROUPS)
 
-In this \[DEMO\] we investigate how groups can be used to hold permissions for group members.
+In this \[DEMO] we investigate how groups can be used to hold permissions for group members.
 
 Permissions which were assigned to the IAM user 'Sally' are migrated to a new development group we create in the demo.
 
@@ -71,7 +71,7 @@ Permissions which were assigned to the IAM user 'Sally' are migrated to a new de
 
 used when the no of principles is unpredictable, or is short-lived, or external
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.04.20-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.04.20 PM.png>)
 
 Trust policy list the identities that's allowed/ disallowed
 
@@ -79,7 +79,7 @@ then if allowed, it generates temporary security credentials
 
 credentials are checked against permissions policy
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.06.22-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.06.22 PM.png>)
 
 sts:AssumeRole, means IAM roles is involved as the identity assumes the role
 
@@ -87,7 +87,7 @@ sts:AssumeRole, means IAM roles is involved as the identity assumes the role
 
 #### LAMBDA
 
-AWS lambda, performs function, has no permission by default. 
+AWS lambda, performs function, has no permission by default.&#x20;
 
 Running it is called lambda invocation.
 
@@ -95,33 +95,33 @@ Create IAM role known as lambda execution role, rather than hardcode access key 
 
 When lambda function runs, it uses the sts:AssumeRole operation
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.10.38-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.10.38 PM.png>)
 
 hardcode = security risk, hard to rotate
 
-#### HELPDESK scenario \(Emergency/ Exception\)
+#### HELPDESK scenario (Emergency/ Exception)
 
 readonly access for helpdesk member by default, but emergency occurs and a role can be used.
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.13.05-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.13.05 PM.png>)
 
-#### External Identities \(&gt;5000 users\)
+#### External Identities (>5000 users)
 
-on-premise sign in, eg: microsoft active directory, with &gt; 5000 staff
+on-premise sign in, eg: microsoft active directory, with > 5000 staff
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.15.00-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.15.00 PM.png>)
 
 #### Mobile app with a lot of users
 
-web identity federation \(eg facebook\)
+web identity federation (eg facebook)
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.16.49-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.16.49 PM.png>)
 
-#### Partner account \(Organizations\)
+#### Partner account (Organizations)
 
 can use aws organization, eg: for uploading to a partner account
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.18.26-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.18.26 PM.png>)
 
 ### AWS Organizations
 
@@ -133,13 +133,13 @@ existing accounts can be added to the org
 
 the account used to create the org is the management acct
 
-you can create levels \(root, ou\)
+you can create levels (root, ou)
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.21.38-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.21.38 PM.png>)
 
 org has consolidated billing
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.22.15-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.22.15 PM.png>)
 
 includes all billing from all accounts
 
@@ -147,21 +147,21 @@ benefits from cheaper price at scale
 
 can create an account within an org
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.23.40-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.23.40 PM.png>)
 
 large orgs may separate concerns
 
 management account for billing, and another for IAM
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.24.58-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.24.58 PM.png>)
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.25.16-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.25.16 PM.png>)
 
 ### Org Demo
 
 [https://learn.cantrill.io/courses/730712/lectures/14293488](https://learn.cantrill.io/courses/730712/lectures/14293488)
 
-In this \[DEMO\] Lesson we will create an organisation for the Animals4life business.
+In this \[DEMO] Lesson we will create an organisation for the Animals4life business.
 
 The GENERAL account will become the MASTER account for the organisation
 
@@ -169,35 +169,35 @@ We will invite the PRODUCTION account as a MEMBER account and create the DEVELOP
 
 Finally - we will create an **OrganizationAccountAccessRole** in the production account, and use this role to switch between accounts.
 
-WARNING : If you get an error "You have exceeded the allowed number of AWS Accounts" then you can go here [https://console.aws.amazon.com/servicequotas/home?region=us-east-1\#!/services/organizations/quotas/L-29A0C5DF](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/organizations/quotas/L-29A0C5DF) and request a quote increase for the number of member accounts in an ORG
+WARNING : If you get an error "You have exceeded the allowed number of AWS Accounts" then you can go here [https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/organizations/quotas/L-29A0C5DF](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/organizations/quotas/L-29A0C5DF) and request a quote increase for the number of member accounts in an ORG
 
 Need to add role if adding existing account, eg, add general account to role
 
 switch role
 
-provide the account from, to acct to switch role to \(prod acct\), display name \(eg:prod\)
+provide the account from, to acct to switch role to (prod acct), display name (eg:prod)
 
 ### Service control policy
 
 json doc, attached to org / ou / member
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.50.18-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.50.18 PM.png>)
 
 management acct cannot be restricted using service control policy.
 
 don't use management acct to do normal tasks
 
-![](../../../.gitbook/assets/screenshot-2021-07-01-at-10.52.07-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-01 at 10.52.07 PM.png>)
 
 limit but can't grant, define the limits
 
-same flow = deny &gt; allow &gt; deny
+same flow = deny > allow > deny
 
 preferred is a deny list, even if the user has permissions, explicit deny of SCP overrules it
 
 allow list is easy to make mistakes for scp
 
-![](../../../.gitbook/assets/screenshot-2021-07-05-at-10.25.08-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-05 at 10.25.08 PM.png>)
 
 only the overlapping policies are actually allowed
 
@@ -207,11 +207,11 @@ can create folders for organizations
 
 select PROD from role history
 
-aws organization -&gt; policies -&gt; service control policy -&gt; enable service control policy -&gt; default is full access -&gt; add explicit deny by create -&gt; detach other policies and attach the recently created scp
+aws organization -> policies -> service control policy -> enable service control policy -> default is full access -> add explicit deny by create -> detach other policies and attach the recently created scp
 
 ### Cloudwatch logs
 
-![](../../../.gitbook/assets/screenshot-2021-07-05-at-10.40.07-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-05 at 10.40.07 PM.png>)
 
 regional service
 
@@ -221,7 +221,7 @@ log events are stored in log stream
 
 log group stores config settings, metric filter, metric triggers alarm
 
-![](../../../.gitbook/assets/screenshot-2021-07-06-at-8.19.37-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-06 at 8.19.37 PM.png>)
 
 ### Cloudtrail
 
@@ -233,7 +233,7 @@ It is enabled by default in AWS accounts and logs free information with a 90 day
 
 It can be configured to store data indefinitely in S3 or CloudWatch Logs.
 
-![](../../../.gitbook/assets/screenshot-2021-07-06-at-8.21.49-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-06 at 8.21.49 PM.png>)
 
 only management event is logged by default
 
@@ -245,13 +245,13 @@ you can also enable data events to be logged
 
 you can store logs to s3
 
-you can store in cloudwatch logs \(more powerful\)
+you can store in cloudwatch logs (more powerful)
 
-![](../../../.gitbook/assets/screenshot-2021-07-06-at-8.25.56-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-06 at 8.25.56 PM.png>)
 
 can configure organization trail
 
-![](../../../.gitbook/assets/screenshot-2021-07-06-at-8.27.23-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-06 at 8.27.23 PM.png>)
 
 within 15mins
 
@@ -261,13 +261,11 @@ CloudTrail Pricing : [https://aws.amazon.com/cloudtrail/pricing/](https://aws.am
 
 CloudWatch Logs Pricing : [https://aws.amazon.com/cloudwatch/pricing/](https://aws.amazon.com/cloudwatch/pricing/)
 
-cloudtrail \(free\) - 90 days, 1 trail per region, management events but no data events
+cloudtrail (free) - 90 days, 1 trail per region, management events but no data events
 
-Cloud trail -&gt; Trails -&gt; trail name, all regions for all accounts in org, use/ create s3 bucket to store logs -&gt; log file encryption -&gt; cloudwatch logs enabled -&gt; choose things to log \(management, data, insight\) -&gt; read and write enabled
+Cloud trail -> Trails -> trail name, all regions for all accounts in org, use/ create s3 bucket to store logs -> log file encryption -> cloudwatch logs enabled -> choose things to log (management, data, insight) -> read and write enabled
 
 open json log file for cloudtrail
 
 Event history enabled by default
-
-
 

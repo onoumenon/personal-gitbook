@@ -6,7 +6,7 @@ Aromachemicals and essential oils are generally not safe to ingest/ touch undilu
 
 Keep away from warm temperatures, as there are some chemicals that may combust
 
-Room-temp UHT milk to wash out oils \(from ingestion or eyes\)
+Room-temp UHT milk to wash out oils (from ingestion or eyes)
 
 Use foam-based fire extinguishers for flames
 
@@ -26,56 +26,56 @@ Beginner ingredients:
 
 {% embed url="https://www.youtube.com/watch?v=jP3Z3WGAijA" %}
 
-{% embed url="https://shop.perfumersapprentice.com/Images/Spyros\_Intensive\_2020.pdf" %}
+{% embed url="https://shop.perfumersapprentice.com/Images/Spyros_Intensive_2020.pdf" %}
 
 
 
-![](../../.gitbook/assets/screenshot-2021-06-26-at-8.48.48-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-06-26 at 8.48.48 AM.png>)
 
-• Perfumers alcohol \(200 proof - SDA 40-B Ethanol\)
+• Perfumers alcohol (200 proof - SDA 40-B Ethanol)
 
-• The "Must haves": 
+• The "Must haves":&#x20;
 
-* [x] Iso E super \(for blending\)
-* [x]  Galaxolide \(clean musk\)
-* [x]  Hedione \(floral\) \(women's floral perfume\)
-* [x] Dipropylene Glycol \(DPG\) for diluting
+* [x] Iso E super (for blending)
+* [x] &#x20;Galaxolide (clean musk)
+* [x] &#x20;Hedione (floral) (women's floral perfume)
+* [x] Dipropylene Glycol (DPG) for diluting
 
-• Musks, Linalool: 
+• Musks, Linalool:&#x20;
 
-* [ ] Exaltolide \(skin musk\)
+* [ ] Exaltolide (skin musk)
 * [x] Ethyl Linalool
 
 • Woods:
 
-* [x] Cedarwood EO \(~~atlas~~ vs virginia\)
-* [x] Agarwood \(oud\) - Black Agar accord
-* [ ] Sandalwood \(Sandalore/Sandela\) 
+* [x] Cedarwood EO (~~atlas~~ vs virginia)
+* [x] Agarwood (oud) - Black Agar accord
+* [ ] Sandalwood (Sandalore/Sandela)&#x20;
 * [ ] Pine
 * [ ] Juniper Berry EO
-* [ ] Patchouli Light EO \(Clearwood\)
+* [ ] Patchouli Light EO (Clearwood)
 
 • Florals:
 
 * [x] Rose otto/ rose de mai accord
-* [ ] Jasmine \(Jasmatone\)
-* [x] Iris/violet/orris \(alpha isomethyl ionone, ~~ionone alpha or Methyl Ionone Gamma~~\)
-* [x] Lavender EO 
-* [x] Orange Blossom \(neroli accord\)
+* [ ] Jasmine (Jasmatone)
+* [x] Iris/violet/orris (alpha isomethyl ionone,~~ ionone alpha or Methyl Ionone Gamma~~)
+* [x] Lavender EO&#x20;
+* [x] Orange Blossom (neroli accord)
 
-• Citruses 
+• Citruses&#x20;
 
 * [x] Bergamot EO
-* [x]  Orange \(Sweet\) 
-* [ ] EO Grapefruit \(Pink\) EO
+* [x] &#x20;Orange (Sweet)&#x20;
+* [ ] EO Grapefruit (Pink) EO
 
-• Fruits 
+• Fruits&#x20;
 
-* [ ] Nectarine/peach \(Nectaryl\) 
-* [x] Delta Decalactone \(creamy coconut, or coconut accord\)
-* [x] Apple \(Fructone and/or ~~Manzanate~~\)
+* [ ] Nectarine/peach (Nectaryl)&#x20;
+* [x] Delta Decalactone (creamy coconut, or coconut accord)
+* [x] Apple (Fructone and/or ~~Manzanate~~)
 * [x] Benzyl acetate
-* [ ] Pineapple \(pre-made accord\)
+* [ ] Pineapple (pre-made accord)
 
 • Gourmand
 
@@ -83,63 +83,61 @@ Beginner ingredients:
 * [x] Green tea accord
 * [x] Mint EO
 * [x] Coffee EO
-* [x] Cocoa absolute \(10%\)
+* [x] Cocoa absolute (10%)
 * [x] Maple lactone
 * [x] Cognac accord
-* [x] Tonka Bean \(absolute or pre made accord\)
+* [x] Tonka Bean (absolute or pre made accord)
 
-• Spicy 
+• Spicy&#x20;
 
-* [x] Cardamom EO 
-* [x] AllSpice \(replace w spice accord\)
-* [ ] Cinnamon \(Cinnamic Aldehyde\) 
-* [ ] Pink pepper EO 
-* [x] Frankincense EO \(also called Olibanum\) 
-* [x] Tobacco Absolute \(5%\)/ accord
+* [x] Cardamom EO&#x20;
+* [x] AllSpice (replace w spice accord)
+* [ ] Cinnamon (Cinnamic Aldehyde)&#x20;
+* [ ] Pink pepper EO&#x20;
+* [x] Frankincense EO (also called Olibanum)&#x20;
+* [x] Tobacco Absolute (5%)/ accord
 
-• Ambery 
+• Ambery&#x20;
 
-* [x] Cetalox or Ambroxan \(replaced w fixative 505\)
-* [x] Amber \(pre-made accord\)
+* [x] Cetalox or Ambroxan (replaced w fixative 505)
+* [x] Amber (pre-made accord)
 
 • Aldehydes
 
-* [x]  C12 MNA \(warm ambery\) 
-* [ ] C12 Lauric \(soapy fresh\) 
-* [x] C10 Decanal \(orange peel\) 
+* [x] &#x20;C12 MNA (warm ambery)&#x20;
+* [ ] C12 Lauric (soapy fresh)&#x20;
+* [x] C10 Decanal (orange peel)&#x20;
 * [x] C16 Strawberry
 
-• Ozonic 
+• Ozonic&#x20;
 
-* [x]  Calone \(replaced w ozone\)
+* [x] &#x20;Calone (replaced w ozone)
 * [x] Floral ozone
 
 • Mossy/Earthy/Animalic
 
-* [x] Oakmoss 
-* [x] Leather \(Suederal\)
+* [x] Oakmoss&#x20;
+* [x] Leather (Suederal)
 
-• Sweet 
+• Sweet&#x20;
 
 * [x] Ethyl Maltol
-* [x] Vanillin 
+* [x] Vanillin&#x20;
 
 • Green
 
-* [ ] Violet leaf/ tomato leaf \(green leaf accord\)
-* [x]   Hexenol-3-Cis \(fresh grass\)
+* [ ] Violet leaf/ tomato leaf (green leaf accord)
+* [x] &#x20; Hexenol-3-Cis (fresh grass)
 
 • Balsamic
 
-* [x] Benzoin Ollifac 63 \(replaced w accord or resinoid\)
+* [x] Benzoin Ollifac 63 (replaced w accord or resinoid)
 
-###  Schiff base
+### &#x20;Schiff base
 
 {% embed url="https://www.perfumerflavorist.com/fragrance/application/finefrag/Schiff-Base-Shuffling-Paul-Kilers-New-Work-with-Old-Chemistry-568283141.html" %}
 
 {% embed url="http://pkperfumes.com/wp-content/uploads/2013/12/Schiff-Bases-Compendium.pdf" %}
 
 {% embed url="https://groups.io/g/perfumemaking/files" %}
-
-
 

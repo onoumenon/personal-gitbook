@@ -4,7 +4,7 @@
 
 From first answer:
 
-```text
+```
   // objectContaining, with nested object, containing full props/values
   // PASSES
   expect({ position: { x: 0, y: 0 } }).toEqual(expect.objectContaining({
@@ -47,6 +47,4 @@ From first answer:
     }
   });
 ```
-
-
 

@@ -2,5 +2,3 @@
 
 {% embed url="https://betterwebtype.com/" %}
 
-
-

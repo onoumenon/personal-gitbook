@@ -6,5 +6,3 @@
 
 {% embed url="http://wiki.c2.com/?PatternIndex" %}
 
-
-

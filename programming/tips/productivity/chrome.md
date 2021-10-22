@@ -6,5 +6,3 @@
 
 {% embed url="http://anti-code.com/devtools-cheatsheet/" %}
 
-
-

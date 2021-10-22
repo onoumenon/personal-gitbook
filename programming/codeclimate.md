@@ -4,5 +4,3 @@
 
 {% embed url="https://circleci.com/blog/continuous-integration-with-code-climates-automated-code-review/" %}
 
-
-

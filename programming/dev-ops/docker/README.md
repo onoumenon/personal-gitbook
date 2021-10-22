@@ -14,14 +14,14 @@ The below two guides are very good intro-level guide to the high level concepts:
 
 {% embed url="https://pythonspeed.com/articles/docker-build-secrets/" %}
 
-Note: in moving to Docker buildkit secrets, make sure your Docker version is &gt;18 \(eg: in circleCI\), and also if you're using Next, the build picks up the variables from the 'build' command:
+Note: in moving to Docker buildkit secrets, make sure your Docker version is >18 (eg: in circleCI), and also if you're using Next, the build picks up the variables from the 'build' command:
 
-```text
+```
 // in circleCI docker build step, extra build args
 '... --secret id=secrets,src=.env'
 ```
 
-```text
+```
 # syntax=docker/dockerfile:1.2
 
 ...
@@ -33,6 +33,4 @@ RUN --mount=type=secret,id=secrets,dst=/secrets,required=true \
   && API_KEY=${API_KEY} npm run build \
   && npm ci --only=production
 ```
-
-
 

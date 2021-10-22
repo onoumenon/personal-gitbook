@@ -8,15 +8,15 @@
 
 {% embed url="https://medium.com/@mshostdrive/how-to-run-a-rails-app-in-production-locally-f29f6556d786" %}
 
-```text
+```
 RAILS_ENV=production rails s
 ```
 
-```text
+```
 RAILS_ENV=production rake db:create db:migrate db:seed
 ```
 
-Open postico to check database, where eg: user = {username}, database = {db name} 
+Open postico to check database, where eg: user = {username}, database = {db name}&#x20;
 
 ### Check if docker image can run locally
 
@@ -120,7 +120,7 @@ resource "aws_ecr_lifecycle_policy" "lifecycle_policy" {
 
 ### Login to AWS and check if EC2 instance is created
 
-### 
+###
 
 ### SSH into the EC2 instance in AWS and try to run docker inside
 
@@ -136,7 +136,7 @@ ssh -i {devname}.pem ec2-user@{server-public-ip}
 ```
 
 {% hint style="info" %}
-You need to ssh in via public ip because your client is not part of the same VPC. However, if you're communicating from within the same VPC \(eg: EC2 sibling instances\), you should use private ip by default. 
+You need to ssh in via public ip because your client is not part of the same VPC. However, if you're communicating from within the same VPC (eg: EC2 sibling instances), you should use private ip by default.&#x20;
 {% endhint %}
 
 To run Rails Console once SSH in the server:
@@ -146,9 +146,9 @@ docker exec -it web sh
 bin/rails console
 ```
 
-create the starting script you want to add to terraform \(weirdly named as user\_data.sh\)
+create the starting script you want to add to terraform (weirdly named as user\_data.sh)
 
-{% code title="user\_data.sh" %}
+{% code title="user_data.sh" %}
 ```bash
 #!/bin/bash
 sudo yum -y update
@@ -188,13 +188,13 @@ docker run -d --restart unless-stopped --name nginx-proxy \
 
 ### Add Nginx layer to EC2
 
-Nginx makes sure users don't hit :3000 directly, for security. 
+Nginx makes sure users don't hit :3000 directly, for security.&#x20;
 
 ![Setup Nginx as Frontend Server for Node.js - TecAdmin.net](https://tecadmin.net/wp-content/uploads/2016/01/nginx-nodejs.png)
 
- This is in the last part of the .sh script, there's:
+&#x20;This is in the last part of the .sh script, there's:
 
-```text
+```
 docker run -d --restart unless-stopped --name nginx-proxy \
   --network {proj_name} \
   -p 80:80 \
@@ -204,16 +204,16 @@ docker run -d --restart unless-stopped --name nginx-proxy \
   jwilder/nginx-proxy
 ```
 
-Make sure that you support incoming http \(port 80\)/ https \(port 443\) connection in the EC2's security group via terraforming.
+Make sure that you support incoming http (port 80)/ https (port 443) connection in the EC2's security group via terraforming.
 
 {% hint style="warning" %}
 Do not edit an EC2 created by terraform directly, and instead provision one using terraform. The state should also be saved remotely and not changed as much as possible.
 {% endhint %}
 
-It looks something like this \(ingress\):
+It looks something like this (ingress):
 
 {% code title="web/main.tf" %}
-```text
+```
 ...
 resource "aws_security_group" "allow_http" {
   name        = "http_{proj_name}_production"
@@ -260,25 +260,25 @@ resource "aws_security_group" "allow_http" {
 ```
 {% endcode %}
 
-We don't care about outbound connections, so egress protocol is -1 \(all protocols allowed\). cidr\_blocks is set to the lax "0.0.0.0/0" which allows all ip addresses, but SSH should be deleted once terrraform file is done.
+We don't care about outbound connections, so egress protocol is -1 (all protocols allowed). cidr\_blocks is set to the lax "0.0.0.0/0" which allows all ip addresses, but SSH should be deleted once terrraform file is done.
 
 This should be saved to the same folder as the other tf files.
 
-![](../../../.gitbook/assets/screenshot-2021-01-12-at-5.29.14-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-01-12 at 5.29.14 PM.png>)
 
-The file structure should look like the above. Terraform will read all the tf files and run it as one huge file. main.tf is conventionally the main config, outputs.tf is the script to generate outputs \(eg: aws ip address\), variables for the script variables, with secrets in .env using TF VAR name method
+The file structure should look like the above. Terraform will read all the tf files and run it as one huge file. main.tf is conventionally the main config, outputs.tf is the script to generate outputs (eg: aws ip address), variables for the script variables, with secrets in .env using TF VAR name method
 
-### TF\_VAR\_name <a id="tf_var_name"></a>
+### TF\_VAR\_name <a href="tf_var_name" id="tf_var_name"></a>
 
 Environment variables can be used to set variables. The environment variables must be in the format `TF_VAR_name` and this will be checked last for a value. For example:
 
-```text
+```
 export TF_VAR_POSTGRES_DB={DB_name}
 ```
 
 and set up the variables
 
-```text
+```
 variable "POSTGRES_DB" {
   type = string
 }
@@ -289,9 +289,9 @@ variable "ECR_STDIN" {
 }
 ```
 
-and to use it in the main.tf: 
+and to use it in the main.tf:&#x20;
 
-```text
+```
   user_data = templatefile("./terraform/production/web/user_data.sh", {
     rails_master_key  = var.RAILS_MASTER_KEY,
     ecr_stdin         = var.ECR_STDIN,
@@ -308,7 +308,7 @@ then run `source .env` so env is in the environment
 The end file looks like this:
 
 {% code title="database/main.tf" %}
-```text
+```
 provider "aws" {
   region  = "ap-southeast-1"
   version = "~> 2.0"
@@ -377,7 +377,7 @@ resource "aws_db_instance" "rds" {
 {% endcode %}
 
 {% code title="web/main.tf" %}
-```text
+```
 provider "aws" {
   region = "ap-southeast-1"
 }
@@ -477,7 +477,7 @@ resource "aws_instance" "server" {
 
 ### use Elastic IP so don't have to update cloudflare's subdomain's EC2 IP
 
-```text
+```
 resource "aws_eip" "web_instance" {
   instance = aws_instance.server.id
 }
@@ -487,9 +487,9 @@ Check elastic ip on aws console.
 
 ### Upload the terraform state to S3
 
-This is so that team members in the same dev team can also share the state, and state is not saved locally. \(You can delete the local state files.\)
+This is so that team members in the same dev team can also share the state, and state is not saved locally. (You can delete the local state files.)
 
-```text
+```
 terraform {
   backend "s3" {
     bucket = "{proj_name}-tf-state"
@@ -504,17 +504,15 @@ terraform {
 
 ### Additional concerns
 
-* Database and rails server should be in separate EC2 \(so it doesn't go down together, and you can have multiple servers getting from one DB\).
+* Database and rails server should be in separate EC2 (so it doesn't go down together, and you can have multiple servers getting from one DB).
 * They should not communicate with public IP. You can set in the security groups, a policy that the incoming connection should be of a certain security id.
 
 ### Additional Info
 
-Instead of using Elastic IP to deal with the cloudflare IP issue, you can also use Application Load Balancer with a Target Group of one or more EC2 instances to manage it, as the Load Balancer has its own IP address. You can additionally add autoscaling to it, with rules such as "memory utilization &gt; 60%, add one more instance".
+Instead of using Elastic IP to deal with the cloudflare IP issue, you can also use Application Load Balancer with a Target Group of one or more EC2 instances to manage it, as the Load Balancer has its own IP address. You can additionally add autoscaling to it, with rules such as "memory utilization > 60%, add one more instance".
 
 Horizontal scaling is better than vertical scaling, as
 
-* it's cheaper \(pay for more only if you need more\)
+* it's cheaper (pay for more only if you need more)
 * multiple instances means less chance of everything going down
-
-
 

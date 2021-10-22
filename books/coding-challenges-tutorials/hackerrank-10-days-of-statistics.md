@@ -4,17 +4,17 @@
 
 ### Mean, Median, Mode
 
-Mean: Average of the set. If the set = \[2, 4, 5\], then the average is \(2+4+5\)/3.
+Mean: Average of the set. If the set = \[2, 4, 5], then the average is (2+4+5)/3.
 
-Median: Midpoint value of a data set, where a equal number of samples is _less than_ and _greater than_ the value. If the set = \[1, 3, 4, 5, 9\], then the median is 4.
+Median: Midpoint value of a data set, where a equal number of samples is _less than_ and _greater than_ the value. If the set = \[1, 3, 4, 5, 9], then the median is 4.
 
-Mode: Element\(s\) that occur most frequently in a data set. If the set is \[1, 3, 3, 3, 4, 6, 7, 7, 9\], then the mode is 3.
+Mode: Element(s) that occur most frequently in a data set. If the set is \[1, 3, 3, 3, 4, 6, 7, 7, 9], then the mode is 3.
 
 ### Precision & Scale
 
-Precision: Number of significant digits. \(eg: 0.012345 and 12.345 have a precision of 5\)
+Precision: Number of significant digits. (eg: 0.012345 and 12.345 have a precision of 5)
 
-Scale: Number of significant digits to the right of a decimal point. \(eg: 0.12 and 1.23 both have a scale of 2\)
+Scale: Number of significant digits to the right of a decimal point. (eg: 0.12 and 1.23 both have a scale of 2)
 
 
 
@@ -22,31 +22,31 @@ Scale: Number of significant digits to the right of a decimal point. \(eg: 0.12 
 
 ### Standard Deviation
 
-{% embed url="https://www.youtube.com/watch?v=qqOyy\_NjflU" %}
+{% embed url="https://www.youtube.com/watch?v=qqOyy_NjflU" %}
 
 To calculate the Variance, take each difference, square it, and then average the result:
 
-| **Variance** |  |  |
-| :--- | :--- | :--- |
-| σ2 | = | _2062 + 762 + \(−224\)2 + 362 + \(−94\)2_**5** |
-|  | = | _42436 + 5776 + 50176 + 1296 + 8836_**5** |
-|  | = | _108520_**5** |
-|  | = | 21704 |
+| **Variance** |   |                                            |
+| ------------ | - | ------------------------------------------ |
+| σ2           | = | _2062 + 762 + (−224)2 + 362 + (−94)2_**5** |
+|              | = | _42436 + 5776 + 50176 + 1296 + 8836_**5**  |
+|              | = | _108520_**5**                              |
+|              | = | 21704                                      |
 
 So the Variance is **21,704**
 
 And the Standard Deviation is just the square root of Variance, so:
 
-| **Standard Deviation** |  |  |
-| :--- | :--- | :--- |
-| σ | = | √21704 |
-|  | = | 147.32... |
-|  | = | **147** \(to the nearest mm\) |
+| **Standard Deviation** |   |                             |
+| ---------------------- | - | --------------------------- |
+| σ                      | = | √21704                      |
+|                        | = | 147.32...                   |
+|                        | = | **147** (to the nearest mm) |
 
 {% hint style="info" %}
-Why square? 
+Why square?&#x20;
 
-[https://www.mathsisfun.com/data/standard-deviation.html\#WhySquare](https://www.mathsisfun.com/data/standard-deviation.html#WhySquare)
+[https://www.mathsisfun.com/data/standard-deviation.html#WhySquare](https://www.mathsisfun.com/data/standard-deviation.html#WhySquare)
 {% endhint %}
 
 
@@ -55,25 +55,25 @@ Why square?
 
 ### Probability
 
-Probability of an event happening = _Number of ways it can happen /_ Total number of outcomes
+Probability of an event happening = _Number of ways it can happen / _Total number of outcomes
 
 {% embed url="https://www.mathsisfun.com/data/probability-events-conditional.html" %}
 
 ### Permutations
 
-![Permutations for 4 numbers ordering](../../.gitbook/assets/image%20%2822%29.png)
+![Permutations for 4 numbers ordering](<../../.gitbook/assets/image (8).png>)
 
-![Permutations with repetition](../../.gitbook/assets/image%20%2829%29.png)
+![Permutations with repetition](<../../.gitbook/assets/image (9).png>)
 
-![](../../.gitbook/assets/image%20%2823%29.png)
+![](<../../.gitbook/assets/image (10).png>)
 
 ### Combinations
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](<../../.gitbook/assets/image (7).png>)
 
 ## Day 3
 
-### [Conditional Probability](https://en.wikipedia.org/wiki/Conditional_probability)
+### [Conditional Probability](https://en.wikipedia.org/wiki/Conditional\_probability)
 
 This is defined as the probability of an event occurring, assuming that one or more other events have already occurred.
 
@@ -81,11 +81,11 @@ Resource: [https://www.mathsisfun.com/data/probability-events-conditional.html](
 
 Probability of **event A and event B** equals the probability of **event A** times the probability of **event B given event A:**
 
-![](../../.gitbook/assets/image%20%2830%29.png)
+![](<../../.gitbook/assets/image (18).png>)
 
 The probability of **event B given event A** equals the probability of **event A and event B** divided by the probability of **event A:**
 
-![](../../.gitbook/assets/image%20%2825%29%20%281%29.png)
+![](<../../.gitbook/assets/image (19).png>)
 
 ### Bayes Theorem
 
@@ -95,11 +95,11 @@ The probability of **event B given event A** equals the probability of **event A
 
 ### Binomial Distribution
 
-Formula: n! / \(k!\(n-k\)!
+Formula: n! / (k!(n-k)!
 
 Assumption: the chances of success or failure are **equally likely**.
 
-![The binomial distribution follows a pascal&apos;s triangle pattern ](../../.gitbook/assets/image.png)
+![The binomial distribution follows a pascal's triangle pattern ](<../../.gitbook/assets/image (11).png>)
 
 ### Geometric Distribution
 
@@ -107,15 +107,15 @@ Geometric probability distribution” basically means the multiplication of prob
 
 {% embed url="https://magoosh.com/statistics/understanding-geometric-probability-distribution/" %}
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](<../../.gitbook/assets/image (12).png>)
 
 #### Cumulative geometric probability distribution
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](<../../.gitbook/assets/image (13).png>)
 
 {% embed url="https://magoosh.com/statistics/what-is-the-geometric-distribution-formula/" %}
 
-Formula: p \* \(\(1-p\) \*\* k-1\)
+Formula: p \* ((1-p) \*\* k-1)
 
 ## Day 5
 
@@ -136,17 +136,17 @@ The **Poisson distribution** is the [discrete probability distribution](https://
 
 
 
-![](../../.gitbook/assets/image%20%2818%29.png)
+![](<../../.gitbook/assets/image (15).png>)
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](<../../.gitbook/assets/image (14).png>)
 
 ### Waiting Time
 
-Using Poisson process to figure out how long we have to wait until the next event \(this is sometimes called the interarrival time\):
+Using Poisson process to figure out how long we have to wait until the next event (this is sometimes called the interarrival time):
 
-![Probability of waiting more than a certain time](../../.gitbook/assets/image%20%2812%29.png)
+![Probability of waiting more than a certain time](<../../.gitbook/assets/image (16).png>)
 
-![Probability of waiting less than or equal to a certain time](../../.gitbook/assets/image%20%2815%29.png)
+![Probability of waiting less than or equal to a certain time](<../../.gitbook/assets/image (17).png>)
 
 {% embed url="https://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/" %}
 
@@ -156,7 +156,7 @@ Note to self: Still not too sure how to derive Poisson Distribution's formula
 
 ## Day 6
 
-### Central Limit Theorem 
+### Central Limit Theorem&#x20;
 
 CLT is a statistical theory that states that given a sufficiently large sample size from a population with a finite level of variance, the mean of all samples from the same population will be about equal to the mean of the population.
 
@@ -170,66 +170,66 @@ All the samples will follow an approximate [normal distribution](https://www.inv
 
 {% embed url="https://towardsdatascience.com/let-us-understand-the-correlation-matrix-and-covariance-matrix-d42e6b643c22" %}
 
-Covariance =&gt; Correlation: divide the covariance values by the standard deviation, it essentially scales the value down to a limited range of **-1 to +1,** ie:
+Covariance => Correlation: divide the covariance values by the standard deviation, it essentially scales the value down to a limited range of **-1 to +1, **ie:
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](<../../.gitbook/assets/image (21).png>)
 
 
 
-* **ρ\(X,Y\)** – the correlation between the variables X and Y
-* **Cov\(X,Y\)** – the covariance between the variables X and Y
-* **σX** – the standard deviation of the X-variable
+* **ρ(X,Y)** – the correlation between the variables X and Y
+* **Cov(X,Y) **– the covariance between the variables X and Y
+* **σX **– the standard deviation of the X-variable
 * **σY** – the standard deviation of the Y-variable
 
-![Formula to find covariance of x,y](../../.gitbook/assets/image%20%2831%29.png)
+![Formula to find covariance of x,y](<../../.gitbook/assets/image (20).png>)
 
-* **Xi** – the values of the X-variable
+* **Xi **– the values of the X-variable
 * **Yj** – the values of the Y-variable
-* **X̄** – the mean \(average\) of the X-variable
-* **Ȳ** – the mean \(average\) of the Y-variable
+* **X̄ **– the mean (average) of the X-variable
+* **Ȳ** – the mean (average) of the Y-variable
 * **n** – the number of the data points
 
 {% embed url="https://corporatefinanceinstitute.com/resources/knowledge/finance/covariance/" %}
 
 {% embed url="https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php" %}
 
-### Spearman's Rank-Order Correlation 
+### Spearman's Rank-Order Correlation&#x20;
 
 {% embed url="https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php" %}
 
-The Spearman's rank-order correlation is the nonparametric \(data does not need to fit normal distribution\) version of the [Pearson product-moment correlation](https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php). Spearman's correlation coefficient, \(ρ, also signified by _r_s\) measures the strength and direction of association between two ranked variables.
+The Spearman's rank-order correlation is the nonparametric (data does not need to fit normal distribution) version of the [Pearson product-moment correlation](https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php). Spearman's correlation coefficient, (ρ, also signified by _r_s) measures the strength and direction of association between two ranked variables.
 
-Assumptions: You need two variables that are either ordinal, interval or ratio \(see our [Types of Variable](https://statistics.laerd.com/statistical-guides/types-of-variable.php) guide if you need clarification\).
+Assumptions: You need two variables that are either ordinal, interval or ratio (see our [Types of Variable](https://statistics.laerd.com/statistical-guides/types-of-variable.php) guide if you need clarification).
 
-Spearman's correlation determines the strength and direction of the **monotonic relationship** between your two variables rather than the strength and direction of the linear relationship between your two variables \(ie: for Pearson's correlation\).
+Spearman's correlation determines the strength and direction of the **monotonic relationship** between your two variables rather than the strength and direction of the linear relationship between your two variables (ie: for Pearson's correlation).
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](<../../.gitbook/assets/image (22).png>)
 
-You will need to rank the data \(or use [SPSS Statistics](https://statistics.laerd.com/spss-tutorials/ranking-data-in-spss-statistics.php)\) if it hasn't been ranked yet. 
+You will need to rank the data (or use [SPSS Statistics](https://statistics.laerd.com/spss-tutorials/ranking-data-in-spss-statistics.php)) if it hasn't been ranked yet.&#x20;
 
-![](../../.gitbook/assets/screenshot-2019-09-10-at-11.05.16-am.png)
+![](<../../.gitbook/assets/Screenshot 2019-09-10 at 11.05.16 AM.png>)
 
-For a tie in ranking \(eg: 61 for English\), the tie will share an averaged rank \(\(6 + 7\)/2 = 6.5\).
+For a tie in ranking (eg: 61 for English), the tie will share an averaged rank ((6 + 7)/2 = 6.5).
 
 #### Formula for no-tied ranks
 
-![where di = difference in paired ranks and n = number of cases.](../../.gitbook/assets/image%20%2810%29.png)
+![where di = difference in paired ranks and n = number of cases.](<../../.gitbook/assets/image (23).png>)
 
 #### Formula for tied ranks
 
-![where i = paired score](../../.gitbook/assets/image%20%2816%29.png)
+![where i = paired score](<../../.gitbook/assets/image (24).png>)
 
 Example for no-tied ranks:
 
-![Where d = difference between ranks and d2 = difference squared.](../../.gitbook/assets/screenshot-2019-09-10-at-11.00.56-am.png)
+![Where d = difference between ranks and d2 = difference squared.](<../../.gitbook/assets/Screenshot 2019-09-10 at 11.00.56 AM.png>)
 
 Then calculate the following:
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](<../../.gitbook/assets/image (25).png>)
 
 And then substitute into the formula:
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](<../../.gitbook/assets/image (26).png>)
 
 0.67 = strong positive relationship between the ranks individuals obtained in the maths and English exam.
 
@@ -239,19 +239,19 @@ And then substitute into the formula:
 
 aka 'line of best fit'
 
-equation of a straight line is **y = mx + b**
+equation of a straight line is** y = mx + b**
 
 {% embed url="https://www.mathsisfun.com/data/least-squares-regression.html" %}
 
-**Step 1**: For each \(x,y\) point calculate x2 and xy
+**Step 1**: For each (x,y) point calculate x2 and xy
 
-**Step 2**: Sum all x, y, x2 and xy, which gives us Σx, Σy, Σx2 and Σxy \([Σ means "sum up"](https://www.mathsisfun.com/algebra/sigma-notation.html)\)
+**Step 2**: Sum all x, y, x2 and xy, which gives us Σx, Σy, Σx2 and Σxy ([Σ means "sum up"](https://www.mathsisfun.com/algebra/sigma-notation.html))
 
 **Step 3**: Calculate Slope **m**:
 
-### **m** = _N Σ\(xy\) − Σx Σy_**N Σ\(x2\) − \(Σx\)2**
+### **m** = _N Σ(xy) − Σx Σy_**N Σ(x2) − (Σx)2**
 
-\(N is the number of points.\)
+(N is the number of points.)
 
 **Step 4**: Calculate Intercept **b**:
 
@@ -266,6 +266,4 @@ equation of a straight line is **y = mx + b**
 ### Multiple Linear Regression
 
 **Simple linear regression** is what you can use when you have one independent variable and one dependent variable. **Multiple linear regression** is what you can use when you have a bunch of different independent variables
-
-
 

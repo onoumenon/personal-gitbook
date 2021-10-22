@@ -2,7 +2,7 @@
 
 Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.
 
-```text
+```
 // Context lets us pass a value deep into the component tree
 // without explicitly threading it through every component.
 // Create a context for the current theme (with "light" as the default).
@@ -46,21 +46,21 @@ class ThemedButton extends React.Component {
 
 When a component subscribes to a context, the current context value is gotten from the closest matching `Provider` above it in the tree.
 
-```text
+```
 const MyContext = React.createContext(defaultValue);
 ```
 
 The `defaultValue` argument is **only** used when a component does not have a matching Provider above it in the tree.
 
-```text
+```
 <MyContext.Provider value={/* some value */}>
 ```
 
-All consumers that are descendants of a Provider will re-render whenever the Provider’s `value` prop changes. The propagation from Provider to its descendant consumers \(including [`.contextType`](https://reactjs.org/docs/context.html#classcontexttype) and [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext)\) is not subject to the `shouldComponentUpdate` method, so the consumer is updated even when an ancestor component skips an update.
+All consumers that are descendants of a Provider will re-render whenever the Provider’s `value` prop changes. The propagation from Provider to its descendant consumers (including [`.contextType`](https://reactjs.org/docs/context.html#classcontexttype) and [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext)) is not subject to the `shouldComponentUpdate` method, so the consumer is updated even when an ancestor component skips an update.
 
-Changes are determined by comparing the new and old values using the same algorithm as [`Object.is`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#Description).
+Changes are determined by comparing the new and old values using the same algorithm as [`Object.is`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Object/is#Description).
 
-```text
+```
 class MyClass extends React.Component {
   componentDidMount() {
     let value = this.context;
@@ -84,7 +84,7 @@ MyClass.contextType = MyContext;
 
 The `contextType` property on a class can be assigned a Context object created by [`React.createContext()`](https://reactjs.org/docs/context.html#reactcreatecontext). This lets you consume the nearest current value of that Context type using `this.context`. You can reference this in any of the lifecycle methods including the render function.
 
-```text
+```
 <MyContext.Consumer>
   {value => /* render something based on the context value */}
 </MyContext.Consumer>
@@ -94,10 +94,9 @@ A React component that subscribes to context changes. This lets you subscribe to
 
 ### Debugging
 
-```text
+```
 const MyContext = React.createContext(/* some value */);
 MyContext.displayName = 'MyDisplayName';
 <MyContext.Provider> // "MyDisplayName.Provider" in DevTools
 <MyContext.Consumer> // "MyDisplayName.Consumer" in DevTools
 ```
-

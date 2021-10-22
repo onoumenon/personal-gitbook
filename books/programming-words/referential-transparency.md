@@ -9,4 +9,3 @@ A referentially opaque function is akin to looking at a watch at different insta
 Since the results of a referentially transparent function is always the same, you can memoize it.
 
 "If I call this twice, will I get the same result?". If not, be more explicit about the dependencies. If it depends on current time or some other global variable, pass it in as a parameter.
-

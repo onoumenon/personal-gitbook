@@ -18,19 +18,18 @@ description: Or how I came to become a programmer.
 
 The Japanese concept '[Ikigai](https://medium.com/thrive-global/ikigai-the-japanese-secret-to-a-long-and-happy-life-might-just-help-you-live-a-more-fulfilling-9871d01992b7)' refers to "a reason for being."
 
-![](../.gitbook/assets/image%20%2820%29%20%281%29.png)
+![](../.gitbook/assets/image.png)
 
-The modern conception of 'ikigai', as the diagram above shows, is a distillation of the concept. I personally find it too moderate. The assumption that you should find a middle ground disregards individual differences in priorities and opportunities. 
+The modern conception of 'ikigai', as the diagram above shows, is a distillation of the concept. I personally find it too moderate. The assumption that you should find a middle ground disregards individual differences in priorities and opportunities.&#x20;
 
-Given that we spend about half our waking hours in a job, choosing a career can be an existential question. It's why when asked "What do you do?", most of us default to our job titles. 
+Given that we spend about half our waking hours in a job, choosing a career can be an existential question. It's why when asked "What do you do?", most of us default to our job titles.&#x20;
 
-The reality for most people is that a job just pays the bills. Ignoring economic realities when talking about finding[ a job you love](https://junkee.com/lets-talk-immense-privilege-struggle-love/93679) paints an incomplete picture. 
+The reality for most people is that a job just pays the bills. Ignoring economic realities when talking about finding[ a job you love](https://junkee.com/lets-talk-immense-privilege-struggle-love/93679) paints an incomplete picture.&#x20;
 
-Your priorities, the job market, and opportunities change with time. You shouldn't base your identity on your career. I think the barometer of a good career choice is how much value it brings to your and others' lives. 
+Your priorities, the job market, and opportunities change with time. You shouldn't base your identity on your career. I think the barometer of a good career choice is how much value it brings to your and others' lives.&#x20;
 
 ## Other Resources
 
 * [waitbutwhy's comic](https://waitbutwhy.com/2018/04/picking-career.html)
-* [80000 hours](https://80000hours.org/career-guide/) \(based on the idea that you spend at least 80000 hours working on average.\)
+* [80000 hours](https://80000hours.org/career-guide/) (based on the idea that you spend at least 80000 hours working on average.)
 * [Practical guide to multiple careers](https://blog.markgrowth.com/a-practical-guide-to-having-multiple-careers-3eae8748fde2)
-

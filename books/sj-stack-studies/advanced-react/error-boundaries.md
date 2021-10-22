@@ -1,15 +1,13 @@
 # Error Boundaries
 
-Error boundaries **catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI** 
+Error boundaries **catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI**&#x20;
 
 {% hint style="info" %}
 Error boundaries do **not** catch errors for:
 
-* Event handlers \([learn more](https://reactjs.org/docs/error-boundaries.html#how-about-event-handlers)\)
-* Asynchronous code \(e.g. `setTimeout` or `requestAnimationFrame` callbacks\)
+* Event handlers ([learn more](https://reactjs.org/docs/error-boundaries.html#how-about-event-handlers))
+* Asynchronous code (e.g. `setTimeout` or `requestAnimationFrame` callbacks)
 * Server side rendering
-* Errors thrown in the error boundary itself \(rather than its children\)
+* Errors thrown in the error boundary itself (rather than its children)
 {% endhint %}
-
-
 

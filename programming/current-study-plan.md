@@ -2,15 +2,13 @@
 
 * AWS pass SA Associate by mid Aug
 * Terraform exam - pluralsight, pass end Sept
-*  Understand how a whole web app works. \(check out basics on pluralsight\)
+* &#x20;Understand how a whole web app works. (check out basics on pluralsight)
 * Cypress, Jest, Testing library
 * redux
-* TypeScript. 
+* TypeScript.&#x20;
 * Next.js.
 * React Native.
 * styled-components.
-
-
 
 
 

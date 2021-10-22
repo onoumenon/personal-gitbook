@@ -4,19 +4,19 @@
 
 {% embed url="http://wiki.c2.com/?ArrangeActAssert" %}
 
-{% embed url="https://integralpath.blogs.com/thinkingoutloud/2005/09/principles\_of\_t.html" %}
+{% embed url="https://integralpath.blogs.com/thinkingoutloud/2005/09/principles_of_t.html" %}
 
-1\) **Tests serve as examples of how to use a class or method.**  Once used to having tests that show how things work \(and _that_ they work\), developers start using the key phrase, "Do you have a test for that?" Tests become like documentation.
+1\) **Tests serve as examples of how to use a class or method.**  Once used to having tests that show how things work (and _that_ they work), developers start using the key phrase, "Do you have a test for that?" Tests become like documentation.
 
-2\) **Developer tests \(they call them "coder tests"\) are distinctly different from QA test and should be kept separate.**  QA tests target features and treat the system as a black box.  Unit test created by the developer operate at a lower level and test different things.
+2\) **Developer tests (they call them "coder tests") are distinctly different from QA test and should be kept separate.**  QA tests target features and treat the system as a black box.  Unit test created by the developer operate at a lower level and test different things.
 
-3\) **Name your tests carefully.** 
+3\) **Name your tests carefully.**&#x20;
 
 4\) **Write each test before writing the method under test.**  aka TDD. This ensures that you don't waste time writing code that isn't going to be tested and used.  It also encourages the developer to think as a user of the target method before thinking about implementation, which usually results in a cleaner, easier-to-use interface.
 
-5\) **Follow the "3-As" pattern for test methods: Arrange, Act, Assert.** Specifically, use separate code paragraphs \(groups of lines of code separated by a blank line\) for each of the As.  Arrange is variable declaration and initialization.  Act is invoking the code under test.  Assert is using the Assert.\* methods to verify that expectations were met.  Following this pattern consistently makes it easy to revisit test code.
+5\) **Follow the "3-As" pattern for test methods: Arrange, Act, Assert.** Specifically, use separate code paragraphs (groups of lines of code separated by a blank line) for each of the As.  Arrange is variable declaration and initialization.  Act is invoking the code under test.  Assert is using the Assert.\* methods to verify that expectations were met.  Following this pattern consistently makes it easy to revisit test code.
 
-6\) **When writing application code, only write enough code to make a test work.**  If you know there should be more code to handle other logic cases, go write the tests for those cases.  This technique prevents gold-plating and ensures that you always have a test for the code you write. 
+6\) **When writing application code, only write enough code to make a test work.**  If you know there should be more code to handle other logic cases, go write the tests for those cases.  This technique prevents gold-plating and ensures that you always have a test for the code you write.&#x20;
 
 7\) **When you find you need to refactor working code, refactor and re-test prior to writing new code.**  This technique ensures your refactoring is correct prior to adding new functionality and applies to creating new methods, introducing inheritance, everything.  I equate this principle to the practice of running all tests in a solution after getting the latest code from the repository and prior to writing anything new.  I don't want to spend time debugging my newly written code under the false assumption that the system wasn't already broken.
 
@@ -28,7 +28,7 @@
 
 ### Setup/ teardown
 
-```text
+```
 import { unmountComponentAtNode } from "react-dom";
 
 let container = null;
@@ -51,14 +51,14 @@ You may use a different pattern, but keep in mind that we want to execute the cl
 {% hint style="info" %}
 **INFO if using react testing library**
 
-Please note that this is done automatically if the testing framework you're using supports the `afterEach` global \(like mocha, Jest, and Jasmine\). If not, you will need to do manual cleanups after each test.
+Please note that this is done automatically if the testing framework you're using supports the `afterEach` global (like mocha, Jest, and Jasmine). If not, you will need to do manual cleanups after each test.
 
 In react testing library, methods such as`render` and `fireEvent` are already wrapped in `act`
 {% endhint %}
 
 ### Data Fetching
 
-```text
+```
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
@@ -96,7 +96,7 @@ it("renders user data", async () => {
 
 We recommend dispatching real DOM events on DOM elements, and then asserting on the result. Consider a `Toggle` component:
 
-```text
+```
 // toggle.test.js
 
 import React from "react";
@@ -149,7 +149,7 @@ Different DOM events and their properties are described in [MDN](https://develop
 
 Your code might use timer-based functions like `setTimeout` to schedule more work in the future. In this example, a multiple choice panel waits for a selection and advances, timing out if a selection isn’t made in 5 seconds:
 
-```text
+```
 // card.test.js
 
 import React from "react";
@@ -225,4 +225,3 @@ it("should accept selections", () => {
   expect(onSelect).toHaveBeenCalledWith(2);
 });
 ```
-

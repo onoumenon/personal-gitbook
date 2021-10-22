@@ -8,5 +8,3 @@
 
 {% embed url="https://www.nasdaq.com/education/dont-dismiss-dividends" %}
 
-
-

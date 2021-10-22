@@ -6,5 +6,3 @@
 
 {% embed url="https://githowto.com/setup" %}
 
-
-

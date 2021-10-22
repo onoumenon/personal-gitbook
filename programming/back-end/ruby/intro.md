@@ -16,4 +16,3 @@
 * What is the Ruby Standard Library?
 * What does the Bundler do for Ruby Gems?
 * What is the Ruby load path?
-

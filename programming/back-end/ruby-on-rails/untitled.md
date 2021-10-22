@@ -7,7 +7,7 @@
 * add storage config in storage.yml
 
 {% code title="storage.yml" %}
-```text
+```
 amazon:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
@@ -27,7 +27,7 @@ amazon:
 * add the api route for creating the presigned url
 
 {% code title="routes.rb" %}
-```text
+```
 resources :upload_url, only: [:create]
 ```
 {% endcode %}
@@ -35,7 +35,7 @@ resources :upload_url, only: [:create]
 * add aws config
 * create service and controller
 
-In service, validates params \(eg: filename is present using `include ActiveModel::Validations`\)
+In service, validates params (eg: filename is present using `include ActiveModel::Validations`)
 
 If self.valid, get and return a presigned url by creating a resource in your aws bucket:
 
@@ -43,7 +43,7 @@ If self.valid, get and return a presigned url by creating a resource in your aws
 
 
 
-```text
+```
     bucket_url = Rails.application.credentials.aws[:s3_bucket]
     bucket = Aws::S3::Resource.new.bucket(bucket_url)
     presigned_url = bucket.presigned_post(
@@ -59,7 +59,7 @@ If self.valid, get and return a presigned url by creating a resource in your aws
 * eg: should have valid url, created\_by, itemable
 * should have right associations
 
-```text
+```
     resources :documents, only: %i[update show] do
       resources :media, only: [:create]
     end
@@ -67,11 +67,9 @@ If self.valid, get and return a presigned url by creating a resource in your aws
 
 Other resources
 
-{% embed url="http://ruby-metaprogramming.rubylearning.com/html/ruby\_metaprogramming\_2.html" %}
+{% embed url="http://ruby-metaprogramming.rubylearning.com/html/ruby_metaprogramming_2.html" %}
 
 {% embed url="https://www.rubyguides.com/2017/06/ruby-struct-and-openstruct/" %}
 
 {% embed url="https://www.rubyguides.com/2019/10/scopes-in-ruby-on-rails/" %}
-
-
 

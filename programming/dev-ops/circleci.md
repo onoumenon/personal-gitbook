@@ -11,4 +11,3 @@ Set up Circle CLI on your local to test circleCI jobs manually
 {% embed url="https://circleci.com/docs/2.0/local-cli/" %}
 
 Do add comments for gotchas
-

@@ -6,7 +6,7 @@ Debounce limits the rate a function is called. Eg: You press a button rapidly 3 
 
 It is important in JavaScript because it’s a single-threaded language, and large tasks will become blocking.
 
-```text
+```
 <html> 
   <body> 
     <button id="debounce"> 
@@ -37,21 +37,19 @@ It is important in JavaScript because it’s a single-threaded language, and lar
 </html> 
 ```
 
-Here's what happening:  
-  
-A button with id `debounce` is created. 
+Here's what happening:\
+\
+A button with id `debounce` is created.&#x20;
 
-It's declared as a var `button`. 
+It's declared as a var `button`.&#x20;
 
 A higher order function `debounce` is created. A listener is attached to the button.
 
 When the button is click, the function `debounce` is called.
 
 1. Start with 0 timeout
-2. If the debounced function is called again \(when button is clicked\), reset the timer again to the specified delay \(3 seconds\)
-3. When the timeout expires, the function provided \(alert\) is applied to `this` which is the global object `window`. \(Check [this](this.md) out\)
+2. If the debounced function is called again (when button is clicked), reset the timer again to the specified delay (3 seconds)
+3. When the timeout expires, the function provided (alert) is applied to `this` which is the global object `window`. (Check [this](this.md) out)
 
 {% embed url="https://stackoverflow.com/questions/25991367/difference-between-throttling-and-debouncing-a-function" %}
-
-
 

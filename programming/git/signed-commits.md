@@ -20,5 +20,3 @@ Create alias: `alias -g gcms="git commit -a -S -m"`
 
 {% embed url="https://confluence.atlassian.com/sourcetreekb/setup-gpg-to-sign-commits-within-sourcetree-765397791.html" %}
 
-
-

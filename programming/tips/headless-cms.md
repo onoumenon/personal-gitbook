@@ -4,5 +4,3 @@
 
 {% embed url="https://jamstack.org/headless-cms/builderio/" %}
 
-
-

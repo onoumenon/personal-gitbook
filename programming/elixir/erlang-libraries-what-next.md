@@ -4,5 +4,3 @@
 
 {% embed url="https://elixir-lang.org/learning.html" %}
 
-
-

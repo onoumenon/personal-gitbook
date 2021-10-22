@@ -2,8 +2,8 @@
 
 Summary of what I learned from JumpStart's clean code session.
 
-For more on how to write clean code, you can refer to: "Refactoring: Improving the Design of Existing Code" by Martin Fowler.  
-  
+For more on how to write clean code, you can refer to: "Refactoring: Improving the Design of Existing Code" by Martin Fowler.\
+\
 **1. Mysterious Names**
 
 When: Names are not self-explanatory and descriptive.
@@ -64,19 +64,18 @@ When: Class has too many fields, methods or/and lines of code.
 
 When: Unused code for "what ifs".
 
-Solution: If in doubt, YAGNI \(You probably Aren't Gonna Need It\).
+Solution: If in doubt, YAGNI (You probably Aren't Gonna Need It).
 
 **13. Primitive Obsession**
 
-When: A lot of primitives instead of objects. \(Eg: admin\_role = 1\)
+When: A lot of primitives instead of objects. (Eg: admin\_role = 1)
 
 Solution: Wrap primitives in classes.
 
 **Resources:**
 
-[https://blog.codinghorror.com/code-smells/](https://blog.codinghorror.com/code-smells/)  
-[https://refactoring.guru/refactoring/smells](https://refactoring.guru/refactoring/smells)  
-[https://williamdurand.fr/2013/06/03/object-calisthenics](https://williamdurand.fr/2013/06/03/object-calisthenics)  
-[https://hackernoon.com/lessons-learned-common-react-code-smells-and-how-to-avoid-them-f253eb9696a4](https://hackernoon.com/lessons-learned-common-react-code-smells-and-how-to-avoid-them-f253eb9696a4)  
+[https://blog.codinghorror.com/code-smells/](https://blog.codinghorror.com/code-smells/)\
+[https://refactoring.guru/refactoring/smells](https://refactoring.guru/refactoring/smells)\
+[https://williamdurand.fr/2013/06/03/object-calisthenics](https://williamdurand.fr/2013/06/03/object-calisthenics)\
+[https://hackernoon.com/lessons-learned-common-react-code-smells-and-how-to-avoid-them-f253eb9696a4](https://hackernoon.com/lessons-learned-common-react-code-smells-and-how-to-avoid-them-f253eb9696a4)\
 [https://github.com/Droogans/unmaintainable-code](https://github.com/Droogans/unmaintainable-code)
-

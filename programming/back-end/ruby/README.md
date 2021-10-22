@@ -1,12 +1,12 @@
 # Ruby
 
-{% embed url="https://www.learnenough.com/ruby-tutorial/hello\_world" %}
+{% embed url="https://www.learnenough.com/ruby-tutorial/hello_world" %}
 
 
 
 {% embed url="https://learnxinyminutes.com/docs/ruby/" %}
 
-```text
+```
 # comment
 
 =begin
@@ -524,4 +524,3 @@ Something.new.qux #=> 'qux'
 
 
 ```
-

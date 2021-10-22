@@ -2,25 +2,24 @@
 
 Predicate is a proposition with variables
 
-![](../../../.gitbook/assets/image%20%28129%29.png)
+![](<../../../.gitbook/assets/image (80).png>)
 
-![](../../../.gitbook/assets/image%20%28139%29.png)
+![](<../../../.gitbook/assets/image (81).png>)
 
 
 
 ### Quantifiers:
 
-![](../../../.gitbook/assets/image%20%28127%29.png)
+![](<../../../.gitbook/assets/image (82).png>)
 
-![](../../../.gitbook/assets/image%20%2891%29.png)
+![](<../../../.gitbook/assets/image (84).png>)
 
-![](../../../.gitbook/assets/image%20%2886%29.png)
+![](<../../../.gitbook/assets/image (85).png>)
 
-English is hard to translate into mathematical logic: 
+English is hard to translate into mathematical logic:&#x20;
 
-![](../../../.gitbook/assets/image%20%2897%29.png)
+![](<../../../.gitbook/assets/image (86).png>)
 
-![](../../../.gitbook/assets/image%20%2882%29.png)
+![](<../../../.gitbook/assets/image (87).png>)
 
-![](../../../.gitbook/assets/image%20%2844%29.png)
-
+![](<../../../.gitbook/assets/image (88).png>)

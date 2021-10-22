@@ -2,11 +2,11 @@
 
 ## Intro
 
-Ember is a front-end framework that follows Ruby on Rails' _Convention over Configuration_ guiding principle. The advantage is that you will usually end up using best practices if you follow those conventions, and waste less time thinking about configuration. 
+Ember is a front-end framework that follows Ruby on Rails' _Convention over Configuration_ guiding principle. The advantage is that you will usually end up using best practices if you follow those conventions, and waste less time thinking about configuration.&#x20;
 
 The emberCLI is a useful tool for meta-programming and fast prototyping, as it can generate files using blueprints. For instance, generating a component in the CLI includes the test file with accompanying starter tests, a component and a template file.
 
-It was one of the big 3 back in 2012, but has been replaced by the new kids on the block. 
+It was one of the big 3 back in 2012, but has been replaced by the new kids on the block.&#x20;
 
 
 
@@ -14,61 +14,61 @@ It was one of the big 3 back in 2012, but has been replaced by the new kids on t
 
 **Routes** - URLs on client is handled by router.js, renders templates + models
 
-**Templates** - organizes the HTML \(handlebar templates\)
+**Templates** - organizes the HTML (handlebar templates)
 
 **Models** - the data layer
 
-**Components** - logic for UI behaviour 
+**Components** - logic for UI behaviour&#x20;
 
 **Hooks** - component lifecycle hooks and route hooks
 
 
 
-![Source: Jackie Luo&apos;s Talk &quot;From React to Ember&quot;](https://stuffihavelearnthome.files.wordpress.com/2019/06/ember-vs-react.png)
+![Source: Jackie Luo's Talk "From React to Ember"](https://stuffihavelearnthome.files.wordpress.com/2019/06/ember-vs-react.png)
 
-  
+&#x20;&#x20;
 
-![Source: Ember&apos;s docs](https://guides.emberjs.com/images/ember-core-concepts/ember-core-concepts.png)
+![Source: Ember's docs](https://guides.emberjs.com/images/ember-core-concepts/ember-core-concepts.png)
 
-###  
+### &#x20;
 
-![](../../../.gitbook/assets/image%20%289%29%20%281%29.png)
+![](<../../../.gitbook/assets/image (1).png>)
 
-### 
+###
 
 ### QuickStart
 
-```text
+```
 npm install -g ember-cli
 ```
 
-```text
+```
 ember new [directory name]
 ```
 
-```text
+```
 cd [directory-name]
 ember serve
 ```
 
-### 
+###
 
 ### Routes
 
 To generate a route:
 
-```text
+```
 ember g route [route-name]
 ```
 
 Creates
 
 * a template to be displayed
-* a route object \(fetches model\)
-* an entry in the router \(app/router.js\)
+* a route object (fetches model)
+* an entry in the router (app/router.js)
 * a unit test for the route
 
-### 
+###
 
 ### Components and Hooks
 
@@ -76,36 +76,36 @@ Similar to React's concept of Components and Hooks.
 
 A component consists of two parts:
 
-* A template that defines how it will look \(`app/templates/components/rental-listing.hbs`\)
-* A JavaScript source file \(`app/components/rental-listing.js`\) that defines how it will behave.
+* A template that defines how it will look (`app/templates/components/rental-listing.hbs`)
+* A JavaScript source file (`app/components/rental-listing.js`) that defines how it will behave.
 
 [Docs for Hooks](https://guides.emberjs.com/release/components/the-component-lifecycle/)
 
-note: didRender \(is called during both render and re-render\)
+note: didRender (is called during both render and re-render)
 
-```text
+```
 ember g component [dir/component-name]
 ```
 
-### 
+###
 
 ### Models
 
 There should only be a single source of truth for the data.
 
-Represents persistent state, saved to web server or local \(local storage\).
+Represents persistent state, saved to web server or local (local storage).
 
- To generate:
+&#x20;To generate:
 
-```text
+```
 ember g model [model-name]
 ```
 
 It generates a model file and a test file.
 
-To initiate a model object: 
+To initiate a model object:&#x20;
 
-```text
+```
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -119,7 +119,7 @@ export default DS.Model.extend({
 });
 ```
 
-### 
+###
 
 ### Help
 
@@ -129,7 +129,7 @@ Naming conventions: [Docs](https://guides.emberjs.com/v1.10.0/concepts/naming-co
 
 In Ember, the browser URL is mapped to a route, which then rendered a template, and loads a model available to the template.
 
-###  
+### &#x20;
 
 ### VSC extensions
 
@@ -137,31 +137,31 @@ Besides my usual, you can also installed these extensions for productivity:
 
 * handlebar-formatter
 * Ember.js
-* Ember JS \(ES6\) and Handlebars code snippets
+* Ember JS (ES6) and Handlebars code snippets
 
 
 
 ### Notes on Handlebars
 
-Ember uses [Handlebars](http://handlebarsjs.com/) templates
+Ember uses [Handlebars](http://handlebarsjs.com) templates
 
-```text
+```
 {{expression}}
 ```
 
-```text
+```
 {{{triple bars unescapes html tags}}}
 ```
 
 **Block expressions**
 
-```text
+```
 {{#list people}}{{firstName}} {{lastName}}{{/list}}
 ```
 
 list is a helper function, and people is an object of persons with first and last names.
 
-```text
+```
 Handlebars.registerHelper('list', function(items, options) {
   var out = "<ul>";
 
@@ -175,7 +175,7 @@ Handlebars.registerHelper('list', function(items, options) {
 
 **Handlebar paths can include `../`**
 
-```text
+```
 <div id="comments">
   {{#each comments}}
   <h2><a href="/posts/{{../permalink}}#{{id}}">{{title}}</a></h2>
@@ -186,17 +186,17 @@ Handlebars.registerHelper('list', function(items, options) {
 
 **Comments**
 
-```text
+```
 {{!-- only output author name if an author exists --}}
 ```
 
-```text
+```
 {{! This comment will not be in the output }}
 ```
 
 **Register Helpers**
 
-```text
+```
 var context = {
   author: {firstName: "Alan", lastName: "Johnson"},
   body: "I Love Handlebars",
@@ -211,7 +211,7 @@ Handlebars.registerHelper('fullName', function(person) {
 });
 ```
 
-```text
+```
 var context = {
   items: [
     {name: "Handlebars", emotion: "love"},
@@ -230,25 +230,25 @@ Handlebars.registerHelper('agree_button', function() {
 });
 ```
 
-**Literals \(includes `true`,`false`, `null`, `undefined`\)**
+**Literals (includes `true`,`false`, `null`, `undefined`)**
 
-```text
+```
 {{agree_button "My Text" class="my-class" visible=true counter=4}}
 ```
 
-**Partials \(code reuse\)**
+**Partials (code reuse)**
 
-```text
+```
 {{> userMessage tagName="h2" }}
 ```
 
-```text
+```
 Handlebars.registerPartial('userMessage',
     '<{{tagName}}>By {{author.firstName}} {{author.lastName}}</{{tagName}}>'
     + '<div class="body">{{body}}</div>');
 ```
 
-```text
+```
 var context = {
   author: {firstName: "Alan", lastName: "Johnson"},
   body: "I Love Handlebars",
@@ -259,7 +259,7 @@ var context = {
 };
 ```
 
-[Handlebars Built-in Helpers: ](http://handlebarsjs.com/builtin_helpers.html)\(if, else, unless, with , each, lookup, log...\)
+[Handlebars Built-in Helpers: ](http://handlebarsjs.com/builtin\_helpers.html)(if, else, unless, with , each, lookup, log...)
 
 Anything that is valid Handlebars syntax is valid Ember syntax.
 
@@ -269,13 +269,13 @@ Anything that is valid Handlebars syntax is valid Ember syntax.
 
 Handle helpers allow our users to quickly see if a property is "Standalone" or part of a "Community".
 
-```text
+```
 ember g helper rental-property-type
 ```
 
- This creates 2 files \(a JavaScript file and a test file\):
+&#x20;This creates 2 files (a JavaScript file and a test file):
 
-```text
+```
 installing helper
   create app/helpers/rental-property-type.js
 installing helper-test
@@ -284,11 +284,11 @@ installing helper-test
 
 Now in the rental-listing component file:
 
-```text
+```
 <span>Type:</span> {{rental-property-type this.rental.category}} - {{this.rental.category}}
 ```
 
-###  
+### &#x20;
 
 ### Test
 
@@ -298,7 +298,7 @@ Open the test file. It should have the boilerplate already set up. Ember uses QU
 
 `setupApplicationTest` ensures that your Ember app is started and shut down between each test.
 
-`ember test --server` to run tests with Testem test runner \(runs QUnit in Chrome\).
+`ember test --server` to run tests with Testem test runner (runs QUnit in Chrome).
 
 Some of the helpers we'll use commonly are:
 
@@ -306,7 +306,7 @@ Some of the helpers we'll use commonly are:
 * [`click`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click) - pretends to be a user clicking on a specific part of the screen
 * [`currentURL`](https://github.com/emberjs/ember-test-helpers/blob/master/API.md#currenturl) - returns the URL of the page we're currently on
 
-```text
+```
 import {
   click,
   currentURL,
@@ -318,7 +318,7 @@ import {
 
 For components:
 
-```text
+```
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render, click } from '@ember/test-helpers';
@@ -359,7 +359,7 @@ module('Integration | Component | rental listing', function (hooks) {
 
 For handlebar helper:
 
-```text
+```
 test("it renders correctly for a Community rental", async function(assert) { 
     this.set("inputValue", "Apartment");
     await render(hbs`{{rental-property-typ inputValue}}`);
@@ -369,7 +369,7 @@ test("it renders correctly for a Community rental", async function(assert) {
 
 ### AddOns
 
-[Library here](https://emberobserver.com/)
+[Library here](https://emberobserver.com)
 
 Installation:
 
@@ -377,7 +377,7 @@ Installation:
 
 `ember install ember-cli-babel`
 
-###  
+### &#x20;
 
 ### Adapters
 
@@ -387,20 +387,20 @@ Adapter determines how data is persisted to a backend data store. Things such as
 
 `ember generate adapter application`
 
-### 
+###
 
 ### Input Helpers
 
 [docs here](https://guides.emberjs.com/release/templates/input-helpers/)
 
-```text
+```
 <label for="facebook">Facebook</label>
 {{input id="facebook" value="http://www.facebook.com"}}
 ```
 
 More complex version:
 
-```text
+```
 {{input
   value=this.value
   key-up=(action "handleFilterEntry")
@@ -415,6 +415,4 @@ More complex version:
 ### Services
 
 [docs here](https://guides.emberjs.com/release/tutorial/service/)
-
-
 

@@ -4,7 +4,5 @@
 
 {% embed url="https://www.firepathlion.com/the-bogleheads-3-fund-portfolio-for-singapore-firewalkers/" %}
 
-{% embed url="https://www.bogleheads.org/wiki/Investing\_from\_Singapore" %}
-
-
+{% embed url="https://www.bogleheads.org/wiki/Investing_from_Singapore" %}
 

@@ -4,9 +4,8 @@
 
 
 
-_╰─$ createuser postgres_ 
+_╰─$ createuser postgres _
 
 ╰─$ psql -U postgres -c "drop database dpms\_01\_latest;"
 
 ╰─$ psql -U postgres -c "create database dpms\_01\_latest;"
-

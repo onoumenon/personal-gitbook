@@ -6,7 +6,6 @@ description: TLDR version of official EmberJS docs
 
 
 
-```text
+```
 ember generate route route-name
 ```
-

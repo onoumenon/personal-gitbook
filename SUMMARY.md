@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-## Programming Core <a id="programming"></a>
+## Programming Core <a href="programming" id="programming"></a>
 
 * [Current Study Plan](programming/current-study-plan.md)
 * [Start Here](programming/start-here/README.md)
@@ -10,6 +10,7 @@
   * [Preparation/ Setup](programming/start-here/introduction/README.md)
     * [Mac Setup](programming/start-here/introduction/mac-setup.md)
 * [Semantic versioning](programming/semver.md)
+* [Access Control](programming/access-control.md)
 * [REST](programming/rest.md)
 * [GIT](programming/git/README.md)
   * [Sourcetree](programming/git/sourcetree.md)
@@ -54,7 +55,7 @@
     * [Weird bugs](programming/front-end/html-and-css/weird-bugs.md)
   * [Browser Support](programming/front-end/browser-support.md)
   * [EDM templates](programming/front-end/edm-templates.md)
-  * [Multi-select \(shift-click\)](programming/front-end/multi-select-shift-click.md)
+  * [Multi-select (shift-click)](programming/front-end/multi-select-shift-click.md)
 * [FE animation](programming/fe-animation.md)
 * [Ruby/ ROR](programming/back-end/README.md)
   * [Make ruby gem](programming/back-end/make-ruby-gem.md)
@@ -115,19 +116,19 @@
   * [Docker](programming/dev-ops/docker/README.md)
     * [Docker and semver](programming/dev-ops/docker/docker-and-semver.md)
     * [Docker commands](programming/dev-ops/docker/docker-commands.md)
-  * [AWS \(Architect path\)](programming/dev-ops/aws-architect-path/README.md)
+  * [AWS (Architect path)](programming/dev-ops/aws-architect-path/README.md)
     * [Course Fundamentals and AWS Accounts](programming/dev-ops/aws-architect-path/course-fundamentals-and-aws-accounts.md)
     * [Cloud Computing Fundamentals](programming/dev-ops/aws-architect-path/cloud-computing-fundamentals.md)
     * [Tech Fundamentals](programming/dev-ops/aws-architect-path/tech-fundamentals.md)
     * [AWS Fundamentals](programming/dev-ops/aws-architect-path/aws-fundamentals.md)
     * [IAM, ACCOUNTS AND AWS ORGANISATIONS](programming/dev-ops/aws-architect-path/iam-accounts-and-aws-organisations.md)
-    * [SIMPLE STORAGE SERVICE \(S3\)](programming/dev-ops/aws-architect-path/simple-storage-service-s3.md)
-    * [VIRTUAL PRIVATE CLOUD \(VPC\) BASICS](programming/dev-ops/aws-architect-path/virtual-private-cloud-vpc-basics.md)
-    * [ELASTIC COMPUTE CLOUD \(EC2\) BASICS](programming/dev-ops/aws-architect-path/elastic-compute-cloud-ec2-basics.md)
+    * [SIMPLE STORAGE SERVICE (S3)](programming/dev-ops/aws-architect-path/simple-storage-service-s3.md)
+    * [VIRTUAL PRIVATE CLOUD (VPC) BASICS](programming/dev-ops/aws-architect-path/virtual-private-cloud-vpc-basics.md)
+    * [ELASTIC COMPUTE CLOUD (EC2) BASICS](programming/dev-ops/aws-architect-path/elastic-compute-cloud-ec2-basics.md)
     * [CONTAINERS & ECS](programming/dev-ops/aws-architect-path/containers-and-ecs.md)
     * [ADVANCED EC2](programming/dev-ops/aws-architect-path/advanced-ec2.md)
     * [Route 53 - Global DNS](programming/dev-ops/aws-architect-path/route-53-global-dns.md)
-    * [Relational Database Service \(RDS\)](programming/dev-ops/aws-architect-path/relational-database-service-rds.md)
+    * [Relational Database Service (RDS)](programming/dev-ops/aws-architect-path/relational-database-service-rds.md)
     * [NETWORK STORAGE](programming/dev-ops/aws-architect-path/network-storage.md)
     * [HA & SCALING](programming/dev-ops/aws-architect-path/ha-and-scaling.md)
     * [SERVERLESS AND APPLICATION SERVICES](programming/dev-ops/aws-architect-path/serverless-and-application-services.md)
@@ -142,7 +143,7 @@
   * [What to do if you've pushed secrets to github](programming/code-security/what-to-do-if-youve-pushed-secrets-to-github.md)
 * [Security](programming/security/README.md)
   * [OWASP guide](programming/security/owasp-guide.md)
-  * [OWASP Top 10 \(2017\)](programming/security/untitled.md)
+  * [OWASP Top 10 (2017)](programming/security/untitled.md)
   * [XSS](programming/security/xss.md)
   * [Content Security Policies](programming/security/content-security-policies.md)
 * [Deployment](programming/deployment/README.md)
@@ -166,7 +167,7 @@
   * [Mix, Agent](programming/elixir/mix-agent.md)
   * [GenServer](programming/elixir/genserver.md)
   * [misc](programming/elixir/misc.md)
-  * [Sage \(Saga Pattern\)](programming/elixir/sage-saga-pattern.md)
+  * [Sage (Saga Pattern)](programming/elixir/sage-saga-pattern.md)
 * [Phoenix](programming/phoenix.md)
 * [Django](programming/django/README.md)
   * [Deployment](programming/django/deployment.md)
@@ -176,13 +177,13 @@
 * [CodeClimate](programming/codeclimate.md)
 * [postgres](programming/postgres.md)
 * [MISC](programming/tips/README.md)
-  * [Utils library \(JS\)](programming/tips/utils-library-js.md)
+  * [Utils library (JS)](programming/tips/utils-library-js.md)
   * [Interview Prep](programming/tips/interview-prep.md)
   * [Optimistic UI](programming/tips/optimistic-ui.md)
   * [Error handling](programming/tips/error-handling.md)
   * [Babel & webpack](programming/tips/babel-and-webpack.md)
   * [Sourcemap](programming/tips/sourcemap.md)
-  * [RTMP + flv.js \(Livestreaming app\)](programming/tips/rtmp.md)
+  * [RTMP + flv.js (Livestreaming app)](programming/tips/rtmp.md)
   * [Productivity](programming/tips/productivity/README.md)
     * [Chrome](programming/tips/productivity/chrome.md)
     * [Mac](programming/tips/productivity/mac.md)
@@ -193,15 +194,15 @@
   * [Headless CMS](programming/tips/headless-cms.md)
   * [misc](programming/tips/misc.md)
 
-## Articles/ Websites <a id="articles"></a>
+## Articles/ Websites <a href="articles" id="articles"></a>
 
 * [Wiki of People, Projects and Patterns in Software Dev](articles/wiki-of-people-projects-and-patterns-in-software-dev.md)
 * [Programming: Universal Design Pattern](articles/programming-universal-design-pattern.md)
-* [Data Structures &gt; Code](articles/data-structures-greater-than-code.md)
+* [Data Structures > Code](articles/data-structures-greater-than-code.md)
 * [UI guidelines](articles/ui-guidelines.md)
 * [Other resources](articles/scalability.md)
 
-## Books/ Courses/ Etc <a id="books"></a>
+## Books/ Courses/ Etc <a href="books" id="books"></a>
 
 * [SJ Stack Studies](books/sj-stack-studies/README.md)
   * [React Big Picture](books/sj-stack-studies/react-big-picture.md)
@@ -239,12 +240,11 @@
 * [Fitness](life/fitness/README.md)
   * [Beginner Strength Routine](life/fitness/beginner-strength-routine.md)
 
-## Slides for Presentations <a id="slides"></a>
+## Slides for Presentations <a href="slides" id="slides"></a>
 
 * [Front End Design Thinking](slides/front-end-design-thinking.md)
-* [Dev Journey \(CodingGirls\)](slides/dev-journey-codinggirls.md)
+* [Dev Journey (CodingGirls)](slides/dev-journey-codinggirls.md)
 
 ## Interesting Stuff
 
 * [Generative / AI Art](interesting-stuff/generative-ai-art.md)
-

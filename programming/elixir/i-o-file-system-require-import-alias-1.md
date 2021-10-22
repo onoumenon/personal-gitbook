@@ -2,17 +2,17 @@
 
 ## TLDR:
 
-`IO.puts` and `IO.gets` for standard I/O \(:stdio\)
+`IO.puts` and `IO.gets` for standard I/O (:stdio)
 
 `File.read` to read file
 
 Use `Path` module to provide paths for `File` operations
 
-Prefer passing binary \(double-quoted strings\) to `IO` as lists are accepted but encode differently based on settings passed in.
+Prefer passing binary (double-quoted strings) to `IO` as lists are accepted but encode differently based on settings passed in.
 
 `alias` `require` `import` are lexically scoped
 
-```text
+```
 # Alias the module so it can be called as Bar instead of Foo.Bar
 # Note that it 'overrides' Elixir modules, so if alias Math.List,
 # calling original List methods will be Elixir.List 
@@ -32,11 +32,11 @@ import Foo, only: [duplicate: 2]
 use Foo
 ```
 
-### The `IO` module <a id="the-io-module"></a>
+### The `IO` module <a href="the-io-module" id="the-io-module"></a>
 
-The [`IO`](https://hexdocs.pm/elixir/IO.html) module is the main mechanism in Elixir for reading and writing to standard input/output \(`:stdio`\), standard error \(`:stderr`\), files, and other IO devices. Usage of the module is pretty straightforward:
+The [`IO`](https://hexdocs.pm/elixir/IO.html) module is the main mechanism in Elixir for reading and writing to standard input/output (`:stdio`), standard error (`:stderr`), files, and other IO devices. Usage of the module is pretty straightforward:
 
-```text
+```
 iex> IO.puts("hello world")
 hello world
 :ok
@@ -45,11 +45,11 @@ yes or no? yes
 "yes\n"
 ```
 
-### The `File` module <a id="the-file-module"></a>
+### The `File` module <a href="the-file-module" id="the-file-module"></a>
 
 The [`File`](https://hexdocs.pm/elixir/File.html) module contains functions that allow us to open files as IO devices. By default, files are opened in binary mode, which requires developers to use the specific `IO.binread/2` and `IO.binwrite/2` functions from the `IO` module:
 
-```text
+```
 iex> {:ok, file} = File.open("hello", [:write])
 {:ok, #PID<0.47.0>}
 iex> IO.binwrite(file, "world")
@@ -64,7 +64,7 @@ A file can also be opened with `:utf8` encoding, which tells the `File` module t
 
 Besides functions for opening, reading and writing files, the `File` module has many functions to work with the file system. Those functions are named after their UNIX equivalents.
 
-```text
+```
 iex> File.read("hello")
 {:ok, "world"}
 iex> File.read!("hello")
@@ -79,7 +79,7 @@ Notice that the version with `!` returns the contents of the file instead of a t
 
 The version without `!` is preferred when you want to handle different outcomes using pattern matching:
 
-```text
+```
 case File.read(file) do
   {:ok, body}      -> # do something with the `body`
   {:error, reason} -> # handle the error caused by `reason`
@@ -88,21 +88,21 @@ end
 
 However, if you expect the file to be there, the bang variation is more useful as it raises a meaningful error message. Avoid writing:
 
-```text
+```
 {:ok, body} = File.read(file)
 ```
 
-as, in case of an error, `File.read/1` will return `{:error, reason}` and the pattern matching will fail. You will still get the desired result \(a raised error\), but the message will be about the pattern which doesn’t match \(thus being cryptic in respect to what the error actually is about\).
+as, in case of an error, `File.read/1` will return `{:error, reason}` and the pattern matching will fail. You will still get the desired result (a raised error), but the message will be about the pattern which doesn’t match (thus being cryptic in respect to what the error actually is about).
 
 Therefore, if you don’t want to handle the error outcomes, prefer using `File.read!/1`.
 
 
 
-### The `Path` module <a id="the-path-module"></a>
+### The `Path` module <a href="the-path-module" id="the-path-module"></a>
 
 The majority of the functions in the `File` module expect paths as arguments. Most commonly, those paths will be regular binaries. The [`Path`](https://hexdocs.pm/elixir/Path.html) module provides facilities for working with such paths:
 
-```text
+```
 iex> Path.join("foo", "bar")
 "foo/bar"
 iex> Path.expand("~/hello")
@@ -111,18 +111,18 @@ iex> Path.expand("~/hello")
 
 
 
-### Processes <a id="processes"></a>
+### Processes <a href="processes" id="processes"></a>
 
 You may have noticed that `File.open/2` returns a tuple like `{:ok, pid}`:
 
-```text
+```
 iex> {:ok, file} = File.open("hello", [:write])
 {:ok, #PID<0.47.0>}
 ```
 
-That happens because the `IO` module actually works with processes \(see [chapter 11](https://elixir-lang.org/getting-started/processes.html)\). Given a file is a process, when you write to a file that has been closed, you are actually sending a message to a process which has been terminated:
+That happens because the `IO` module actually works with processes (see [chapter 11](https://elixir-lang.org/getting-started/processes.html)). Given a file is a process, when you write to a file that has been closed, you are actually sending a message to a process which has been terminated:
 
-```text
+```
 iex> File.close(file)
 :ok
 iex> IO.write(file, "is anybody out there")
@@ -131,7 +131,7 @@ iex> IO.write(file, "is anybody out there")
 
 Let’s see in more detail what happens when you request `IO.write(pid, binary)`. The `IO` module sends a message to the process identified by `pid` with the desired operation. A small ad-hoc process can help us see it:
 
-```text
+```
 iex> pid = spawn(fn ->
 ...>  receive do: (msg -> IO.inspect msg)
 ...> end)
@@ -142,15 +142,15 @@ iex> IO.write(pid, "hello")
 ** (ErlangError) erlang error: :terminated
 ```
 
-After `IO.write/2`, we can see the request sent by the `IO` module printed out \(a four-elements tuple\). Soon after that, we see that it fails since the `IO` module expected some kind of result, which we did not supply.
+After `IO.write/2`, we can see the request sent by the `IO` module printed out (a four-elements tuple). Soon after that, we see that it fails since the `IO` module expected some kind of result, which we did not supply.
 
-### `iodata` and `chardata` <a id="iodata-and-chardata"></a>
+### `iodata` and `chardata` <a href="iodata-and-chardata" id="iodata-and-chardata"></a>
 
 In all of the examples above, we used binaries when writing to files. In the chapter [“Binaries, strings, and charlists”](https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html), we mentioned how strings are made of bytes while charlists are lists with Unicode codepoints.
 
 The functions in `IO` and `File` also allow lists to be given as arguments. Not only that, they also allow a mixed list of lists, integers, and binaries to be given:
 
-```text
+```
 iex> IO.puts('hello world')
 hello world
 :ok
@@ -167,7 +167,7 @@ Although this is a subtle difference, you only need to worry about these details
 
 ### Alias, require, import
 
-```text
+```
 # Alias the module so it can be called as Bar instead of Foo.Bar
 alias Foo.Bar, as: Bar
 
@@ -183,7 +183,7 @@ use Foo
 
 Imagine a module uses a specialized list implemented in `Math.List`. The `alias` directive allows referring to `Math.List` just as `List` within the module definition:
 
-```text
+```
 defmodule Stats do
   alias Math.List, as: List
   # In the remaining module definition List expands to Math.List.
@@ -194,19 +194,19 @@ The original `List` can still be accessed within `Stats` by the fully-qualified 
 
 Aliases are frequently used to define shortcuts. In fact, calling `alias` without an `:as` option sets the alias automatically to the last part of the module name, for example:
 
-```text
+```
 alias Math.List
 ```
 
 Is the same as:
 
-```text
+```
 alias Math.List, as: List
 ```
 
 Note that `alias` is **lexically scoped**, which allows you to set aliases inside specific functions:
 
-```text
+```
 defmodule Math do
   def plus(a, b) do
     alias Math.List
@@ -221,13 +221,13 @@ end
 
 In the example above, since we are invoking `alias` inside the function `plus/2`, the alias will be valid only inside the function `plus/2`. `minus/2` won’t be affected at all.
 
-### require <a id="require"></a>
+### require <a href="require" id="require"></a>
 
-Elixir provides macros as a mechanism for meta-programming \(writing code that generates code\). Macros are expanded at compile time.
+Elixir provides macros as a mechanism for meta-programming (writing code that generates code). Macros are expanded at compile time.
 
 Public functions in modules are globally available, but in order to use macros, you need to opt-in by requiring the module they are defined in.
 
-```text
+```
 iex> Integer.is_odd(3)
 ** (CompileError) iex:1: you must require Integer before invoking the macro Integer.is_odd/1
     (elixir) src/elixir_dispatch.erl:97: :elixir_dispatch.dispatch_require/6
@@ -249,7 +249,7 @@ The `use` macro is frequently used as an extension point. This means that, when 
 
 For example, in order to write tests using the ExUnit framework, a developer should use the `ExUnit.Case` module:
 
-```text
+```
 defmodule AssertionTest do
   use ExUnit.Case, async: true
 
@@ -263,7 +263,7 @@ end
 
 Generally speaking, the following module:
 
-```text
+```
 defmodule Example do
   use Feature, option: :value
 end
@@ -271,7 +271,7 @@ end
 
 is compiled into
 
-```text
+```
 defmodule Example do
   require Feature
   Feature.__using__(option: :value)
@@ -282,7 +282,7 @@ Since `use` allows any code to run, we can’t really know the side-effects of u
 
 ### What is an Alias?
 
-```text
+```
 iex> is_atom(String)
 true
 iex> to_string(String)
@@ -291,13 +291,13 @@ iex> :"Elixir.String" == String
 true
 ```
 
-An alias in Elixir is a capitalized identifier \(like `String`, `Keyword`, etc\) which is converted to an atom during compilation. For instance, the `String` alias translates by default to the atom `:"Elixir.String"`:
+An alias in Elixir is a capitalized identifier (like `String`, `Keyword`, etc) which is converted to an atom during compilation. For instance, the `String` alias translates by default to the atom `:"Elixir.String"`:
 
-### Module nesting <a id="module-nesting"></a>
+### Module nesting <a href="module-nesting" id="module-nesting"></a>
 
 Now that we have talked about aliases, we can talk about nesting and how it works in Elixir. Consider the following example:
 
-```text
+```
 defmodule Foo do
   defmodule Bar do
   end
@@ -306,14 +306,14 @@ end
 
 The example above will define two modules: `Foo` and `Foo.Bar`. The second can be accessed as `Bar` inside `Foo` as long as they are in the same lexical scope.
 
-If, later, the `Bar` module is moved outside the `Foo` module definition, it must be referenced by its full name \(`Foo.Bar`\) or an alias must be set using the `alias` directive discussed above.  
+If, later, the `Bar` module is moved outside the `Foo` module definition, it must be referenced by its full name (`Foo.Bar`) or an alias must be set using the `alias` directive discussed above.\
 
 
 
 
 **Note**: in Elixir, you don’t have to define the `Foo` module before being able to define the `Foo.Bar` module, as they are effectively independent. The above could also be written as:
 
-```text
+```
 defmodule Foo.Bar do
 end
 
@@ -325,11 +325,10 @@ end
 
 
 
-### Multi alias/import/require/use <a id="multi-aliasimportrequireuse"></a>
+### Multi alias/import/require/use <a href="multi-aliasimportrequireuse" id="multi-aliasimportrequireuse"></a>
 
 It is possible to alias, import or require multiple modules at once. This is particularly useful once we start nesting modules, which is very common when building Elixir applications. For example, imagine you have an application where all modules are nested under `MyApp`, you can alias the modules `MyApp.Foo`, `MyApp.Bar` and `MyApp.Baz` at once as follows:
 
-```text
+```
 alias MyApp.{Foo, Bar, Baz}
 ```
-

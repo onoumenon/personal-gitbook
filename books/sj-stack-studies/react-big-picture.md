@@ -2,12 +2,12 @@
 
 {% embed url="https://reactjs.org/docs/thinking-in-react.html" %}
 
-Get the feature brief \(a UI mock\), API method and sample response.
+Get the feature brief (a UI mock), API method and sample response.
 
-Then break it down into the different components:  
-- Use [Single Responsibility](https://en.wikipedia.org/wiki/Single-responsibility_principle) Principle
+Then break it down into the different components:\
+\- Use [Single Responsibility](https://en.wikipedia.org/wiki/Single-responsibility\_principle) Principle
 
-![](../../.gitbook/assets/image%20%28155%29.png)
+![](<../../.gitbook/assets/image (158).png>)
 
 Arrange the components in a hierarchy
 
@@ -18,7 +18,7 @@ Arrange the components in a hierarchy
   * `ProductCategoryRow`
   * `ProductRow`
 
-Then build a static version in react \(ie: without state\).
+Then build a static version in react (ie: without state).
 
 Determine what needs state:
 
@@ -35,7 +35,7 @@ In the example, the states are:
 **All React components must act like pure functions with respect to their props.**
 {% endhint %}
 
-### The Data Flows Down <a id="the-data-flows-down"></a>
+### The Data Flows Down <a href="the-data-flows-down" id="the-data-flows-down"></a>
 
 This is commonly called a “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.
 
@@ -48,7 +48,7 @@ Handling events with React elements is very similar to handling events on DOM el
 
 For example, the HTML:
 
-```text
+```
 <button onclick="activateLasers()">
   Activate Lasers
 </button>
@@ -56,14 +56,14 @@ For example, the HTML:
 
 is slightly different in React:
 
-```text
+```
 <button onClick={activateLasers}>  Activate Lasers
 </button>
 ```
 
 Another difference is that you cannot return `false` to prevent default behavior in React. You must call `preventDefault` explicitly.
 
-```text
+```
 function ActionLink() {
   function handleClick(e) {    e.preventDefault();    console.log('The link was clicked.');  }
   return (
@@ -77,16 +77,16 @@ function ActionLink() {
 
 Rendering multiple components
 
-```text
+```
 const numbers = [1, 2, 3, 4, 5];
 const listItems = numbers.map((number) =>  <li>{number}</li>);
 ```
 
-### Keys <a id="keys"></a>
+### Keys <a href="keys" id="keys"></a>
 
 Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
 
-```text
+```
 const numbers = [1, 2, 3, 4, 5];
 const listItems = numbers.map((number) =>
   <li key={number.toString()}>    {number}
@@ -100,9 +100,9 @@ Keys used within arrays should be unique among their siblings. However they don�
 
 HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state.
 
-If you want to control the behaviour of the HTML forms in React, you can do so with controlled components. The single source of truth is from the component's state. 
+If you want to control the behaviour of the HTML forms in React, you can do so with controlled components. The single source of truth is from the component's state.&#x20;
 
-```text
+```
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
@@ -134,7 +134,7 @@ class NameForm extends React.Component {
 
 In HTML, a `<textarea>` element defines its text by its children:
 
-```text
+```
 <textarea>
   Hello there, this is some text in a text area
 </textarea>
@@ -142,7 +142,7 @@ In HTML, a `<textarea>` element defines its text by its children:
 
 In React, a `<textarea>` uses a `value` attribute instead. This way, a form using a `<textarea>` can be written very similarly to a form that uses a single-line input:
 
-```text
+```
 <textarea value={this.state.value} onChange={this.handleChange} />
 ```
 
@@ -150,7 +150,7 @@ In React, a `<textarea>` uses a `value` attribute instead. This way, a form usin
 
 In html, the selected value is indicated by the 'selected' attribute.
 
-```text
+```
 <select>
   <option value="grapefruit">Grapefruit</option>
   <option value="lime">Lime</option>
@@ -161,7 +161,7 @@ In html, the selected value is indicated by the 'selected' attribute.
 
 In a controlled component:
 
-```text
+```
 <select value={this.state.value} onChange={this.handleChange}>            <option value="grapefruit">Grapefruit</option>
   <option value="lime">Lime</option>
   <option value="coconut">Coconut</option>
@@ -174,14 +174,14 @@ Overall, this makes it so that `<input type="text">`, `<textarea>`, and `<select
 {% hint style="info" %}
 You can pass an array into the `value` attribute, allowing you to select multiple options in a `select` tag:
 
-```text
+```
 <select multiple={true} value={['B', 'C']}>
 ```
 {% endhint %}
 
-### Handling Multiple Inputs <a id="handling-multiple-inputs"></a>
+### Handling Multiple Inputs <a href="handling-multiple-inputs" id="handling-multiple-inputs"></a>
 
-```text
+```
 class Reservation extends React.Component {
   constructor(props) {
     super(props);
@@ -224,6 +224,4 @@ class Reservation extends React.Component {
   }
 }
 ```
-
-
 

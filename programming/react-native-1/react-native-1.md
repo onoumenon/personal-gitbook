@@ -32,7 +32,7 @@ Similar to React but has its own library of components
 
 ### Handling text input:
 
-```text
+```
 import React, { useState } from 'react';
 import { Text, TextInput, View } from 'react-native';
 
@@ -59,15 +59,15 @@ export default PizzaTranslator;
 
 ### Lists:
 
-The `FlatList` component displays a scrolling list of changing, but similarly structured, data. `FlatList` works well for long lists of data, where the number of items might change over time. Unlike the more generic [`ScrollView`](https://reactnative.dev/docs/using-a-scrollview), the `FlatList` **only renders elements that are currently showing on the screen, not all the elements at once.**  
+The `FlatList` component displays a scrolling list of changing, but similarly structured, data. `FlatList` works well for long lists of data, where the number of items might change over time. Unlike the more generic [`ScrollView`](https://reactnative.dev/docs/using-a-scrollview), the `FlatList` **only renders elements that are currently showing on the screen, not all the elements at once.**\
+****
 
-
-If you want to render a set of **data broken into logical sections, maybe with section headers, similar to `UITableView`s on iOS, then a** [**SectionList**](https://reactnative.dev/docs/sectionlist) **is the way to go.**  
+If you want to render a set of **data broken into logical sections, maybe with section headers, similar to `UITableView`s on iOS, then a **[**SectionList**](https://reactnative.dev/docs/sectionlist)** is the way to go.**\
 
 
 ### Platform-specific code
 
-```text
+```
 import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
 
 `Platform.select` method
 
-```text
+```
 import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-```text
+```
 const Component = Platform.select({
   ios: () => require('ComponentIOS'),
   android: () => require('ComponentAndroid')
@@ -110,7 +110,7 @@ const Component = Platform.select({
 
 ## Styles
 
-```text
+```
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -146,6 +146,4 @@ export default LotsOfStyles;
 ## Troubleshooting
 
 {% embed url="https://reactnative.dev/docs/troubleshooting" %}
-
-
 

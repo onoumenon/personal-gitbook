@@ -13,4 +13,3 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 This should be used in conjunction with your Release flow/ CI so that Release cycles are well documented.
 
 See also: Git Flow
-

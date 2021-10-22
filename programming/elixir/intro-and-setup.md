@@ -6,24 +6,24 @@
 
 ### Scalability
 
-Elixir runs in lightweight execution threads \(aka processes\) that are isolated and exchange messages. 
+Elixir runs in lightweight execution threads (aka processes) that are isolated and exchange messages.&#x20;
 
 Isolation means:
 
-*  Can run thousands of processes concurrently as they are lightweight
+* &#x20;Can run thousands of processes concurrently as they are lightweight
 * Garbage collection per process, so no system-wide pauses
-* Uses machine resource effectively \(vertical scaling\)
+* Uses machine resource effectively (vertical scaling)
 
 Communication between processes means:
 
 * can communicate with other processes on different machine on same network
-* can coordinate work across multiple nodes \(horizontal scaling\)
+* can coordinate work across multiple nodes (horizontal scaling)
 
 ### Fault tolerance
 
 `Supervisors` can restart processes when things go awry
 
-```text
+```
 children = [
   TCP.Pool,
   {TCP.Acceptor, port: 4040}
@@ -40,16 +40,16 @@ Supervisor.start_link(children, strategy: :one_for_one)
 
 Eg: pattern matching for destructuring
 
-```text
+```
 %User{name: name, age: age} = User.get("John Doe")
 name #=> "John Doe"
 ```
 
 ### Extensible
 
-Eg: test case using [Elixir's test framework called ExUnit](https://hexdocs.pm/ex_unit/):
+Eg: test case using [Elixir's test framework called ExUnit](https://hexdocs.pm/ex\_unit/):
 
-```text
+```
 defmodule MathTest do
   use ExUnit.Case, async: true
 
@@ -71,13 +71,13 @@ set up path, check version
 
 
 
-{% embed url="https://wandbox.org/\#" %}
+{% embed url="https://wandbox.org/#" %}
 
 Alternative: Online elixir compiler to skip setup
 
 ## Create first elixir module
 
-```text
+```
 defmodule Wandbox do
     def hello do
         IO.puts "Hello"
@@ -91,11 +91,10 @@ save as `filename.exs`
 
 to run:
 
-```text
+```
 $ elixir filename.exs
 ```
 
 
 
- 
-
+&#x20;

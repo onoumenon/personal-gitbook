@@ -14,5 +14,3 @@
 
 {% embed url="https://gist.github.com/anandtripathi5/118995139602599dab64fddcd147545a" %}
 
-
-

@@ -2,7 +2,7 @@
 
 aasm gem: [https://github.com/aasm/aasm](https://github.com/aasm/aasm)
 
-after commit: [https://github.com/Envek/after\_commit\_everywhere](https://github.com/Envek/after_commit_everywhere)
+after commit: [https://github.com/Envek/after\_commit\_everywhere](https://github.com/Envek/after\_commit\_everywhere)
 
 
 
@@ -10,7 +10,7 @@ To add a status to a model:
 
 Add 'status' column, include aasm, add aasm function
 
-```text
+```
 class Job
   include AASM
 
@@ -36,7 +36,7 @@ end
 
 This provides you with a couple of public methods for instances of the class `Job`:
 
-```text
+```
 job = Job.new
 job.sleeping? # => true
 job.may_run?  # => true
@@ -51,11 +51,9 @@ Then you can call these methods from your services
 
 You can combine it with after commit:
 
-```text
+```
 event :completed, after_commit: :notify_completion do
     transitions from: :processing, to: :converted, guard: :conversion_completed?
 end
 ```
-
-
 

@@ -8,21 +8,22 @@
 
 Quick sort is a fast sorting algorithm that uses divide-and-conquer, but has a slow worst-case run-time. That possibility can be reduced by picking a correct pivot.
 
-**Run time**  
-In average to best case, if pivot is a 'middle' value: n \* Log\(n\)
+**Run time**\
+****In average to best case, if pivot is a 'middle' value: n \* Log(n)
 
-![](../../../.gitbook/assets/image%20%2863%29.png)
+![](<../../../.gitbook/assets/image (38).png>)
 
-In worst case: O\(n \*\* 2\)
+In worst case: O(n \*\* 2)
 
-![](../../../.gitbook/assets/image%20%28114%29.png)
+![](<../../../.gitbook/assets/image (40).png>)
 
 ### Steps:
 
 **Divide:**
 
-1. [Pick a pivot](https://brilliant.org/wiki/quick-sort/#choosing-a-pivot) element, A\[q\].
-2. Partition, or rearrange, the array into two subarrays: A\[p ... q-1\] such that all elements are less than A\[q\], and A\[q+1 … r\] such that all elements are greater than or equal to A\[q\]. \(Eg: if a pivot is the element at midpoint, the subarrays are A\[0 ... midpoint - 1\] and A\[midpoint + 1 ... endpoint\]\)
+1. [Pick a pivot](https://brilliant.org/wiki/quick-sort/#choosing-a-pivot) element, A\[q].
+2. Partition, or rearrange, the array into two subarrays: A\[p ... q-1] such that all elements are less than A\[q], and A\[q+1 … r] such that all elements are greater than or equal to A\[q].\
+   (Eg: if a pivot is the element at midpoint, the subarrays are A\[0 ... midpoint - 1] and A\[midpoint + 1 ... endpoint])
 
 **Conquer:** Sort the subarrays recursively with quicksort.
 
@@ -30,7 +31,7 @@ In worst case: O\(n \*\* 2\)
 
 
 
-```text
+```
 const quickSort = (arr, startIndex = 0, endIndex = arr.length - 1) => {
   if (startIndex < endIndex) {
     const pIndex = partition(arr, startIndex, endIndex);
@@ -65,4 +66,3 @@ function partition(arr, startIndex, endIndex) {
   return pIndex;
 }
 ```
-

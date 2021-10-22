@@ -8,5 +8,3 @@
 
 {% embed url="https://kentcdodds.com/blog/stop-mocking-fetch" %}
 
-
-

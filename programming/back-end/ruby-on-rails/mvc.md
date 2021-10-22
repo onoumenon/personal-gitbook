@@ -13,7 +13,7 @@ DB wrapper, eg: User
 
 ### Views
 
-response body content \(html/ csv/xml, etc\)
+response body content (html/ csv/xml, etc)
 
 ### Controllers
 
@@ -22,4 +22,3 @@ How to process request and define a response
 ### Routes
 
 Matchers for url requested
-

@@ -4,7 +4,7 @@ Resource:
 
 {% embed url="https://johnresig.com/apps/learn/" %}
 
-```text
+```
 // The .bind method from Prototype.js 
 Function.prototype.bind = function(){ 
   var fn = this, args = Array.prototype.slice.call(arguments), object = args.shift(); 
@@ -17,7 +17,7 @@ Function.prototype.bind = function(){
 
 ### Helper methods
 
-```text
+```
 assert( true, "I'll pass." ); 
 assert( "truey", "So will I." ); 
 assert( false, "I'll fail." ); 
@@ -28,12 +28,12 @@ error( "I'm an error!" );
 
 ### Hoisting
 
-Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope \(to the top of the current script or the current function\). 
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).&#x20;
 
-TLDR: hoists `var` and functions \(including definition\). \(Read more: [http://adripofjavascript.com/blog/drips/variable-and-function-hoisting.html](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting.html)\)
+TLDR: hoists `var` and functions (including definition). (Read more: [http://adripofjavascript.com/blog/drips/variable-and-function-hoisting.html](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting.html))
 
 {% hint style="info" %}
- **function definition hoisting only occurs for function declarations**, not function expressions.
+&#x20;**function definition hoisting only occurs for function declarations**, not function expressions.
 {% endhint %}
 
 `let` and `const` are not hoisted but have block scope
@@ -42,7 +42,7 @@ TLDR: hoists `var` and functions \(including definition\). \(Read more: [http://
 Always declare your variables/ functions at the top of the scope.
 {% endhint %}
 
-```text
+```
 var canFly = function(){ return true; }; 
 window.isDeadly = function(){ return true; }; 
 assert( isNimble() && canFly() && isDeadly(), "Still works, even though isNimble is moved." ); 
@@ -55,7 +55,7 @@ Variables declared with the `let` keyword can have Block Scope.
 
 Variables declared inside a block **{}** can not be accessed from outside the block:
 
-```text
+```
 {
   let x = 2;
 }
@@ -64,7 +64,7 @@ Variables declared inside a block **{}** can not be accessed from outside the bl
 
 What this means:
 
-```text
+```
 let i = 5;
 for (let i = 0; i < 10; i++) {
   // some statements
@@ -79,6 +79,4 @@ var carName = "Volvo";
 
 // let variables also cannot be redeclared 
 ```
-
-
 

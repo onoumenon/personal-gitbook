@@ -2,5 +2,3 @@
 
 Prerequisite: [Closures](closures.md)
 
-
-

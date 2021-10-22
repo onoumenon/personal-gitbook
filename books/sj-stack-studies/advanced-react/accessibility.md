@@ -1,10 +1,10 @@
 # Accessibility
 
-### Semantic HTML <a id="semantic-html"></a>
+### Semantic HTML <a href="semantic-html" id="semantic-html"></a>
 
 Use fragments so as not to break semantic html
 
-```text
+```
 function ListItem({ item }) {
   return (
     <>      <dt>{item.term}</dt>
@@ -17,19 +17,17 @@ function ListItem({ item }) {
 
 Labels `for` is `htmlFor`
 
-```text
+```
 <label htmlFor="namedInput">Name:</label><input id="namedInput" type="text" name="name"/>
 ```
 
-Errors  
+Errors\
 [https://webaim.org/techniques/formvalidation/](https://webaim.org/techniques/formvalidation/)
 
 ### Focus control
 
 * Don't remove blue focus outline
-* Programatically manage focus \(eg: when modal is closed\)
+* Programatically manage focus (eg: when modal is closed)
 
 ### Test keyboard functionality
-
-
 

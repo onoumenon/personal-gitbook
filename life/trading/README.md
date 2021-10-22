@@ -2,11 +2,11 @@
 
 #### Books:
 
-The Intelligent Investor by Benjamin Graham \(Value Investing.\)
+The Intelligent Investor by Benjamin Graham (Value Investing.)
 
-Security Analysis by Benjamin Graham \(Value investing.\)
+Security Analysis by Benjamin Graham (Value investing.)
 
-Common Sense on Mutual Funds by John c. Bogle \(Authored by the "father" of index investing.\)
+Common Sense on Mutual Funds by John c. Bogle (Authored by the "father" of index investing.)
 
 **Web Articles:**
 
@@ -28,13 +28,12 @@ Bloomberg
 
 **Communities:**
 
-Seedly Personal Finance Community Facebook Group \(Tremendously helpful. Expect quality answers to any questions you may have. Covers all topics across Finance. Localized.\)
+Seedly Personal Finance Community Facebook Group (Tremendously helpful. Expect quality answers to any questions you may have. Covers all topics across Finance. Localized.)
 
-Tradably Investors Club Facebook Group \(More specialised in Investing. Appropriate if you are looking to improve your investing literacy. Localized.\)
+Tradably Investors Club Facebook Group (More specialised in Investing. Appropriate if you are looking to improve your investing literacy. Localized.)
 
-Shiny Things Hardwarezone Forum \(suggested by @captmomo\)
+Shiny Things Hardwarezone Forum (suggested by @captmomo)
 
-TradingView \(Charting and global community. Very established, but downside is that you won't really have a voice. Global\)
+TradingView (Charting and global community. Very established, but downside is that you won't really have a voice. Global)
 
-SeekingAlpha \(Crowd-sourced content. Good place for solid ideas but hefty price for premium articles. Global.\)
-
+SeekingAlpha (Crowd-sourced content. Good place for solid ideas but hefty price for premium articles. Global.)

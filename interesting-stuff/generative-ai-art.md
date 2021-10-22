@@ -10,5 +10,3 @@
 
 {% embed url="https://jinglescode.github.io/2020/05/08/use-gan-beyond-art/" %}
 
-
-

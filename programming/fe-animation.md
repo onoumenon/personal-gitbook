@@ -6,5 +6,3 @@
 
 {% embed url="https://lottiefiles.com/course/a-beginners-guide-to-lottie" %}
 
-
-

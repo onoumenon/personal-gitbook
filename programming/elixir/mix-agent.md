@@ -7,7 +7,7 @@ mix.exs is a config file for the project
 you can define project details in `project` function, and dependencies in `dep`
 
 {% code title="mix.exs" %}
-```text
+```
 defmodule KV.MixProject do
   use Mix.Project
 
@@ -43,13 +43,13 @@ end
 
 you can start an `iex` session inside the project by running:
 
-```text
+```
 $ iex -S mix
 ```
 
 
 
-```text
+```
 defmodule KVTest do
   use ExUnit.Case
   doctest KV
@@ -60,31 +60,31 @@ defmodule KVTest do
 end
 ```
 
-* saved as .exs \(elixir script files, doesn't need compilation before running\)
+* saved as .exs (elixir script files, doesn't need compilation before running)
 * use ExUnit.Case to inject testing API
 
 to run tests:
 
-```text
+```
 $ mix test
 ```
 
 to format codebase:
 
-```text
+```
 mix format
 ```
 
 
 
-### Environments <a id="environments"></a>
+### Environments <a href="environments" id="environments"></a>
 
-* `:dev` - the one in which Mix tasks \(like `compile`\) run by default
+* `:dev` - the one in which Mix tasks (like `compile`) run by default
 * `:test` - used by `mix test`
 * `:prod` - the one you will use to run your project in production
 
 {% hint style="warning" %}
-Mix is a build tool and, as such, it is not expected to be available in production. Therefore, it is recommended to access `Mix.env` only in configuration files and inside `mix.exs`, never in your application code \(`lib`\).
+Mix is a build tool and, as such, it is not expected to be available in production. Therefore, it is recommended to access `Mix.env` only in configuration files and inside `mix.exs`, never in your application code (`lib`).
 {% endhint %}
 
 ## Agent
@@ -96,19 +96,19 @@ How to keep and share state between multiple entities. If you have previous prog
 Elixir is an immutable language where nothing is shared by default. If we want to share information, which can be read and modified from multiple places, we have two main options in Elixir:
 
 * Using Processes and message passing
-* [ETS \(Erlang Term Storage\)](http://www.erlang.org/doc/man/ets.html)
+* [ETS (Erlang Term Storage)](http://www.erlang.org/doc/man/ets.html)
 
 
 
 
 
 * [Agent](https://hexdocs.pm/elixir/Agent.html) - Simple wrappers around state.
-* [GenServer](https://hexdocs.pm/elixir/GenServer.html) - “Generic servers” \(processes\) that encapsulate state, provide sync and async calls, support code reloading, and more.
+* [GenServer](https://hexdocs.pm/elixir/GenServer.html) - “Generic servers” (processes) that encapsulate state, provide sync and async calls, support code reloading, and more.
 * [Task](https://hexdocs.pm/elixir/Task.html) - Asynchronous units of computation that allow spawning a process and potentially retrieving its result at a later time.
 
 
 
-```text
+```
 iex> {:ok, agent} = Agent.start_link fn -> [] end
 {:ok, #PID<0.57.0>}
 iex> Agent.update(agent, fn list -> ["eggs" | list] end)
@@ -121,7 +121,7 @@ iex> Agent.stop(agent)
 
 
 
-```text
+```
 iex> {:ok, agent} = Agent.start_link fn -> [] end
 {:ok, #PID<0.338.0>}
 iex> Agent.update(agent, fn _list -> 123 end)
@@ -139,7 +139,7 @@ iex>
 
 we can modify the agent state in any way we want. Therefore, we most likely don’t want to access the Agent API throughout many different places in our code. Instead, we want to encapsulate all Agent-related functionality in a single module, which we will call `KV.Bucket`
 
-```text
+```
 defmodule KV.BucketTest do
   use ExUnit.Case, async: true
 
@@ -153,10 +153,10 @@ defmodule KV.BucketTest do
 end
 ```
 
-`:async` must _only_ be set if the test case does not rely on or change any global values. For example, if the test requires writing to the filesystem or access a database, keep it synchronous \(omit the `:async` option\) to avoid race conditions between tests.
+`:async` must _only_ be set if the test case does not rely on or change any global values. For example, if the test requires writing to the filesystem or access a database, keep it synchronous (omit the `:async` option) to avoid race conditions between tests.
 
 {% code title="lib/kv/bucket.ex" %}
-```text
+```
 defmodule KV.Bucket do
   use Agent
 
@@ -188,9 +188,9 @@ We are keeping a map inside the agent to store our keys and values. Getting and 
 
 
 
-### Test setup with ExUnit callbacks <a id="test-setup-with-exunit-callbacks"></a>
+### Test setup with ExUnit callbacks <a href="test-setup-with-exunit-callbacks" id="test-setup-with-exunit-callbacks"></a>
 
-```text
+```
 defmodule KV.BucketTest do
   use ExUnit.Case, async: true
 
@@ -207,4 +207,3 @@ defmodule KV.BucketTest do
   end
 end
 ```
-

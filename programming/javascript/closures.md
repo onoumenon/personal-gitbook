@@ -1,10 +1,10 @@
 # Closures
 
-> Closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time. 
+> Closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.&#x20;
 >
 > From MDN
 
-```text
+```
 // Lexical Scoping: the closure function sayHello has access to the parent's variable, "John"
 function greeting() {
   var name = "John";
@@ -50,8 +50,6 @@ console.log(toThePowerOf10(2)); //1024
 > Among other things, closures are commonly used to give objects data privacy. Data privacy is an essential property that helps us program to an interface, not an implementation. This is an important concept that helps us build more robust software because implementation details are more likely to change in breaking ways than interface contracts.
 >
 > Source: [https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
-
-
 
 
 

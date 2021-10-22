@@ -2,5 +2,3 @@
 
 {% embed url="https://cheatsheetseries.owasp.org/index.html" %}
 
-
-

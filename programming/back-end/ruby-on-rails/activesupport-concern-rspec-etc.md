@@ -8,7 +8,7 @@
 
 {% embed url="https://ruby-doc.org/stdlib-2.6.3/libdoc/open-uri/rdoc/OpenURI.html" %}
 
-```text
+```
 require 'open-uri'
 
 URI.parse(url).open
@@ -18,16 +18,15 @@ URI.parse(url).open
 
 To run methods based on model events:
 
-```text
+```
   before_validation :do_something, on: :create
   before_create :do_something_else
   after_create :run_async_jobs
 ```
 
-to perform jobs later:  
+to perform jobs later:\
 
 
-```text
+```
 Job.perform_later()
 ```
-

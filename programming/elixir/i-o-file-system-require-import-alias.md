@@ -7,15 +7,15 @@
 * store state in processes
 * agents are abstractions around state
 
-Elixir’s processes should not be confused with operating system processes. Processes in Elixir are extremely lightweight in terms of memory and CPU \(even compared to threads as used in many other programming languages\). Because of this, it is not uncommon to have tens or even hundreds of thousands of processes running simultaneously.
+Elixir’s processes should not be confused with operating system processes. Processes in Elixir are extremely lightweight in terms of memory and CPU (even compared to threads as used in many other programming languages). Because of this, it is not uncommon to have tens or even hundreds of thousands of processes running simultaneously.
 
 
 
-### `spawn` <a id="spawn"></a>
+### `spawn` <a href="spawn" id="spawn"></a>
 
 The basic mechanism for spawning new processes is the auto-imported `spawn/1` function:
 
-```text
+```
 iex> spawn(fn -> 1 + 2 end)
 #PID<0.43.0>
 ```
@@ -24,9 +24,9 @@ iex> spawn(fn -> 1 + 2 end)
 
 `spawn/1` takes a function which it will execute in another process.
 
-Notice `spawn/1` returns a PID \(process identifier\). At this point, the process you spawned is very likely dead. The spawned process will execute the given function and exit after the function is done:
+Notice `spawn/1` returns a PID (process identifier). At this point, the process you spawned is very likely dead. The spawned process will execute the given function and exit after the function is done:
 
-```text
+```
 iex> pid = spawn(fn -> 1 + 2 end)
 #PID<0.44.0>
 iex> Process.alive?(pid)
@@ -35,7 +35,7 @@ false
 
 retrieve the PID of the current process by calling `self/0`:
 
-```text
+```
 iex> self()
 #PID<0.41.0>
 iex> Process.alive?(self())
@@ -44,11 +44,11 @@ true
 
 
 
-### `send` and `receive` <a id="send-and-receive"></a>
+### `send` and `receive` <a href="send-and-receive" id="send-and-receive"></a>
 
 We can send messages to a process with `send/2` and receive them with `receive/1`:
 
-```text
+```
 iex> send(self(), {:hello, "world"})
 {:hello, "world"}
 iex> receive do
@@ -66,7 +66,7 @@ The process that sends the message does not block on `send/2`, it puts the messa
 
 If there is no message in the mailbox matching any of the patterns, the current process will wait until a matching message arrives. A timeout can also be specified:
 
-```text
+```
 iex> receive do
 ...>   {:hello, msg}  -> msg
 ...> after
@@ -81,7 +81,7 @@ A timeout of 0 can be given when you already expect the message to be in the mai
 
 Let’s put it all together and send messages between processes:
 
-```text
+```
 iex> parent = self()
 #PID<0.41.0>
 iex> spawn(fn -> send(parent, {:hello, self()}) end)
@@ -98,7 +98,7 @@ The `inspect/1` function is used to convert a data structure’s internal repres
 
 While in the shell, you may find the helper `flush/0` quite useful. It flushes and prints all the messages in the mailbox.
 
-```text
+```
 iex> send(self(), :hello)
 :hello
 iex> flush()
@@ -106,9 +106,9 @@ iex> flush()
 :ok
 ```
 
-### Links <a id="links"></a>
+### Links <a href="links" id="links"></a>
 
-```text
+```
 iex> spawn(fn -> raise "oops" end)
 #PID<0.58.0>
 
@@ -119,7 +119,7 @@ iex> spawn(fn -> raise "oops" end)
 
 It merely logged an error but the parent process is still running. That’s because processes are isolated. If we want the failure in one process to propagate to another one, we should link them. This can be done with `spawn_link/1`:
 
-```text
+```
 iex> self()
 #PID<0.41.0>
 iex> spawn_link(fn -> raise "oops" end)
@@ -137,9 +137,9 @@ Links, however, allow processes to establish a relationship in case of failure. 
 
 `spawn/1` and `spawn_link/1` are the basic primitives for creating processes in Elixir. Although we have used them exclusively so far, most of the time we are going to use abstractions that build on top of them. Let’s see the most common one, called tasks.
 
-### Tasks <a id="tasks"></a>
+### Tasks <a href="tasks" id="tasks"></a>
 
-```text
+```
 iex(1)> Task.start(fn -> raise "oops" end)
 {:ok, #PID<0.55.0>}
 
@@ -154,13 +154,13 @@ Function: #Function<20.99386804/0 in :erl_eval.expr/5>
 
 Instead of `spawn/1` and `spawn_link/1`, we use `Task.start/1` and `Task.start_link/1` which return `{:ok, pid}` rather than just the PID. This is what enables tasks to be used in supervision trees. Furthermore, `Task` provides convenience functions, like `Task.async/1` and `Task.await/1`, and functionality to ease distribution.
 
-### State <a id="state"></a>
+### State <a href="state" id="state"></a>
 
 We haven’t talked about state so far in this guide. If you are building an application that requires state, for example, to keep your application configuration, or you need to parse a file and keep it in memory, where would you store it?
 
 Processes are the most common answer to this question. We can write processes that loop infinitely, maintain state, and send and receive messages. As an example, let’s write a module that starts new processes that work as a key-value store in a file named `kv.exs`:
 
-```text
+```
 defmodule KV do
   def start_link do
     Task.start_link(fn -> loop(%{}) end)
@@ -178,11 +178,11 @@ defmodule KV do
 end
 ```
 
-Note that the `start_link` function starts a new process that runs the `loop/1` function, starting with an empty map. The `loop/1` \(private\) function then waits for messages and performs the appropriate action for each message. We made `loop/1` private by using `defp` instead of `def`. In the case of a `:get` message, it sends a message back to the caller and calls `loop/1` again, to wait for a new message. While the `:put` message actually invokes `loop/1` with a new version of the map, with the given `key` and `value` stored.
+Note that the `start_link` function starts a new process that runs the `loop/1` function, starting with an empty map. The `loop/1` (private) function then waits for messages and performs the appropriate action for each message. We made `loop/1` private by using `defp` instead of `def`. In the case of a `:get` message, it sends a message back to the caller and calls `loop/1` again, to wait for a new message. While the `:put` message actually invokes `loop/1` with a new version of the map, with the given `key` and `value` stored.
 
 Let’s give it a try by running `iex kv.exs`:
 
-```text
+```
 iex> {:ok, pid} = KV.start_link()
 {:ok, #PID<0.62.0>}
 iex> send(pid, {:get, :hello, self()})
@@ -192,9 +192,9 @@ nil
 :ok
 ```
 
-name the process \(pid\):
+name the process (pid):
 
-```text
+```
 iex> Process.register(pid, :kv)
 true
 iex> send(:kv, {:get, :hello, self()})
@@ -204,9 +204,9 @@ iex> flush()
 :ok
 ```
 
- Elixir provides [agents](https://hexdocs.pm/elixir/Agent.html), which are simple abstractions around state:
+&#x20;Elixir provides [agents](https://hexdocs.pm/elixir/Agent.html), which are simple abstractions around state:
 
-```text
+```
 iex> {:ok, pid} = Agent.start_link(fn -> %{} end)
 {:ok, #PID<0.72.0>}
 iex> Agent.update(pid, fn map -> Map.put(map, :hello, :world) end)
@@ -214,4 +214,3 @@ iex> Agent.update(pid, fn map -> Map.put(map, :hello, :world) end)
 iex> Agent.get(pid, fn map -> Map.get(map, :hello) end)
 :world
 ```
-

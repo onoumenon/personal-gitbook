@@ -2,7 +2,7 @@
 
 {% embed url="https://dev.to/ugglr/step-1-setting-up-react-native-with-storybook-36l" %}
 
-Hot reload works for component but not folder level \(eg: new component\)
+Hot reload works for component but not folder level (eg: new component)
 
 
 
@@ -21,4 +21,3 @@ Hot reload works for component but not folder level \(eg: new component\)
 {% embed url="https://github.com/jantimon/html-webpack-plugin/issues/1377" %}
 
 Solved jest testing by mocking the storybook methods used
-

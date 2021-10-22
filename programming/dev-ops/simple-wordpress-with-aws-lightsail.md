@@ -4,7 +4,5 @@
 
 `cat bitnami_credentials` to get wordpress admin credentials and go to static ip + `/admin` for access to wp dashboard
 
-{% embed url="https://lightsail.aws.amazon.com/ls/docs/en\_us/articles/amazon-lightsail-enabling-https-on-wordpress" %}
-
-
+{% embed url="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-enabling-https-on-wordpress" %}
 

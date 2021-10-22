@@ -4,13 +4,13 @@
 
 Guest OS is duplicated
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-10.34.17-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 10.34.17 PM.png>)
 
 Containers solve the problem by having the container runs as a process in the host OS, but each container is isolated from each other
 
 Much lighter than virtualization
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-10.36.28-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 10.36.28 PM.png>)
 
 Container is running copy of docker image
 
@@ -18,22 +18,22 @@ Docker image is created by Dockerfile steps
 
 first line is base image, centos:7, and each instructions layers on top of it
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-10.41.49-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 10.41.49 PM.png>)
 
 Docker container has read write layer
 
 Base layers can be gotten from the registry, eg Dockerhub
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-10.44.31-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 10.44.31 PM.png>)
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-10.45.10-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 10.45.10 PM.png>)
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-10.47.23-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 10.47.23 PM.png>)
 
 Demo: [https://learn.cantrill.io/courses/730712/lectures/14640455](https://learn.cantrill.io/courses/730712/lectures/14640455)
 
 * ec2 instance connect
-* [Lesson Commands](https://github.com/acantril/aws-sa-associate-saac02/blob/master/09-Containers-ECS/container_of_cats/lesson_commands.txt)
+* [Lesson Commands](https://github.com/acantril/aws-sa-associate-saac02/blob/master/09-Containers-ECS/container\_of\_cats/lesson\_commands.txt)
 * install docker
 * sudo service docker start
 * give user permission to use docker `sudo usermod -a -G docker ec2-user`
@@ -42,7 +42,7 @@ Demo: [https://learn.cantrill.io/courses/730712/lectures/14640455](https://learn
 * `git clone {repo}`
 * there should be Dockerfile, jpeg files
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-10.51.29-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 10.51.29 PM.png>)
 
 entrypoint is apache web server
 
@@ -53,7 +53,7 @@ entrypoint is apache web server
 * enter password
 * `docker tag {img id} {user}/{image name}`
 
-##  ECS - Elastic Container Service
+## &#x20;ECS - Elastic Container Service
 
 ECS lets you create a cluster, which is where containers run from
 
@@ -69,9 +69,9 @@ task definition store the rest: storage mode, task role, which give containers w
 
 service lets you determine how to scale task, load balance for tasks, replace failed tasks, etc
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.04.46-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 11.04.46 PM.png>)
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.04.13-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 11.04.13 PM.png>)
 
 ECS is capable of running in EC2 mode or Fargate mode.
 
@@ -91,24 +91,24 @@ EC2 mode: not serverless, handles no of instances deployed, you handle capacity,
 
 you pay for ec2 instances regardless of container usage
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.09.06-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 11.09.06 PM.png>)
 
 fargate: no servers to manage, use fargate shared infra, injected into vpc, no need to care for capacity
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.11.26-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 11.11.26 PM.png>)
 
 EC2: virtualization
 
-ECS in EC2 mode: containerized app 
+ECS in EC2 mode: containerized app&#x20;
 
 Fargate: less management overhead, burst cos charge for only what you use
 
-![](../../../.gitbook/assets/screenshot-2021-07-19-at-11.14.29-pm.png)
+![](<../../../.gitbook/assets/Screenshot 2021-07-19 at 11.14.29 PM.png>)
 
 Demo: [https://learn.cantrill.io/courses/730712/lectures/14640459](https://learn.cantrill.io/courses/730712/lectures/14640459)
 
 * ECS
-* Clusters -&gt; create cluster -&gt; networking only fargate
+* Clusters -> create cluster -> networking only fargate
 * create w/o create vpc
 * cos default alr has public ip address for all subnets
 * task definition - create fargate
@@ -117,14 +117,12 @@ Demo: [https://learn.cantrill.io/courses/730712/lectures/14640459](https://learn
 * add container, can add multiple containers, choose image
 * since web server port 80, set port to 80, click create
 * click clusters, select cluster, click tasks tab
-*  run a new task
+* &#x20;run a new task
 * switch launch type fargate
-* select vpc to attach to \(default: 172...\)
+* select vpc to attach to (default: 172...)
 * select two subnets
 * attach security group, run task
 * copy public ip of cluster
-
-
 
 
 

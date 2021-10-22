@@ -1,17 +1,17 @@
 # EmberJS Components
 
 {% hint style="warning" %}
-Components must have at least one dash in their name \(to prevent clashes with HTML element names\).
+Components must have at least one dash in their name (to prevent clashes with HTML element names).
 {% endhint %}
 
-```text
+```
 ember generate component my-component-name
 ```
 
-Two parts: component.js \(logic\) and component.hbs \(view\)
+Two parts: component.js (logic) and component.hbs (view)
 
 {% code title="app/templates/components/blog-post.hbs" %}
-```text
+```
 <article class="blog-post">
   <h1>{{this.title}}</h1>
   <p>{{yield}}</p>
@@ -24,7 +24,7 @@ Two parts: component.js \(logic\) and component.hbs \(view\)
 #### Usage:
 
 {% code title="app/templates/index.hbs" %}
-```text
+```
 {{#each model as |post|}}
   {{#blog-post title=post.title}}
     {{post.body}}
@@ -33,5 +33,4 @@ Two parts: component.js \(logic\) and component.hbs \(view\)
 ```
 {% endcode %}
 
-###  <a id="toc_defining-a-component-subclass"></a>
-
+### &#x20;<a href="toc_defining-a-component-subclass" id="toc_defining-a-component-subclass"></a>

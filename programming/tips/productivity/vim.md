@@ -2,21 +2,21 @@
 
 In a bid to increase productivity, I've been trying to limit my use of the track pad, and learning VIM is one of the things that have been consistently recommended.
 
-Vim \(Vi IMproved\) is a clone of the text editor Vi, with additional functionalities. It was released November 1991, and is one of the more popular editors, even today.
+Vim (Vi IMproved) is a clone of the text editor Vi, with additional functionalities. It was released November 1991, and is one of the more popular editors, even today.
 
-It's highly customizable and includes the ability to create macros with the aid of vim scripts. 
+It's highly customizable and includes the ability to create macros with the aid of vim scripts.&#x20;
 
-You can also install extensions that provide emulate vim functionalities in the browser \(Vimium\) or your IDE \(VSCodeVim, etc\)
+You can also install extensions that provide emulate vim functionalities in the browser (Vimium) or your IDE (VSCodeVim, etc)
 
 ## Quickstart
 
 `$vimtutor` is probably already available on your linux terminal. If not, you can install the vim editor.
 
-[Open vim](https://www.openvim.com/) is a good starting online interactive vim tutorial.
+[Open vim](https://www.openvim.com) is a good starting online interactive vim tutorial.
 
-[Vim Adventures](https://vim-adventures.com/) is a fun online game to learn vim. \(But the free version only has a few levels.\) 
+[Vim Adventures](https://vim-adventures.com) is a fun online game to learn vim. (But the free version only has a few levels.)&#x20;
 
-[Vim cheatsheet](https://vim.rtorr.com/)
+[Vim cheatsheet](https://vim.rtorr.com)
 
 ## Basic vim commands:
 
@@ -24,7 +24,7 @@ You can also install extensions that provide emulate vim functionalities in the 
 
 `:e [file]` open a file
 
-`:w` \(write\) save the current file
+`:w` (write) save the current file
 
 `:w [filename]` save as filename
 
@@ -66,15 +66,15 @@ You can also install extensions that provide emulate vim functionalities in the 
 
 `G` end of file
 
-`# [number]` go to line \[number\]
+`# [number]` go to line \[number]
 
 ## Editing:
 
 `v` visual mode to select characters
 
-`y[motion]` copy \(yank\), where motion denotes vim motions
+`y[motion]` copy (yank), where motion denotes vim motions
 
-`d[motion]` delete \(cut\)
+`d[motion]` delete (cut)
 
 `p` paste
 
@@ -139,6 +139,4 @@ You can also install extensions that provide emulate vim functionalities in the 
 `gt` move to next tab, `gT` move to previous tab
 
 `#gt` go to specific tab, e.g. `2gt` goes to the second tab
-
-
 

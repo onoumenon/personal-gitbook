@@ -4,21 +4,19 @@
 Go to the main page to get starting ingredients
 {% endhint %}
 
-{% file src="../../.gitbook/assets/\_perfume-making-step-by-step.txt" %}
+{% file src="../../.gitbook/assets/_PERFUME MAKING STEP BY STEP (1).txt" %}
 
-{% file src="../../.gitbook/assets/apothecary-weights-and-measurements-tutorial-rev6-12.pdf" %}
+{% file src="../../.gitbook/assets/Apothecary Weights and Measurements Tutorial-rev6-12.pdf" %}
 
-{% file src="../../.gitbook/assets/appell\_chem.pdf" %}
+{% file src="../../.gitbook/assets/appell_chem.pdf" %}
 
-{% file src="../../.gitbook/assets/appell\_classics1.pdf" %}
+{% file src="../../.gitbook/assets/appell_classics1.pdf" %}
 
-{% file src="../../.gitbook/assets/appell\_nat.pdf" %}
+{% file src="../../.gitbook/assets/appell_nat.pdf" %}
 
-{% file src="../../.gitbook/assets/arranging-fine-perfume-compositions.pdf" %}
+{% file src="../../.gitbook/assets/Arranging Fine Perfume Compositions.pdf" %}
 
 
 
 {% embed url="https://groups.io/g/perfumemaking/files" %}
-
-
 

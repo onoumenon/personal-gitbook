@@ -26,6 +26,4 @@ Rails takes advantage of Ruby’s metaprogramming features to not just reuse cod
 
 
 
-  
-
-
+\

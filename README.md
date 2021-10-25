@@ -4,13 +4,13 @@
 
 [Portfolio ](http://onoumenon.netlify.com)| [Github ](https://github.com/onoumenon)| [LinkedIn](https://www.linkedin.com/in/hui-tian/)
 
-Hi, I'm Hui Tian, a mid-career switcher (from artist/designer to web developer).
+Hi, I'm Hui Tian, a mid-career switcher (from artist/designer to software developer).
 
-I graduated from the ThoughtWorks Jumpstart bootcamp, and here's their guidebook if you're interested in getting into software development: [https://guides.jumpstart.sh/#/](https://guides.jumpstart.sh/#/)&#x20;
+I graduated from the ThoughtWorks Jumpstart bootcamp, and [click here](https://www.thoughtworks.com/jumpstart) to learn more about the program.
 
 I like learning new things, but the mind is [forgetful](https://www.iflscience.com/brain/being-forgetful-may-mean-your-brain-is-actually-working-properly/), and this is my way of preserving the stuff I know.
 
-Other things I like: good food, bubble tea, science fiction and anime.
+Other things I like: science fiction, anime, humanistic design, perfumery
 
 ## How to Use
 

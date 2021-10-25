@@ -1,14 +1,11 @@
 # Current Study Plan
 
-* AWS pass SA Associate by mid Aug
-* Terraform exam - pluralsight, pass end Sept
-* &#x20;Understand how a whole web app works. (check out basics on pluralsight)
-* Cypress, Jest, Testing library
-* redux
+* AWS pass SA Associate by dec
+* Terraform exam - pluralsight
+* &#x20;Review on a whole web app works. (check out basics on pluralsight)
+* review redux (any updates?)
 * TypeScript.&#x20;
-* Next.js.
-* React Native.
-* styled-components.
+* Algorithms, leet codes (cracking the coding interview)
 
 
 

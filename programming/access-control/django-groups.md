@@ -47,3 +47,55 @@ def revert_migration(apps, schema_editor):
 class Migration(migrations.Migration):
     operations = [migrations.RunPython(apply_migration, revert_migration)]
 ```
+
+{% embed url="https://stackoverflow.com/questions/42743825/how-to-create-groups-and-assign-permission-during-project-setup-in-django" %}
+
+{% code title="kyc/apps.py" %}
+```
+from django.apps import AppConfig
+from django.db.models.signals import post_migrate
+
+from genbase.management import assign_group_permissions
+
+class KycConfig(AppConfig):
+    name = 'kyc'
+
+    def ready(self):
+        post_migrate.connect(assign_group_permissions(
+            ProfileRole.CORPORATE_SECRETARY.value,
+            [
+                'kyc.add_kyc',
+                'kyc.delete_kyc',
+                'kyc.view_kyc'
+            ],
+        ))
+```
+{% endcode %}
+
+{% code title="genbase/management.py" %}
+```
+from django import apps as global_apps
+from django.db.models import Q
+
+def assign_group_permissions(group_name, permissions):
+    def receiver(*args, apps=global_apps, **kwargs):
+        try:
+            Group = apps.get_model('auth', 'Group')
+            Permission = apps.get_model('auth', 'Permission')
+        except LookupError:
+            return
+
+        perm_q = Q()
+        for perm in permissions:
+            app_label, codename = perm.split('.')
+            perm_q |= Q(content_type__app_label=app_label) & Q(codename=codename)
+
+        group, _ = Group.objects.get_or_create(name=group_name)
+        group.permissions.add(
+            *Permission.objects.filter(perm_q)
+        )
+
+    return receiver
+
+```
+{% endcode %}

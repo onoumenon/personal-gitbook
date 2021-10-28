@@ -35,6 +35,7 @@
     * [Heap Sort](programming/fundamentals/data-structures-and-algos/heap-sort.md)
     * [Quick Sort](programming/fundamentals/data-structures-and-algos/quick-sort.md)
 * [Useful Formatters/ Utils](programming/useful-formatters-utils.md)
+* [phone numbers](programming/phone-numbers.md)
 * [JavaScript](programming/javascript/README.md)
   * [Resources](programming/javascript/resources.md)
   * [Event loop](programming/javascript/event-loop.md)

@@ -7,3 +7,5 @@
 [numeralJS](http://numeraljs.com) (for numbers)
 
 [pluralize](https://www.npmjs.com/package/pluralize) (for pluralizing)
+
+{% embed url="https://github.com/google/libphonenumber" %}

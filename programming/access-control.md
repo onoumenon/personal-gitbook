@@ -5,3 +5,7 @@
 {% embed url="https://epub.uni-regensburg.de/6503/1/Trustbus_114.pdf" %}
 
 {% embed url="https://en.wikipedia.org/wiki/Role-based_access_control" %}
+
+{% embed url="https://medium.com/innoventes/django-protect-apis-using-djangomodelpermissions-cb1bf65c5b58" %}
+
+{% embed url="https://stackoverflow.com/questions/25960850/loading-initial-data-with-django-1-7-and-data-migrations" %}

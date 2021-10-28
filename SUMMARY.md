@@ -81,6 +81,7 @@
 * [Development for Apple](programming/development-for-apple/README.md)
   * [Code signing](programming/development-for-apple/apple-developers.md)
 * [Testing](programming/testing/README.md)
+  * [django test](programming/testing/django-test.md)
   * [Jest](programming/testing/jest/README.md)
     * [Object Containing](programming/testing/jest/jest.md)
     * [Mock](programming/testing/jest/mock.md)

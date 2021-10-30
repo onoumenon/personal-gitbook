@@ -186,7 +186,7 @@
   * [groundwork](programming/interview-prep/groundwork/README.md)
     * [JS](programming/interview-prep/groundwork/js.md)
   * [Algo problems prep](programming/interview-prep/algo-problems-prep/README.md)
-    * [big o & data structures](programming/interview-prep/algo-problems-prep/big-o-and-data-structures/README.md)
+    * [big o & data structures](programming/interview-prep/algo-problems-prep/big-o-and-data-structures.md)
       * [bit operators](programming/interview-prep/algo-problems-prep/big-o-and-data-structures/bit-operators.md)
       * [algos](programming/interview-prep/algo-problems-prep/big-o-and-data-structures/algos/README.md)
         * [puzzles](programming/interview-prep/algo-problems-prep/big-o-and-data-structures/algos/puzzles.md)

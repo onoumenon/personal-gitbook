@@ -70,6 +70,18 @@ In problems where greedy algorithms fail, [dynamic programming](https://brillian
 
 {% embed url="https://brilliant.org/wiki/problem-solving-dynamic-programming" %}
 
+
+
+An important property of a problem that is being solved through dynamic programming is that it should have overlapping subproblems. This is what distinguishes DP from [divide and conquer](https://brilliant.org/wiki/divide-and-conquer/) in which storing the simpler values isn't necessary.
+
+To show how powerful the technique can be, here are some of the most famous problems commonly approached through dynamic programming:
+
+1. [Backpack Problem](https://brilliant.org/wiki/backpack-problem/): Given a set of treasures with known values and weights, which of them should you pick to maximize your profit whilst not damaging your backpack which has a fixed capacity?
+2. [Egg Dropping](https://brilliant.org/wiki/egg-dropping/): What is the best way to drop nn eggs from an mm-floored building to figure out the lowest height from which the eggs when dropped crack?
+3. **Longest Common Subsequence**: Given two sequences, which is the longest subsequence common to both of them?
+4. [Subset Sum Problem](https://brilliant.org/discussions/thread/balance-it-if-you-possibly-can/): Given a set and a value n,n, is there a subset the sum of whose elements is n?n?
+5. [Fibonacci Numbers](https://brilliant.org/wiki/fast-fibonacci-transform/): Is there a better way to compute Fibonacci numbers than plain recursion?
+
 ## Divide and Conquer
 
 {% embed url="https://brilliant.org/wiki/divide-and-conquer" %}

@@ -6,6 +6,10 @@
 
 {% embed url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" %}
 
+{% embed url="https://www.educative.io/blog/javascript-data-structures" %}
+
+###
+
 ### Array
 
 Array: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array)
@@ -177,5 +181,111 @@ User defined data structures
 
 
 
+### Stack
+
+```
+"use strict";
+module.exports = class Stack {
+    constructor() {
+        this.items = [];
+        this.top = null;
+    }
+
+    getTop() {
+        if (this.items.length == 0)
+            return null;
+        return this.top;
+    }
+
+    isEmpty() {
+        return this.items.length == 0;
+    }
+
+    size() {
+        return this.items.length;
+    }
+
+    push(element) {
+        this.items.push(element);
+        this.top = element;
+    }
+
+    pop() {
+        if (this.items.length != 0) {
+            if (this.items.length == 1) {
+                this.top = null;
+                return this.items.pop();
+            } else {
+                this.top = this.items[this.items.length - 2];
+                return this.items.pop();
+            }
+
+        } else
+            return null;
+    }
+}
+```
 
 
+
+### Queue
+
+```
+"use strict";
+module.exports = class Queue {
+
+    constructor() {
+        this.items = [];
+        this.front = null;
+        this.back = null;
+
+    }
+
+
+
+    isEmpty() {
+        return this.items.length == 0;
+    }
+
+    getFront() {
+        if (this.items.length != 0) {
+            return this.items[0];
+        } else
+            return null;
+    }
+
+    size() {
+        return this.items.length;
+    }
+
+    enqueue(element) {
+        this.items.push(element);
+    }
+
+
+
+    dequeue() {
+        if (this.items.length == 0) {
+            return null;
+        } else {
+            return this.items.shift();
+
+
+        }
+
+    }
+
+
+}
+```
+
+### Linked List
+
+```
+module.exports = class Node {
+  constructor(data) {
+    this.data = data;
+    this.nextElement = null;
+  }
+}
+```

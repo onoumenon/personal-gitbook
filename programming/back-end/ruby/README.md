@@ -524,3 +524,35 @@ Something.new.qux #=> 'qux'
 
 
 ```
+
+{% embed url="https://www.synopsys.com/blogs/software-security/ruby-demystified-and-vs" %}
+
+`and or`: They are much easier to understand if you stop thinking about them as boolean operators and start thinking of them as control flow operators! Allow me to explain.
+
+
+
+Let’s revisit the above example with this behavior in mind. Using parentheses to illustrate the order of operations, the following illustrates how `&&` and `and` operate differently.
+
+![](https://www.synopsys.com/blogs/software-security/wp-content/uploads/2020/07/ruby-demystified-and-vs-4.jpg)
+
+The low-precedence `or` works in just the same way, short-circuiting execution of its right-hand side if its left-hand side evaluates to a truth-y value (anything but false or nil). It is most commonly used to throw errors if something goes wrong.
+
+![](https://www.synopsys.com/blogs/software-security/wp-content/uploads/2020/07/ruby-demystified-and-vs-7.jpg)
+
+The above example could have just as easily been written like this, depending on your style.
+
+![](https://www.synopsys.com/blogs/software-security/wp-content/uploads/2020/07/ruby-demystified-and-vs-8.jpg)
+
+I prefer the or version in this case as the code gets run from left to right, the same way it is read.
+
+Watch out, though, as the `and` and `or` keywords still have slightly higher precedence than their more mainstream control-flow cohorts (`if`, `unless`, `while`, and `until`).
+
+![](https://www.synopsys.com/blogs/software-security/wp-content/uploads/2020/07/ruby-demystified-and-vs-9.jpg)
+
+…gets evaluated in this order:
+
+![](https://www.synopsys.com/blogs/software-security/wp-content/uploads/2020/07/ruby-demystified-and-vs-10.jpg)
+
+{% embed url="https://rubyinrails.com/2014/01/03/ruby-difference-between-single-and-double-quotes" %}
+
+\

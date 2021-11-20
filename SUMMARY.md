@@ -62,6 +62,7 @@
 * [FE animation](programming/fe-animation.md)
 * [Ruby/ ROR](programming/back-end/README.md)
   * [Make ruby gem](programming/back-end/make-ruby-gem.md)
+  * [TDD](programming/back-end/tdd.md)
   * [Ruby](programming/back-end/ruby/README.md)
     * [Intro](programming/back-end/ruby/intro.md)
     * [Ruby Date and Time](programming/back-end/ruby/ruby-date-and-time.md)
@@ -190,6 +191,7 @@
       * [bit operators](programming/interview-prep/algo-problems-prep/big-o-and-data-structures/bit-operators.md)
       * [algos](programming/interview-prep/algo-problems-prep/big-o-and-data-structures/algos/README.md)
         * [puzzles](programming/interview-prep/algo-problems-prep/big-o-and-data-structures/algos/puzzles.md)
+* [Web 3.0](programming/web-3.0.md)
 * [MISC](programming/tips/README.md)
   * [Utils library (JS)](programming/tips/utils-library-js.md)
   * [Interview Prep](programming/tips/interview-prep.md)
@@ -207,6 +209,7 @@
   * [Storing currency](programming/tips/storing-currency.md)
   * [Headless CMS](programming/tips/headless-cms.md)
   * [misc](programming/tips/misc.md)
+* [Ideas](programming/ideas.md)
 
 ## Articles/ Websites <a href="articles" id="articles"></a>
 

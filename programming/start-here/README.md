@@ -43,7 +43,7 @@ Refer to [Quora's answers ](https://www.quora.com/What-are-the-best-books-on-alg
 
 ### JavaScript
 
-* [x] Eloquent JavaScript
+* [ ] Eloquent JavaScript
 * [ ] JavaScript The Good Parts
 * [ ] You Don't Know JS
 * [ ] JavaScript Patterns

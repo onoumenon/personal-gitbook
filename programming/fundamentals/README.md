@@ -1,7 +1,7 @@
 # CS Fundamentals
 
 {% hint style="info" %}
-I recommend CS50 by Harvard (it's free!) if you're a maths/ com-sci noob like I was. It's engaging, and challenging without being overwhelming. Afterwards, you can pick a roadmap depending on your goals/ interests. I'm going with OSSU since the roadmap is clear-cut and open source.
+I recommend CS50 by Harvard (it's free!). It's engaging, and challenging without being overwhelming. Afterwards, you can pick a roadmap depending on your goals/ interests. I'm going with OSSU since the roadmap is clear-cut and open source.
 {% endhint %}
 
 {% embed url="https://en.wikibooks.org/wiki/Programming_Fundamentals/" %}

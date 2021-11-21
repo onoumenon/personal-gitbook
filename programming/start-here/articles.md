@@ -14,7 +14,7 @@
 \- [https://unix4lyfe.org/time/?v=1](https://unix4lyfe.org/time/?v=1)\
 \- [https://softwareengineering.stackexchange.com/questions/46716/what-technical-details-should-a-programmer-of-a-web-application-consider-before](https://softwareengineering.stackexchange.com/questions/46716/what-technical-details-should-a-programmer-of-a-web-application-consider-before)\
 \- [http://katemats.com/what-every-programmer-should-know-about-seo/](http://katemats.com/what-every-programmer-should-know-about-seo/)\
-\- [https://gafferongames.com/post/what\_every\_programmer\_needs\_to\_know\_about\_game\_networking/](https://gafferongames.com/post/what\_every\_programmer\_needs\_to\_know\_about\_game\_networking/)\
+\-[https://gafferongames.com/post/what\_every\_programmer\_needs\_to\_know\_about\_game\_networking/](https://gafferongames.com/post/what\_every\_programmer\_needs\_to\_know\_about\_game\_networking/)\
 \- [https://stackoverflow.com/questions/2794016/what-should-every-programmer-know-about-security](https://stackoverflow.com/questions/2794016/what-should-every-programmer-know-about-security)\
 \- [https://colin-scott.github.io/personal\_website/research/interactive\_latency.html](https://colin-scott.github.io/personal\_website/research/interactive\_latency.html)\
 \- [https://akkadia.org/drepper/cpumemory.pdf](https://akkadia.org/drepper/cpumemory.pdf)\

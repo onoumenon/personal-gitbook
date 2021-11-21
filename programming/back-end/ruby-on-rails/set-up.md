@@ -17,19 +17,19 @@ Once rails and bundle are installed,&#x20;
 to run seed data\
 `rake db:seed`
 
-to add to db: \
+to add admin\
 `rails console`
 
 `Admin.create(email: "huitian@siliconjungles.com", password: '12345678', password_confirmation: '12345678')`
 
 (base on schema)
 
-see postgres db records:
+#### see postgres db records:
 
-Open Postico
+Open Postico/ TablePlus
 
-Create a new favorite:\
-User: developers\
+Connect to db:\
+User: developers (this is the default on sj comp)\
 localhost: 5432\
 db name based on database.yml
 

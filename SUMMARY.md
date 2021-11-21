@@ -112,7 +112,7 @@
 ## Frameworks / Libraries / Languages
 
 * [Ruby/ ROR](programming/back-end/README.md)
-  * [Template for fast set-up](frameworks-libraries-languages/back-end/template-for-fast-set-up.md)
+  * [Template for fast set-up](programming/back-end/template-for-set-up.md)
   * [Make ruby gem](programming/back-end/make-ruby-gem.md)
   * [TDD](programming/back-end/tdd.md)
   * [Ruby](programming/back-end/ruby/README.md)
@@ -126,7 +126,7 @@
     * [MVC](programming/back-end/ruby-on-rails/mvc.md)
     * [Views](programming/back-end/ruby-on-rails/views-templates.md)
     * [Models](programming/back-end/ruby-on-rails/models.md)
-    * [Enable s3](programming/back-end/ruby-on-rails/untitled.md)
+    * [aws s3 integration](programming/back-end/ruby-on-rails/untitled.md)
     * [Enable pagination](programming/back-end/ruby-on-rails/enable-pagination.md)
     * [ActiveSupport Concern, rspec, openURI](programming/back-end/ruby-on-rails/activesupport-concern-rspec-etc.md)
     * [Active Jobs & Sidekiq](programming/back-end/ruby-on-rails/active-jobs-and-sidekiq.md)

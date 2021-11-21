@@ -4,7 +4,7 @@
 
 {% embed url="https://ruby-doc.org/core-3.0.2" %}
 
-[ruby](../../../programming/back-end/ruby/ "mention")
+[ruby](../../../frameworks-libraries-languages/back-end/ruby/ "mention")
 
 
 

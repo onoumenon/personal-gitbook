@@ -26,7 +26,8 @@ Key Principle 4: Be abstract and centralized.
 
 {% embed url="https://en.wikipedia.org/wiki/Computer_security_model" %}
 
-\
+{% embed url="https://www.ekransystem.com/en/blog/rbac-vs-abac" %}
+
 \
 
 

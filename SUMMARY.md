@@ -123,6 +123,7 @@
     * [Ruby Koans](programming/back-end/ruby/ruby-koans.md)
   * [Ruby on Rails](programming/back-end/ruby-on-rails/README.md)
     * [Set up](programming/back-end/ruby-on-rails/set-up.md)
+    * [Quickstart](frameworks-libraries-languages/back-end/ruby-on-rails/quickstart.md)
     * [Gems](frameworks-libraries-languages/back-end/ruby-on-rails/gems.md)
     * [Intro](programming/back-end/ruby-on-rails/intro.md)
     * [Set up testing](frameworks-libraries-languages/back-end/ruby-on-rails/set-up-testing.md)

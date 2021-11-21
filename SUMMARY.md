@@ -8,7 +8,7 @@
 * [Start Here](programming/start-here/README.md)
   * [Useful Links](programming/start-here/articles.md)
   * [Preparation/ Setup](programming/start-here/introduction/README.md)
-    * [Productivity tools/ software](programming/start-here/introduction/productivity-tools-software.md)
+    * [Productivity tools/ software](programming/productivity.md)
     * [Mac Setup](programming/start-here/introduction/mac-setup.md)
 * [CS Fundamentals](programming/fundamentals/README.md)
   * [Maths for CS](programming/fundamentals/maths-for-cs/README.md)
@@ -112,7 +112,7 @@
 ## Frameworks / Libraries / Languages
 
 * [Ruby/ ROR](programming/back-end/README.md)
-  * [template for set up](programming/back-end/template-for-set-up.md)
+  * [Template for fast set-up](frameworks-libraries-languages/back-end/template-for-fast-set-up.md)
   * [Make ruby gem](programming/back-end/make-ruby-gem.md)
   * [TDD](programming/back-end/tdd.md)
   * [Ruby](programming/back-end/ruby/README.md)

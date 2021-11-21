@@ -1,4 +1,4 @@
-# Gmail Emails
+# Google Admin
 
 {% embed url="https://thedigitalnonprofit.com/use-gmail-own-domain-free" %}
 

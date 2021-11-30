@@ -4,7 +4,7 @@ Cross Site Scripting (XSS) is a vulnerability that allows attackers to inject ma
 
 ## Types
 
-In a** reflected XSS** attack, the attack is in the **request** itself (frequently the URL), and the server inserts the attack in the response (reflecting the attack code as an error message, eg) without sanitisation.&#x20;
+In a **reflected XSS** attack, the attack is in the **request** itself (frequently the URL), and the server inserts the attack in the response (reflecting the attack code as an error message, eg) without sanitisation.&#x20;
 
 In a **stored XSS** attack, the attacker stores the attack in the **server** (e.g., in a snippet) and the victim triggers the attack by browsing to a page on the server that renders the attack, by not properly escaping or sanitizing the stored data.
 
@@ -29,17 +29,17 @@ In a **stored XSS** attack, the attacker stores the attack in the **server** (e.
 CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgndGVzdDMnKTwvc2NyaXB0Pg">
 ```
 
-**Others: **[XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS\_Filter\_Evasion\_Cheat\_Sheet)
+**Others:** [XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS\_Filter\_Evasion\_Cheat\_Sheet)
 
 ## Preventation
 
 #### Have a whitelist mental model:
 
-Only allow untrusted input in limited places & you should** **use the escape syntax for the part of the HTML document you're putting untrusted data into.
+Only allow untrusted input in limited places & you should **** use the escape syntax for the part of the HTML document you're putting untrusted data into.
 
 #### Filter input, escape output:
 
-If doing the above, use** tested** libraries and conventions like filter input, escape output. (See also: [input vs output sanitization](https://security.stackexchange.com/questions/95325/input-sanitization-vs-output-sanitization)).&#x20;
+If doing the above, use **tested** libraries and conventions like filter input, escape output. (See also: [input vs output sanitization](https://security.stackexchange.com/questions/95325/input-sanitization-vs-output-sanitization)).&#x20;
 
 {% hint style="info" %}
 Sanitization is a misleading term. It evokes having a blacklist of dangerous tags to be removed, but can also mean other methods. Read [this](https://kevinsmith.io/sanitize-your-inputs).

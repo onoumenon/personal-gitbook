@@ -45,7 +45,7 @@ Source: [Harvard's School of Public Health](https://www.hsph.harvard.edu/nutriti
 ## Brain Fitness
 
 {% hint style="info" %}
-**TLDR **Healthy body, healthy mind, duh. Caffeine and omega-3 if you want to hyperoptimize.  Socializing and managing stress is also important.
+**TLDR** Healthy body, healthy mind, duh. Caffeine and omega-3 if you want to hyperoptimize.  Socializing and managing stress is also important.
 {% endhint %}
 
 From [Scientific American (review of a book)](https://blogs.scientificamerican.com/beautiful-minds/review-of-the-sharpbrains-guide-to-brain-fitness/)

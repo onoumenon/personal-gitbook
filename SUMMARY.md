@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-## Programming Core <a href="programming" id="programming"></a>
+## Programming Core <a href="#programming" id="programming"></a>
 
 * [Current Study Plan](programming/current-study-plan.md)
 * [Start Here](programming/start-here/README.md)
@@ -112,6 +112,7 @@
 
 ## Frameworks / Libraries / Languages
 
+* [Typescript](frameworks-libraries-languages/typescript.md)
 * [Ruby/ ROR](programming/back-end/README.md)
   * [Template for fast set-up](programming/back-end/template-for-set-up.md)
   * [Make ruby gem](programming/back-end/make-ruby-gem.md)
@@ -200,7 +201,7 @@
   * [EmberJS Components](programming/front-end/emberjs/emberjs-components.md)
 * [Postgresql commands](programming/postgres.md)
 
-## Articles/ Websites <a href="articles" id="articles"></a>
+## Articles/ Websites <a href="#articles" id="articles"></a>
 
 * [Atomic Design with React](articles/atomic-design-with-react.md)
 * [Wiki of People, Projects and Patterns in Software Dev](articles/wiki-of-people-projects-and-patterns-in-software-dev.md)
@@ -209,7 +210,7 @@
 * [UI guidelines](articles/ui-guidelines.md)
 * [Other resources](articles/scalability.md)
 
-## Books/ Courses/ Etc <a href="books" id="books"></a>
+## Books/ Courses/ Etc <a href="#books" id="books"></a>
 
 * [Patterns Game](books/patterns-game.md)
 * [AWS (Architect path)](programming/dev-ops/aws-architect-path/README.md)
@@ -275,12 +276,12 @@
 * [Fitness](life/fitness/README.md)
   * [Beginner Strength Routine](life/fitness/beginner-strength-routine.md)
 
-## Slides for Presentations <a href="slides" id="slides"></a>
+## Slides for Presentations <a href="#slides" id="slides"></a>
 
 * [Front End Design Thinking](slides/front-end-design-thinking.md)
 * [Dev Journey (CodingGirls)](slides/dev-journey-codinggirls.md)
 
-## Design / Art <a href="interesting-stuff" id="interesting-stuff"></a>
+## Design / Art <a href="#interesting-stuff" id="interesting-stuff"></a>
 
 * [Generative / AI Art](interesting-stuff/generative-ai-art.md)
 * [UX](interesting-stuff/ux.md)

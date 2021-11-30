@@ -13,3 +13,7 @@
 {% embed url="https://algodaily.com/lessons/how-to-prepare-for-a-technical-interview" %}
 
 {% embed url="https://www.hackerrank.com/interview/interview-preparation-kit" %}
+
+{% embed url="https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions" %}
+
+{% embed url="https://seanprashad.com/leetcode-patterns" %}

@@ -12,3 +12,4 @@ I recommend CS50 by Harvard (it's free!). It's engaging, and challenging without
 
 {% embed url="https://medium.com%2F@medium.com/@amangoeliitb/build-a-solid-career-in-tech-without-a-cs-major-39cdef86013" %}
 
+{% embed url="https://www.freecodecamp.org/news/harvard-cs50-guide" %}

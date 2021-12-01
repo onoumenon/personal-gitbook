@@ -4,19 +4,23 @@ description: Documentation for style consistency + tools used
 
 # Preparation/ Setup
 
-## Flowchart
+## Check what's good
 
-{% embed url="https://en.wikibooks.org/wiki/Programming_Fundamentals/Flowcharts" %}
+{% embed url="https://stackshare.io" %}
 
-## IDE
+## Pick your IDE
 
 ![](<../../../.gitbook/assets/image (30).png>)
 
-Historically, we had to use several software programs (a text editor, a compiler, a linker, and operating system commands) to make the conversion and run our program. However, today all those software programs with their associated tasks have been integrated into one program. However, this one program is really many software items that create an environment used by programmers to develop software. Thus the name: Integrated Development Environment or IDE.
+Historically, we had to use several software programs (a text editor, a compiler, a linker, and operating system commands) to make the conversion and run our program. However, today all those software programs with their associated tasks have been integrated into one program. You don't need to code on Notepad. An IDE is really many software items that create an environment used by programmers to develop software. Thus the name: Integrated Development Environment or IDE.
 
 IDEs available: Atom, VSCode, Eclipse, VIm, etc
 
 IDE I'm using: VSCode (as I'm on Windows, and it's free)
+
+{% hint style="info" %}
+I'm on Mac and still using Visual Studio Code.
+{% endhint %}
 
 ## Version control
 
@@ -28,7 +32,7 @@ Refer to [GIT](../../git/)
 
 {% embed url="https://en.wikibooks.org/wiki/Programming_Fundamentals/Identifier_Names" %}
 
-Almost all programming languages and most coding shops have a standard code formatting style guide programmers are expected to follow. Among these are three common identifier casing standards:
+Almost all programming languages and most coding shops have a standard code formatting style guide programmers are expected to follow. Among these are the common identifier casing standards:
 
 * camelCase - each word is capitalized except the first word, with no intervening spaces
 * PascalCase - each word is capitalized including the first word, with no intervening spaces
@@ -49,7 +53,11 @@ Different programming languages may have different casing standards. Refer to: [
 ## Machine Set-Up (for Web Dev)
 
 {% hint style="info" %}
-2020 Update: I've given in to getting a macbook since set up is smoother on macs. Check [Mac Setup](mac-setup.md) for the new setup
+2020 Update: I've given in to getting a macbook since set up is smoother on macs. Check [Mac Setup](mac-setup.md) for the new setup.
+
+
+
+2021 Update: I've given in to getting an iMac because of the spacious screen real-estate. Hedonistic adaptation is a bitch.
 {% endhint %}
 
 On Windows:&#x20;
@@ -93,13 +101,16 @@ VSCode:
 * [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 * Quokka
 * Git File History
+* ...
 
 Browser:
 
-* [Octotree](https://www.octotree.io)
+* [~~Octotree~~](https://www.octotree.io) ~~~~ (Github now has folder directories built in!)
 * React Dev Tool
 
-## Bikeshedding&#x20;
+## Reminder to self: why stick to a config?
+
+#### Bikeshedding
 
 ![Source: Dilbert](<../../../.gitbook/assets/image (49).png>)
 

@@ -61,7 +61,3 @@ Refer to [Quora's answers ](https://www.quora.com/What-are-the-best-books-on-alg
 For more recommendations, this [article](https://simpleprogrammer.com/best-programming-books-2019/) is great as a starting point.
 {% endhint %}
 
-The bootcamp I graduated from also has a good guide available here:
-
-{% embed url="https://guides.jumpstart.sh/#/" %}
-

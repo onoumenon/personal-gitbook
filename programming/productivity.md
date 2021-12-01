@@ -1,8 +1,14 @@
 # Productivity tools/ software
 
+
+
 {% embed url="https://maccy.app" %}
 
+OR
+
 {% embed url="https://pasteapp.io" %}
+
+
 
 {% embed url="https://copilot.github.com" %}
 

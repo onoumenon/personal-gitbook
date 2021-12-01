@@ -74,3 +74,10 @@ References:
 
 {% embed url="https://ohi-science.org/news/github-going-back-in-time" %}
 
+## Rewriting Github History (aka you f-d up?)
+
+{% embed url="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository" %}
+
+Prevent yourself from commiting secrets in the first place:
+
+{% embed url="https://github.com/awslabs/git-secrets" %}

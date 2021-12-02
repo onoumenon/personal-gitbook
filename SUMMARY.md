@@ -76,6 +76,7 @@
   * [Terraform + AWS](programming/dev-ops/devops/README.md)
     * [Terraform + AWS + Rails + Postgres](programming/dev-ops/devops/terraform-+-aws-+-rails-+-postgres.md)
   * [Docker](programming/dev-ops/docker/README.md)
+    * [Docker vs Docker compose vs Kubenetes](programming/dev-ops/docker/docker-vs-docker-compose-vs-kubenetes.md)
     * [Docker and semver](programming/dev-ops/docker/docker-and-semver.md)
     * [Docker commands](programming/dev-ops/docker/docker-commands.md)
   * [CodeClimate](programming/dev-ops/codeclimate.md)

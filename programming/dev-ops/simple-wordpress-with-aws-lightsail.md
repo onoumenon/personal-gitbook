@@ -8,7 +8,9 @@
 
 {% embed url="https://medium.com/@reggirl32/set-up-a-wordpress-multisite-using-an-amazon-web-services-ec2-instance-part-1-bdf128b1cf4f" %}
 
+{% embed url="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-editing-wp-config-for-distribution" %}
 
+{% embed url="https://docs.bitnami.com/ibm/apps/wordpress-multisite/configuration/configure-wordpress-multisite" %}
 
 {% embed url="https://smallbusiness.chron.com/differences-between-primary-alias-domain-73189.html" %}
 

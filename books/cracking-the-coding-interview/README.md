@@ -12,7 +12,7 @@
 
 ### Heuristics
 
-**Nested loop with two inputs** => O(A_B) **(!! different inputs matters)** _&#x20;
+**Nested loop with two inputs** => O(A_B) **(!! different inputs matters)** _
 
 _**Nested loop with same input** => O(N \*_2)&#x20;
 
@@ -24,7 +24,7 @@ _**Nested loop with same input** => O(N \*_2)&#x20;
 
 **Recursive runtime** => tree structure => ((nodes  N+1) -1) => O(node 2)
 
-**Sort arr of strs by char in str and str in arr** => O(a\*s(log a + log s)) (!! if N is used differently, use different var)
+**Sort arr of strs by char in str and str in arr **=> O(a\*s(log a + log s)) (!! if N is used differently, use different var)
 
 ## Must know concepts
 

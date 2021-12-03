@@ -22,7 +22,7 @@ Edge locations are more specific, preferred for low latency needs
 
 ### VPC
 
-A **default VPC is created once per region (only 1 per region)** when an AWS account is first created.
+A **default VPC is created once per region (only 1 per region) **when an AWS account is first created.
 
 There can only be one default VPC per region, and they can be deleted and recreated from the console UI .
 

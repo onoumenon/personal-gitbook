@@ -20,7 +20,7 @@ __`#idname` _element with ID_\
 __`div.classname` _divs with certain classname_\
 __`div#idname` _div with certain ID_
 
-`a:link` _link in normal state_\
+`a:link`_ link in normal state_\
 __`a:active` _link in clicked state_\
 __`a:hover` _link with mouse over it_\
 __`a:visited` _visited link_\
@@ -54,7 +54,7 @@ Our **:nth-of-type** selector, in "Plain English," means:
 
 :nth-of-type is... what's a good way to say it... _less conditional_.
 
-_Source:_ [_https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/_](https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/)__
+_Source: _[_https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/_](https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/)__
 {% endhint %}
 
 __\
@@ -62,11 +62,11 @@ __`p:lang(en)` _p with en language attribute_\
 __`:not(span)` _element that's not a span_\
 __`p:first-child` _first child of its parent_\
 __`p:last-child` _last child of its parent_\
-__`p:nth-child(2)` _second child of its parent_ \
+__`p:nth-child(2)` _second child of its parent _\
 __`p:nth-child(3n+1)` _nth-child (an + b) formula_\
 __`p:nth-last-child(2)` _second child from behind_\
 __`p:nth-of-type(2)` _second p of its parent_\
-__`p:nth-last-of-type(2)` _...from behind_ \
+__`p:nth-last-of-type(2)` _...from behind _\
 __`p:only-of-type` _unique of its parent_\
 __`p:only-child` _only child of its parent_\
 __`:root` _document's root element_\

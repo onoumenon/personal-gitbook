@@ -80,6 +80,7 @@
     * [Docker and semver](programming/dev-ops/docker/docker-and-semver.md)
     * [Docker commands](programming/dev-ops/docker/docker-commands.md)
   * [CodeClimate](programming/dev-ops/codeclimate.md)
+  * [nginx](programming/dev-ops/nginx.md)
   * [Google Admin](programming/dev-ops/gmail-emails.md)
 * [Interview Prep](programming/interview-prep/README.md)
   * [groundwork](programming/interview-prep/groundwork/README.md)

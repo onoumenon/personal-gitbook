@@ -70,7 +70,7 @@
   * [Code quality](programming/open-source/code-quality.md)
 * [Dev ops](programming/dev-ops/README.md)
   * [AWS S3 UI with cyberduck](programming/dev-ops/aws-s3-ui-with-cyberduck.md)
-  * [apache](programming/dev-ops/apache.md)
+  * [apache](programming/dev-ops/page-1.md)
   * [Simple Wordpress with AWS Lightsail](programming/dev-ops/simple-wordpress-with-aws-lightsail.md)
   * [Webpacker](programming/dev-ops/webpacker/README.md)
     * [Alternatives](programming/dev-ops/webpacker/alternatives.md)
@@ -114,6 +114,7 @@
 
 ## Frameworks / Libraries / Languages
 
+* [Go](frameworks-libraries-languages/go.md)
 * [Typescript](frameworks-libraries-languages/typescript.md)
 * [Ruby/ ROR](programming/back-end/README.md)
   * [Template for fast set-up](programming/back-end/template-for-set-up.md)

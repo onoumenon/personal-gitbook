@@ -4,7 +4,7 @@ description: Table of Contents
 
 # SICP
 
-**    **[**1  Building Abstractions with Procedures**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-9.html#%\_chap\_1)\
+&#x20;   ****    [**1  Building Abstractions with Procedures**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-9.html#%\_chap\_1)\
 &#x20;       [1.1  The Elements of Programming](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html#%\_sec\_1.1)\
 &#x20;           [1.1.1  Expressions](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html#%\_sec\_1.1.1)\
 &#x20;           [1.1.2  Naming and the Environment](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html#%\_sec\_1.1.2)\
@@ -28,7 +28,7 @@ description: Table of Contents
 &#x20;           [1.3.4  Procedures as Returned Values](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-12.html#%\_sec\_1.3.4)\
 
 
-**    **[**2  Building Abstractions with Data**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-13.html#%\_chap\_2)\
+&#x20;   ****    [**2  Building Abstractions with Data**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-13.html#%\_chap\_2)\
 &#x20;       [2.1  Introduction to Data Abstraction](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-14.html#%\_sec\_2.1)\
 &#x20;           [2.1.1  Example: Arithmetic Operations for Rational Numbers](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-14.html#%\_sec\_2.1.1)\
 &#x20;           [2.1.2  Abstraction Barriers](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-14.html#%\_sec\_2.1.2)\
@@ -54,7 +54,7 @@ description: Table of Contents
 &#x20;           [2.5.3  Example: Symbolic Algebra](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-18.html#%\_sec\_2.5.3)\
 
 
-**    **[**3  Modularity, Objects, and State**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-19.html#%\_chap\_3)\
+&#x20;   ****    [**3  Modularity, Objects, and State**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-19.html#%\_chap\_3)\
 &#x20;       [3.1  Assignment and Local State](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-20.html#%\_sec\_3.1)\
 &#x20;           [3.1.1  Local State Variables](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-20.html#%\_sec\_3.1.1)\
 &#x20;           [3.1.2  The Benefits of Introducing Assignment](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-20.html#%\_sec\_3.1.2)\
@@ -81,7 +81,7 @@ description: Table of Contents
 &#x20;           [3.5.5  Modularity of Functional Programs and Modularity of Objects](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-24.html#%\_sec\_3.5.5)\
 
 
-**    **[**4  Metalinguistic Abstraction**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-25.html#%\_chap\_4)\
+&#x20;   ****    [**4  Metalinguistic Abstraction**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-25.html#%\_chap\_4)\
 &#x20;       [4.1  The Metacircular Evaluator](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-26.html#%\_sec\_4.1)\
 &#x20;           [4.1.1  The Core of the Evaluator](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-26.html#%\_sec\_4.1.1)\
 &#x20;           [4.1.2  Representing Expressions](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-26.html#%\_sec\_4.1.2)\
@@ -105,7 +105,7 @@ description: Table of Contents
 &#x20;           [4.4.4  Implementing the Query System](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-29.html#%\_sec\_4.4.4)\
 
 
-**    **[**5  Computing with Register Machines**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-30.html#%\_chap\_5)\
+&#x20;   ****    [**5  Computing with Register Machines**](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-30.html#%\_chap\_5)\
 &#x20;       [5.1  Designing Register Machines](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-31.html#%\_sec\_5.1)\
 &#x20;           [5.1.1  A Language for Describing Register Machines](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-31.html#%\_sec\_5.1.1)\
 &#x20;           [5.1.2  Abstraction in Machine Design](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-31.html#%\_sec\_5.1.2)\

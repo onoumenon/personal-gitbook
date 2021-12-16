@@ -30,6 +30,30 @@ func split (sum int) (x, y int) {
     return
 }
 
+// var to declare variable (can be list), type is last word
+var c, python, java bool // false, false, false
+
+// can also declare var with defaults
+// if an initializer is present, the type can be omitted as it will be inferred
+var i, j int = 1, 2
+
+// inside func, := can be used instead of var
+func assign() {
+    k := 3
+    fmt.Println(k)
+}
+
+// basic types:
+// bool
+// string
+// int int8 int16 int32 int64 uint uint8 uint16 uint32 uint64 uintptr
+// btye // alias for uint8
+// rune // alias for int32, represents Unicode code point
+// float32 float64
+// complex64 complex128
+
+
+
 func main() {
     // exported vars are capitalized because Go exports any capitalized var
     fmt.Println("hello")

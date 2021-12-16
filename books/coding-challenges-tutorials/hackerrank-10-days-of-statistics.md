@@ -55,7 +55,7 @@ Why square?&#x20;
 
 ### Probability
 
-Probability of an event happening = _Number of ways it can happen /_ Total number of outcomes
+Probability of an event happening = _Number of ways it can happen / _Total number of outcomes
 
 {% embed url="https://www.mathsisfun.com/data/probability-events-conditional.html" %}
 
@@ -170,22 +170,22 @@ All the samples will follow an approximate [normal distribution](https://www.inv
 
 {% embed url="https://towardsdatascience.com/let-us-understand-the-correlation-matrix-and-covariance-matrix-d42e6b643c22" %}
 
-Covariance => Correlation: divide the covariance values by the standard deviation, it essentially scales the value down to a limited range of **-1 to +1,** ie:
+Covariance => Correlation: divide the covariance values by the standard deviation, it essentially scales the value down to a limited range of **-1 to +1, **ie:
 
 ![](<../../.gitbook/assets/image (21).png>)
 
 
 
 * **ρ(X,Y)** – the correlation between the variables X and Y
-* **Cov(X,Y)** – the covariance between the variables X and Y
-* **σX** – the standard deviation of the X-variable
+* **Cov(X,Y) **– the covariance between the variables X and Y
+* **σX **– the standard deviation of the X-variable
 * **σY** – the standard deviation of the Y-variable
 
 ![Formula to find covariance of x,y](<../../.gitbook/assets/image (20).png>)
 
-* **Xi** – the values of the X-variable
+* **Xi **– the values of the X-variable
 * **Yj** – the values of the Y-variable
-* **X̄** – the mean (average) of the X-variable
+* **X̄ **– the mean (average) of the X-variable
 * **Ȳ** – the mean (average) of the Y-variable
 * **n** – the number of the data points
 
@@ -239,7 +239,7 @@ And then substitute into the formula:
 
 aka 'line of best fit'
 
-equation of a straight line is **y = mx + b**
+equation of a straight line is** y = mx + b**
 
 {% embed url="https://www.mathsisfun.com/data/least-squares-regression.html" %}
 

@@ -257,31 +257,31 @@ you can be permissioned to only create key but not encrypt/decrypt
 Note : the commands required will be different based on using 1) Windows 10, or 2) macOS/Linux
 
 `# Shared`\
-`echo "find all the doggos, distract them with the yumz" > battleplans.txt`&#x20;
+`echo "find all the doggos, distract them with the yumz" > battleplans.txt `
 
-`Windows Commands` \
-`aws kms encrypt --key-id alias/catrobot --plaintext fileb://battleplans.txt --output text --profile iamadmin-general --query CiphertextBlob > battleplans.base64` \
+`Windows Commands `\
+`aws kms encrypt --key-id alias/catrobot --plaintext fileb://battleplans.txt --output text --profile iamadmin-general --query CiphertextBlob > battleplans.base64 `\
 ``\
-`certutil -decode battleplans.base64 not_battleplans.enc` \
+`certutil -decode battleplans.base64 not_battleplans.enc `\
 ``\
-`aws kms decrypt --ciphertext-blob fileb://not_battleplans.enc --output text --profile iamadmin-general --query Plaintext > decreyptedplans.base64` \
+`aws kms decrypt --ciphertext-blob fileb://not_battleplans.enc --output text --profile iamadmin-general --query Plaintext > decreyptedplans.base64 `\
 ``\
-`certutil -decode decreyptedplans.base64 decryptedplans.txt #`&#x20;
+`certutil -decode decreyptedplans.base64 decryptedplans.txt # `
 
-`Linux/macOS commands` \
-`aws kms encrypt \` \
-&#x20;`--key-id alias/catrobot \`\
-&#x20;`--plaintext fileb://battleplans.txt \`\
-&#x20;`--output text \`\
-&#x20;`--query CiphertextBlob \`\
-&#x20;`--profile iamadmin-general | base64 \`\
-&#x20;`--decode > not_battleplans.enc` \
+`Linux/macOS commands `\
+`aws kms encrypt \ `\
+` --key-id alias/catrobot \`\
+` --plaintext fileb://battleplans.txt \`\
+` --output text \`\
+` --query CiphertextBlob \`\
+` --profile iamadmin-general | base64 \`\
+`  --decode > not_battleplans.enc  `\
 ``\
 `aws kms decrypt \`\
-&#x20;`--ciphertext-blob fileb://not_battleplans.enc \`\
-&#x20;`--output text \`\
-&#x20;`--profile iamadmin-general \`\
-&#x20;`--query Plaintext | base64 --decode > decryptedplans.txt`
+` --ciphertext-blob fileb://not_battleplans.enc \`\
+` --output text \`\
+` --profile iamadmin-general \`\
+` --query Plaintext | base64 --decode > decryptedplans.txt`
 
 some services creates aws managed keys
 

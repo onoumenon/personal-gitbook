@@ -101,7 +101,7 @@ Step 2: Draw the React components tree, decide whether you need Redux
 
 ![Related image](https://stuffihavelearnthome.files.wordpress.com/2019/02/8f912-187dj5eb3ydd7\_abhkb4uoq.png)
 
-Step 3: Code your way up/down the tree ****&#x20;
+Step 3: Code your way up/down the tree** **
 
 Note: Hierarchy of components matters. For sibling components to share data, states and handlers should be in a parent, and the parent can't affect child component if it already has its own state.
 

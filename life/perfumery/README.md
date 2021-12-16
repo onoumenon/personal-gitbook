@@ -59,7 +59,7 @@ Beginner ingredients:
 
 * [x] Rose otto/ rose de mai accord
 * [ ] Jasmine (Jasmatone)
-* [x] Iris/violet/orris (alpha isomethyl ionone, ~~ionone alpha or Methyl Ionone Gamma~~)
+* [x] Iris/violet/orris (alpha isomethyl ionone,~~ ionone alpha or Methyl Ionone Gamma~~)
 * [x] Lavender EO&#x20;
 * [x] Orange Blossom (neroli accord)
 

@@ -4,7 +4,7 @@
 
 Note that mac doesn't have 'default' user postgres
 
-_╰─$ createuser postgres_&#x20;
+_╰─$ createuser postgres _
 
 ╰─$ psql -U postgres -c "drop database db\_name;"
 

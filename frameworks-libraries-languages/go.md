@@ -71,6 +71,50 @@ g := 0.867 + 0.5i // complex128
 // cannot be declared with :=
 const World = "世界"
 
+// Numeric constants are high-precision values.
+// An untyped constant takes the type needed by its context.
+
+// Go only has one looping construct: for
+// structure of for loop: init, condition, post
+// Note: Unlike other languages like C, Java, or JavaScript
+// there are no parentheses surrounding the three components 
+// of the for statement and the braces { } are always required.
+func loop() {
+	sum := 0
+	for i := 0; i < 10; i++ {
+		sum += i
+	}
+	fmt.Println(sum)
+}
+
+// init and post in for loop are optional
+func loop2() {
+	sum := 1
+	for ; sum < 1000; {
+		sum += sum
+	}
+	fmt.Println(sum)
+}
+
+// therefore, for is while in Go
+func whileLoop() {
+	sum := 1
+	for sum < 1000 {
+		sum += sum
+	}
+	fmt.Println(sum)
+}
+
+// this runs forever
+func infiniteLoop() {
+	sum := 1
+	for {
+		sum += sum
+	}
+	fmt.Println(sum)
+}
+
+
 func main() {
     // exported vars are capitalized because Go exports any capitalized var
     fmt.Println("hello")

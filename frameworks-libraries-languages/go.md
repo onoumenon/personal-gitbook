@@ -114,6 +114,14 @@ func infiniteLoop() {
 	fmt.Println(sum)
 }
 
+// if also doesn't need ()
+func sqrt(x float64) string {
+	if x < 0 {
+		return sqrt(-x) + "i"
+	}
+	return fmt.Sprint(math.Sqrt(x))
+}
+
 
 func main() {
     // exported vars are capitalized because Go exports any capitalized var

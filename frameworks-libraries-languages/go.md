@@ -52,7 +52,24 @@ func assign() {
 // float32 float64
 // complex64 complex128
 
+// zero value for var if not initialized, eg: var i int
+// 0 for numeric
+// false for boolean
+// "" for string
 
+// T(v) converts v to type T
+i := 42
+f := float64(i)
+u := uint(f)
+
+// numeric type is derived from the precision
+i := 42           // int
+f := 3.142        // float64
+g := 0.867 + 0.5i // complex128
+
+// const for constants
+// cannot be declared with :=
+const World = "世界"
 
 func main() {
     // exported vars are capitalized because Go exports any capitalized var

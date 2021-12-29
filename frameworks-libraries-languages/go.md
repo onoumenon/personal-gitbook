@@ -157,6 +157,49 @@ func switchCases() {
 	}
 }
 
+func saturday() {
+	fmt.Println("When's Saturday?")
+	today := time.Now().Weekday()
+	switch time.Saturday {
+		case today + 0: 
+			fmt.Println("Today")
+		case today + 1: 
+			fmt.Println("Tomorrow")
+		case today + 2: 
+			fmt.Println("In two days")
+		default:
+			fmt.Println("Too far away")
+	}
+}
+
+// Switch without a condition is the same as switch true
+func switchTrue() {
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
+}
+
+
+// A defer statement defers the execution of a function until the surrounding function returns.
+func deferFunc() {
+	// Deferred function calls are pushed onto a stack. When a function returns, its deferred calls are executed in last-in-first-out order.
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+	
+	defer fmt.Println("world")
+
+	fmt.Println("hello")
+}
+
+
+
 func main() {
     // exported vars are capitalized because Go exports any capitalized var
     fmt.Println("hello")

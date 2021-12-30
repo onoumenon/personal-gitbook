@@ -198,7 +198,182 @@ func deferFunc() {
 	fmt.Println("hello")
 }
 
+// The type *T is a pointer to a T value. Its zero value is nil.
+// The & operator generates a pointer to its operand.
+// The * operator denotes the pointer's underlying value.
+func pointers() {
+	i, j := 42, 2701
 
+	p := &i         // point to i
+	fmt.Println(*p) // read i through the pointer
+	*p = 21         // set i through the pointer
+	fmt.Println(i)  // see the new value of i
+
+	p = &j         // point to j
+	*p = *p / 37   // divide j through the pointer
+	fmt.Println(j) // see the new value of j
+}
+
+// A struct is a collection of fields.
+type Vertex struct {
+	X int
+	Y int
+}
+
+// Struct fields are accessed using a dot
+func printStruct() {
+	v := Vertex{1, 2}
+	v.X = 4
+	// you can write p.X instead of (*p).X
+	p := &v
+	fmt.Println(p.X)
+}
+
+// struct literal denotes a newly allocated struct value by listing field values
+// order of named fields is irrelevant, eg: Vertex{y: 1, x:2}
+var (
+	v1 = Vertex{1, 2}  // has type Vertex
+	v2 = Vertex{X: 1}  // Y:0 is implicit
+	v3 = Vertex{}      // X:0 and Y:0
+	p  = &Vertex{1, 2} // has type *Vertex
+)
+
+func arrays() {
+	// declare a as array of 2 strings
+	var a [2]string
+	a[0] = "Hello"
+	a[1] = "World"
+	fmt.Println(a[0], a[1])
+	fmt.Println(a)
+
+	// arrays cannot be resized
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println(primes)
+}
+
+func slice() {
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+	// slice can be resized, is declared as [low:high], which excludes the last one
+	var s []int = primes[1:4]
+	fmt.Println(s) // [3 5 7]
+}
+
+// slice does not store data, just describe a slice of underlying array.
+// changing the slice element changes the corresponding element in array
+// other slices sharing the same element will see that change
+func sliceChange() {
+	names := [4]string { "Alice", "Ben", "Candy", "Darren" }
+	fmt.Println(names)
+	
+	a := names[0:2] // [Alice Ben]
+	b := names[1:3] [Ben Candy]
+	
+	b[0] = "XXX"
+	fmt.Println(a) // [Alice XXX]
+	fmt.Println(names) [Alice XXX Candy Darren]
+}
+
+// A slice literal is like an array without length
+// Array literal: [3]bool{true, false, false}
+// this creates the array then builds the slice: []bool{true, false, false}
+func sliceLiteral() {
+	q := []int{2, 3, 5, 7, 11, 13}
+	fmt.Println(q)
+
+	r := []bool{true, false, true, true, false, true}
+	fmt.Println(r)
+
+	s := []struct {
+		i int
+		b bool
+	}{
+		{2, true},
+		{3, false},
+		{5, true},
+		{7, true},
+		{11, false},
+		{13, true},
+	}
+	fmt.Println(s)
+}
+
+// you can omit the low and high bounds and use defaults of [0: length]
+var a [10]int
+// these are equivalent
+a[0:10]
+a[:10]
+a[0:]
+a[:]
+
+// a slice has both length and capacity, capacity is the no of elements in underlying array
+// len and capacity can be obtained via len(s) and cap(s)
+// slice can be extended by re-slicing
+func reslice() {
+	s := []int{2, 3, 5, 7, 11, 13}
+	printSlice(s)
+
+	// Slice the slice to give it zero length.
+	s = s[:0]
+	printSlice(s)
+
+	// Extend its length.
+	s = s[:4]
+	printSlice(s)
+
+	// Drop its first two values.
+	s = s[2:]
+	printSlice(s)
+}
+
+// zero value of slice is nil
+// slice can be create wit make
+// make allocates a zeroed array and returns a slice that refers to that array
+a := make([]int, 5) // len(a) = 5, [0 0 0 0 0]
+// To specify capacity, pass a third arg
+b := make([]int, 0, 5) // len(b)=0, cap(b)=5
+b = b[:cap(b)] // len(b)=5, cap(b)=5
+b = b[1:] // len(b)=4, cap(b)=4
+
+// slices can contain any types, including slices
+func tictactoe() {
+	// Create a tic-tac-toe board.
+	board := [][]string{
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+	}
+
+	// The players take turns.
+	board[0][0] = "X"
+	board[2][2] = "O"
+	board[1][2] = "X"
+	board[1][0] = "O"
+	board[0][2] = "X"
+
+	for i := 0; i < len(board); i++ {
+		fmt.Printf("%s\n", strings.Join(board[i], " "))
+	}
+}
+
+// append: func append(s []T, vs ...T) []T
+// The first parameter s of append is a slice of type T, and the rest are T values to append to the slice
+
+func appendSlice() {
+	var s []int
+	printSlice(s) // len=0 cap=0 []
+
+	// append works on nil slices.
+	s = append(s, 0)
+	printSlice(s) // len=1 cap=1 [0]
+
+	// The slice grows as needed.
+	s = append(s, 1)
+	printSlice(s) // len=2 cap=2 [0 1]
+
+	// We can add more than one element at a time.
+	s = append(s, 2, 3, 4)
+	printSlice(s) // len=5 cap=6 [0 1 2 3 4]
+}
 
 func main() {
     // exported vars are capitalized because Go exports any capitalized var

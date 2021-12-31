@@ -375,6 +375,21 @@ func appendSlice() {
 	printSlice(s) // len=5 cap=6 [0 1 2 3 4]
 }
 
+// range iterates over a slice or map
+// range over slice returns index and element
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+func rangeOverSlice() {
+	// i is index, v is element
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+}
+
+// skip index of rnage by assigning to _ or omit
+// for i, _ := range pow
+// for _, value := range pow
+// for i := range pow
+
 func main() {
     // exported vars are capitalized because Go exports any capitalized var
     fmt.Println("hello")

@@ -385,10 +385,85 @@ func rangeOverSlice() {
 	}
 }
 
-// skip index of rnage by assigning to _ or omit
+// skip index of range by assigning to _ or omit
 // for i, _ := range pow
 // for _, value := range pow
 // for i := range pow
+
+
+
+// Map maps keys to values
+// zero value of map is nil
+// make function returns map of a given type
+func makeMap() {
+	m = make(map[string]Vertex)
+	m["Bell Labs"] = Vertex{40, -99.2}	
+}
+
+// map literals are like struct literals, but keys are required
+var m = map[string]Vertex{
+	"Bell Labs": Vertex{1.0, 2.0},
+	"Google": Vertex{37.42, -122.08}
+	}
+}
+
+// if the top-level type is just a type name, you can omit it from the elements of literal
+var m = map[string]Vertex{
+	"Bell Labs": {1.0, 2.0},
+	"Google": {37.42, -122.08}
+	}
+}
+
+// Insert or update an element in map m:
+m[key] = elem
+
+// Retrieve an element:
+elem = m[key]
+
+// Delete an element:
+delete(m, key)
+
+// Test that a key is present with a two-value assignment:
+
+elem, ok = m[key]
+// If key is in m, ok is true. If not, ok is false.
+
+// If key is not in the map, then elem is the zero value for the map's element type.
+
+// Note: If elem or ok have not yet been declared you could use a short declaration form:
+elem, ok := m[key]
+
+// Function are values too, can be passed around
+// Function values can be used as function arguments and return values
+
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+// Go functions may be closures, that references var outside its body
+// for eg, the adder func returns a closure
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
+// the above returns
+// 0 0
+// 1 -2
+// 3 -6
+// 6 -12
+// 10 -20
+// 15 -30
+// 21 -42
+// 28 -56
+// 36 -72
+// 45 -90
+
+
+
 
 func main() {
     // exported vars are capitalized because Go exports any capitalized var

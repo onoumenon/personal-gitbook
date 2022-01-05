@@ -462,8 +462,263 @@ func adder() func(int) int {
 // 36 -72
 // 45 -90
 
+// Go have no class, but you can define method on types
+// A method is a function with a special receiver arg
+// The receiver appears in its own arg list between the function keyword and the method name
+
+type Vertex struct {
+	X, Y float64
+}
+
+// Abs method has receiver of type Vertex named v
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X * v.X + v.Y * v.Y)
+}
+// invoke via 
+// v:= Vertex{3, 4}
+// v.Abs()
+
+// You can declare a method on a non-struct type too
+// You can only declare a method with a receiver whose type is defined in the same package
+// therefore you can't declare a method of built-in types
+
+type MyFloat float64
+
+func (f MyFloat) Abs() float64 {
+	if f < 0 {
+		return float^4(-f)
+	}
+	return float64(f)
+}
+
+// you can declare methods with pointer receivers
+// *T literal syntax for type T, where T cannot itself be a pointer
+// methods with pointer receivers can modify the value that's pointed. 
+
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+// v := Vertex{3, 4}
+// v.Scale(10)
+
+// Go interpretes v.Scale(5) as (&v).Scale(5) if a pointer is expected
+// Why pointer?
+// so the method can modify the value its receiver points to
+// so as to avoid copying the value on each method call
+// all methods on a given type should have either value or pointer receivers, not mixed
+
+// An interface type is defined as a set of method signatures
+// A value of interface type can hold any value that implements those methods
+
+type Abser interface {
+	Abs() float64
+}
+
+func main() {
+	var a Abser
+	f := MyFloat(-math.Sqrt2)
+	v := Vertex{3, 4}
+
+	a = f  // a MyFloat implements Abser
+	a = &v // a *Vertex implements Abser
 
 
+
+	fmt.Println(a.Abs())
+}
+
+type MyFloat float64
+
+func (f MyFloat) Abs() float64 {
+	if f < 0 {
+		return float64(-f)
+	}
+	return float64(f)
+}
+
+type Vertex struct {
+	X, Y float64
+}
+
+func (v *Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+// A type implements an interface by implementing its methods
+// no "implements" keyword
+
+type I interface {
+	M()
+}
+
+type T struct {
+	S string
+}
+
+// this method means type T implements the interface I,
+// but we don't need explicit declaration
+func (t T) M() {
+	fmt.Println(t.S)
+}
+
+var i I = T{"hello"}
+i.M()
+
+// under the hood, interface values can be thought of as tuples with value and type:
+// (value, type)
+// an interface value holds a value of a specific underlying concrete type
+// calling a method on a interface value executes the method on its type
+
+type I interface {
+	M()
+}
+
+type T struct {
+	s String
+}
+
+func (t *T) M() {
+	fmt.Println(t.S)
+}
+
+type F float64
+
+func (f F) M() {
+	fmt.Println(f)
+}
+
+func describe(i I) {
+	fmt.Printf("(%v, %T)\m", i, i)
+}
+
+var i I
+i = &T{"Hello"}
+describe(i) // (&{Hello}, *main.T)
+i.M() // Hello
+
+i = F(math.Pi)
+describe(i) // (3.14159, main.F)
+i.M() // 3.14159
+
+// Interface with underlying nil value
+// if the concrete value inside the interface is nil, the method will be called with a nil receiver
+// common to write methods that gracefully handles nil receiver
+// interface value that holds a nil concrete value is non-nil
+
+func (t *T) M() {
+	if t == nil {
+		fmt.Println("<nil>")
+		return
+	}
+	fmt.Println(t.S)
+}
+
+// Nil interface values
+// nil interface value holds neither value nor concrete type
+// calling a method on a nil interface is a run-time error, because there is no type
+
+// Empty interface
+// interface type that specifies zero methods:
+// interface{}
+// empty interface may hold values of any type, every type implements at least 0 methods
+// empty interfaces are used to handle values of unknown type. eg: fmt.Print takes any no of args of type interface{}
+
+var i interface{}
+describe(i) // (<nil>, <nil>)
+i = 42
+describe(i) // (42, int)
+i = "hello"
+describe(i) // (hello, string)
+
+func describe(i interface{}) {
+	fmt.Printf("(%v, %T)\n", i, i)
+}
+
+// Type assertions
+// a type assertion provides access to an interface's value underlying type
+// t := i.(T)
+// above statement asserts that the interface value i hold concrete type T and assigns the underlying value to t
+// if i does not hold a T, the statement will trigger a panic
+// to test if an interface value holds a specific type, type assertion returns two value:
+// the underlying value and a boolean that reports if assertion suceeds
+// t, ok := i.(T)
+
+func main() {
+	var i interface{} = "hello"
+
+	s := i.(string)
+	fmt.Println(s)
+
+	s, ok := i.(string)
+	fmt.Println(s, ok)
+
+	f, ok := i.(float64)
+	fmt.Println(f, ok)
+
+	f = i.(float64) // panic
+	fmt.Println(f)
+}
+
+// Type switch
+// a construct that permits several type assertions in series
+// like regular switch statement, but the cases are types
+// declaration in switch statement has same syntax as type assertion, 
+// but specific type T is replaced with the keyword type
+	
+func do(i interface{}) {
+	switch v := i.(type) {
+	case int:
+		fmt.Printf("Twice %v is %v\n", v, v*2)
+	case string:
+		fmt.Printf("%q is %v bytes long\n", v, len(v))
+	default:
+		fmt.Printf("I don't know about type %T!\n", v)
+	}
+}
+
+// Stringer, a common interface defined by fmt
+type Stringer interface {
+    String() string
+}
+// is a type that can describes itself as a string
+
+type Person struct {
+	Name string
+	Age  int
+}
+
+func (p Person) String() string {
+	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
+}
+
+func main() {
+	a := Person{"Arthur Dent", 42}
+	z := Person{"Zaphod Beeblebrox", 9001}
+	fmt.Println(a, z)
+}
+
+// Stringers exercise
+type IPAddr [4]byte
+
+func (ip IPAddr) String() string {
+	var s string
+	for _, v := range ip {
+		s += fmt.Sprintf("%d.", v)
+	}
+	return s[:len(s)-1]
+}
+
+func main() {
+	hosts := map[string]IPAddr{
+		"loopback":  {127, 0, 0, 1},
+		"googleDNS": {8, 8, 8, 8},
+	}
+	for name, ip := range hosts {
+		fmt.Printf("%v: %v\n", name, ip)
+	}
+}
 
 func main() {
     // exported vars are capitalized because Go exports any capitalized var

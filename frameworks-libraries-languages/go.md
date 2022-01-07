@@ -720,6 +720,79 @@ func main() {
 	}
 }
 
+// Go programs express error state with error values.
+
+// The error type is a built-in interface similar to fmt.Stringer:
+
+type error interface {
+    Error() string
+}
+
+// (As with fmt.Stringer, the fmt package looks for the error interface when printing values.)
+
+// Functions often return an error value, and calling code should handle errors by testing whether the error equals nil.
+
+type MyError struct {
+	When time.Time
+	What string
+}
+
+func (e *MyError) Error() string {
+	return fmt.Sprintf("at %v, %s", e.When, e.What)
+}
+
+func run() error {
+	return &MyError{
+		time.Now(),
+		"it didn't work"
+	}
+}
+
+if err := run(); err != nil {
+	fmt.Println(err)
+}
+
+// io package has io.Reader interface, which represents the read end of a stream of data
+
+// Go standard library contains many implementation of this interface, including files, network connection, compressors, ciphers, etc
+// io.Reader has a Read method:
+func (T) Read(b []byte) (n int, err error)
+
+// Read populates the given byte slice with data and returns the no of bytes populated and an error value. io.EOF error is returned when stream ends.
+
+func main() {
+	r := strings.NewReader("Hello Reader")
+	b := make([]byte, 8)
+	for {
+		n, err := r.Read(b)
+		fmt.Printf("n = %v err = %v b = %v\n", n, err, b)
+		fmt.Printf("b[:n] = %q\n", b[:n])
+		if err == io.EOF {
+			break
+		}
+	}
+}
+
+// Package image defines the Image interface:
+
+package image
+
+type Image interface {
+    ColorModel() color.Model
+    Bounds() Rectangle
+    At(x, y int) color.Color
+}
+// Note: the Rectangle return value of the Bounds method is actually an image.Rectangle, as the declaration is inside package image.
+
+// The color.Color and color.Model types are also interfaces, but we'll ignore that by using the predefined implementations color.RGBA and color.RGBAModel. These interfaces and types are specified by the image/color package
+
+func main() {
+	m := image.NewRGBA(image.Rect(0, 0, 100, 100))
+	fmt.Println(m.Bounds())
+	fmt.Println(m.At(0,0).RGBA())
+}
+
+
 func main() {
     // exported vars are capitalized because Go exports any capitalized var
     fmt.Println("hello")

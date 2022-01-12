@@ -798,3 +798,87 @@ func main() {
     fmt.Println("hello")
 }
 ```
+
+## Routines
+
+```
+// goroutine is a lightweight thread managed the Go runtime
+go f(x, y, z)
+// starts a new goroutine running
+f(x,y,z)
+// the evaluation of f, x,y,z happens in the current goroutine and the execution of
+// f happens in the new goroutine
+// goroutines run in the same address space, so access to shared memory must be synchronized
+// sync package provides useful primitives
+
+
+
+package main 
+
+import (
+    "fmt"
+    "time"
+)
+
+func say(s string) {
+    for i := 0; i < 5; i++ {
+        time.Sleep(100 * time.Millisecond)
+        fmt.Println(s)
+    }
+}
+
+func main() {
+    go say("world")
+    say("hello")
+}
+```
+
+## Channels
+
+Channels are a typed conduit through which you send and receive values with channel operator `<-`
+
+```
+ch <- v // send v to channel ch
+v := <-ch // receive from ch and assign value to v
+```
+
+data flows in arrow's direction
+
+like maps and slice, channels must be created before use:
+
+`ch := make(chan int)`
+
+send and receive blocks until the other side is ready. this allows goroutines to synchronize without explicit locks or condition var
+
+
+
+the example code sums the numbers in a slice, distributing the work between two goroutines. once both goroutines are completed, it calculated the final result:
+
+```
+package main
+
+import "fmt"
+
+func sum(s []int, c chan int) {
+    sum := 0
+    for _, v := range s {
+        sum += v
+    }
+    c <- sum // send sum to c
+}
+
+func main() {
+    s := []int{7, 2, 8, -9, 4, 0}
+    
+    c := make(chan int)
+    go sum(s[:len(s)/2], c) // first half
+    go sum(s[len(s)/2:], c) // second half
+    x, y := <- c, <- c // receive both sums from c
+    
+    fmt.Println(x, y, x+y) // -5 7 12
+}
+```
+
+### Buffered Channels
+
+channels can be buffered by providing the buffer length

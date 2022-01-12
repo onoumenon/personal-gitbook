@@ -4,7 +4,7 @@
 
 > We are a way for the universe to know itself. Some part of our being knows this is where we came from. We long to return. And we can, because the cosmos is also within us. We're made of star-stuff.
 >
-> ** - Carl Sagan**
+> &#x20;**- Carl Sagan**
 
 Like many others, I'm compelled to learn new things, but am not good at studying.
 
@@ -25,7 +25,7 @@ Here's a famously [good summary](https://www.reddit.com/r/GetMotivated/comments/
 > &#x20;**- Michio Kaku**
 
 {% hint style="info" %}
-**Sidenote: **Interesting [Quora answer](https://www.quora.com/What-is-the-2nd-most-complex-structure-in-the-universe-after-the-human-brain/answer/John-Bailey-43) about [Kolmogorov Complexity](https://arxiv.org/abs/1710.06846)
+**Sidenote:** Interesting [Quora answer](https://www.quora.com/What-is-the-2nd-most-complex-structure-in-the-universe-after-the-human-brain/answer/John-Bailey-43) about [Kolmogorov Complexity](https://arxiv.org/abs/1710.06846)
 {% endhint %}
 
 All your learning hinges on your brain so it's best to know your equipment.

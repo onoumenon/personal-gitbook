@@ -115,6 +115,7 @@
 ## Frameworks / Libraries / Languages
 
 * [Go](frameworks-libraries-languages/go/README.md)
+  * [docs](frameworks-libraries-languages/go/docs.md)
   * [go crash course](frameworks-libraries-languages/go/go-crash-course.md)
 * [Typescript](frameworks-libraries-languages/typescript.md)
 * [Ruby/ ROR](programming/back-end/README.md)

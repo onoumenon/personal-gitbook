@@ -205,6 +205,7 @@
   * [EmberJS Routes](programming/front-end/emberjs/emberjs-routing.md)
   * [EmberJS Components](programming/front-end/emberjs/emberjs-components.md)
 * [Postgresql commands](programming/postgres.md)
+* [Glossary](frameworks-libraries-languages/glossary.md)
 
 ## Articles/ Websites <a href="#articles" id="articles"></a>
 

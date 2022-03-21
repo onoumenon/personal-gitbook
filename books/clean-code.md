@@ -20,3 +20,4 @@
 * structured programming: go-tos were the norm, but unrestrained go-tos lead to halting problem  ([https://en.wikipedia.org/wiki/Halting\_problem](https://en.wikipedia.org/wiki/Halting\_problem)). So prefer the other 3 structures: sequence, if/else, iteration (loops)
 * it's too hard to prove software is correct so we write tests instead (science rather than maths)
 * comment code that cannot explain itself
+* comments degrade over time. use as last resort

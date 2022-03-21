@@ -218,6 +218,7 @@
 
 ## Books/ Courses/ Etc <a href="#books" id="books"></a>
 
+* [Clean Code](books/clean-code.md)
 * [Patterns Game](books/patterns-game.md)
 * [AWS (Architect path)](programming/dev-ops/aws-architect-path/README.md)
   * [Course Fundamentals and AWS Accounts](programming/dev-ops/aws-architect-path/course-fundamentals-and-aws-accounts.md)

@@ -21,3 +21,5 @@
 * it's too hard to prove software is correct so we write tests instead (science rather than maths)
 * comment code that cannot explain itself
 * comments degrade over time. use as last resort
+* clean code not add comment
+* cmoments that are 'ok': copyright, when using a pattern leads to non-clear names (singleton), regex,&#x20;

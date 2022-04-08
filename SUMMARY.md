@@ -209,6 +209,7 @@
 
 ## Articles/ Websites <a href="#articles" id="articles"></a>
 
+* [Recommended books](articles/recommended-books.md)
 * [Atomic Design with React](articles/atomic-design-with-react.md)
 * [Wiki of People, Projects and Patterns in Software Dev](articles/wiki-of-people-projects-and-patterns-in-software-dev.md)
 * [Programming: Universal Design Pattern](articles/programming-universal-design-pattern.md)

@@ -119,6 +119,7 @@
   * [go crash course](frameworks-libraries-languages/go/go-crash-course.md)
 * [Typescript](frameworks-libraries-languages/typescript.md)
 * [Ruby/ ROR](programming/back-end/README.md)
+  * [Assets pipeline](frameworks-libraries-languages/back-end/assets-pipeline.md)
   * [Template for fast set-up](programming/back-end/template-for-set-up.md)
   * [Make ruby gem](programming/back-end/make-ruby-gem.md)
   * [TDD](programming/back-end/tdd.md)

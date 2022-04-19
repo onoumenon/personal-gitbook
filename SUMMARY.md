@@ -109,6 +109,7 @@
   * [Code Smells](programming/tips/code-smells.md)
   * [Storing currency](programming/tips/storing-currency.md)
   * [Headless CMS](programming/tips/headless-cms.md)
+  * [debugging](programming/tips/debugging.md)
   * [unorganized](programming/tips/misc.md)
 * [Ideas](programming/ideas.md)
 
